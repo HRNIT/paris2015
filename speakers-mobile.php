@@ -87,7 +87,8 @@ $speakers = new speakers_main;
 <link rel="stylesheet" href="css/footer.css" />
 
 
-
+<!-- Mobile Menu JS -->
+<script src="vendor/hammer/hammer.js"></script>
 
 <!-- Scroll to top JS -->
 <script src="js/gotopscroll.js"></script>
@@ -104,10 +105,7 @@ $speakers = new speakers_main;
 <script src="vendor/reveal/jquery.reveal.js" type="text/javascript"></script>
 
 <!-- Include Custom CSS Definitions -->
-<link rel="stylesheet" href="css/speaker-profile.css" />
-
-<!-- Include Custom CSS Definitions -->
-<link rel="stylesheet" href="css/speakers.css" />
+<link rel="stylesheet" href="css/speakers-mobile.css" />
 
 <!-- Thank you modal -->
 <script type="text/javascript">
@@ -341,23 +339,13 @@ $(document).ready(function() {
 </a> 
 <!-- END Go to Top Button --> 
 
-<!-- Speakers Modal -->
-<div id="SpeakersModalContainer">
-  <?php 
-
-
-
-  $content = $speakers->speaker_modals();
-    if(isset($content)) {
-		  echo $content;	
-	}
-   
-
-
-?>
+<!-- Speaker Modal-->
+<div id="SpeakerModal" class="reveal-modal" data-reveal>
+   	<div id="ModalBigContainer"></div>
+    
+  
 </div>
-
-<!-- END Speakers Modal --> 
+<!-- END Speaker Modal --> 
 
 <!-- Download Brochure Modal -->
 <div id="DownloadBrochureModal" class="reveal-modal" data-reveal> <a class="close-reveal-modal">&#215;</a>

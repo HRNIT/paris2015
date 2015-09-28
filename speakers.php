@@ -85,7 +85,11 @@ $speakers = new speakers_main;
 <!-- Include Footer CSS Definitions -->
 <link rel="stylesheet" href="css/footer.css" />
 
+<!-- Modal Arrows -->
+<link rel="stylesheet" href="css/modal-arrows.css" />
 
+<!-- Mobile Menu JS -->
+<script src="vendor/hammer/hammer.js"></script>
 
 <!-- Scroll to top JS -->
 <script src="js/gotopscroll.js"></script>
@@ -96,13 +100,13 @@ $speakers = new speakers_main;
 <!-- Scroll to top JS -->
 <script src="js/speakers.js"></script>
 
+
+
 <!-- Include Reveal Modal -->
 <link rel="stylesheet" href="vendor/reveal/reveal.css">
 <script src="vendor/reveal/jquery.min.js" type="text/javascript"></script>
 <script src="vendor/reveal/jquery.reveal.js" type="text/javascript"></script>
 
-<!-- Include Custom CSS Definitions -->
-<link rel="stylesheet" href="css/speaker-profile.css" />
 
 <!-- Include Custom CSS Definitions -->
 <link rel="stylesheet" href="css/speakers.css" />
@@ -288,21 +292,6 @@ $(document).ready(function() {
   </section>
   <!--END Speakers --> 
   
-  <!--Speaker List Section -->
-  <div id="SpeakerListSection">
-    <?php
-
-        
-
-
- $content = $speakers->speaker();  
-
-
-echo $content;
-?>
-  </div>
-  <!-- END Speaker List Section --> 
-  
 </div>
 <!-- END Main Content --> 
 <!-- FOOTER -->
@@ -354,23 +343,13 @@ echo $content;
 </a> 
 <!-- END Go to Top Button --> 
 
-<!-- Speakers Modal -->
-<div id="SpeakersModalContainer">
-  <?php 
-
-
-
-  $content = $speakers->speaker_modals();
-    if(isset($content)) {
-		  echo $content;	
-	}
-   
-
-
-?>
+<!-- Speaker Modal-->
+<div id="SpeakerModal" class="reveal-modal" data-reveal>
+   	<div id="ModalBigContainer"></div>
+    
+  
 </div>
-
-<!-- END Speakers Modal --> 
+<!-- END Speaker Modal --> 
 
 <!-- Download Brochure Modal -->
 <div id="DownloadBrochureModal" class="reveal-modal" data-reveal> <a class="close-reveal-modal">&#215;</a>
