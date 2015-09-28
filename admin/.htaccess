@@ -1,0 +1,14 @@
+Options +FollowSymLinks
+RewriteEngine On
+ 
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+
+RewriteRule ^.*$ ./index.php
+
+# perform redirect if speaker profile
+RewriteRule    ^speaker-profile/[a-zA-Z]   speaker-profile.php    [NC,L]
+RewriteRule    ^blogger-profile/[a-zA-Z]   blogger-profile.php    [NC,L]
+RewriteRule    ^analyst-profile/[a-zA-Z]   analyst-profile.php    [NC,L]
+
+

@@ -1,0 +1,1196 @@
+@charset "utf-8";
+/* Mainpage Stylesheet. These changes will effect only the index page. */
+
+
+body {
+	overflow-x: hidden;
+	background-color: #fff;
+}
+
+/* Video Header */
+#VideoHeader {
+	max-width: 100vw;
+	max-height: 100vh;
+	background-size: contain;
+	background-position: center center;	
+	background-repeat: no-repeat;
+	position: relative; 
+	color: #fff;
+}
+#VideoHeader video {
+	width: 100%;
+	max-width: 100vw;
+	max-height: auto;
+}
+#HeaderContainer {
+	position: absolute; 
+	bottom: 0; 
+	left: 0; 
+	width: 100vw; 
+	height: 21.5vw; 
+	text-align: center; 
+	/*padding-top: 20.6979166vw;*/
+}
+#HeaderContainer h1 {
+	font-size: 3.125vw; 
+	margin-bottom: 0;
+	position: relative;	
+	/*padding-top: 8.5vw;*/
+	bottom: 0vw;
+}
+#HeaderContainer h2 {
+	font-size: 1.354166vw; 
+	font-weight: 600;
+	margin-top:1.35vw;
+}
+#VideoHeaderDownloadBrochureButton {
+	font-size: 0.9375vw; 
+	max-width: 12.5vw; 
+	height: 2.604166vw; 
+	padding:0;
+	margin-top: 0.5vw;
+	margin-bottom: 2.64583333vw;	
+	color: #fff;
+	background-color: #106ab5;
+	border: 3px solid #106ab5;
+	transition: all 0.3s;
+}
+#VideoHeaderDownloadBrochureButton:hover {
+	background-color: rgba(255,255,255,0);
+}
+
+#SponsorLogos {
+	display: block;
+	margin: 0 auto;
+	width: 72.916666vw;
+	height: 3.4375vw;
+}
+@media (max-width: 1000px) {
+	#VideoHeader {
+		width: 100%;
+		margin-top: 50px;
+		height: 43.359375vw;
+	}
+	#VideoHeader video {
+		display: none;	
+	}
+	#HeaderContainer {
+		position: static;
+		background-image: url(../img/mainpage/videoheader/video-header-tablet-bg.jpg);
+		background-size: contain;
+		background-repeat: no-repeat;
+		height: 43.359375vw;	
+		padding-top: 6vw;
+	}
+	#HeaderContainer h1 {
+		font-size: 2.734375vw;	
+	}
+	#HeaderContainer h2 {
+		font-size: 1.4322916vw;
+		margin-top: 1.5vw;
+		margin-bottom: 2.5vw;
+	}
+	#VideoHeaderDownloadBrochureButton {
+		font-size: 1.38020833vw; 
+		max-width: 18.22916vw; 
+		height: 3.90625vw; 
+		margin-bottom: 12vw;
+	}	
+	#SponsorLogos {
+		margin: 0 auto;
+		width: 85.8072916vw;
+		height: 4.2vw;
+	}
+}
+@media (max-width: 640px) {
+	#VideoHeader {
+		width: 100%;
+		height: 132.1875vw;
+	}
+	#VideoHeader video {
+		display: none;	
+	}
+	#HeaderContainer {
+		background-image: url(../img/mainpage/videoheader/video-header-mobile-bg.jpg);
+		background-size: contain;
+		height: 132.1875vw;	
+		padding-top: 20vw;
+	}
+	#HeaderContainer h1 {
+		font-size: 6.5625vw;
+	}
+	#HeaderContainer h2 {
+		font-size: 4.6875vw;	
+		margin-top: 5.125vw;
+		margin-bottom: 5vw;	
+	}
+	#VideoHeaderDownloadBrochureButton {
+		font-size: 4.0625vw; 
+		max-width: 54.6875vw; 
+		height: 9.375vw; 
+		margin-bottom: 28.125vw;
+	}
+	#SponsorLogos {
+		display: none;
+	}		
+}
+/* END Video Header */
+
+/* About HR Tech World / iRecruit */
+a#iRecruit, a#disruptHR {
+	position: relative;
+	top: -2.083333vw;	
+}
+#AboutHRTechiRecruit { 
+	width: 100%;
+	background-color: #000;
+	background-size: cover;
+	margin-top: 0vw;
+	padding: 0;
+	position: relative;
+	color: #fff;
+	transition: all 0.5s;
+	height: 30.72916vw;
+}
+#HRTechSlideContainer {  /* HR Tech SLIDE (1st) */
+	width: 100%;
+	max-width: 46.875vw;
+	margin: 0 auto;
+	padding-top: 6.510416vw;
+	padding-bottom: 2.604166vw;
+	background-image: none;
+	transition: all 0.1s linear;
+}
+#HRTechSlideContainer h1 {
+	font-size: 1.822916vw;
+	margin-bottom: 2.604166vw;
+	margin-top: 0;
+	font-weight: 700;	
+}
+#HRTechSlideContainer p {
+	font-size: 0.833333vw;
+	line-height: 1.4583333vw;
+	margin-bottom: 2.864583vw;
+}
+.ShownTextOnMobile {
+	display: none;	
+}
+#iRecruitSlideContainer { /*iRecruit SLIDE (2nd) */
+	margin: 0vw 0 10vw 8.33333vw;
+	padding-top: 2.864583vw;
+	width: 45.3125vw;
+}
+#iRecruitLogo {
+	width: 13.75vw;
+	height: 5.15625vw;	
+}
+.VenueAndDate {
+	font-size: 1.25vw;
+	line-height: 1.666666vw;
+	display: inline-block;
+	margin-left: 1.822916vw;
+	margin-bottom: 0.2604166vw;
+	vertical-align: bottom;
+}
+#iRecruitSlideContainer h2 {
+	font-size: 1.979166vw;
+	font-weight: 700;
+	margin-top: 1.66666vw;	
+}
+#iRecruitSlideContainer p {
+	line-height: 1.458333vw;	
+	margin-bottom: 2.604166vw;
+	font-size: 0.833333vw;
+}
+#disruptHRSlideContainer { /*disruptHR SLIDE (3rd) */
+	margin-left: 8.33333vw;
+	padding-top: 1.8229166vw;
+	width: 39.0625vw;
+}
+#disruptHRLogo {
+	width: 17.4479166vw;
+	height: 5.572916vw;
+}
+#disruptHRSlideContainer .VenueAndDate {
+	margin-left: 0.78125vw;
+}
+#disruptHRSlideContainer h2 {
+	font-size: 1.66666vw;
+	font-weight: 700;
+	margin-top: 1.041666vw;
+	margin-bottom: 1.041666vw;	
+}
+#disruptHRSlideContainer p {
+	margin-bottom: 1.822916vw;
+	font-size: 0.833333vw;
+	line-height: 1.25vw;	
+}
+#AboutHRTechFadingContentOne {
+	padding: 0 1.041vw;
+	display: block;
+}
+#AboutHRTechFadingContentTwo {
+	padding: 0 1.041vw;
+	display: none;
+}
+#AboutHRTechFadingContentThree {
+	padding: 0 1.041vw;
+	display: none;
+}
+.AboutButtonContainer { /* CONTROLS */
+	text-align: left;	
+}
+.AboutButtonContainer button {
+	font-size: 0.885416vw;
+	font-weight: bold;
+	display: inline-block;
+	margin-right: 0.78125vw;
+	padding: 0;
+	color: #fff;
+	width: 100%;
+	max-width: 12.65625vw;
+	height: 2.864583vw;
+	transition: all 0.3s;
+}
+.SlideDownloadBrochureButton {
+	background-color: #fd494e;
+	border: 3px solid #fd494e;
+}
+.SlideDownloadBrochureButton:hover {
+	background-color: transparent;
+	border: 3px solid #fff;
+}
+.SlidePlayVideoButton {
+	color: #fff;
+	background: transparent;
+	border: 3px solid #fff;
+}
+.SlidePlayVideoButton .Arrow {
+	margin-left: 0.5208vw;
+	transition: all 0.3s;
+}
+.SlidePlayVideoButton:hover .Arrow {
+	margin-left: 1.5625vw;
+}
+#FadingControlls {
+	width: 10.41666vw;
+	text-align: center;
+	position: absolute;
+	bottom: 2.864583vw;
+	left: 46.875vw;
+}
+#FadingControlls div {
+	border: 3px solid #fff;
+	float: left;
+	margin: 0 1vw;
+	width: 1.25vw;
+	height: 0.46875vw;
+	box-sizing: border-box;
+}
+#FadingControlls div:hover, .ActiveFadingControll {
+	cursor: pointer;
+	background: #fff;
+}
+#SliderArrowLeft, #SliderArrowRight {
+	display:none;
+	position: absolute;
+	top: 14vw;
+	width: 1.1979166vw;
+	height: 2.1875vw;
+	cursor:pointer;	
+}
+#SliderArrowLeft {
+	left: 1vw;
+}
+#SliderArrowRight {
+	left: 97.5%;
+}
+@media (max-width: 1400px) {
+	#AboutHRTechiRecruit {
+		margin-top: -5px;	
+	}
+}
+@media (max-width: 1000px) {
+	#AboutHRTechiRecruit { 
+		height: 58.59375vw;
+		background-color: #000;
+	}	
+	#HRTechSlideContainer {  /* HR Tech SLIDE (1st) */
+		max-width: 78.125vw;
+		margin: 0 auto;
+		padding-top: 18.229166vw;
+	}
+	#HRTechSlideContainer h1 {
+		font-size: 2.99479166vw;
+		margin-bottom: 3.25520833vw;	
+	}
+	#HRTechSlideContainer p {
+		font-size: 1.43229166vw;
+		line-height: 2.4739583vw;
+		margin-bottom: 4.55729166vw;
+	}	
+	#iRecruitSlideContainer { /*iRecruit SLIDE (2nd) */
+		margin: 0vw 0 10vw 10.41666vw;
+		padding-top: 9.114583vw;
+		width: 61.1979166vw;
+	}
+	#iRecruitLogo {
+		width: 22.7864583vw;
+		height: 8.59375vw;	
+	}
+	.VenueAndDate {
+		font-size: 2.083333vw;
+		line-height: 2.8645833vw;
+		margin-left: 3.2552083vw;
+		margin-bottom: 1.302083vw;
+	}
+	#iRecruitSlideContainer h2 {
+		font-size: 3.2552083vw;
+		font-weight: 700;
+		margin-top: 3.2552083vw;
+		margin-bottom: 1.302083vw;	
+	}
+	#iRecruitSlideContainer p {
+		line-height: 2.473958vw;	
+		margin-bottom: 2.604166vw;
+		font-size: 1.4322916vw;
+	}	
+	#disruptHRSlideContainer { /*disruptHR SLIDE (3rd) */
+		margin-left: 10.4166vw;
+		padding-top: 7.1614583vw;
+		width: 66.40625vw;
+	}
+	#disruptHRLogo {
+		width: 29.036458vw;
+		height: 9.375vw;
+	}
+	#disruptHRSlideContainer .VenueAndDate {
+		margin-left: 1.302083vw;
+	}
+	#disruptHRSlideContainer h2 {
+		font-size: 2.734375vw;
+		margin-top: 1.302083vw;
+		margin-bottom: 1.302083vw;	
+	}
+	#disruptHRSlideContainer p {
+		margin-bottom: 3.2552083vw;
+		font-size: 1.4322916vw;
+		line-height: 2.083333vw;	
+	}
+	#AboutHRTechFadingContentOne, #AboutHRTechFadingContentTwo, #AboutHRTechFadingContentThree {
+		padding: 0 1.041vw;
+	}
+	.AboutButtonContainer button { /* CONTROLS */
+		font-size: 1.5625vw;
+		margin-right: 1.3020833vw;
+		max-width: 21.484375vw;
+		height: 4.8177083vw;
+	}
+	.SlidePlayVideoButton .Arrow {
+		font-size: 1.953125vw;
+	}
+	.SlidePlayVideoButton:hover .Arrow {
+		margin-left: 2.604166vw;
+	}
+	#FadingControlls {
+		bottom: 4.5572916vw;
+		left: 42.96875vw;
+		width: 13.02083vw;
+	}
+	#FadingControlls div {
+		border: 2px solid #fff;
+		margin: 0 1vw;
+		width: 2.08333vw;
+		height: 0.78125vw;
+	}
+	#SliderArrowLeft, #SliderArrowRight {
+		top: 30vw;
+		width: 1.953125vw;
+		height: 3.645833vw;
+	}
+	#SliderArrowLeft {
+		left: 2vw;
+	}
+	#SliderArrowRight {
+		left: 95vw;
+	}
+}
+@media (max-width: 640px) {
+    #AboutSection {
+		position: relative; 
+		top: -9.375vw;
+	}
+	#AboutHRTechiRecruit { 
+		height: 150.625vw;
+		background-color: #000;
+	}
+	#HRTechSlideContainer {  /* HR Tech SLIDE (1st) */
+		max-width: 100%;
+		padding-top: 10.9375vw;
+	}
+	.SlideInnerContainer {
+		padding: 0 15vw;	
+	}
+	#HRTechSlideContainer h1 {
+		font-size: 5.625vw;
+		line-height: 7.8125vw;
+		margin-bottom: 6.25vw;
+	}
+	#HRTechSlideContainer p {		
+		font-size: 4.0625vw;
+		line-height: 7.5vw;
+		margin-bottom: 10.9375vw;
+	}
+	#iRecruitSlideContainer { /*iRecruit SLIDE (2nd) */
+		margin: 0vw 0 10vw 0px;
+		padding-top: 7vw;
+		width: 100%;
+	}
+	#iRecruitLogo {
+		width: 44.6875vw;
+		height: 16.875vw;	
+	}
+	.VenueAndDate {
+		font-size: 4.0625vw;
+		line-height: 6.25vw;
+		margin-left: 0;
+		margin-bottom: 0;
+		margin-top: 1.5vw;
+		display: block;
+	}
+	#iRecruitSlideContainer h2 {
+		font-size: 4.375vw;
+		font-weight: 700;
+		margin-top: 6.8125vw;
+		margin-bottom: 3.125vw;
+	}
+	#iRecruitSlideContainer p {
+		line-height: 5.9375vw;
+		margin-bottom: 9.375vw;
+		font-size: 4.0625vw;
+	}	
+	.HiddenTextOnMobile {
+		display: none;	
+	}
+	.ShownTextOnMobile {
+		display: inline;	
+	}
+	#disruptHRSlideContainer { /*disruptHR SLIDE (3rd) */
+		margin-left: 0px;
+		padding-top: 7.8125vw;
+		width: 100%;
+	}
+	#disruptHRLogo {
+		width: 59.0625vw;
+		height: 19.0625vw;
+	}
+	#disruptHRSlideContainer .VenueAndDate {
+		margin-left: 0;
+		margin-top: 0;
+	}
+	#disruptHRSlideContainer h2 {
+		font-size: 4.375vw;
+		margin-top: 10.0625vw;
+		margin-bottom: 5vw;	
+	}
+	#disruptHRSlideContainer p {
+		margin-bottom: 12.5vw;
+		font-size: 4.0625vw;
+		line-height: 6.25vw;	
+	}
+	#AboutHRTechFadingContentOne, #AboutHRTechFadingContentTwo, #AboutHRTechFadingContentThree {
+		padding: 0;
+	}
+	
+	
+	.AboutButtonContainer { /* CONTROLS */
+		box-sizing: border-box;
+		position: absolute;
+		bottom: 20vw;
+		left: 21.875vw;
+	}
+	.AboutButtonContainer button {
+		font-size: 4.0625vw;
+		margin-right: 0px;
+		margin-left: 0;
+		width: 56.25vw;
+		max-width: 56.25vw;
+		height: 13.125vw;
+		box-sizing: border-box;	
+		border: 2px solid #fff;
+	}
+	.AboutButtonContainer .SlideDownloadBrochureButton {
+		border: 2px solid #fd494e;
+		margin-bottom: 2.8125vw;
+	}
+	.AboutButtonContainer .SlideDownloadBrochureButton:hover {
+		border: 2px solid #fff;
+	}	
+	.AboutButtonContainer .SlidePlayVideoButton {
+		padding-bottom: 0.9375vw;
+	}
+	.SlidePlayVideoButton .Arrow {
+		font-size: 4.6875vw;
+	}
+	.SlidePlayVideoButton:hover .Arrow {
+		margin-left: 3.125vw;
+	}
+	#FadingControlls {
+		width: 31.25vw;
+		bottom: 11vw;
+		left: 36vw;
+	}
+	#FadingControlls div {
+		border: 2px solid #fff;
+		margin: 0 2.1875vw;
+		width: 5vw;
+		height: 1.875vw;
+	}
+	#SliderArrowLeft, #SliderArrowRight {
+		display: none;
+	}
+}
+/* END About HR Tech World / iRecruit */
+
+/*Speakers */
+#Speakers {
+	font-size: 0.5208vw;
+	color: #fff;
+	margin: 0 1% 1% 0;
+	background-color: #fff;
+}
+#Speakers h2 {
+	font-size: 5.20833vw;
+	text-align: center;
+	margin: 2vw auto;
+}
+#SpeakersContainer {
+	margin: 0 auto;
+	padding: 0;
+	text-align: center;
+}
+.SpeakerOverlay{
+  display: block;
+  position: absolute;
+  margin-top: 19.53125vw;
+  height: 4.6875vw;
+  background-color: rgba(0, 0, 0, 0.62);
+  width: 24.2vw;
+}
+
+.SpeakerOverlay h3{
+  font-size: 2vw;
+  text-align: left;
+  padding-left: 1vw;
+  margin-bottom:0;
+  margin-top: 0.2604166vw;
+  padding-bottom:0;
+}
+
+.SpeakerOverlay h4{
+  font-size: 1.3vw;
+  text-align: left;
+  padding-left: 1vw;
+  margin-top:0;
+  padding-top:0;
+  font-weight:200;
+}
+
+#SpeakersContainer ul {
+	list-style: none;
+	padding-left: 0;
+}
+#SpeakersContainer ul li {
+	/*float: left;*/
+	display:inline-block;
+}
+.SpeakersImageContainer {
+	margin: 0.25vw;
+}
+.Square {
+	width: 24.2vw;
+	height: 24.2vw; /* match width for a 1:1 aspect ratio *//*margin: 0.25vw;*/
+}
+.SpeakerName {
+	font-size: 2.08vw;
+	margin: 2vw 0 0 1vw;
+	line-height: 0.2vw;
+}
+.SpeakerCompany {
+	font-size: 1.25vw;
+	margin: 1vw 0 0 1vw;
+}
+.SpeakerInfo {
+	margin: 2vw 1vw 0 1vw;
+	font-size: 0.927083vw;
+	line-height: 1.5vw;
+}
+.SpeakerHoverLinks {
+	position: absolute;
+	bottom: 1vw;
+	left: 1vw;
+}
+.SpeakerHoverLinks a {
+	color: #fff;
+	font-size: 2.08vw;
+	margin-right: 1vw;
+}
+.TwitterColor {
+	color: #fff;
+}
+.TwitterColor:hover {
+	color: #002b49;
+}
+#CallForSpeakers {
+	font-size: 1.5625vw;
+	font-weight: 400;
+	line-height: 300%;
+	margin-bottom: 0.520833vw;
+}
+#BecomeASpeakerButton {
+	margin: 0 0 2.08333vw 0;
+	max-width: 15.625vw;
+	height: 3.64583vw;
+	padding: 0;
+	font-size: 1.25vw;
+	border: 3px solid #106ab5;
+}
+#BecomeASpeakerButton:hover {
+	border: 3px solid #106ab5;
+	background-color: rgba(0, 255, 255, 0);
+}
+
+@media (max-width: 1416px) {
+.Square {
+	width: 24vw;
+	height: 24vw; /* match width for a 1:1 aspect ratio *//*margin: 0.25vw;*/
+}
+
+.SpeakerOverlay{
+  width: 24vw;
+  height: 4.5vw;
+}
+}
+
+@media (max-width: 1000px) {
+#Speakers {
+	font-size: 1.302vw;
+	margin: 0 0.5% 1% 0.5%;
+}
+#Speakers h2 {
+	font-size: 13.02083vw;
+	margin-top: 5.46875vw;
+	margin-bottom: 5.46875vw;
+}
+.Square {
+	width: 47.60vw;
+	height: 49vw; /* match width for a 1:1 aspect ratio *//*margin: 0.5vw;*/
+}
+
+.SpeakerOverlay{
+  width: 47.6vw;
+  margin-top: 39vw;
+  height: 10vw;
+}
+
+.SpeakerOverlay h3{
+  font-size: 4vw;
+  text-align: left;
+  padding-left: 1vw;
+  margin-bottom:0;
+  margin-top: 1vw;
+padding-bottom:0;
+}
+
+.SpeakerOverlay h4{
+  font-size: 2.6vw;
+  text-align: left;
+  padding-left: 1vw;
+  margin-top:0;
+  padding-top:0;
+  font-weight:100;
+}
+
+.SpeakersImageContainer {
+	margin: 0.5vw;
+}
+.SpeakerName {
+	font-size: 4.1328125vw;
+	margin: 3.515625vw 0 0 2vw;
+	line-height: 3.125vw;
+}
+.SpeakerCompany {
+	font-size: 2.48046875vw;
+	margin: 2vw 0 0 2vw;
+}
+.SpeakerInfo {
+	margin: 2vw 1vw 0 2vw;
+	font-size: 1.953125vw;
+	line-height: 3.125vw;
+}
+.SpeakerHoverLinks a {
+	font-size: 4.166666vw;
+	margin-right: 1.25vw;
+	margin-left: 1vw
+}
+#CallForSpeakers {
+	font-size: 3.90625vw;
+	margin-bottom: 1.2499992vw;
+}
+#BecomeASpeakerButton {
+	margin: 0 0 5.208325vw 0;
+	max-width: 39.0625vw;
+	height: 9.114575vw;
+	font-size: 3.125vw;
+	border: 3px;
+}
+}
+
+@media (max-width: 640px) {
+#Speakers {
+	font-size: 3.1248vw;
+	margin: 0 0.5% 1% 0.5%;
+}
+#Speakers h2 {
+	font-size: 13.75vw;
+	margin-top: 9.375vw;
+	margin-bottom: 9.375vw;
+}
+.Square {
+	width: 95vw;
+	height: 95vw; /* match width for a 1:1 aspect ratio */
+	margin: 0 2vw 2vw 2vw;
+}
+
+.SpeakerOverlay{
+  margin-top: 76.3vw;
+  height: 18.75vw;
+  width: 95vw;
+  margin-left: 2vw;
+}
+
+.SpeakerOverlay h3{
+  font-size: 8vw;
+  text-align: left;
+  padding: 0 0 0 3vw;
+  margin-bottom: 0;
+  margin-top: 1.5625vw;
+}
+
+.SpeakerOverlay h4{
+  font-size: 4.8vw;
+  text-align: left;
+  padding-left: 3.6vw;
+}
+
+.SpeakerName {
+	font-size: 8.125vw;
+	margin: 6vw 0 0 4.8vw;
+	line-height: 7.5vw;
+}
+.SpeakerCompany {
+	font-size: 5.953125vw;
+	margin: 2.4vw 0 0 4.8vw;
+}
+.SpeakerInfo {
+	margin: 2vw 4.8vw 0 4.8vw;
+	font-size: 3.75vw;
+	line-height: 5.9375vw;
+}
+.SpeakerHoverLinks a {
+	font-size: 8.125vw;
+	margin-right: 1.25vw;
+	margin-left: 4.8vw
+}
+#SpeakersTernynckJ, #SpeakersMarkidesC, #SpeakersRussoL, #SpeakersSinekS, #SpeakersNelsonL {
+	height: 0;
+	overflow: hidden;
+}
+#CallForSpeakers {
+	font-size: 6vw;
+	margin-bottom: 3vw;
+}
+#BecomeASpeakerButton {
+	margin: 0 0 5.208325vw 0;
+	max-width: 93.75vw;
+	height: 21.87498vw;
+	padding-top: 1vw;
+	font-size: 7.5vw;
+}
+}
+/*END Speakers */
+
+/* Sneak Peek */
+#SneakPeek {
+	width: 100%;
+	height: 31.77083vw;
+	background-image: url(../img/mainpage/sneak-peek/background.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+	box-sizing: border-box;
+	padding-left: 52.604166vw;
+	padding-top: 5.2083333vw;
+}
+#SneakPeek * {
+	box-sizing: border-box;	
+}
+#SneakPeek h2 {
+	margin: 0;	
+}
+#HeadlineTextSneakPeek {
+	width: 	36.927083vw;
+	height: 6.770833vw;
+}
+#SneakPeek h3 {
+	font-size: 1.979166vw;
+	color: #20201e;
+	font-weight: 500;	
+	margin-top: 1.979166vw;
+	margin-bottom: 2.864583vw;
+}
+#HRTechLogoSneakPeek {
+	width: 11.45833vw;
+	height: 8.90625vw;
+	position: absolute;
+	top: 0.78125vw;
+	left: 0.78125vw;
+}
+#KeyIntervalLogo {
+	position: absolute;
+	right: 1.5625vw;
+	bottom: 1.3020833vw;	
+	width: 4.375vw;
+	height: 5.989583vw;
+}
+
+#SneakPeek .BlueButton {
+	padding: 0;	
+	border: 3px solid #3e6ab1;
+	max-width: 15.625vw;
+	height: 3.645833vw;
+	font-size: 1.25vw;
+}
+#SneakPeek .BlueButton:hover {
+	background-color: transparent;	
+}
+.hs-form-field > label {
+	display: none
+}
+.hs-button {
+	text-transform: uppercase;	
+}
+@media (max-width: 1100px) {
+#SneakPeek .BlueButton {
+	max-width: 18vw;
+}
+}
+@media (max-width: 640px) {
+#SneakPeek {
+	height: auto;
+	background-image: url(../img/mainpage/sneak-peek/background-640.jpg);
+	background-size: cover;
+	padding-left: 3.125vw;
+	padding-right: 3.125vw;
+	padding-top: 15vw;
+	padding-bottom: 7vw;
+	text-align: center;
+}
+
+#HeadlineTextSneakPeek {
+	width: 	100%;
+	height: auto;
+}	
+#SneakPeek h3 {
+	font-size: 5.625vw;
+	margin-top: 6.25vw;
+	margin-bottom: 12.5vw;
+}
+#HRTechLogoSneakPeek, #KeyIntervalLogo {
+	display: none;
+}	
+#SneakPeek .BlueButton {
+	padding: 0;	
+	border: 3px solid #3e6ab1;
+	max-width: 	93.75vw;
+	height: 21.875vw;
+	font-size: 7.5vw;
+}
+}
+/* END Sneak Peek */
+
+/* Social Love */
+#SocialWrapper {
+	min-height:500px;
+	max-height:700px;
+	overflow:hidden;
+	width:100%;
+	margin:0 auto;
+}
+#SuccessFactorsLogo {
+	margin-left:2vw;
+	
+	}
+#SocialLove {
+	text-align: center;
+	width: 100%;
+	min-height:600px;
+	margin: 0 auto;
+	background-color: #fff;
+}
+#SocialLove h2 {
+	display:inline-block;
+	font-size: 4.6875vw;
+	margin-top: 3.125vw;
+	margin-bottom: 1.5625vw;
+}
+#SocialLove h2 img {
+	width: 3.645833vw;
+	height: 3.333333vw;
+	padding-bottom: 0.260416vw;
+	margin-left: -0.3vw;
+}
+#SocialLove h3 {
+	display:inline-block;
+	font-size: 1.04166vw;
+	color: #010101;
+	margin-bottom: 1.3020833vw;
+	font-weight: 400;
+	position:relative;
+	top:-1vw;
+	left:1vw;
+}
+
+#SocialLoveLoadMoreButton {
+	margin: 3.125vw 0;
+	max-width: 15.625vw;
+	height: 3.64583vw;
+	font-size: 1.25vw;
+	border: 3px solid #106ab5;
+}
+#SocialLoveLoadMoreButton:hover {
+	border: 3px solid #106ab5;
+	background-color: rgba(0, 255, 255, 0)
+}
+
+@media (max-width: 1000px) {
+	#SocialLove h2 {
+		font-size: 9vw;
+		margin-top: 6vw;
+		margin-bottom: 3vw;
+	}
+	#SocialLove h2 img {
+		width: 7vw;
+		height: 6.4vw;
+		padding-bottom: 0.5vw;
+	}
+	#SocialLove h3 {
+		font-size: 2vw;
+		color: #010101;
+		margin-bottom: 2.5vw;
+		font-weight: 400;
+	}
+	
+	
+	#SocialLoveLoadMoreButton {
+		margin: 7.8125vw 0;
+		max-width: 39.0625vw;
+		height: 9.114575vw;
+		padding-top: 0.65104vw;
+		font-size: 3.125vw;
+	}
+}
+@media (max-width: 640px) {
+	#SocialLove h2 {
+		font-size: 11.25vw;
+		margin-top: 7.8125vw;
+		margin-bottom: 4.6875vw;
+	}
+	#SocialLove h2 img {
+		width: 7.8125vw;
+		height: 7.1875vw;
+		padding-bottom: 0.625vw;
+		margin-left: -1.5625vw;
+	}
+	#SocialLove h3 {
+		font-size: 4.0625vw;
+		margin-bottom: 4.6875vw;
+	}
+	
+	#SocialLoveLoadMoreButton {
+		margin: 9.375.75vw 0;
+		max-width: 93.75vw;
+		height: 21.87498vw;
+		padding-top: 1.562496vw;
+		font-size: 7.5vw;
+	}
+}
+@media (max-width:420px) {
+#SuccessFactorsLogo {
+	width:90vw;
+	margin:0 auto;
+	
+	}	
+	}
+/* END Social Love */
+
+/* Venue */
+#Venue {
+	width: 100%;	
+}
+#VenueHeadline {
+	font-size: 5.20833vw;
+	text-align: center;
+	margin: 2vw auto;
+	text-transform:uppercase;
+}
+#VenueInnerContainer {
+	background-image: url(../img/mainpage/venue/venue-bg.jpg);
+	background-size: cover;
+	background-position: top center;
+	text-align: center;
+	box-sizing: border-box;
+	width: 100%;
+	height: 28.6458333333333333vw;
+	padding-top: 13.0208333333333333vw;
+}
+#Pin {
+	width: 2.7083333vw;
+	height: 3.6458333vw;	
+	position: absolute;
+	left: 8.333333vw;
+	top: -4.9479166vw;
+}
+@keyframes PinBounce {
+	0%, 20%, 50%, 75%, 100% { margin-top: 0; }
+	40% { margin-top: -30px; }
+	60% { margin-top: -15px; }
+}
+@-webkit-keyframes PinBounce {
+	0%, 20%, 50%, 75%, 100% { margin-top: 0; }
+	40% { margin-top: -30px; }
+	60% { margin-top: -15px; }
+}
+@-moz-keyframes PinBounce {
+	0%, 20%, 50%, 75%, 100% { margin-top: 0; }
+	40% { margin-top: -30px; }
+	60% { margin-top: -15px; }
+}
+.PinAnimation {
+	animation: PinBounce 2s linear infinite;
+	-webkit-animation: PinBounce 2s linear infinite;
+	-moz-animation: PinBounce 2s linear infinite;
+}
+
+#VenueInfo {
+	width: 100%;
+	max-width: 19.0104166vw;
+	background-color: #fff;
+	border: 1px solid #d9d9d9;
+	margin: 0 auto;
+	padding-top: 0.78125vw;
+	margin-bottom: 1.5625vw;
+	position: relative;
+}
+#VenueInfo h3 {
+	font-size: 1.25vw;
+	font-weight: 800;	
+	margin: 0;
+	margin-bottom: 0.2604166vw;
+}
+#VenueInfo p {
+	font-size: 0.729166vw;
+	font-weight: 300;
+	margin: 0;	
+	margin-bottom: 1.04166vw;
+}
+#ViewInGoogleMapsButton {
+	max-width: 12.1875vw;
+	height: 2.34375vw;	
+	font-size: 0.9375vw;
+	padding: 0; 
+}
+@media (max-width: 1920px) {
+	#VenueInnerContainer {
+		height: 550px;
+		padding-top: 250px;
+	}
+	#VenueHeadline {
+		font-size: 100px;
+		margin: 39px auto;
+	}
+	#Pin {
+		width: 52px;
+		height: 70px;	
+		left: 160px;
+		top: -95px;
+	}
+	#VenueInfo {
+		max-width: 365px;
+		padding-top: 15px;
+		margin-bottom: 30px;
+	}
+	#VenueInfo h3 {
+		font-size: 24px;
+		margin-bottom: 5px;
+	}
+	#VenueInfo p {
+		font-size: 14px;
+		margin-bottom: 20px;
+	}
+	#ViewInGoogleMapsButton {
+		max-width: 234px;
+		height: 45px;	
+		font-size: 18px;
+	}	
+}
+@media (max-width: 1000px) {
+	#VenueHeadline {
+		font-size: 13.0208vw;
+		margin: 9.375vw auto;	
+	}
+}
+@media (max-width: 640px) {
+#VenueInnerContainer {
+	background-image: url(../img/mainpage/venue/venue-mobile-bg.jpg);
+	background-size: cover;
+	width: 100%;
+	height: 118.125vw;
+	padding-top: 53.75vw;
+}
+#VenueHeadline {
+	font-size: 13.75vw;
+	margin: 9.375vw;
+}
+#Pin {
+	width: 11.25vw;
+	height: 15vw;	
+	top: -21.875vw;
+	left: 32.8125vw;
+}
+#VenueInfo {
+	width: 100%;
+	max-width: 78.125vw;
+	padding-top: 3.125vw;
+	margin-bottom: 6.25vw;
+}
+#VenueInfo h3 {
+	font-size: 5.15625vw;
+	margin-bottom: 1.5625vw;
+}
+#VenueInfo p {
+	font-size: 3.125vw;
+	margin-bottom: 4.6875vw;
+}
+	
+#ViewInGoogleMapsButton {
+	max-width: 51.875vw;
+	height: 9.6875vw;	
+	font-size: 4.0625vw;
+}
+}
+
+
+/* END Venue */
+

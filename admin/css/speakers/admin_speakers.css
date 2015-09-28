@@ -1,0 +1,56 @@
+@charset "utf-8";
+/* General Definitions*/
+
+.fa-external-link {
+	padding:10px 10px 10px 0;	
+}
+
+#SpeakerPhotoContainer {
+	width:390px;
+	
+}
+
+#CompanyLogo {
+	  margin-top: 3.90625vw;
+	  max-height:100%;
+}
+
+.CompanyWebsiteEdit {
+	margin-bottom:25px !important;	
+}
+
+.dropzone {
+ min-height:0;
+}
+
+.SysDelete{
+	    text-align: center;
+  padding: 15px;
+  background-color: rgb(46, 169, 224);
+  margin-left: 90%;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  transition:all 0.3s;
+}
+
+.SysDelete:hover {
+background-color: rgba(218, 5, 5, 0.95);	
+}
+
+#MPBioTextClick {
+		    text-align: center;
+  padding: 15px;
+  background-color: rgb(46, 169, 224);
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  transition:all 0.3s;
+  max-width:100px;
+	
+}
+
+#MPBioTextClick:hover {
+	background-color: rgba(218, 5, 5, 0.95);
+	
+}

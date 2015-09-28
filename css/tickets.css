@@ -1,0 +1,411 @@
+@charset "utf-8";
+/* These CSS rules will affect the Tickets page.  */
+
+/* Header */
+header {
+	background-image:url(../img/tickets/ticketsheader.png);
+	background-repeat:no-repeat;
+	background-size: contain;
+	width:100%;
+	height:27.08333vw; 
+	color:#106ab5;
+	margin-top: 4.0625vw;
+	margin-bottom: -5px;
+}
+#HeaderInnerContainer {
+	padding-top: 4.6875vw;
+	padding-left: 16.666666vw;	
+}
+header h1 {
+	font-size:3.125833vw;
+	margin-top: 0px;
+	margin-bottom: 2.4vw;
+}
+header p {
+	width: 100%;
+	max-width:29vw;
+	font-size:1.25vw;
+	line-height: 1.5625vw;
+	margin-bottom: 3.9vw;
+}
+header button {
+	font-size: 1.25vw;
+	font-weight: 600;
+	background-color: rgba(255, 255, 255, 0);
+	color: #106ab5;
+	border: 3px solid #106ab5;
+	padding: 0;
+	max-width: 15.625vw;
+	height: 3.6458333vw;
+	transition: all 0.3s ease-in;
+}
+header button:hover {
+	background-color: #fff;
+	color: #106ab5;
+}
+
+#BookNowButton {
+	font-size: 1.25vw;
+	font-weight: 600;
+	background-color: rgba(255, 255, 255, 0);
+	color: #106ab5;
+	border: 3px solid #106ab5;
+	padding: 0;
+	max-width: 15.625vw;
+	height: 3.6458333vw;
+	text-align: center;
+	
+	text-transform: uppercase;
+	transition: all 0.3s ease-in;
+}
+#BookNowButton:hover {
+	background-color: #106ab5;
+	border: 3px solid #106ab5;
+	color:#fff;
+}
+@media (max-width: 1000px) {
+	header {
+		margin-top: 50px;	
+	}
+}
+@media (max-width: 768px) {
+header {
+	background-image:url(../img/tickets/header-small-tablet.jpg);
+	background-repeat:no-repeat;
+	background-size: contain;
+	width:100%;
+	height:56.25vw; 
+}
+#HeaderInnerContainer {
+	padding-top: 7.8125vw;
+	padding-left: 7.03125vw;	
+}
+header h1 {
+	font-size:6.5625vw;
+	margin-top: 0px;
+	margin-bottom:4.6875vw;
+}
+header p {
+	width: 100%;
+	max-width:51.5625vw;
+	font-size:2.34375vw;
+	line-height: 2.96875vw;
+	margin-bottom:4.6875vw;
+}
+#BookNowButton {
+	font-size: 2.34375vw;
+	border: 1px solid #106ab5;
+	max-width: 28.90625vw;
+	height: 7.03125vw;
+}
+#BookNowButton:hover {
+	background-color: #106ab5;
+	border: 1px solid #106ab5;
+}
+}
+@media (max-width: 640px) {
+header {
+	background-image:url(../img/tickets/header-mobile.jpg);
+	background-repeat:no-repeat;
+	background-size: contain;
+	width:100%;
+	height:150vw; 
+}
+#HeaderInnerContainer {
+	padding-top: 22vw;
+	padding-left: 0;
+	text-align: center;	
+}
+header h1 {
+	font-size:12.5vw;
+	margin-top: 0px;
+	margin-bottom:7.8125vw;
+}
+header p {
+	max-width:78.125vw;
+	font-size:4.0625vw;
+	line-height: 5.625vw;
+	margin: 0 auto;
+	margin-bottom:16vw;
+}
+#BookNowButton {
+	font-size: 4.6875vw;
+	border: 2px solid #106ab5;
+	max-width: 62.5vw;
+	height: 12.5vw;
+	margin-bottom: 16.2vw;
+}
+#BookNowButton:hover {
+	background-color: #106ab5;
+	border: 2px solid #106ab5;
+}	
+#ScrollDownHeaderLinkContainer a span {
+	color: #388bd0;	
+}
+}
+/* END Header */
+
+/* Tickets */
+#TicketsMainContainer {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	padding-bottom: 8vw;
+}
+.TicketContainer {
+	width: 360px;
+	display: inline-block;
+	margin: 0 auto;
+	text-align: left;
+	position: relative;
+	top: 0;
+	transition: all 0.3s;
+}
+.TicketContainer:hover {
+	top: -8px;
+}
+#ThreeDelegateMainContainer {
+	margin: 0 2vw;
+}
+.ContainerShadow {
+	-webkit-box-shadow: 2px 2px 4px 0px rgba(50, 50, 50, 0.25);
+	-moz-box-shadow: 2px 2px 4px 0px rgba(50, 50, 50, 0.25);
+	box-shadow: 2px 2px 4px 0px rgba(50, 50, 50, 0.25);
+}
+.TicketsHeader {
+	margin: 0 auto;
+	text-align: center;
+	height: 90px;
+	width: 100%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.TicketsHeader h6 {
+	color: #fff;
+	font-size: 26px;
+	padding-top: 30px;
+}
+#OneDelegateMainContainer .TicketsHeader {
+	background: url(../img/tickets/onedelegate-bg.jpg);
+	background-size: cover;
+	background-position: center;
+}
+#ThreeDelegateMainContainer .TicketsHeader {
+	background: url(../img/tickets/threedelegate-bg.jpg);
+	background-size: cover;
+	background-position: center;
+}
+#VIPDelegateMainContainer .TicketsHeader {
+	background: url(../img/tickets/vip-bg.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.TicketsInfo {
+	padding: 20px;
+	background: #fff;
+}
+.TicketsInfo p {
+	margin: 0;
+	font-size: 16px;
+}
+.TicketsInfo p span {
+	color: #da3f3f;
+}
+.TicketsInfo ul {
+	margin-left: 0;
+	padding: 0;
+}
+.TicketsInfo ul li {
+	list-style-position: inside;	
+}
+.TicketsPrice {
+	width: 100%;
+	height: 100px;
+	border-bottom: 1px solid rgba(194, 194, 194, 0.76);
+	border-top: 1px solid rgba(194, 194, 194, 0.76);
+}
+.TicketsPrice h4 {
+	margin: 0;
+	margin-top: 30px;
+	font-size: 36px;
+	float: left;
+	text-align: center;
+	width: 250px;
+}
+#VIPDelegateMainContainer .TicketsPrice h4 {
+	width: 100%;
+}
+.SavePriceBox {
+	display: inline-block;
+	float: right;
+	width: 110px;
+	height: 100px;
+	background-color: #da3f3f;
+}
+.SavePriceBox h5 {
+	color: #fff;
+	font-size: 26px;
+	text-transform: uppercase;
+	text-align: center;
+	margin: 0;
+	padding-top: 20px;
+}
+.TicketsButtonContainer {
+	width: 100%;
+	height: 100px;
+	text-align: center;
+}
+.TicketsButtonContainer button {
+	padding: 0 !important;
+	width: 155px;
+	height: 60px;
+	background: #106ab5;
+	font-family: "proxima-nova", sans-serif;
+	font-size: 20px;
+	color: #fff;
+	text-align: center;
+	margin-top: 20px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	border: 3px solid #106ab5;
+	transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+}
+.TicketsButtonContainer button:hover {
+	background: #fff;
+	color: #106ab5;
+	border: 3px solid #106ab5;
+}
+.TicketsButtonContainer button a {
+	color: #fff;
+}
+@media (max-width:1200px) {
+.TicketContainer {
+	width: 30vw;
+}
+.TicketContainer:hover {
+	top: -0.66666vw;
+}
+#ThreeDelegateMainContainer {
+	margin: 0 2vw;
+}
+.TicketsHeader {
+	height: 7.5vw; /* !!!!! */
+}
+.TicketsHeader h6 {
+	font-size: 2.16666vw;
+	padding-top: 2.5vw;
+}
+.TicketsInfo {
+	padding: 1.66666vw;
+}
+.TicketsInfo p {
+	font-size: 1.33333vw;
+}
+.TicketsInfo ul {
+	font-size: 1.33333vw;
+}
+.TicketsPrice {
+	height: 8.333333vw;
+}
+.TicketsPrice h4 {
+	margin-top: 2.5vw;
+	font-size: 3vw;
+	width: 20.83333vw;
+}
+.SavePriceBox {
+	width: 9.16666vw;
+	height: 8.33333vw;
+}
+.SavePriceBox h5 {
+	font-size: 2.1666vw;
+	padding-top: 1.6666vw;
+}
+.TicketsButtonContainer {
+	height: 8.33333vw;
+}
+.TicketsButtonContainer button {
+	width: 12.91666vw;
+	height: 5vw;
+	font-size: 1.6666vw;
+	margin-top: 1.6666vw;
+}
+}
+@media (max-width:767px) {
+#TicketsMainContainer {
+	padding-bottom: 15vw;
+}
+.TicketContainer {
+	width: 360px;
+	display: block;
+	margin: 0 auto;
+}
+.TicketContainer:hover {
+	top: -8px;
+}
+#ThreeDelegateMainContainer {
+	margin: 0 auto;
+}
+.TicketsHeader {
+	height: 90px;
+}
+.TicketsHeader h6 {
+	font-size: 26px;
+	padding-top: 30px;
+}
+.TicketsInfo {
+	padding: 20px;
+}
+.TicketsInfo p {
+	font-size: 16px;
+}
+.TicketsInfo ul {
+	font-size: 16px;
+}
+.TicketsPrice {
+	height: 100px;
+}
+.TicketsPrice h4 {
+	margin-top: 30px;
+	font-size: 36px;
+	width: 250px;
+}
+.SavePriceBox {
+	width: 110px;
+	height: 100px;
+	background-color: #da3f3f;
+}
+.SavePriceBox h5 {
+	font-size: 26px;
+	padding-top: 20px;
+}
+.TicketsButtonContainer {
+	height: 100px;
+}
+.TicketsButtonContainer button {
+	width: 155px;
+	height: 60px;
+	font-size: 20px;
+	margin-top: 20px;
+}
+
+
+}
+@media (max-width:520px) {
+#TicketsMainContainer {
+	padding-bottom: 25vw;
+}
+}
+@media (max-width:400px) {
+.TicketsPrice h4 {
+	width: 54vw;
+}
+.TicketContainer {
+	width: auto;
+	margin: 0 3vw !important;
+}
+}
+/*End Tickets */

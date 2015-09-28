@@ -1,0 +1,115 @@
+@charset "utf-8";
+/* CSS Document of the 404 page */
+
+body {
+	font-family: 'Roboto', sans-serif;	
+	text-align: center;
+	margin: 0;
+	background-image: url(../img/404/wallpaper.jpg);
+	background-size: cover;
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-color: #000;
+	color: #fff;
+}
+h1, h2, h3 {
+	margin: 0;	
+}
+a {
+	color: #fff;
+	text-decoration: none;	
+}
+#Message {
+	width: 100%;
+	max-width: 26.5625vw;
+	background-color: rgba(16, 106, 181, 0.8);
+	padding: 1.5625vw;
+	border-radius: 0.78125vw;
+	margin: 0 auto;	
+	margin-top: 4.427083vw;
+}
+#Message h1 {
+	font-size: 2.5vw;
+	line-height: 100%;
+	font-weight: 500;
+	margin-bottom: 1.04166vw;
+}
+#Message h2 {
+	font-size: 1.875vw;
+	line-height: 2.5vw;	
+	font-weight: 500;
+}
+#HRTechLogo {
+	width: 22.03125vw;
+	height: 16.97916vw;	
+	background-image: url(../img/404/hrtech-congress-logo.png);
+	background-size: cover;
+	margin: 0 auto;
+	margin-top: 9.895833vw;
+	position: relative;
+	left: -1.04166vw;
+}
+#HRTechLogo h2 {
+	padding-top: 2.60416vw;
+	font-size: 2.5vw;
+}
+/*
+@media (max-width: 1920px) {
+body {
+		background-size: auto;
+}
+#Message {
+	max-width: 510px;
+	padding: 30px;
+	border-radius: 15px;
+	margin-top: 85px;
+}
+#Message h1 {
+	font-size: 48px;
+	margin-bottom: 20px;
+}
+#Message h2 {
+	font-size: 36px;
+	line-height: 48px;	
+}
+#HRTechLogo {
+	width: 423px;
+	height: 326px;	
+	margin-top: 190px;
+	left: -20px;
+}
+#HRTechLogo h2 {
+	padding-top: 50px;
+	font-size: 48px;
+}
+}*/
+@media (max-width: 1000px) {
+body {
+	background-image: url(../img/404/wallpaper-768.jpg);
+	background-size: cover;
+}
+#Message {
+	max-width: 66.40625vw;
+	padding: 3.90625vw;
+	border-radius: 1.953125vw;
+	margin-top: 11.067708vw;
+}
+#Message h1 {
+	font-size: 6.25vw;
+	margin-bottom: 2.604166vw;
+}
+#Message h2 {
+	font-size: 4.6875vw;
+	line-height: 6.25vw;	
+}
+#HRTechLogo {
+	width: 55.078vw;
+	height: 42.447916vw;	
+	margin-top: 20vw;
+	left: -1vw;
+}
+#HRTechLogo h2 {
+	padding-top: 6.510416vw;
+	font-size: 6.25vw;
+}
+}

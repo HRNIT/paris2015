@@ -1,0 +1,202 @@
+@charset "utf-8";
+/* These CSS rules will effect every page. Use this file keeping this in mind and override the settings with the custom CSS is necessary */
+
+
+/* General HTML tag rules */
+body {
+	background: #fff;
+	color: #353530;
+	font-family: 'Raleway', sans-serif;
+	margin:0 auto;
+	padding:0;
+	width:100%;
+	overflow-x:hidden;
+}
+
+section {    /* Override default behavior */
+	margin:0;
+	width:100%;
+	padding:0;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: "proxima-nova", sans-serif;
+}
+
+a {
+	text-decoration: none;	
+}
+
+:focus {
+	outline: none;	
+}
+
+button {
+	max-width:300px;
+	width:100%;
+	height:70px;
+	text-align:center;
+	padding-top:5px;
+	font-size:24px;
+	font-weight:bold;
+	text-transform:uppercase;
+	border:0;	
+}
+
+button:hover {
+	cursor:pointer;
+}
+	
+/* General classes */
+
+.BlueText {
+	color: #106ab5;
+}
+.RedText {
+	color: #fd494e;
+}
+
+.WhiteText {
+	color: #fff;
+}
+.YellowText {
+	color: #efed44;
+}
+.FontRaleway {
+	font-family: 'Raleway', sans-serif;
+}
+.FontProximaNova {
+	font-family: "proxima-nova", sans-serif;
+}
+.FontSourceSansPro {
+	font-family: 'Source Sans Pro', sans-serif;	
+}
+.FontLato {
+	font-family: 'Lato', sans-serif;
+}
+.InvisibleHeadline {   		/*Make sections W3C valid without breaking their layout. */
+	position: absolute;
+	opacity: 0;
+}
+.BlueButton {
+	background:#106ab5;	
+	color:white;
+	transition:all 0.3s;
+	cursor:pointer;
+	padding:1vw 1.25vw;
+	}	
+.BlueButton:hover {
+	background:white;	
+	color:#106ab5;
+}
+.BlackButton {
+	background:#1a1a18;	
+	color:white;
+	transition:all 0.3s;
+}	
+.BlackButton:hover {
+	background:white;	
+	color:#1a1a18;
+}
+
+/* Headers Scroll Down text and icon */
+#ScrollDownHeaderLinkContainer {
+	display: none;
+}
+@media (max-width: 640px) {
+#ScrollDownHeaderLinkContainer {	
+	display: block;
+	text-transform: uppercase;
+	font-size: 4.6875vw;
+	transition: all 0.3s;
+	text-align: center;	
+}
+#ScrollDownHeaderLinkContainer a span {
+	z-index: 2;
+	position: relative;
+}
+#ScrollDownIcon {
+	display: block;
+	width: 11.875vw;
+	height: 11.875vw;
+	margin: 0 auto;
+	margin-top: -5vw;
+}
+}
+/* END Headers Scroll Down text and icon */
+
+/*Social Widget */
+#SocialWidgetWrapper {
+	position:fixed;
+	top:20vw;
+	float:left;
+	z-index:100;
+	box-sizing: border-box;
+}
+#SocialWidgetWrapper * {
+	box-sizing: border-box;	
+}
+@media (max-width: 640px) {
+	#SocialWidgetWrapper {
+		top:55vw;
+	}	
+}
+#SocialWidgetWrapper div {
+	height:3vw;
+	width:3vw;
+	min-height:45px;
+	min-width:45px;
+	color:#fff;
+	font-size: 1.5625vw;
+	transition: all 0.2s;
+	text-align:right;
+	padding:0.5vw 1vw 0 0;
+}
+#SocialWidgetWrapper div:hover {	
+width:4vw;
+min-width:55px;
+}
+
+#FacebookShare {
+	background:#3b5998;
+	}
+
+#SocialWidgetWrapper #TwitterShare{
+	background:#4099ff;
+	padding-right: 0.8vw;
+	}
+#LinkedInShare {
+	background:#007bb6;
+}
+@media (max-width: 1920px) {
+#SocialWidgetWrapper div {
+	font-size: xx-large;
+	padding-right: 1vw;	
+}
+#SocialWidgetWrapper #TwitterShare{
+	padding-right: 1vw;
+}
+}
+
+/*END Social Widget */
+	
+/* Go to Top button */
+#GoTopImg {
+	background-color: rgba(10, 66, 113, 0.57);
+	width: 54px;
+	height: 54px;
+	bottom: 25px;
+	right: 25px;
+	text-align: center;
+	position: fixed;
+	z-index: 10000;
+	transition: all 0.3s;
+}
+#GoTopImg:hover {
+	background-color: rgba(10, 66, 113, 1);
+}
+#GoTopImg .fa {
+	font-size: 30px;
+	color: #f4f4f2;
+	padding-top: 10px;
+}
+/* END Go to Top button */

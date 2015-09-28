@@ -1,0 +1,190 @@
+.NormalSession {
+	cursor: default;	
+}
+.BreakSession {
+  position: relative;	
+	
+}
+.SessionTitleAdmin {
+	cursor: pointer;	
+	transition: all 0.3s;
+}
+.SessionTitleAdmin:hover {
+	text-decoration: underline;	
+}
+
+.SpeakerInfoAdmin, .SpeakerInfoAdminNew, .SessionAbstract, .SessionDelete{
+ display: inline-block;
+  border: 1px solid;
+  padding: 0.5vw;
+  margin: 0 0.6vw 0 0;
+  cursor: pointer; 
+  transition: all 0.3s;
+}
+.SpeakerInfoAdmin:hover, .SpeakerInfoAdminNew:hover, .SessionAbstract:hover, .SessionDelete:hover { 
+	background-color: #353530;
+	color: #fff;
+}
+
+.TimeSelector {
+  width: 56px;
+  height: 28px;
+  padding: 5px;
+	
+}
+
+.CategorySelector {
+  height: 28px;
+  width: 158px;	
+  padding: 5px;
+}
+
+.SessionAbstract{
+  right: 148px;
+  position: absolute;
+  margin-top: -80px;
+  
+}
+
+.SessionSpeakerContainerBox{
+	  margin-top: 15px;
+}
+
+.SpeakerModalButton, .SpeakerDeleteModalButton, .AdminModalButton, .AdminTestimonialTypeButton, .TestimonialSpeakerModalButton, .TestimonialSpeakerDeleteModalButton, .TestimonialQuoteDeleteModalButton, .TestimonialQuoteModalButton, #NewQuote, .EditQuoteButton, #EditQuotes, .AdminSponsorTypeButton, .TestimonialSponsorModalButton, .TestimonialSponsorDeleteModalButton{
+border: 1px solid;
+  padding: 0.5vw;
+  margin: 0.6vw;
+  cursor: pointer;
+  width: 183px;
+  display: inline-block;
+  transition: all 0.3s;
+}
+.SpeakerModalButton:hover, .SpeakerDeleteModalButton:hover, .AdminModalButton:hover, .AdminTestimonialTypeButton:hover, .TestimonialSpeakerModalButton:hover, .TestimonialSpeakerDeleteModalButton:hover, .TestimonialQuoteDeleteModalButton:hover, .TestimonialQuoteModalButton:hover, #NewQuote:hover, .EditQuoteButton:hover, #EditQuotes:hover, .AdminSponsorTypeButton:hover, .TestimonialSponsorModalButton:hover{ 
+	background-color: #353530;
+	color: #fff;
+}
+
+
+.TestimonialSponsorDeleteModalButton{
+   background-color: #353530;
+	color: #fff;
+}
+
+.TestimonialSponsorDeleteModalButton:hover {
+   background-color: #66A6E0;
+	color: #fff;
+}
+
+.AdminModalButton{
+	background-color: #7CA7A4;
+	color: #fff;
+}
+
+	
+.SessionTitleEditor{
+  width: 430px;
+  margin: 15px 461px 15px 0;
+  height:28px;
+}
+
+.DaySelector{
+  height: 28px;
+  width: 90px;	
+  padding: 5px;
+}
+
+.SessionDelete{
+	    right: 2px;
+  position: absolute;
+  margin-top: -80px;
+}
+
+.InfoText {
+font-size: 13px !important;
+line-height: 23px !important;	
+	
+}
+
+.ModalWarning{
+	color:#D40205;	
+}
+
+#TestimonialTypeContainer{
+	border: 1px solid #ABA9A9;
+	padding: 1vw;
+	
+}
+
+#SelectedSpeaker{
+border: 1px solid #ABA9A9;
+margin-top: 1vw;
+padding: 1vw;	
+}
+
+
+.reveal-modal p {
+    font-size: 15px !important;
+	line-height: 21px !important;
+}
+
+.AdminBlock {
+   border: 1px solid rgb(224, 214, 214);
+   cursor:pointer;	
+}
+
+#NewQuote, #EditQuotes{
+	font-size: 26px;
+}
+
+.AdminInputField {
+	-webkit-appearance: none;
+    -webkit-border-radius: 0px;
+	 background-color: white;
+	font-family: inherit;
+	border: 1px solid #cccccc;
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+	color: rgba(0, 0, 0, 0.75);
+	display: block;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
+	padding: 0.5rem;
+    margin: 0 0 1rem 0;
+	width:100%;
+	transition:all 0.6s;
+	
+	font-size: 20px;
+	height: 56px;
+ 
+	
+	/*
+	  height: 2.3125rem;
+	 font-size: 0.875rem;	
+
+	*/
+}
+
+#Sponsors {
+ height:auto !important;	
+}
+#QuoteEditField{
+	display:none;
+}
+
+#EditSponsorButton, #EditAgendaSponsorLogo{
+  border: 1px solid;
+  padding: 0.5vw;
+  margin: 2vw auto;
+  cursor: pointer;
+  width: 500px;
+  transition: all 0.3s;
+  text-align:center;
+  font-size:25px;
+}
+
+#EditSponsorButton:hover, #EditAgendaSponsorLogo:hover{
+	background-color: #353530;
+	color: #fff;
+	
+}

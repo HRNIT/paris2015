@@ -1,0 +1,56 @@
+/*This CSS file contains the definitions of the 404 page*/
+
+body {
+	font-size: 10px;
+}
+body * {
+	padding: 0;
+	margin: 0;
+	box-sizing:border-box;
+}
+section {
+	width: 100%;
+	max-width: 720px;
+	margin: 0 auto;
+	padding: 10px;
+	text-align: center;
+}
+h1, h2, h3, a {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	color: #2daae1;
+	text-transform: uppercase;
+}
+h1, h3 { font-size: 3em; }
+h2 { font-size: 2.4em; }
+
+#ImageContainer {
+	width: 100%;
+	max-width: 700px;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+#Image404 {
+	margin-top: 60px;
+	margin-bottom: 85px;
+}
+#BackButton {
+	margin-top: 70px;
+	margin-bottom: 10px;
+}
+
+@media (max-width: 1024px){
+	body {	font-size: 9px;	}
+	#BackButton { width: 8%;}
+}
+@media (max-width: 768px){
+	body {	font-size: 9px;	padding-top: 80px;	}
+}
+@media (max-width: 480px){
+	body {	font-size: 8px;	}
+	#BackButton { width: 12%;}
+}
+@media (max-width: 360px){
+	body {	font-size: 6px;	padding-top: 20px;	}
+	#BackButton { width: 14%;}
+}

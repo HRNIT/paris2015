@@ -1,0 +1,976 @@
+@charset "utf-8";
+/* These CSS rules will affect the sponsors page.  */
+
+
+/* Header */
+header {
+	background-image:url(../img/speakers/header.jpg);
+	background-repeat:no-repeat;
+	background-size: contain;
+	width:100%;
+	height:27.08333vw; 
+	color:#fff;
+	margin-top: 4.0625vw;
+}
+#HeaderInnerContainer {
+	padding-top: 4.6875vw;
+	padding-left: 16.666666vw;	
+}
+header h1 {
+	font-size:3.125833vw;
+	margin-top: 0px;
+	margin-bottom:2.34375vw;
+}
+header p {
+	width: 100%;
+	max-width:30.46875vw;
+	font-size:1.25vw;
+	line-height: 1.5625vw;
+	margin-bottom:3.645833vw;
+}
+header button {
+	font-size: 1.25vw;
+	font-weight: 600;
+	background-color: rgba(255, 255, 255, 0);
+	color: #fff;
+	border: 3px solid #fff;
+	padding: 0;
+	max-width: 15.625vw;
+	height: 3.6458333vw;
+	transition: all 0.3s ease-in;
+}
+header button:hover {
+	background-color: #106ab5;
+	border: 3px solid #106ab5;
+}
+@media (max-width: 1000px) {
+	header {
+		margin-top: 50px;	
+	}
+}
+@media (max-width: 768px) {
+header {
+	background-image:url(../img/speakers/header-small-tablet.jpg);
+	background-repeat:no-repeat;
+	background-size: contain;
+	width:100%;
+	height:56.25vw; 
+}
+#HeaderInnerContainer {
+	padding-top: 7.8125vw;
+	padding-left: 7.03125vw;	
+}
+header h1 {
+	font-size:6.5625vw;
+	margin-top: 0px;
+	margin-bottom:4.6875vw;
+}
+header p {
+	width: 100%;
+	max-width:47.65625vw;
+	font-size:2.5vw;
+	line-height: 3.4375vw;
+	margin-bottom:6.25vw;
+}
+header button {
+	font-size: 2.34375vw;
+	border: 1px solid #fff;
+	max-width: 28.90625vw;
+	height: 7.03125vw;
+}
+header button:hover {
+	background-color: #106ab5;
+	border: 1px solid #106ab5;
+}
+}
+@media (max-width: 640px) {
+header {
+	background-image:url(../img/speakers/header-mobile.jpg);
+	background-repeat:no-repeat;
+	background-size: contain;
+	width:100%;
+	height:150vw;
+}
+#HeaderInnerContainer {
+	padding-top: 19vw;
+	padding-left: 0;
+	text-align: center;	
+}
+header h1 {
+	font-size:12.5vw;
+	margin-top: 0px;
+	margin-bottom:7.8125vw;
+}
+header p {
+	max-width:78.125vw;
+	font-size:4.0625vw;
+	line-height: 5.625vw;
+	margin: 0 auto;
+	margin-bottom:21.875vw;
+}
+header button {
+	font-size: 4.6875vw;
+	border: 2px solid #fff;
+	max-width: 62.5vw;
+	height: 12.5vw;
+	margin-bottom: 15.3vw;
+}
+header button:hover {
+	background-color: #106ab5;
+	border: 2px solid #106ab5;
+}	
+#ScrollDownHeaderLinkContainer a span {
+	color: #a5c0d4;	
+}	
+}
+/* END Header */
+	
+/* Main Content */
+#MainContent {
+	box-sizing: border-box;	
+}
+#MainContent * {
+	box-sizing: border-box;	
+}
+/* END Main Content */
+/* Search Bar */
+#SearchBarContainer {
+	width: 100%; 
+	height: 3.22916666vw; 
+	background-color: #106ab5;	
+}
+#SearchBarInnerContainer {
+	width: 100%;
+	max-width: 59.375vw; 
+	height: 100%; 
+	margin: 0 auto; 
+	position: relative;
+}
+#FilterSpeakersButton {
+	/*display: inline-block; */
+	display:none;
+	width: 11.6145833vw; 
+	height: 100%; 
+	position: absolute;
+	right: 5.46875vw; 
+	top: 0;
+	background-color: #002b49; 
+	border-left: 3px solid #1f7dcc; 
+	cursor: pointer;
+	transition: all 0.3s;	
+}
+#FilterSpeakersButton:hover {
+	background-color: #ff6147; 
+	border-left: 3px solid #d05440; 
+}
+#FilterSpeakersButton img {
+	width: 0.78125vw;
+	height: 0.9895833vw;
+	margin-left: 1.041666vw; 
+	margin-top: 1.145833vw;	
+}
+#FilterSpeakersButton span {
+	color: #fffefe; 
+	font-size: 0.9375vw; 
+	font-weight: 700; 
+	padding-left: 0.520833vw;	
+	position: relative; 
+	top: -0.104166vw;
+}
+#SpeakersMobileHeadlineText {
+	display: none;
+}
+@media (max-width: 1919px) {
+	#SearchBarContainer {
+		height: 62px; 
+	}
+	#SearchBarInnerContainer {
+		max-width: 1140px; 
+	}
+	#FilterSpeakersButton {
+		width: 223px; 
+		right: 105px; 
+		top: 0;
+		border-left: 3px solid #1f7dcc; 
+	}
+	#FilterSpeakersButton:hover {
+		border-left: 3px solid #d05440; 
+	}
+	#FilterSpeakersButton img {
+		width: 15px;
+		height: 19px;
+		margin-left: 20px; 
+		margin-top: 22px;	
+	}
+	#FilterSpeakersButton span {
+		font-size: 18px; 
+		padding-left: 10px;	
+		top: -2px;
+	}
+}
+@media (max-width: 1280px) {
+	#SearchBarContainer {
+		height: 4.84375vw; 
+	}
+	#SearchBarInnerContainer {
+		max-width: 89.0625vw; 
+	}
+	#FilterSpeakersButton {
+		width: 17.421875vw; 
+		right: 8.203125vw; 
+		top: 0; 
+	}
+	#FilterSpeakersButton img {
+		width: 1.171875vw;
+		height: 1.484375vw;
+		margin-left: 1.5625vw; 
+		margin-top: 1.71875vw;	
+	}
+	#FilterSpeakersButton span {
+		font-size: 1.40625vw; 
+		padding-left: 0.78125vw;	
+		top: -0.25625vw;
+	}
+}
+@media (max-width: 1000px) {
+	#SearchBarContainer {
+		height: 62px; 
+	}
+	#SearchBarInnerContainer {
+		max-width: 100%; 
+	}
+	#SpeakersMobileHeadlineText	{
+		display: block;	
+		text-align: center; 
+		width: 100%; 
+		max-width: 200px; 
+		margin: 0 auto; 
+		font-size: 30px; 
+		color: #fff; 
+		padding-top: 10px;	
+	}
+	#FilterSpeakersButton {
+		width: 67px;
+		right: 0;
+		text-align: center;
+	}
+	#FilterSpeakersButton img {
+		width: 15px;
+		height: 19px;
+		margin-left: 0px; 
+		margin-top: 22px;	
+	}
+	#FilterSpeakersButton span {
+		display: none;
+	}
+}
+@media (max-width: 640px) {
+	#SearchBarContainer {
+		width: 100%; 
+		height: 55px; 
+		background-color: #106ab5;	
+	}	
+	#SpeakersMobileHeadlineText	{
+		display: block;	
+		font-size: 20px;
+		padding-top: 15px;
+	}
+	#FilterSpeakersButton img {
+		margin-left: 0px; 
+		margin-top: 18px;	
+	}
+}
+/*End Search Bar */
+
+/* Selected Filters */
+#SelectedFiltersContainer {
+	width: 100%;
+	max-width: 59.375vw;
+	color: #002b49;
+	margin: 0 auto;	
+	margin-top: 1.8229166vw;
+}
+#Filter {
+	font-size: 20px;
+}
+#SelectedFiltersContainer ul {
+	display: inline;
+	padding: 0;
+	margin-left: 10px;
+}
+#SelectedFiltersContainer ul li {
+	display: inline-block;	
+	border-radius: 90px;
+	color: #fff;
+	font-size: 18px;
+	padding: 2px 10px; 
+	margin: 0 5px 10px 0;
+}
+#ClearFilters {
+	font-size: 18px; 
+	text-decoration: underline; 
+	margin-left: 10px;	
+	white-space: nowrap;
+	cursor: pointer;
+}
+@media (max-width: 1919px) {
+	#SelectedFiltersContainer {
+		width: 100%;
+		max-width: 1140px;
+		margin-top: 35px;
+	}
+	#Filter {
+		font-size: 20px;
+	}
+	#SelectedFiltersContainer ul {
+		margin-left: 10px;
+	}
+	#SelectedFiltersContainer ul li {
+		font-size: 18px;
+		padding: 2px 10px; 
+		margin: 0 5px 10px 0;
+	}
+	#ClearFilters {
+		font-size: 18px; 
+		margin-left: 10px;	
+	}
+}
+@media (max-width: 1280px) {
+	#SelectedFiltersContainer {
+		max-width: 89.0625vw;	
+	}
+}
+@media (max-width: 1000px) {
+	#SelectedFiltersContainer {
+		max-width: 100%;
+		padding-left: 2.6041666666666667vw;
+		padding-right: 2.6041666666666667vw;
+		margin-top: 2.604166vw;
+	}
+	#Filter {
+		font-size: 16px;
+	}
+	#SelectedFiltersContainer ul {
+		margin-left: 0.65104166vw;
+	}	
+	#SelectedFiltersContainer ul li {
+		font-size: 14px;
+		padding: 2px 10px; 
+		margin: 0 5px 5px 0;
+	}
+	#ClearFilters {
+		font-size: 14px; 
+		margin-left: 5px;	
+	}
+}
+@media (max-width: 640px) {
+	#SelectedFiltersContainer {
+		padding-left: 6.25vw;
+		padding-right: 6.25vw;
+		margin-top: 4.6875vw;
+	}
+	#ClearFilters {
+		margin-left: 0;	
+		margin-top: 10px;
+		display: block;
+		text-align: center;
+	}
+}
+#SelectedFiltersContainer ul #FutureOfWorkforceLearningLabel,
+#SelectedFiltersContainer ul #HRTechnologyLabel,
+#SelectedFiltersContainer ul #ProductDemoLabel,
+#SelectedFiltersContainer ul #PayrollAndRewardsLabel,
+#SelectedFiltersContainer ul #FutureOfWorkLabel,
+#SelectedFiltersContainer ul #UserAdoptionLabel,
+#SelectedFiltersContainer ul #HRAnalyticsAndReportingLabel,
+#SelectedFiltersContainer ul #MainStageLabel,
+#SelectedFiltersContainer ul #CloudTechnologyLabel,
+#SelectedFiltersContainer ul #LabsAndExecutiveBriefingsLabel,
+#SelectedFiltersContainer ul #RoundTableLabel,
+#SelectedFiltersContainer ul #TalentAndRecruitmentTechnologyLabel,
+#SelectedFiltersContainer ul #SocialCollaborationLabel,
+#SelectedFiltersContainer ul #HRSharedServicesAndPayrollLabel,
+#ClearFilters {
+	display: none;	
+}
+/* END Selected Filters */
+
+/* Speakers */
+#Speakers {
+	width: 100%;	
+}
+
+/* Filters */
+#FiltersContainer {
+	width: 100%;
+	max-width: 60.9375vw;
+	margin: 0 auto;	
+	display: none;
+}
+#FilterHeadline {
+	width: 100%;
+	height: 4.1666666vw;
+}
+#FilteringSpeakers, #FiltersCloseButton {
+	display: inline-block;
+	margin-top: 1.40625vw;
+}
+#FilteringSpeakers {
+	font-size: 1.145833vw;	
+	margin-left: 0.78125vw;
+}
+#FiltersCloseButton {
+	font-size: 0.9375vw;
+	float: right;
+	margin-right: 0.78125vw;	
+	cursor: pointer;
+}
+#FiltersCloseButton img {
+	width: 0.67708333vw;
+	height: 0.67708333vw;
+	margin-left: 0.520833vw;	
+}
+#Filters {
+	font-size: 0;	
+}
+.Filter {
+	display: inline-block;
+	width: 100%;
+	max-width: 7.1354166vw;
+	height: 6.5104166vw;	
+	margin-left: 0.78125vw;
+	margin-right: 0.78125vw;
+	margin-bottom: 0.572916vw;
+	text-align: center;	
+	position: relative;
+	vertical-align: top;
+	background-color: #fff;
+	cursor: pointer;
+	z-index: 0;	
+	transition: all 0.2s;
+}
+.FilterColor {
+	width: 100%;
+	height: 0.2604166vw;
+	position: absolute;
+	top: 0;
+	transition: all 0.3s;
+}	
+.Filter img {
+	width: 2.8125vw;
+	height: 2.8125vw;
+	margin: 0.8854166vw 0 0.625vw 0;	
+	z-index: 1;
+}
+.FilterStageName {
+	color: #000;
+	font-size: 0.6286458vw;
+	margin: 0;
+	z-index: 1;
+}
+							/* hover effect */ 
+.Filter:hover > .FilterColor, .FilterColorSelected {
+	height: 100% !important;
+	cursor: pointer;
+	z-index: -1;
+}
+.Filter:hover > .FilterStageName, .FilterStageNameSelected {
+	color: #fff;
+}
+#ApplyButtonContainer {
+	width: 100%;
+	text-align: center;	
+}
+#ApplyFiltersButton {
+	max-width: 7.1354166vw;
+	height: 2.34375vw;
+	font-size: 0.9375vw;
+	margin: 1.5625vw 0 0.5208333vw 0;
+	padding-top: 0.416666vw;
+	border: 3px solid #106ab5;
+}
+#ApplyFiltersButton:hover {
+	background-color: transparent;	
+	color: #106ab5; 
+}
+#FiltersContainerMobile {
+	display: none;	
+}
+@media (max-width: 1919px) {
+	#FiltersContainer {
+		width: 100%;
+		max-width: 1170px;
+	}
+	#FilterHeadline {
+		width: 100%;
+		height: 80px;
+	}
+	#FilteringSpeakers, #FiltersCloseButton {
+		margin-top: 27px;
+	}
+	#FilteringSpeakers {
+		font-size: 22px;	
+		margin-left: 15px;
+	}
+	#FiltersCloseButton {
+		font-size: 18px;
+		margin-right: 15px;	
+	}
+	#FiltersCloseButton img {
+		width: 13px;
+		height: 13px;
+		margin-left: 10px;	
+	}
+	.Filter {
+		max-width: 137px;
+		height: 125px;	
+		margin-left: 15px;
+		margin-right: 15px;
+		margin-bottom: 11px;
+	}
+	.FilterColor {
+		height: 5px;
+	}
+	.Filter img {
+		margin: 17px 0 12px 0;	
+	}
+	.FilterStageName {
+		font-size: 12.07px;
+	}
+	
+	#ApplyFiltersButton {
+		max-width: 137px;
+		height: 45px;
+		font-size: 18px;
+		margin: 30px 0 10px 0;
+		padding-top: 8px;
+	}
+}
+@media (max-width: 1280px) {
+	#FiltersContainer {
+		max-width: 91.40625vw;
+	}
+	#FilterHeadline {
+		height: 6.25vw;
+	}
+	#FilteringSpeakers, #FiltersCloseButton {
+		margin-top: 2.109375vw;
+	}
+	#FilteringSpeakers {
+		font-size: 1.71875vw;	
+		margin-left: 1.171875vw;
+	}
+	#FiltersCloseButton {
+		font-size: 1.40625vw;
+		margin-right: 1.171875vw;	
+	}
+	#FiltersCloseButton img {
+		margin-left: 0.78125vw;	
+	}
+	
+	.Filter {
+		max-width: 10.703125vw;
+		height: 9.765625vw;	
+		margin-left: 1.171875vw;
+		margin-right: 1.171875vw;
+		margin-bottom: 0.859375vw;
+	}
+	.FilterColor {
+		height: 0.390625vw;
+	}
+	.Filter img {
+		margin: 1.328125vw 0 0.9375vw 0;
+		width: 	4.21875vw;
+		height: 4.21875vw;
+	}
+	.FilterStageName {
+		font-size: 0.94296875vw;
+	}
+	#ApplyFiltersButton {
+		max-width: 10.703125vw;
+		height: 3.515625vw;
+		font-size: 1.40625vw;
+		margin: 2.34375vw 0 0.78125vw 0;
+		padding-top: 0.625vw;
+		border: 3px solid #106ab5;
+	}
+}
+@media (max-width: 1000px) {
+	#FiltersContainer {
+		max-width: 100%;
+		padding-left: 1.953125vw;
+	}
+	#FilterHeadline {
+		height: 10.41666666vw;
+	}
+	#FilteringSpeakers, #FiltersCloseButton {
+		margin-top: 3.515625vw;
+	}
+	#FilteringSpeakers {
+		font-size: 2.864583333vw;	
+		margin-left: 0.6510416vw;
+	}
+	#FiltersCloseButton {
+		font-size: 2.34375vw;
+		margin-right: 3.125vw;	
+	}
+	#FiltersCloseButton img {
+		width: 1.69270833vw;
+		height: 1.69270833vw;
+		margin-left: 1.302083vw;	
+	}
+	
+	.Filter {
+		max-width: 17.838541vw;
+		height: 16.2760416vw;	
+		margin-left: 0.6510416666666667vw;
+		margin-right: 0.6510416666666667vw;
+		margin-bottom: 1.3020833vw;
+	}
+	.FilterColor {
+		height: 0.6510416vw;
+	}
+	.Filter img {
+		margin: 2.21354166vw 0 1.5625vw 0;
+		width: 	7.03125vw;
+		height: 7.03125vw;
+	}
+	.FilterStageName {
+		font-size: 1.57161458vw;
+	}
+	#ApplyFiltersButton {
+		max-width: 17.8385416vw;
+		height: 5.859375vw;
+		font-size: 2.34375vw;
+		margin: 2.6041666vw 0 1.953125vw;
+		padding-top: 1.0416666vw;
+	}
+}
+@media (max-width: 640px) {
+	#FiltersContainer {
+		display: none;	
+	}
+	/* Filters Mobile */
+	#FiltersContainerMobile {
+		/*display: block;*/
+		display: none;
+		position: fixed;
+		top: 0;
+		right: -100vw;
+		width: 100%;
+		height: 100%;
+		background-color: #fff;
+		overflow-y: scroll;
+		
+		transition: all 0.3s;
+		z-index: 6000;
+	}
+	#FilterHeadlineMobile {
+		padding: 22px;
+		width: 100%;
+		height: 60px;
+		background-color: #fff;
+		position: fixed;
+		z-index: 6001;
+	}
+	#FilteringSpeakersMobile {
+		font-size: 22px;
+		margin-top: -7px;
+		display: inline-block;
+	}
+	#FiltersCloseButtonMobile {
+		float: right;
+		margin-right: 5px;
+	}
+	#FiltersCloseButtonMobile img {
+		width: 17px;
+		height: 17px;
+	}
+	
+	#FiltersContainerMobile ul {
+		padding: 0;	
+		font-size: 0;
+		margin-top: 60px;
+	}
+	.FilterMobile {
+		width: 100%;
+		height: 60px;
+		background-color: #fff;
+		border-bottom: 1px solid #e3e3e3;	
+	}
+	.FilterColorMobile {
+		display: inline-block;
+		float: left;
+		width: 8px;
+		height: 100%;
+	}
+	.FilterMobile img {
+		width: 34px;
+		height: 34px;
+		margin-top: 12px;
+		margin-left: 11px;	
+		margin-right: 11px;
+	}
+	.FilterStageNameMobile {
+		 width: 100%; 
+		 max-width: 180px; 
+		 display: inline-block; 
+		 margin: 0; 
+		 font-size: 17px; 
+		 color: #000; 
+		 font-weight: 700;	
+	}
+	.ShortStageNameMobile {
+		position: relative;
+		top: -10px;	
+	}
+	.FilterCircleMobile {
+		display: inline-block;
+		float: right;
+		margin-right: 25px;
+		margin-top: 20px;
+		width: 21px;
+		height: 21px;
+		background-color: #bebebe;
+		border-radius: 90px;
+		border: 3px solid #e3e3e3;	
+	}
+
+	.FilterCircleMobileFill {
+		display: inline-block;
+		position: relative;
+		top: -3px;
+		left: -3px;
+		width: 21px;
+		height: 21px;
+		transform: scale(0.1, 0.1);
+		-moz-border-radius: 90px; -webkit-border-radius: 90px; border-radius: 90px;
+		background-color: #bebebe;
+		transition: all 0.3s;
+	}
+	.FilterMobile:hover > .FilterCircleMobile > .FilterCircleMobileFill, .FilterMobileSelected {
+		transform: scale(1,1); 
+		background-color: #106ab5;
+	}
+	#ApplyFiltersButtonMobile {
+		max-width: 100%;
+		position: fixed;
+		bottom: 0;
+		height: 60px;
+		font-size: 20px;
+	}
+	/* END Filters Mobile */
+}
+/* END Filters */
+
+
+
+/* Speakers Grid */
+#SpeakersGrid {
+	width: 100%;
+	max-width: 60.677083vw;
+	margin: 0 auto;
+	font-size: 0; /* This snaps the inline-block divs to eachother. Source: http://stackoverflow.com/questions/14241696/how-to-get-rid-of-space-between-divs-when-display-inline-block-and-stacked-horiz 
+					comment this line and see what happens. */
+	padding: 1.5625vw 0 2.34375vw 0;
+}
+.Speaker {
+	width: 100%;
+	max-width: 13.5416666vw;
+	margin: 0 0.78125vw 2.4479166vw 0.78125vw;
+	display: inline-block;
+	vertical-align: top;
+}
+.SpeakerPhoto {
+	width: 100%;
+	max-width: 13.541666vw;
+	height: 13.541666vw;
+	background-size: cover;
+}
+.SelectedSpeakerColor {
+	display: inline-block;
+	float: left;
+	height: 5px; /* fixed 5px on all layout */
+}
+
+.SpeakerInfo {
+	width: 100%;
+	font-weight: 600;
+	padding: 0.8854166vw 0 0 0;
+}
+.SpeakerName, .Jobtitle, .CompanyName {
+	margin: 0;	
+}
+.SpeakerName {
+	font-size: 1.0416666vw;
+}
+.Jobtitle, .CompanyName {
+	font-size: 0.729166vw;
+	color: #6c6c6c;
+}
+.Jobtitle {
+	font-weight: 400;
+	line-height: 1.458333vw;	
+}
+.CompanyName {
+	font-weight: 700;
+	line-height: 1.25vw;
+}
+@media (max-width: 1919px) { /* from 1280 to 1919 everything is defined in pixels */
+	#SpeakersGrid {
+		max-width: 1165px;
+		padding-bottom: 45px;
+		padding-top: 30px;
+	}
+	.Speaker {
+		max-width: 260px;
+		margin: 0 15px 47px 15px;
+	}
+	.SpeakerPhoto {
+		max-width: 260px;
+		height: 260px;
+	}
+	
+	.SpeakerInfo {
+		padding: 17px 0 0 0;
+	}
+	.SpeakerName, .Jobtitle, .CompanyName {
+		line-height: 18px;	
+	}
+	.SpeakerName {
+		font-size: 20px;
+		line-height: 28px;
+	}
+	.Jobtitle, .CompanyName {
+		font-size: 14px;
+		line-height: 24px;
+	}
+}
+@media (max-width: 1280px) {
+	#SpeakersGrid {
+		max-width: 91.015625vw;
+		padding-bottom: 3.515625vw;
+		padding-top: 2.34375vw;
+	}
+	.Speaker {
+		max-width: 20.3125vw;
+		margin: 0 1.171875vw 3.671875vw 1.171875vw;
+	}
+	.SpeakerPhoto {
+		max-width: 20.3125vw;
+		height: 20.3125vw;
+	}
+	
+	.SpeakerInfo {
+		padding: 1.328125vw 0 0 0;
+	}	
+	.SpeakerName {
+		font-size: 1.5625vw;
+		line-height: 2.1875vw;
+	}
+	.Jobtitle, .CompanyName {
+		font-size: 1.09375vw;
+		line-height: 1.875vw;
+	}
+}
+@media (max-width: 1000px) {
+	#SpeakersGrid {		
+		max-width: 98vw;
+		margin: 0 auto;
+		padding: 15px 0vw 5.2083333vw 0.4vw;
+	}	
+	.Speaker {	
+		max-width: 21.74479vw;
+		margin-left: 1.302083vw;
+		margin-right: 1.302083vw;
+	}
+	.SpeakerPhoto {	
+		max-width: 21.74479vw;
+		height: 21.74479vw;
+	}
+	
+	.SpeakerInfo {
+		padding: 1.953125vw 0;
+	}
+	.SpeakerName, .Jobtitle, .CompanyName {
+		line-height: 2.34375vw;
+	}
+	.SpeakerName {
+		font-size: 2.083333vw;
+	}
+	.Jobtitle, .CompanyName {
+		font-size: 1.5625vw;
+	}
+}
+@media (width: 800px) { /* for tablets with 800px res (e.g. the LG GPad 10.1 tablet, ASUS Transformer, etc. ) */
+	#SpeakersGrid {
+		/*padding-left: 10px;*/
+		padding-right: 0;
+	}
+}
+@media (max-width: 730px) { /* Fixing the grid (4 speakers in 1 row) under 730px */
+	#SpeakersGrid {		
+		padding-left: 1vw;
+	}
+	.Speaker {
+		margin-left: 1vw;
+		margin-right: 1vw;	
+	}
+}
+@media (max-width: 640px) {
+	#SpeakersGrid {
+		padding: 30px 0 12.5vw 2vw;
+	}
+	.Speaker {	
+		max-width: 40.625vw;
+		margin: 0 3.125vw 7.8125vw 3.125vw;
+	}
+	.SpeakerPhoto {	
+		max-width: 40.625vw;
+		height: 40.625vw;
+	}
+	
+	.SpeakerInfo {
+		padding-top: 2.5vw;
+		padding-bottom: 3.125vw;
+	}
+	.SpeakerName, .Jobtitle, .CompanyName {
+		line-height: 5vw;	
+	}
+	.SpeakerName {
+		font-size: 4.375vw;
+	}	
+	.Jobtitle, .CompanyName {
+		font-size: 3.75vw;
+	}
+}
+@media (width: 320px) {
+	#SpeakersGrid {		
+		max-width: 320px;
+		padding-left: 10px;
+	}	
+}
+/* END Speakers Grid */
+/* END Speakers */
+
+
+/*Modal*/
+.SpeakerModal {
+	padding: 0;
+	position: fixed;
+	top: 0 !important;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow-y: scroll;
+}
+.SpeakerModal * {
+	text-align: left !important;	
+}
+
+/*End Modal*/
+
+.SpeakerListAnchor {
+	position:absolute;
+	margin-top:-5vw;
+}

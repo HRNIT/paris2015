@@ -1,0 +1,762 @@
+@charset "utf-8";
+/* These CSS rules will affect the sponsors page.  */
+
+
+/* Header */
+header {
+	background-image:url(../img/sponsors/sponsors-header-background.jpg);
+	background-repeat:no-repeat;
+	background-size: contain;
+	width:100%; 
+	color:#fff;
+	padding-left: 10.41666vw;
+	padding-top: 3.125vw;
+	padding-bottom: 3.3854166vw;
+	margin-top: 4.0625vw;
+}
+header h1 {
+	font-size:5.20833vw;
+	margin-top: 0;
+	margin-bottom:0.2604166vw;
+}
+header p {
+	width: 100%;
+	max-width:30.46875vw;
+	font-size:1.25vw;
+	line-height: 1.875vw;
+}
+header button {
+	font-size: 1.041666vw;
+	font-weight: 600;
+	background-color: rgba(255, 255, 255, 0);
+	color: #fff;
+	border: 2px solid #fff;
+	padding: 0;
+	max-width: 13.28125vw;
+	height: 3.125vw;
+	vertical-align: bottom;
+	transition: all 0.3s ease-in;
+}
+header button:hover {
+	background-color: #106ab5;
+	border: 2px solid #106ab5;
+}
+#HeaderWhosWhoLogo {
+	width: 9.895833vw;
+	height: 3.802083vw;
+	margin-left: 2.864583vw;
+}
+@media (max-width: 1000px) {
+	header {
+		margin-top: 15.1vw;	
+	}
+}
+@media (max-width: 767px) {
+	/* hide the full-width header at 767px and below. Add margin to the #Sponsors section to separate it from the menu. */
+	header {
+		display: none;	
+	}
+	#Sponsors {
+		margin-top: 23vw;		
+	}
+}
+/* END Header */
+
+
+
+
+
+
+
+
+/* Search Bar */ 
+	#SearchBarWrapper {
+		width: 100%;
+		background-color: #106ab5;
+		height: 3.125vw;
+		padding: 0.41666vw 0;
+		box-sizing: border-box;	
+	}
+	#SearchBarWrapper * {
+		box-sizing: border-box;	
+	}
+	#SearchBarContainer {
+		width: 100%;
+		max-width: 59.375vw;
+		margin: 0 auto;
+		position: relative;
+	}
+	#FilterSponsorsButton {
+		width: 100%;
+		/*max-width: 9.895833vw;*/
+		display: inline-block;
+		height: 2.34375vw;
+		background-color: #f86740;
+		color: #fff;
+		font-size: 1.041666vw;
+		padding-top: 0.520833vw;
+		padding-left: 0.677083vw;
+		cursor: pointer; 
+		transition: all 0.3s;
+	}
+	#FilterSponsorsButton:hover {
+		background-color: #ff815f;
+	}
+	#FilterSponsorsButton img{
+		margin-right: 0.260416vw;
+		width: 0.833333vw;
+		height: 0.78125vw;
+	}
+	#MagnifyerGlassIcon {
+		position: absolute; 
+		/*left: 10.9375vw;*/ 
+		top: 0.677083vw;
+		width: 0.78125vw;
+		height: 0.989583vw;
+	}
+	#SearchBarContainer input {
+		width: 16.510416vw;
+		height: 2.34375vw;
+		border: none;
+		color: #002c49;
+		font-size: 1.0416666vw;
+		/*padding-left: 2.34375vw;*/
+	}
+	/* END Search Bar */ 
+		
+	/* Filters List */
+	#FiltersWrapper {
+		width: 100vw;
+		height: 100vh;
+		position: fixed;
+		top: 0;
+		right: -100vw;
+		background-color: #e8e8e7;
+		z-index: 9999;
+		transition: right 0.3s;
+		font-family: 'Lato', sans-serif;
+		overflow-y: scroll;
+	}
+	#FiltersWrapper * {
+		box-sizing: border-box;
+	}
+	#FiltersListContainer {
+		width: 100%;
+		background-color: #106ab5;
+		padding-bottom: 2.604166vw;
+	}
+	#FiltersListInnerContainer, #FiltersSelectedListInnerContainer {
+		width: 100%;
+		max-width: 59.375vw;	
+		margin: 0 auto;
+		position: relative;
+	}
+	#CloseFiltersContainer {
+		margin: 0; 
+		padding: 0.989583vw;
+		font-size: 0.9375vw;  
+		text-align: right; 
+		color: #fff; 
+		width: 100%; 
+		max-width: 59.375vw; 
+		margin: 0 auto;
+	}
+	#CloseFilters {
+		cursor: pointer;	
+	}
+	#CloseFilters img {
+		margin-left: 0.260416vw;	
+		width: 0.7291666vw;
+		height: 0.7291666vw;
+	}
+	#FiltersCategories {
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+		width: 100%;
+		max-width: 9.895833vw;
+		text-align: center;
+		color: #fff;
+		font-size: 0.9375vw;
+	}
+	#FiltersCategories li {
+		height: 2.96875vw;	
+		padding: 0.885416vw 0.520833vw;
+		cursor: pointer;
+	}
+	#FiltersCategories li.LongCategoryName {
+		padding-top: 0.364583vw;	
+	}
+	#FiltersCategories li:hover {
+		color: #08243b;	
+	}
+	.SelectedFilterCategory{
+		background-color: #fff;
+		color: #106ab5;	
+	}
+	.Filters {
+		width: 100%;
+		max-width: 49.479166vw;
+		height: 29.6875vw;	
+		display: inline-block;
+		position: absolute;
+		top: 0; 
+		right: 0;
+	
+		padding: 1.3020833vw 0 0 1.3020833vw;
+		background-color: #fff; 
+		display: none;
+	}
+	.Filters ul {
+		padding: 0;
+		margin: 0;
+		list-style-type: none;	
+	}
+	.Filters ul li {
+		display: inline-block;
+		width: 19%;
+		font-size: 0.833333vw;
+		color: #7e7e7e;
+		font-weight: 500;
+		margin-bottom: 1.302083vw;
+		vertical-align: top;
+		padding: 10px; /*change this if the padding is too big*/
+	}
+	
+	.Filters ul li:hover, .SelectedFilter {
+		background-color: #106ab5;
+		border: 1px solid #106ab5;
+		border-radius: 4.6875vw;
+		color: #fff !important;
+		padding: 10px;
+		cursor: pointer;
+		text-align:center;
+	}
+	.SelectAllFilters {
+		color: #000;
+		cursor: pointer;
+	}
+	/* END Filters List */
+	/* Selected Filters */
+	#FiltersSelectedListContainer {
+		width: 100%;
+		background-color: #e8e8e7;
+		padding-top: 1.302083vw;
+		padding-bottom: 1.5625vw;
+	}
+	#Filter {
+		font-size: 0.9375vw;
+		color: #7e7e7e;	
+	}
+	#SelectedFiltersList {
+		padding: 0;
+		margin: 0;
+		margin-bottom: 1.041666vw;
+		list-style-type: none;
+		font-size: 0;
+		display: inline;
+	}
+	#SelectedFiltersList li {
+		display: inline-block;
+		background-color: #7e7e7e;
+		color: #fff;
+		margin-bottom: 0.78125vw;
+		font-size: 0.9375vw;
+		margin-right: 0.520833vw;
+		border-radius: 4.6875vw;
+		padding: 0.052083vw 0.46875vw 0.052083vw 0.364583vw;
+		z-index:850;
+		cursor:pointer;
+	}
+	#ClearFiltersAndApplyContainer {
+		width: 100%;
+		text-align: right;
+	}
+	#SelectedFiltersList li img {
+		width: 0.78125vw;
+		height: 0.78125vw;	
+	}
+	#ApplyFiltersButton {
+		display: inline-block;
+		width: 6.40625vw;
+		height: 2.34375vw;
+		color: #fff;
+		background-color: #ff6046;	
+		cursor: pointer;
+		font-size: 0.9375vw;
+		font-weight: 700;
+		text-align: center;
+		padding-top: 0.625vw;
+		transition: all 0.3s;
+	}
+	#ApplyFiltersButton:hover {
+		background-color: #106ab5;
+	}
+	#ClearFilters {
+		font-size: 1.041666vw;
+		color: #555555;
+		cursor: pointer;
+		text-transform: uppercase;
+		margin-right: 1.041666vw;
+	}
+	#ClearFilters:hover {
+		color: #000;
+	}
+	#ClearFilters img {
+		margin-bottom: 0.104166vw;
+		margin-right: 0.2604166vw;	
+		width: 0.46875vw;
+		height: 0.46875vw;
+	}
+	/* END Selected Filters */
+@media (max-width: 1920px) {
+	/* Search Bar */ 
+	#SearchBarWrapper {
+		height: 60px;
+		padding: 8px 0;
+	}
+	#SearchBarContainer {
+		max-width: 1140px;
+	}
+	#FilterSponsorsButton {
+		max-width: 190px;
+		height: 45px;
+		font-size: 20px;
+		padding-top: 10px;
+		padding-left: 13px;
+	}
+	#FilterSponsorsButton img{
+		margin-right: 5px;
+		width: 16px;
+		height: 15px;
+	}
+	#MagnifyerGlassIcon {
+		left: 220px; 
+		top: 13px;
+		width: 15px;
+		height: 19px;
+		z-index:490
+	}
+	#SearchBarContainer input {
+		width: 317px;
+		height: 45px;
+		font-size: 20px;
+		/*padding-left: 45px;*/
+	}
+	/* END Search Bar */ 
+		
+	/* Filters List */
+	#FiltersListContainer {
+		padding-bottom: 50px;
+	}
+	#FiltersListInnerContainer, #FiltersSelectedListInnerContainer {
+		max-width: 1140px;	
+	}
+	#CloseFiltersContainer {
+		padding: 19px;
+		font-size: 18px;  
+		max-width: 1140px; 
+	}
+	#CloseFilters {
+		cursor: pointer;	
+	}
+	#CloseFilters img {
+		margin-left: 5px;	
+		width: 14px;
+		height: 14px;
+	}
+	#FiltersCategories {
+		max-width: 190px;
+		font-size: 18px;
+	}
+	#FiltersCategories li {
+		height: 57px;	
+		padding: 17px 10px;
+	}
+	#FiltersCategories li.LongCategoryName {
+		padding-top: 7px;	
+	}
+	.Filters {
+		width: 100%;
+		max-width: 950px;
+		height: 570px;	
+	
+		padding: 25px 0 0 25px;
+	}
+	.Filters ul li {
+		font-size: 16px;
+		margin-bottom: 25px;
+	}
+	.Filters ul li span:hover {
+		border-radius: 90px;
+	}
+	/* END Filters List */
+	/* Selected Filters */
+	#FiltersSelectedListContainer {
+		padding-top: 25px;
+		padding-bottom: 30px;
+	}
+	#Filter {
+		font-size: 18px;
+	}
+	#SelectedFiltersList {
+		margin-bottom: 20px;
+	}
+	#SelectedFiltersList li {
+		margin-bottom: 15px;
+		font-size: 18px;
+		margin-right: 10px;
+		border-radius: 90px;
+		padding: 1px 9px 1px 7px;
+	}
+	#SelectedFiltersList li img {
+		width: 15px;
+		height: 15px;	
+	}
+	#ApplyFiltersButton {
+		width: 123px;
+		height: 45px;
+		font-size: 18px;
+		padding-top: 12px;
+	}
+	#ClearFilters {
+		font-size: 20px;
+		margin-right: 20px;
+	}
+	#ClearFilters img {
+		margin-bottom: 2px;
+		margin-right: 5px;	
+		width: 9px;
+		height: 9px;
+	}
+	/* END Selected Filters */
+}
+@media (max-width: 1280px) {
+	/* Search Bar  */
+	#SearchBarWrapper {
+		height: 4.6875vw;
+		padding: 0.625vw 0;
+	}
+	#SearchBarContainer {
+		max-width: 89.0625vw;
+	}
+
+	#FilterSponsorsButton {
+		/*max-width: 14.84375vw;*/
+		height: 3.515625vw;
+		font-size: 1.7625vw;
+		padding-top: 0.58125vw;
+		padding-left: 1.215625vw;
+	}
+	
+	#FilterSponsorsButton img{
+		margin-right: 0.390625vw;
+		width: 1.25vw;
+		height: 1.171875vw;
+	}
+	#MagnifyerGlassIcon {
+		/*left: 16.40625vw; */
+		top: 1.015625vw;
+		width: 1.171875vw;
+		height: 1.484375vw;
+	}
+	#SearchBarContainer input {
+		width: 24.765625vw;
+		height: 3.515625vw;
+		font-size: 1.5625vw;
+		/*padding-left: 3.515625vw;*/
+	}
+	/* END Search Bar */ 	
+	/* Filters List */
+	#FiltersListContainer {
+		width: 100%;
+		background-color: #106ab5;
+		padding-bottom: 3.90625vw;
+	}
+	#FiltersListInnerContainer, #FiltersSelectedListInnerContainer {
+		max-width: 89.0625vw;	
+	}
+	#CloseFiltersContainer {
+		padding: 1.484375vw;
+		font-size: 1.40625vw;  
+		max-width: 89.0625vw;	
+	}
+	#CloseFilters img {
+		margin-left: 0.390625vw;	
+		width: 1.09375vw;
+		height: 1.09375vw;
+	}
+	#FiltersCategories {
+		max-width: 14.84375vw;
+		font-size: 1.40625vw;
+	}
+	#FiltersCategories li {
+		height: 4.453125vw;	
+		padding: 1.328125vw 0.82vw;
+	}
+	#FiltersCategories li.LongCategoryName {
+		padding-top: 0.546875vw;	
+	}
+	.Filters {
+		width: 100%;
+		max-width: 74.21875vw;
+		height: 44.53125vw;	
+	
+		padding: 1.953125vw 0 0 1.953125vw;
+	}
+	.Filters ul li {
+		display: inline-block;
+		width: 19%;
+		font-size: 1.25vw;
+		margin-bottom: 1.953125vw;
+		padding-right: 0.390625vw;
+	}
+	
+	.Filters ul li span:hover {
+		border-radius: 7.03125vw;
+	}
+	/* END Filters List */
+	/* Selected Filters */
+	#FiltersSelectedListContainer {
+		padding-top: 1.953125vw;
+		padding-bottom: 2.34375vw;
+	}
+	#Filter {
+		font-size: 1.40625vw;
+	}
+	#SelectedFiltersList {
+		margin-bottom: 1.5625vw;
+	}
+	#SelectedFiltersList li {
+		margin-bottom: 1.171875vw;
+		font-size: 1.40625vw;
+		margin-right: 0.78125vw;
+		border-radius: 7.03125vw;
+		padding: 0.078125vw 0.703125vw 0.078125vw 0.546875vw;
+	}
+	#SelectedFiltersList li img {
+		width: 1.171875vw;
+		height: 1.171875vw;	
+	}
+	#ApplyFiltersButton {
+		width: 9.609375vw;
+		height: 3.515625vw;
+		font-size: 1.40625vw;
+		padding-top: 0.9375vw;
+	}
+	#ClearFilters {
+		font-size: 1.5625vw;
+		margin-right: 1.5625vw;
+	}
+	#ClearFilters img {
+		margin-bottom: 0.15625vw;
+		margin-right: 0.390625vw;	
+		width: 0.703125vw;
+		height: 0.703125vw;
+	}
+	/* END Selected Filters */	
+}
+
+@media (max-width: 980px) {
+	#FilterSponsorsButton {
+		/*max-width: 14.84375vw;*/
+		height: 3.515625vw;
+		font-size: 1.8625vw;
+		padding-top: 0.68125vw;
+		padding-left: 3.415625vw;
+	}
+}
+
+@media (max-width: 767px) {
+	#SearchBarWrapper, #FiltersWrapper {
+		display: none;	
+	}
+}
+	
+	
+	
+	
+	
+	
+	
+	
+/* Sponsors Grid */
+#Sponsors {
+	width: 100%;
+	background-color: #f4f4f2;
+	font-size: 0;
+}
+#Sponsors * {
+	box-sizing: border-box;
+}
+.SponsorHeadline {
+	width: 100%;
+	max-width: 59.375vw; 
+	/*background-image: url(../img/sponsors/headline-background-desktop.png); */
+	background-size: cover;
+	background-position: center center; 
+	font-size: 1.875vw;
+	font-weight: 500;
+	text-align: center; 
+	padding: 0px; 
+	margin: 0 auto;
+	margin-top: 3.90625vw;
+	margin-bottom: 2.6041666vw;
+}
+.SponsorHeadline span {
+	margin-left: -0.260416vw;
+}
+.CategoryContainer {
+	/*
+	width: 100%; 
+	max-width: 89.5833333vw; 
+	margin: 0 auto;
+	*/
+	
+  width: 100%;
+  max-width: 89.5833333vw;
+  margin: 0 auto;
+  text-align: center;	
+  	
+}
+.Sponsor {
+	width: 10.84375vw;
+	height: 10.677083vw;
+	display: inline-block;
+	text-align: center; /* aligns the Sponsor logo container divs (.SponsorLogo) to the center */
+	position: relative;
+	padding-top: 2.604166vw;
+	transition: all 0.3s;
+}
+.Sponsor:hover {
+	background-color: #d8e3eb;	
+}
+.Sponsor:hover img{
+	opacity: 1;
+}
+.Sponsor img { /* the small + icon on hover */
+	position: absolute;	
+	left: 0.8854166vw;
+	top: 0.8854166vw;
+	width: 1.3020833vw;
+	height: 1.3020833vw;
+	opacity: 0;
+	transition: all 0.3s;
+}
+.SponsorLogo {
+	display: inline-block;
+	width: 7.979166vw;
+	height: 5.7291666vw;
+	background-position: center; 
+	background-repeat: no-repeat; 
+	background-size: contain;
+}
+
+#AlaCarteWrapper .Sponsor {
+	margin-bottom: 3.645833vw;
+}
+.ALaCarteTextContainer { /* Sponsored A La Carte product text */
+	font-size: 0.833333vw;
+	color: #777777;
+	text-align: center;
+	width: 10.84375vw;
+	position: absolute;
+	/*bottom: -1.041666vw;*/
+	margin: 0;
+}
+@media (max-width: 1000px) {
+	.ALaCarteTextContainer { /* Sponsored A La Carte product text */
+		font-size: 1.2vw;
+		height: 2.34375vw;
+		bottom: -2.5vw;
+	}
+}
+
+@media (max-width: 767px) {
+	.SponsorHeadline {
+		font-size: 2.864583vw;
+		max-width: 80vw;
+		margin-top: 5.859375vw;
+		margin-bottom: 3.90625vw;
+	}
+	.CategoryContainer {
+		max-width: 80vw; 
+	}
+	.Sponsor, #crossknowledgeSponsor, #adpSponsor, #inforSponsor {
+		/*width: 153px;
+		height: 110px;
+		padding: 25px 10px 0 10px;*/
+		width: 19.921875vw;
+		height: 14.3229166vw;
+		padding-top: 3.2552083vw;
+	}
+	.Sponsor img { /* the small + icon on hover */
+		/*left: 10px;
+		top: 10px;
+		width: 15px;
+		height: 15px;*/
+		left: 1.3020833vw;
+		top: 1.3020833vw;
+		width: 1.953125vw;
+		height: 1.953125vw;
+	}	
+	.SponsorLogo, #crossknowledgeSponsorBox {
+		/*width: 120px;
+		height: 60px;*/
+		width: 15.625vw;
+		height: 7.8125vw;
+	}
+	#AlaCarteWrapper .Sponsor {
+		margin-bottom: 4.81770833vw;
+	}
+	.ALaCarteTextContainer { /* Sponsored A La Carte product text */
+		font-size: 1.71875vw;
+		width: 19.921875vw;
+		height: 3.90625vw;
+		bottom: -4.16666vw;
+	}
+}
+
+@media (max-width: 639px) {
+	.SponsorHeadline {
+		font-size: 6.875vw;
+		background-image: none;
+		margin-top: 10vw;
+		margin-bottom: 8vw;
+	}
+	#SponsorHeadlineAlaCarte {
+		background-image: none; 
+	}
+	.Sponsor, #crossknowledgeSponsor, #adpSponsor, #inforSponsor {
+		width: 39.7vw;
+		height: 28.4172vw;
+		padding-top: 6vw;
+	}
+	.Sponsor img { /* the small + icon on hover */
+		left: 2.65625vw;
+		top: 2.65625vw;
+		width: 3.90625vw;
+		height: 3.90625vw;
+	}
+	.SponsorLogo, #crossknowledgeSponsorBox {
+		width: 30vw;
+		height: 17.1875vw;
+	}
+	#AlaCarteWrapper .Sponsor {
+		margin-bottom: 11.5625vw;
+	}
+	.ALaCarteTextContainer { /* Sponsored A La Carte product text */
+		font-size: 3.4375vw;
+		width: 39.7vw;
+		height: 9.375vw;
+		bottom: -10vw;
+	}
+}
+
+/*Correction for search bar*/
+.token-input-list-facebook {
+  position: absolute;
+  top: -2px;
+  left: 210px;
+}
+/*End Sponsors Grid */

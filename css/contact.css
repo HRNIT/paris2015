@@ -1,0 +1,298 @@
+/* CSS definitions of the CONTACT page */
+
+body * {
+	box-sizing: border-box;	
+}
+
+#MobileUl {
+	padding-left: 0;	
+}
+@media (max-width: 640px) {
+#MobileUl {
+	margin-left: 4vw;	
+}	
+}
+
+/* Header */
+header {
+	background-image:url(../img/contact/header.jpg);
+	background-repeat:no-repeat;
+	background-size: contain;
+	width:100%;
+	height:27.08333vw; 
+	color:#fff;
+	margin-top: 4.0625vw;
+	margin-bottom: -5px;
+}
+#HeaderInnerContainer {
+	padding-top: 4.6875vw;
+	padding-left: 16.666666vw;	
+}
+header h1 {
+	font-size:3.125833vw;
+	margin-top: 0px;
+	margin-bottom: 2.4vw;
+}
+header p {
+	width: 100%;
+	max-width:29vw;
+	font-size:1.25vw;
+	line-height: 1.5625vw;
+	margin-bottom: 3.9vw;
+}
+header button {
+	font-size: 1.25vw;
+	font-weight: 600;
+	background-color: rgba(255, 255, 255, 0);
+	color: #fff;
+	border: 3px solid #fff;
+	padding: 0;
+	max-width: 15.625vw;
+	height: 3.6458333vw;
+	transition: all 0.3s ease-in;
+}
+header button:hover {
+	background-color: #106ab5;
+	color: #fff;
+	border: 3px solid #106ab5;
+}
+@media (max-width: 1000px) {
+	header {
+		margin-top: 50px;	
+	}
+}
+@media (max-width: 768px) {
+header {
+	background-image:url(../img/contact/header-small-tablet.jpg);
+	background-repeat:no-repeat;
+	background-size: contain;
+	width:100%;
+	height:56.25vw; 
+}
+#HeaderInnerContainer {
+	padding-top: 7.8125vw;
+	padding-left: 7.03125vw;	
+}
+header h1 {
+	font-size:6.5625vw;
+	margin-top: 0px;
+	margin-bottom:4.6875vw;
+}
+header p {
+	width: 100%;
+	max-width:47.65625vw;
+	font-size:2.5vw;
+	line-height: 3.4375vw;
+	margin-bottom:8.59375vw;
+}
+header button {
+	font-size: 2.34375vw;
+	border: 1px solid #fff;
+	max-width: 28.90625vw;
+	height: 7.03125vw;
+}
+header button:hover {
+	background-color: #106ab5;
+	border: 1px solid #106ab5;
+}
+}
+@media (max-width: 640px) {
+header {
+	background-image:url(../img/contact/header-mobile.jpg);
+	background-repeat:no-repeat;
+	background-size: contain;
+	width:100%;
+	height:150vw; 
+}
+#HeaderInnerContainer {
+	padding-top: 19vw;
+	padding-left: 0;
+	text-align: center;	
+}
+header h1 {
+	font-size:12.5vw;
+	margin-top: 0px;
+	margin-bottom:7.8125vw;
+}
+header p {
+	max-width:78.125vw;
+	font-size:4.0625vw;
+	line-height: 5.625vw;
+	margin: 0 auto;
+	margin-bottom:27vw;
+}
+header button {
+	font-size: 4.6875vw;
+	border: 2px solid #fff;
+	max-width: 62.5vw;
+	height: 12.5vw;
+	margin-bottom: 15vw;
+}
+header button:hover {
+	background-color: #106ab5;
+	border: 2px solid #106ab5;
+}
+#ScrollDownHeaderLinkContainer a span {
+	color: #acb9e6;	
+}	
+}
+/* END Header */
+
+/* HRN Contact Info */
+a[id="ContactForm"] {
+	position: relative;
+	top: -55px;	
+}
+#ContactFormSection {
+    width:100%;
+    padding: 50px;
+    background-image:url(../img/contact/formBg.jpg);
+}
+@media (max-width: 768px) {
+	#ContactFormSection {
+		padding-left: 15px;
+		padding-right: 15px;	
+	}
+}
+#ContactInfoContainer{
+	width: 100%;
+	max-width: 910px;
+	padding-left: 15px;
+	margin: 0 auto;	
+}
+@media (max-width: 550px) {
+	#ContactInfoContainer{
+		max-width: 280px;
+	}
+}
+#ContactAddress, #ContactGen, #ContactMail {
+	width:100%;
+	display: inline-block;
+	float:left;
+}
+#ContactAddress {	max-width: 340px;	} /* different container sizes to align the boxes to the " */
+#ContactGen 	{	max-width: 320px;	} 
+#ContactMail 	{	max-width: 220px;	}
+@media (max-width: 1000px) {
+	#ContactAddress, #ContactGen, #ContactMail {
+		max-width: 33%;
+	}		
+}
+@media (max-width: 745px) {
+	#ContactAddress, #ContactGen, #ContactMail {
+		max-width: 200px;
+		float: none;
+		margin: 0 auto;
+	}
+}
+@media (max-width: 640px) {
+	#ContactAddress, #ContactGen, #ContactMail {
+		max-width: 250px;	
+	}
+}
+
+.ContactIcon{
+	width:26px;
+	height:26px;	
+	background-color:#16aae1;
+    -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;
+	margin-right: 10px;
+	float:left;
+}
+.ContactText {
+	color: #fff;
+	font-size: 18px;
+	line-height: 30px;
+	margin: 2px 0 40px 5px;
+	display: inline-block;
+	vertical-align: top;	
+}
+.ContactText a {
+	color: #fff;	
+}
+.ContactIcon .fa {
+	display:block;
+}
+.ContactIcon .fa-pencil, .ContactIcon .fa-phone {
+	font-size:20px;
+	margin-left: 20%;
+	margin-top: 10%;
+}
+.ContactIcon .fa-envelope{
+	font-size: 18px;
+  	margin-left: 17%;
+  	margin-top: 14%;
+}
+/* HRN Contact Info */
+
+/* Contact Form Container */
+#ContactFormContainer {
+	width: 100%;
+	max-width: 860px;
+    background-image:url(../img/contact/formBg.jpg);
+	margin: 0 auto;
+}
+@media(max-width:1024px){
+	#ContactFormContainer {
+		 width:100%;
+	}
+}
+#ContactFormContainer * {
+	font-size:18px;	
+}
+#ContactFormContainer input {
+	height:56px;
+}
+#ContactFormContainer input[placeholder], #ContactFormContainer textarea[placeholder] {
+	color: #b0b0b0;	
+		padding: 15px;
+}
+#first_name, #last_name {
+	width: 100%;	
+}
+#LeftInputFields {
+	width: 100%;
+	max-width: 410px;
+	display: inline-block;	
+}
+#RightInputFields {
+	width: 100%;
+	max-width: 410px;
+	display: inline-block;
+	vertical-align: top;
+	float: right;
+}
+#ContactFormContainer textarea {
+    width: 100%;
+    height: 410px;
+	border: none;
+	box-sizing: border-box;
+}
+#ContactFormContainer input[type="submit"] {
+	width:100%;
+	height:56px;
+	font-size:24px;
+	font-weight: 600;
+	text-transform:uppercase;
+	color:#fff;
+	background:#16aae1;
+	border: none;
+	transition: all 0.3s;
+}	
+#ContactFormContainer input[type="submit"]:hover {
+	background: #fc354c;
+	cursor:pointer;
+}
+@media (max-width: 970px) {
+	#LeftInputFields, #RightInputFields {
+		max-width: 100%;	
+		float: none;
+		display: block;
+	}
+	#ContactFormContainer input[type="submit"] {
+		margin-top: 15px;	
+	}
+	
+}
+
+/* END Contact Form Container */

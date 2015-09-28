@@ -1,0 +1,1634 @@
+@charset "utf-8";
+/* These CSS rules will affect the Agenda page.  */
+
+body {
+	overflow-x: hidden;	
+}
+
+body * {
+	box-sizing: border-box;	
+}
+@media (max-width: 640px) {
+	body {
+		margin-bottom: 40px;	
+	}
+}
+
+/* Floating Desktop Menu */
+#FloatingDesktopMenu {
+	position: fixed;
+	top: 10.4166vw;
+	right: -20vw;
+	width: 100%;
+	max-width: 13.02083vw;	
+	background-color: #fff;
+	transition: right 0.3s;
+	z-index: 2001;
+}
+.OpenedFloatingMenu {
+	right: 0 !important;	
+}
+#StageMenu {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+.StageMenuItem {
+	padding: 0.625vw 0 0 0.9375vw;
+	color: #fff;
+	background-color: #101010;
+	font-size: 0.72916vw;
+	width: 100%;
+	max-width: 13.02083vw;
+	height: 2.083333vw;
+	margin-bottom: 0.104166vw;
+	font-weight: 500;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+#StageMenuListTitle {
+	background-color: #fff !important;
+	color: #101010 !important;
+	position: relative;
+	cursor: default;
+}
+#StageMenuListTitle .icon {
+	font-size: 1.04166vw;
+	position: absolute;
+	right: 0.520833vw;
+	bottom: 0.260416vw;
+	cursor: pointer;
+}
+#UnconferenceFloating {
+	margin-bottom: 0 !important;	
+}
+@media (max-width: 1920px) {
+#FloatingDesktopMenu {
+	top: 200px;
+	max-width: 250px;	
+	right: -300px;
+}
+.StageMenuItem {
+	padding: 9px 0 0 18px;
+	font-size: 14px;
+	max-width: 250px;
+	height: 35px;
+	margin-bottom: 2px;
+}
+#StageMenuListTitle .icon {
+	font-size: 20px;
+	right: 10px;
+	bottom: 3px;
+}
+}
+@media (max-width: 1400px) {
+#FloatingDesktopMenu {
+	top: 50px;	
+}
+}
+@media (max-width: 1000px) {
+#FloatingDesktopMenu {
+	top: 200px;
+}
+}
+@media (max-width: 640px) {
+#FloatingDesktopMenu {
+	display: none;	
+}
+}
+/* END Floating Desktop Menu */
+
+/* Stage Mobile Bar */
+#StageMobileBar {
+	display: none;	
+}
+@media (max-width: 640px) {
+	#StageMobileBar {
+		display: block;
+		position: fixed;
+		bottom: -5px;
+		width: 100%;
+		height: 45px;
+		background-color: #070707;
+		padding-top: 13px;
+		padding-left: 25px;	
+		z-index: 500;
+	}	
+	#MobileStageName {
+		font-size: 15px;
+		text-transform: uppercase;	
+		font-family: "Roboto", sans-serif;
+	}
+	#MobileStageListButton {
+		font-size: 30px;
+		color: #fff;	
+		position: absolute;
+		right: 12px;
+		top: 5px;
+		cursor: pointer;
+	}
+}
+/* Stage Mobile Bar */
+
+/* Stage List */
+.invisible {
+	display: none;	
+}
+#StageList {
+	display: none;	
+}
+@media (max-width: 640px) {
+	#StageList {	
+		width: 100%;
+		height: 100vh;
+		padding-bottom: 200px;
+		background-color: #000;
+		margin-left: 0;
+		margin-top: 0;
+		position: fixed;
+		text-align: left;
+		font-size: 0;
+		display: block;	
+		
+		top: 200vh;
+		left: 0;
+		transition: top 0.3s;
+		z-index: 6000;
+		overflow-y: scroll;
+	}
+	#StageList.MobileClicked {
+		top: 0vh;
+	}
+	.StageButton {
+		width: 100%;
+		max-width: 33.333333%;
+		height: 33vw;
+		text-align: center;
+		border: 1px solid #363636;
+		background-color: rgba(0,0,0,0.95);
+		color: #fff;	
+		display: inline-block;
+		padding-top: 8vw;
+		vertical-align: top;
+		cursor: pointer;
+		transition: all 0.3s;
+	}
+	.StageButton .icon {
+		font-size: 10vw;
+	}
+	.StageName {
+		font-size: 2.5vw;
+		margin-top: 3.125vw;
+		text-transform: uppercase;	
+	}
+	.StageButton .icon-close-icon, .StageButton .icon-next-icon, .StageButton .icon-back-icon {
+		font-size: 6.25vw;	
+	}
+}
+/* END Stage List */
+
+/* Panels */
+.Panel {
+	display: none; /* not visible at 640px and above. */
+	position: fixed;
+	z-index: 6002;
+	top: 0;
+	right: -100vw;
+	width: 100vw;
+	height: 100vh;
+	overflow-y: scroll;	
+	color: #fff;
+	text-align: center;
+	padding-top: 12.5vw;
+	transition: all 0.3s;
+}
+.Panel.PanelClicked {
+	right: 0;
+}
+.PanelInnerContainer {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 80vw;
+	position: relative;	
+	padding-top: 15.625vw;
+}
+.PanelCloseButton {
+	position: absolute;
+	font-size: 7.25vw;
+	right: 13vw;
+	cursor: pointer;	
+	z-index: 6003;
+}
+.Panel .PanelStageIcon {
+	font-size: 31.25vw;	
+}
+.PanelStageName {
+	font-size: 5.625vw;
+	text-transform: uppercase;	
+	font-family: "Roboto", sans-serif;
+	font-weight: 400;
+	margin-top: 0;
+	margin-bottom: 4.6875vw;
+}
+.PanelStageDescription {
+	font-size: 3.75vw;
+	font-family: "Roboto", sans-serif;
+	margin-bottom: 17.1875vw;
+}
+.PanelConfirmButton {
+	width: 100%;
+	max-width: 31.25vw;
+	height: 12.5vw;
+	border: 2px solid #fff;
+	color: #fff;
+	background-color: transparent;
+	font-size: 3.75vw;
+	font-family: "Roboto", sans-serif;
+	padding: 0;
+	margin-bottom: 15vw;
+}
+@media (max-width: 640px) {
+	.Panel {
+		display: block;	
+	}
+}
+/* END Panels */
+
+/* Session Info Modal */
+#SessionInfoModal {
+	width: 700px;
+	color: #737373;
+	left: 60%;
+	border-radius: 0;
+}
+#SessionInfoModal h2, #SessionInfoModal h3, #SessionInfoModal h4, #SessionInfoModal p {
+	text-align: left;
+	font-family: "Roboto", sans-serif;	
+}
+#SessionInfoModalCloseButton {
+	top: 23px;
+	right: 23px;
+	font-size: 24px;
+	color: #DBDBDB;
+}
+#DayInfoContainer {
+	width: 100%;
+	max-width: 180px;
+	display: inline-block;	
+}
+#DayInfoContainer h2 {
+	margin: 0;
+	font-size: 16px;
+	font-weight: 600;	
+	text-transform: uppercase;
+}
+#DayInfoContainer h3 {
+	margin: 0;
+	font-size: 14px;	
+	font-weight: 400;
+	position: relative;
+	top: -3px;
+}
+#SessionInfoModal #ModalStageName {
+	margin-bottom: 5px;
+	font-weight: 500;	
+}
+#SessionStartTime {
+	border-bottom: 1px solid #737373;
+	margin-bottom: 3px;	
+	padding-bottom: 3px;
+}
+
+#SessionInfoContainer {
+	width: 100%;
+	max-width: 400px;
+	display: inline-block;	
+	vertical-align: top;
+	margin-left: 15px;
+	position: relative;
+}
+#SpeakerInfoContainer {
+	margin-bottom: 40px;	
+}
+#SpeakerPhoto, #SpeakerInfo {
+	display: inline-block;
+	vertical-align: top;
+}
+#SpeakerPhoto {
+	width: 130px;
+	height: 130px;
+	margin-top: 5px;	
+}
+#SpeakerInfo {
+	margin-left: 10px;	
+	width: 100%;
+	max-width: 250px;
+}
+#SpeakerInfo h3 {
+	margin: 0;
+	font-size: 14px;
+	font-weight: 600;	
+}
+#SpeakerInfo #CompanyName {
+	font-weight: 400;	
+}
+#SessionInfo {
+	margin-top: 0;
+	padding-bottom: 40px;
+	border-bottom: 1px solid #737373;
+	margin-bottom: 30px;
+}
+#SessionInfo #SessionTitle {
+	text-align: left;
+	font-size: 30px;
+	line-height: 35px;
+	margin-bottom: 30px;
+	margin-top: 0;
+}
+#SessionAbstract {
+	margin: 0;
+	text-align: left;
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: 400;
+}
+
+#SessionAbstract p, #SessionAbstract span{
+	margin: 0 !important;
+	text-align: left !important;
+	font-size: 14px !important;
+	line-height: 21px !important;
+	font-weight: 400 !important;
+	font-family: "Roboto", sans-serif !important;
+	color: #737373 !important;
+}
+
+.PrevNextSession, .FillerPrevNextDiv {
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+	max-width: 150px;
+    min-height: 72px;
+}
+
+.PrevNextSession{
+	cursor: pointer;
+	
+}
+
+.PrevNextSession h3, #PreviousSession p, #NextSession p {
+	margin: 0;
+	font-size: 14px;
+	font-weight: 400;
+}
+.PrevNextSession h4 {
+	margin: 0;
+	margin-top: 5px;
+	font-size: 14px;
+	font-weight: 500;	
+}
+#PreviousSession p, #NextSession p {
+	position: relative;
+	top: -6px;	
+}
+#NextSession {
+	float: right;
+}
+
+@media (max-width: 1024px) {
+	#SessionInfoModal {
+		left: 15%;
+	}
+}
+@media (max-width: 1000px) {
+	#SessionInfoModal {
+		width: 100%;
+		left: 0;
+		top: 0 !important;
+		position: fixed;
+		height: 100vh;
+		overflow-y: scroll;
+	}
+	#SessionInfoContainer {
+		max-width: 60vw;	
+	}
+}
+/* END Session Info Modal */
+
+
+/* Colors */
+.MainStageBgColor, #MainStage {
+	background-color: #3E80B3;
+} 
+.MainStageColor {
+	color: #3E80B3;
+}
+.MainStageButton.ClickedTabButton, .MainStageButton:hover {
+	background-color: #3E80B3;
+	border-bottom: 2px solid #3E80B3;
+}
+.MainStageBorderColor {
+	   border: #3E80B3 0.052083vw solid;
+       border-bottom: #3E80B3 0.1041666vw solid;
+}
+.MainStageSessionBgColor {
+	background-color: #def0fd;
+}
+
+.IRecruitBgColor, #IRecruit {
+	background-color: #3E80B3;
+} 
+.IRecruitColor {
+	color: #3E80B3;
+}
+.IRecruitButton.ClickedTabButton, .IRecruitButton:hover {
+	background-color: #3E80B3;
+	border-bottom: 2px solid #3E80B3;
+}
+.IRecruitBorderColor {
+	   border: #3E80B3 0.052083vw solid;
+       border-bottom: #3E80B3 0.1041666vw solid;
+}
+.IRecruitSessionBgColor {
+	background-color: #def0fd;	
+}
+
+.DisruptHRBgColor, #DisruptHR  {
+	background-color: #3E80B3;
+}
+.DisruptHRColor {
+	color: #3E80B3;	
+}
+.DisruptHRButton.ClickedTabButton, .DisruptHRButton:hover {
+	background-color: #3E80B3;
+	border-bottom: 2px solid #3E80B3;
+}
+.DisruptHRBorderColor {
+	   border: #3E80B3 0.052083vw solid;
+       border-bottom: #3E80B3 0.1041666vw solid;	
+}
+.DisruptHRSessionBgColor {
+	background-color: #def0fd;	
+}
+
+.HRTechnologyBgColor, #HRTechnology {
+	background-color: #c2682c;
+}
+.HRTechnologyColor {
+	color: #c2682c;
+}
+.HRTechnologyButton.ClickedTabButton, .HRTechnologyButton:hover {
+	background-color: #c2682c;
+	border-bottom: 2px solid #c2682c;
+}
+.HRTechnologyBorderColor {
+	 border: #c2682c 0.052083vw solid;
+     border-bottom: #c2682c 0.1041666vw solid;	
+}
+.HRTechnologySessionBgColor {
+	background-color: #f9d6bf;
+}
+
+.TalentSummitBgColor, #TalentSummit {
+	background-color: #63b0b7;
+}
+.TalentSummitColor {
+	color: #63b0b7;
+}
+.TalentSummitButton.ClickedTabButton, .TalentSummitButton:hover {
+	background-color: #63b0b7;
+	border-bottom: 2px solid #63b0b7;
+}
+.TalentSummitBorderColor {
+	 border: #63b0b7 0.052083vw solid;
+     border-bottom: #63b0b7 0.1041666vw solid;	
+}
+.TalentSummitSessionBgColor {
+	background-color: #d2fafe;	
+}
+
+.SocialSummitBgColor, #SocialSummit {
+	background-color: #468649;
+}
+.SocialSummitColor {
+	color: #468649;
+}
+.SocialSummitButton.ClickedTabButton, .SocialSummitButton:hover {
+	background-color: #468649;
+	border-bottom: 2px solid #468649;
+}
+.SocialSummitBorderColor {
+	 border: #468649 0.052083vw solid;
+     border-bottom: #468649 0.1041666vw solid;	
+}
+.SocialSummitSessionBgColor {
+	background-color: #ddffdf;
+}
+
+.ServicesSummitBgColor, #ServicesSummit {
+	background-color: #8b9647;
+}
+.ServicesSummitColor {
+	color: #8b9647;
+}
+.ServicesSummitButton.ClickedTabButton, .ServicesSummitButton:hover {
+	background-color: #8b9647;
+	border-bottom: 2px solid #8b9647;
+}
+.ServicesSummitBorderColor {
+	 border: #8b9647 0.052083vw solid;
+     border-bottom: #8b9647 0.1041666vw solid;
+}
+.ServicesSummitSessionBgColor {
+	background-color: #f5fbd3;
+}
+
+.WorkforceSummitBgColor, #WorkforceSummit {
+	background-color: #009d93;
+}
+.WorkforceSummitColor{
+	color: #009d93;
+}
+.WorkforceSummitButton.ClickedTabButton, .WorkforceSummitButton:hover {
+	background-color: #009d93;
+	border-bottom: 2px solid #009d93;
+}
+.WorkforceSummitBorderColor{
+	 border: #009d93 0.052083vw solid;
+     border-bottom: #009d93 0.1041666vw solid;
+}
+.WorkforceSummitSessionBgColor {
+	background-color: #dcfffd;	
+}
+
+.UserAdoptionBgColor, #UserAdoption {
+	background-color: #a3bf2a;
+}
+.UserAdoptionColor {
+	color: #a3bf2a;
+}
+.UserAdoptionButton.ClickedTabButton, .UserAdoptionButton:hover {
+	background-color: #a3bf2a;
+	border-bottom: 2px solid #a3bf2a;
+}
+.UserAdoptionBorderColor {
+	border: #a3bf2a 0.052083vw solid;
+     border-bottom: #a3bf2a 0.1041666vw solid;
+}
+.UserAdoptionSessionBgColor {
+	background-color: #f8ffdc;	
+}
+
+.CloudSummitBgColor, #CloudSummit {
+	background-color: #8796ca;
+}
+.CloudSummitColor {
+	color: #8796ca;
+}
+.CloudSummitButton.ClickedTabButton, .CloudSummitButton:hover {
+	background-color: #8796ca;
+	border-bottom: 2px solid #8796ca;
+}
+.CloudSummitBorderColor {
+	border: #8796ca 0.052083vw solid;
+     border-bottom: #8796ca 0.1041666vw solid;
+}
+.CloudSummitSessionBgColor {
+	background-color: #e4eafe;	
+}
+
+.AnalyticsSummitBgColor, #AnalyticsSummit {
+	background-color: #8e549c;
+}
+.AnalyticsSummitColor {
+	color: #8e549c;
+}
+.AnalyticsSummitButton.ClickedTabButton, .AnalyticsSummitButton:hover {
+	background-color: #8e549c;
+	border-bottom: 2px solid #8e549c;
+}
+.AnalyticsSummitBorderColor {
+	border: #8e549c 0.052083vw solid;
+     border-bottom: #8e549c 0.1041666vw solid;
+}
+.AnalyticsSummitSessionBgColor {
+	background-color: #f9e2ff;	
+}
+
+.FutureOfWorkBgColor, #FutureOfWork {
+	background-color: #e8ad30;
+}
+.FutureOfWorkColor {
+	color: #e8ad30;
+}
+.FutureOfWorkButton.ClickedTabButton, .FutureOfWorkButton:hover {
+	background-color: #e8ad30;
+	border-bottom: 2px solid #e8ad30;
+}
+.FutureOfWorkBorderColor {
+	border: #e8ad30 0.052083vw solid;
+     border-bottom: #e8ad30 0.1041666vw solid;
+}
+.FutureOfWorkSessionBgColor {
+	background-color: #fae8c3;
+}
+
+.PayAndRewardsBgColor, #PayAndRewards {
+	background-color: #b01d23;
+}
+.PayAndRewardsColor {
+	color: #b01d23;	
+}
+.PayAndRewardsButton.ClickedTabButton, .PayAndRewardsButton:hover {
+	background-color: #b01d23;
+	border-bottom: 2px solid #b01d23;
+}
+.PayAndRewardsBorderColor {
+	border: #b01d23 0.052083vw solid;
+     border-bottom: #b01d23 0.1041666vw solid;	
+}
+.PayAndRewardsSessionBgColor {
+	background-color: #ffe0e1;	
+}
+
+.ProductDemoBgColor, #ProductDemo, #ProductDemoMobile:hover, .ProductDemoBBgColor, #ProductDemoB, #ProductDemoBMobile:hover {
+	background-color: #aa2532;
+}
+.ProductDemoColor, .ProductDemoBColor {
+	color: #aa2532;
+}
+.ProductDemoButton.ClickedTabButton, .ProductDemoButton:hover, .ProductDemoBButton.ClickedTabButton, .ProductDemoBButton:hover {
+	background-color: #aa2532;
+	border-bottom: 2px solid #aa2532;
+}
+.ProductDemoBorderColor, .ProductDemoBBorderColor {
+	border: #aa2532 0.052083vw solid;
+     border-bottom: #aa2532 0.1041666vw solid;		
+}
+.ProductDemoSessionBgColor, .ProductDemoBSessionBgColor {
+	background-color: #ffe1e4;
+}
+
+.Labs1BgColor, #Labs1, #Labs1Mobile:hover {
+	background-color: #507cbd;
+}
+.Labs1Color {
+	color: #507cbd;
+}
+.Labs1Button.ClickedTabButton, .Labs1Button:hover {
+	background-color: #507cbd;
+	border-bottom: 2px solid #507cbd;
+}
+.Labs1BorderColor {
+	border: #507cbd 0.052083vw solid;
+     border-bottom: #507cbd 0.1041666vw solid;	
+}
+.Labs1SessionBgColor {
+	background-color: #d7e6fc;	
+}
+
+.Labs2BgColor, #Labs2, #Labs2Mobile:hover {
+	background-color: #507cbd;
+}
+.Labs2Color {
+	color: #507cbd;
+}
+.Labs2Button.ClickedTabButton, .Labs2Button:hover {
+	background-color: #507cbd;
+	border-bottom: 2px solid #507cbd;
+}
+.Labs2BorderColor {
+	border: #507cbd 0.052083vw solid;
+     border-bottom: #507cbd 0.1041666vw solid;	
+}
+.Labs2SessionBgColor {
+	background-color: #d7e6fc;	
+}
+
+.Labs3BgColor, #Labs3, #Labs3Mobile:hover {
+	background-color: #507cbd;
+}
+.Labs3Color, .Labs3MobileColor {
+	color: #507cbd;
+}
+.Labs3Button.ClickedTabButton, .Labs3Button:hover {
+	background-color: #507cbd;
+	border-bottom: 2px solid #507cbd;
+}
+.Labs3BorderColor {
+	border: #507cbd 0.052083vw solid;
+     border-bottom: #507cbd 0.1041666vw solid;	
+}
+.Labs3SessionBgColor {
+	background-color: #d7e6fc;	
+}
+
+.BreakTextColor{
+	color:#BCBCBC;
+}
+
+
+.UnconferenceBgColor, #Unconference, #UnconferenceMobile:hover {
+	background-color: #F15B40;
+}
+.UnconferenceColor {
+	color: #F15B40;
+}
+.UnconferenceButton.ClickedTabButton, .UnconferenceButton:hover {
+	background-color: #F15B40;
+	border-bottom: 2px solid #F15B40;
+}
+.UnconferenceBorderColor {
+	border: #F15B40 0.052083vw solid;
+     border-bottom: #F15B40 0.1041666vw solid;		
+}
+.UnconferenceSessionBgColor {
+	background-color: #ffe1e4;
+}
+
+/* END Colors */
+
+/* Header */
+header {
+	background-image:url(../img/agenda/header.jpg);
+	background-repeat:no-repeat;
+	background-size: contain;
+	width:100vw;
+	height:27.08333vw; 
+	color:#fff;
+	margin-top: 4.0625vw;
+}
+#HeaderInnerContainer {
+	padding-top: 4.6875vw;
+	padding-left: 16.666666vw;	
+}
+header h1 {
+	font-size:3.125833vw;
+	margin-top: 0px;
+	margin-bottom: 2.4vw;
+}
+header h2 {
+	width: 100%;
+	max-width:29vw;
+	font-size:1.25vw;
+	line-height: 1.5625vw;
+	margin-bottom: 2.2vw;
+	font-weight: 400;
+}
+header button {
+	font-size: 1.1vw;
+	font-weight: 600;
+	background-color: rgba(255, 255, 255, 0);
+	color: #fff;
+	border: 3px solid #fff;
+	padding: 0;
+	max-width: 15.625vw;
+	height: 3.6458333vw;
+	transition: all 0.3s ease-in;
+}
+header button:hover {
+	background-color: #106ab5;
+	border: 3px solid #106ab5;
+}
+
+
+@media (max-width: 1000px) {
+	header {
+		margin-top: 50px;	
+	}	
+}
+@media (max-width: 768px) {
+header {
+	background-image:url(../img/agenda/header-small-tablet.jpg);
+	background-repeat:no-repeat;
+	background-size: contain;
+	width:100%;
+	height:56.25vw; 
+}
+#HeaderInnerContainer {
+	padding-top: 7.8125vw;
+	padding-left: 7.03125vw;	
+}
+header h1 {
+	font-size:6.5625vw;
+	margin-top: 0px;
+	margin-bottom:5.78125vw;
+}
+header h2 {
+	width: 100%;
+	max-width:47.65625vw;
+	font-size:2.5vw;
+	line-height: 3.4375vw;
+	margin-bottom:5.46875vw;
+}
+header button {
+	font-size: 2.34375vw;
+	border: 1px solid #fff;
+	max-width: 32.8125vw;
+	height: 7.03125vw;
+}
+header button:hover {
+	background-color: #106ab5;
+	border: 1px solid #106ab5;
+}
+}
+@media (max-width: 640px) {
+header {
+	background-image:url(../img/agenda/header-mobile.jpg);
+	background-repeat:no-repeat;
+	background-size: contain;
+	width:100%;
+	height:150vw; 
+}
+#HeaderInnerContainer {
+	padding-top: 19vw;
+	padding-left: 0;
+	text-align: center;	
+}
+header h1 {
+	font-size:12.5vw;
+	margin-top: 0px;
+	margin-bottom:7.8125vw;
+}
+header h2 {
+	max-width:78.125vw;
+	font-size:4.0625vw;
+	line-height: 5.625vw;
+	margin: 0 auto;
+	margin-bottom:21.875vw;
+}
+header button {
+	font-size: 4.6875vw;
+	border: 2px solid #fff;
+	max-width: 62.5vw;
+	height: 12.5vw;
+	margin-bottom: 15vw;
+}
+header button:hover {
+	background-color: #106ab5;
+	border: 2px solid #106ab5;
+}
+#ScrollDownHeaderLinkContainer a span {
+	color: #b5d2dd;	
+}	
+}
+
+/* END Header */
+
+/* Tab Panel Navigation */
+#TabPanelNavigationContainer {
+	width: 100%;	
+	z-index: 2000;	
+}
+#TabPanelNavigation {
+	width: 100%;
+	max-width: 53.33333vw;	
+	font-size: 0;
+	margin: 0 auto;
+}
+.TabPanelButton {
+	width: 100%;
+	max-width: 25%;
+	height: 2.083333vw;	
+	font-size: 0.729166vw;
+	color: #fff;
+	background-color: #101010;
+	border-bottom: none !important;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 600;
+	transition: all 0.3s;
+	border-left: 2px solid #FFF;
+}
+#TabPanelNavigation button {
+	text-transform: none;	
+}
+#MainStageBreakoutButton {
+	border-left: none;	
+}
+@media (max-width: 640px) {
+.HiddenText {
+	display: none;
+}
+#TabPanelNavigationContainer {
+	display: none;
+}
+}
+
+.TabPanelButton:hover,
+.ClickedTabButton {
+	color: #fff;	
+}
+#Day1Button {
+	border-left: 0;	
+}
+@media (max-width: 1920px) {
+#TabPanelNavigation {
+	max-width: 1024px;	
+}
+.TabPanelButton {
+	height: 40px;	
+	font-size: 14px;
+}
+}
+@media (max-width: 480px) {
+.TabPanelButton {
+	height: 10.9375vw;	
+	font-size: 3.125vw;
+}	
+}
+/* END Tab Panel Navigation */
+
+/* Agenda Session List Stage Name and Date */
+#AgendaStageTitle, .AgendaDateClass{	
+	width: 100%;
+	max-width: 53.38541vw;
+	margin: 0 auto;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+}
+#AgendaStageTitle {
+	margin-top: 1.3020833vw;
+	margin-bottom: 1.04166vw;
+	font-size: 1.25vw;
+}
+
+#CategoryRoom {
+	float: right;
+	font-size: 0.875vw;
+	vertical-align:bottom;
+	position:relative;
+	top: 0.3vw;
+}
+.AgendaDateClass{
+	font-size: 1.04166vw;
+	color:#666666;
+	border-bottom: 1px solid #CCCCCC;	
+}
+#AgendaDayOne {
+	margin-top: 2.08333vw;
+	padding-bottom: 0.78125vw;
+}
+#AgendaDayTwo {
+	margin-top: 2.604166vw;
+	padding-bottom: 0.78125vw;
+}
+.ProductDName {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 1.04166vw;
+	padding-left: 1.5625vw;	
+}
+#SessionsDayTwoMobile .ProductDName {
+	margin-top: 50px;	
+}
+.AgendaDateDay{
+	float:right;	
+}
+#SelectedStageText {
+	margin: 0 auto;	
+	width: 100%;
+	color: #747474;
+	max-width: 53.333333vw;	
+	font-size: 0.729166vw;
+	line-height: 0.83333vw;
+	font-family: 'Roboto', sans-serif;
+}
+@media (max-width: 1920px) {
+#AgendaStageTitle, .AgendaDateClass{	
+	max-width: 1025px;
+}
+#AgendaStageTitle {
+	margin-top: 25px;
+	margin-bottom: 20px;
+	font-size:36px;
+}
+
+#CategoryRoom {
+	font-size: 25.2px;	
+	top: 0.75vw;
+}
+
+#AgendaDayOne {
+	margin-top: 40px;
+	padding-bottom: 15px;
+}
+#AgendaDayTwo {
+	margin-top: 50px;
+	padding-bottom: 15px;
+}
+.AgendaDateClass{
+	margin-bottom: 0;
+	font-size:36px;
+}
+.ProductDName {
+	font-size: 20px;
+	padding-left: 30px;	
+}
+#SelectedStageText {
+    max-width: 1024px;
+    font-size: 14px;
+    line-height: 17px;
+}
+}
+@media (max-width: 1070px) {
+#AgendaStageTitle, .AgendaDateClass{
+	padding-left: 20px;
+}
+#SelectedStageText {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.AgendaDateClass{
+	max-width: 980px;
+	padding-left: 0;
+}
+}
+@media (max-width: 1000px) {
+#AgendaStageTitle, .AgendaDateClass{
+	padding-left: 4vw;
+}
+#AgendaStageTitle {
+	padding: 4vw 0 3vw 0vw;
+	font-size: 3.125vw;
+	max-width: 95vw;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+#CategoryRoom {
+	font-size: 2.1875vw;	
+}
+.AgendaDateClass{
+	margin-top: 6vw;
+	max-width: 95vw;
+	padding-left: 0;
+	font-size: 2.604166vw;
+}
+.ProductDName {
+	font-size: 2.08333vw;
+	padding-left: 1.692708vw;	
+}	
+#SelectedStageText {
+	max-width: 95vw;
+	font-size: 1.822916vw;
+	line-height: 2.5vw;
+	padding-left: 0;
+	padding-right: 0;
+}
+}
+@media (max-width: 640px) {
+#AgendaStageTitle {
+	margin-top: 6.25vw;
+	margin-bottom: 3.125vw;
+	font-size: 4.6vw;
+	padding-left: 2.8125vw;
+	padding-right: 2.8125vw;
+}
+
+#CategoryRoom {
+	font-size: 4.6vw;	
+	top: 0;
+}
+
+#AgendaDayOne {
+	margin-bottom: 0;	
+}
+.AgendaDateClass{
+	margin-bottom: 0;
+	font-size: 5vw;
+	max-width: 89.375vw;
+}
+.ProductDName {
+	font-size: 4.375vw;
+	padding-left: 2vw;	
+}
+
+#SelectedStageText {
+	max-width: 100%;
+	font-size: 4vw;
+	line-height: 6vw;
+	padding: 0 5.625vw;
+}
+}
+/* END Agenda Session List Stage name and Date */
+
+/* Session List */ 
+.EventDayTitle{
+  width: 48.489062vw;
+  margin: 0 auto;	
+}
+.SessionsList, #SessionCategories {
+	width: 100%;
+	max-width: 53.333333vw;
+	margin: 0vw auto;
+}
+.Session{
+	padding: 0.9375vw;
+    border-bottom: 1px solid #CCCCCC;	
+}
+.Session, .SessionSelector {
+	cursor:pointer;
+}
+.SessionTimeContainer, .SessionContent {
+	display: inline-block;
+	vertical-align: top;	
+}
+.SessionTimeContainer {
+	width: 5.729166vw;
+}
+.SessionStartTime, .SessionTitle, .SessionSpeaker {
+	font-family: 'Roboto', sans-serif;	
+	font-weight: 400;
+	margin: 0;
+	transition: all 0.3s;
+}
+.SessionStartTime, .SessionTitle {
+	font-size: 0.72916vw;		
+}
+.SessionSpeaker {
+	font-size: 0.729166vw;
+	color: #747474;
+}
+.SessionStartTime {
+	display: inline;
+}
+.SessionContent {
+	margin-top: 0;
+	width: 100%;
+	max-width: 45vw;	
+	transition: all 0.3s;
+}
+.BreakTextClass {
+	cursor: default !important;	
+}
+.BreakoutTextColor{
+	color:#747474;
+	font-weight:300;
+}
+.ExtraBreakoutText{
+    float: right;
+    color: #747474;
+}
+.ExtraBreakoutQuestionMark{
+    background-color: #747474;
+    color: #fff;
+    font-size: 10px;
+    padding: 1px 3px 0px 4px;
+    vertical-align: middle;
+    margin-right: 7px;	
+}
+#EventDay2Title {
+	display: inline-block;
+	position: relative;
+	top: 50vw;
+	margin-left: 0;
+	z-index: 10;
+}
+#EventDay1Title {
+	width: 25vw;
+	background-color: rgba(116, 116, 116, 0.85);	
+	color: #fff;
+	transition: all 0.3s;
+	display: inline-block;
+	position: relative;
+	top: 50vw;
+	margin-left: 0;
+	z-index: 10;	
+}
+#SessionsDayTwoAnchor, #SessionsDayOneAnchor {
+	position: relative; 
+	top: -30vh;
+}
+@media (max-width: 1920px) {
+.SessionContent {
+	max-width: 900px;	
+}	
+.EventDayTitle{
+  width: 939px;
+  margin: 0 auto;	
+}
+.Session {
+	padding: 18px 0;
+}
+.SessionsList, #SessionCategories {
+	max-width: 1024px;
+	margin: 0 auto;
+}
+.Session, .SessionSelector {
+	cursor:pointer;	
+}
+.SessionTimeContainer {
+	width: 83px;
+}
+.SessionStartTime, .SessionTitle {
+	font-size: 16px;	
+}
+.SessionSpeaker {
+	font-size: 14px;	
+}
+.ExtraBreakoutQuestionMark{
+    background-color: #747474;
+    color: #fff;
+    font-size: 10px;
+    padding: 1px 3px 0px 4px;
+    vertical-align: middle;
+	
+    margin-right: 7px;	
+}
+}
+@media (max-width: 1070px) {
+.SessionsList {
+	max-width: 980px;
+	margin: 0 auto;	
+}
+.SessionContent {
+	max-width: 890px;	
+}	
+}
+@media (max-width: 1000px) {
+.EventDayTitle {
+	font-family: 'Roboto', sans-serif;
+	font-size: 2.08333vw;
+	color: #747474;
+	background-color: #E0E0E0;
+	width: 100%;
+	max-width: 10.4166vw;
+	text-align: center;
+	margin: 0;
+	padding: 1.04166vw 0;
+}
+#EventDay2Title {
+	max-width: 13.02083vw;
+	background-color: rgba(116, 116, 116, 0.85);	
+	color: #fff;
+	transition: all 0.3s;
+}
+#EventDay2Title .fa-angle-down {
+	font-size: 2.864583vw;
+}
+.SessionsList, #SessionCategories {
+	width: 100%;
+	max-width: 95vw;
+	margin: 0 auto;
+}
+.Session, .SessionSelector {
+	margin-bottom: 0;	
+}
+.SessionTimeContainer, .SessionContent {
+	display: inline-block;
+	vertical-align: top;	
+}
+.SessionTimeContainer {
+	width: 10.546875vw;
+}
+.SessionTimeContainer .fa-caret-right {
+	margin-left: 1.3020833vw;	
+	margin-right: 2.2135416vw;
+	font-size: 1.8229166vw;	
+}
+.SessionStartTime, .SessionTitle, .SessionSpeaker {
+	font-family: 'Roboto', sans-serif;	
+	font-weight: 400;
+	font-size: 1.8229166vw;	
+	margin: 0;
+}
+.SessionTitle:hover, .SessionSpeaker:hover {
+	padding-left: 0px;	
+	filter: contrast(1);
+	webkit-filter: contrast(1);
+}
+.SessionStartTime, .SessionSpeaker, .BreakSessionTitle {
+	color: #747474;
+}
+.SessionStartTime {
+	display: inline;
+}
+.SessionContent {
+	margin-top: 0.130208vw;
+	width: 100%;
+	max-width: 83vw;
+}
+}
+@media (max-width: 640px) {
+	#SessionListMobile {
+		margin-top: 0px;
+	}
+	
+   #SessionTitle{
+	  -webkit-tap-highlight-color: rgba(0,0,0,0);
+      -webkit-tap-highlight-color: transparent; /* For some Androids */
+   }
+	
+	.EventDayTitle {
+		font-size: 5vw;
+		max-width: 25vw;
+		padding: 2.5vw 0;
+	}
+	#EventDay2Title {
+		max-width: 31.25vw;
+	}
+	#EventDay2Title .fa-angle-down {
+		font-size: 6.875vw;
+	}
+	.SessionsList {
+		max-width: 89.375vw;
+		margin: 0 auto;
+	}
+	.Session, .SessionSelector {
+		margin-bottom: 0;	
+	}
+	.Session {
+		padding-top: 3vw;
+		padding-bottom: 3vw;
+	  -webkit-tap-highlight-color: rgba(0,0,0,0);
+      -webkit-tap-highlight-color: transparent; /* For some Androids */
+	}
+	.SessionTimeContainer {
+		width: 18.875vw;	
+	}
+	.SessionTimeContainer .fa-caret-right {
+		margin-left: 3.125vw;	
+		margin-right: 2.5vw;
+		position: relative;
+		top: 3px;
+		font-size: 5vw;
+	}
+	.SessionStartTime, .SessionTitle, .SessionSpeaker {
+		font-size: 3.75vw;
+		line-height: 5vw;	
+	}
+	.SessionContent {
+		max-width: 67.5vw;	
+	}	
+	#SessionCategoriesDesktop{
+		display:none !important;	
+	}
+	.ExtraBreakoutText {
+		display: block;	
+		float: none;
+	}
+}	
+
+
+/* END Session List */
+
+/* Speakers and Testimonials */
+#SpeakersAndTestimonialsContainer {
+	width: 100%;
+	max-width: 53.33333vw;
+	margin: 2.0833vw auto;	
+	font-size: 0;
+	text-align: center;
+}
+.SpeakerBox, .TestimonialBox {
+	width: 100%;
+	max-width: 33.33333333333%;	
+	display: inline-block;
+	vertical-align: top;
+}
+.SpeakerBoxPhoto {
+	width: 100%;
+	height: 17.760416vw;	
+
+}
+.SpeakerBoxSpeakerInfo {
+	font-size: 0.729166vw;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	color: #747474;
+	text-align: left;
+	margin: 1.04166vw 1.04166vw 0 1.04166vw;
+}
+.TestimonialBox {
+	text-align: left;
+	height: 17.7604166vw;
+	color: #fff;
+	font-size: 0.729166vw;
+	font-family: 'Roboto', sans-serif;
+	padding-left: 2.604166vw;
+	padding-right: 1.822916vw;
+	padding-top: 3.645833vw;
+}
+.TestimonialBox img {
+	width: 3.90625vw;
+	height: 2.9166vw;	
+}
+.Testimonial {
+	margin: 0;	
+	margin-top: 0.83333vw;
+	line-height: 0.83333vw;
+}
+.TestimonialSpeakerName {
+	margin: 0;	
+	margin-top: 1.04166vw;
+}
+@media (max-width: 1920px) {
+#SpeakersAndTestimonialsContainer {
+	max-width: 1024px;
+	margin: 40px auto;	
+}
+.SpeakerBoxPhoto {
+	width: 100%;
+	height: 341px;	
+}
+
+.SpeakerBoxSpeakerInfo {
+	font-size: 14px;
+	margin: 20px 20px 0 20px;
+}
+
+.TestimonialBox {
+	height: 341px;
+	font-size: 14px;
+	padding-left: 50px;
+	padding-right: 35px;
+	padding-top: 70px;
+}
+.TestimonialBox img {
+	width: 75px;
+	height: 56px;	
+}
+.Testimonial {
+	margin-top: 16px;
+	line-height: 16px;
+}
+.TestimonialSpeakerName {
+	margin-top: 20px;
+}	
+}
+@media (max-width: 1023px) {
+#SpeakersAndTestimonialsContainer {
+	max-width: 100%;
+	margin: 2.604166vw auto;	
+}
+.SpeakerBoxPhoto {
+	width: 100%;
+	height: 32.633007vw;	
+}
+.SpeakerBoxSpeakerInfo {
+	font-size: 1.822916vw;
+	margin: 2.604166vw 2.604166vw 0 2.604166vw;
+	line-height: 2.08333vw;
+}
+.TestimonialBox {
+	height: 33.333333vw;
+	font-size: 1.822916vw;
+	padding-left: 2.99479vw;
+	padding-right: 2.99479vw;
+	padding-top: 2.99479vw;
+}
+.TestimonialBox img {
+	width: 7.68229vw;
+	height: 5.729166vw;	
+}
+.Testimonial {
+	margin-top: 2.0833333vw;
+	line-height: 2.0833333vw;
+}
+.TestimonialSpeakerName {
+	margin-top: 2.604166vw;
+}
+}
+@media (max-width: 640px) {
+#SpeakersAndTestimonialsContainer {
+	max-width: 100%;
+	margin: 0 auto;	
+	margin-top: 9.375vw;
+}
+.SpeakerBox {
+	max-width: 50%;	
+}
+.SpeakerBoxPhoto {
+	width: 100%;
+	height: 50vw;	
+}
+.TestimonialBox {
+	max-width: 100%;
+}
+.SpeakerBoxSpeakerInfo {
+	font-size: 3.75vw;
+	margin: 3.125vw 3.125vw 7.8125vw 4.6875vw;
+	line-height: 4.6875vw;
+}
+.TestimonialBox {
+	height: auto;
+	font-size: 3.75vw;
+	padding: 9.375vw 0 7.8125vw 5.625vw;
+}
+.TestimonialBox img {
+	width: 13.75vw;
+	height: 10.3125vw;	
+	display: inline-block;
+	vertical-align: top;
+}
+.TestimonialTextContainer {
+	display: inline-block;
+	width: 100%;
+	max-width: 68.75vw;
+	margin-left: 5vw;	
+}
+.Testimonial {
+	margin-top: 0;
+	line-height: 4.6875vw;
+}
+.TestimonialSpeakerName {
+	margin-top: 4.6875vw;
+}
+}
+/* Speakers and Testimonials */
+
+/* Sponsors */
+#Sponsors {
+	width: 100%;
+	height: 6.25vw;
+	background-color: rgba(102, 103, 102, 0.1);	
+}
+#SponsorsInnerContainer {
+	width: 100%;
+	max-width: 53.3333vw;
+	margin: 0 auto;
+	font-size: 0;
+	text-align: center;
+}
+.Sponsor {
+	display: inline-block;
+	width: 25%;
+    vertical-align: middle;	
+}
+@media (max-width: 1920px) {
+#Sponsors {
+	height: 120px;	
+}
+#SponsorsInnerContainer {
+	max-width: 1024px;
+    /*padding-top: 25px;*/
+}	
+}
+@media (max-width: 1000px) {
+#Sponsors {
+	/*height: 15.625vw;*/
+	height: auto;
+	padding-top: 1.5vw;
+	padding-bottom: 1.5vw;
+}
+#SponsorsInnerContainer {
+	max-width: 100%;
+}
+}
+@media (max-width: 640px) {
+	#SponsorsInnerContainer {
+		padding-bottom: 3vw;
+	}
+	.Sponsor {
+		width: 50%;	
+	}
+	.WhiteSponsorBg {
+		background-color: #fff;	
+	}
+}
+/* END Sponsors */
+
+/* Go Top Button Agenda customization */
+#GoTopImg {
+	bottom: 50px;
+	z-index: 5000;
+}
+
+/* For the delegates, who print out the Agenda: hide the unnecessery elements of the page. Uncomment this if it is valuable. 
+@media print {
+	#DesktopMenu, header, #SpeakersAndTestimonialsContainer, #FooterWrapper, #GoTopImg {
+		display: none;	
+	}
+	#StageDescription{
+		margin-top: 100px;	
+	}
+	.SessionContent {
+		max-width: 500px !important;	
+	}
+}*/
+
+#AgendaScrollAcnhor {
+	position:absolute;
+	top: 25vw;	
+}
+@media (max-width: 640px) {
+	#AgendaScrollAcnhor {
+	
+	top: 5vw;	
+}
+
+.ExtraBreakoutText{
+	display:none;
+	
+}
+}
+
+.AgendaSponsorLogo{
+    max-width: 162px;
+    max-height: 120px;	
+}
+
+.RoomNum {
+	margin-top: 3vw !important;	
+}

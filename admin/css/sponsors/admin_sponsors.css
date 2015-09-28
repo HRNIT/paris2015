@@ -1,0 +1,57 @@
+@charset "utf-8";
+/* General Definitions*/
+
+.fa-external-link {
+	padding:10px 10px 10px 0;	
+}
+
+.SysIcon {
+  padding: 1vw 1vw 1vw 0;
+  font-size: 20px;
+  cursor:pointer;
+  
+}
+
+.SelectClass {
+  min-width: 18vw;
+  margin: 15px 2vw 2vw;
+  min-height: 35px;
+  color: #555;
+  padding: 0 5px;
+  border: 1px solid rgba(191, 192, 194, 0.79);
+  border-radius: 4px;
+	
+}
+
+.HelpText {
+	display:none;
+	color:rgba(211,17,21,1.00);
+}
+
+.AlaCarteContainer {
+	display:none;	
+}
+
+.SocialLinkEdit {
+  font-size: 11pt !important;
+}
+
+.AlacarteContainer{
+	  /*padding-bottom: 5vw;*/
+}
+
+.AlaCarteBox{
+	
+}
+
+.AlaCarteItem, .AlaCarteItemNew{
+  display: inline-block;
+  border: 1px solid;
+  padding: 0.5vw;
+  margin: 0 0.6vw 0 0;
+  cursor:pointer;
+}
+
+.AlaCarteItemNew{
+margin: 5vw 0;
+}

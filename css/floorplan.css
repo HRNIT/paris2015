@@ -1,0 +1,143 @@
+@charset "utf-8";
+/* These CSS rules will affect the Floorplan page.  */
+
+/* Header */
+header {
+	background-image:url(../img/tickets/ticketsheader.png);
+	background-repeat:no-repeat;
+	background-size: contain;
+	width:100%;
+	height:27.08333vw; 
+	color:#106ab5;
+	margin-top: 4.0625vw;
+	margin-bottom: -5px;
+}
+#HeaderInnerContainer {
+	padding-top: 4.6875vw;
+	padding-left: 16.666666vw;	
+}
+header h1 {
+	font-size:3.125833vw;
+	margin-top: 0px;
+	margin-bottom: 2.4vw;
+}
+header p {
+	width: 100%;
+	max-width:29vw;
+	font-size:1.25vw;
+	line-height: 1.5625vw;
+	margin-bottom: 3.9vw;
+}
+header button {
+	font-size: 1.25vw;
+	font-weight: 600;
+	background-color: rgba(255, 255, 255, 0);
+	color: #106ab5;
+	border: 3px solid #106ab5;
+	padding: 0;
+	max-width: 15.625vw;
+	height: 3.6458333vw;
+	transition: all 0.3s ease-in;
+}
+header button:hover {
+	background-color: #fff;
+	color: #106ab5;
+}
+
+#BookNowButton {
+	font-size: 1.25vw;
+	font-weight: 600;
+	background-color: rgba(255, 255, 255, 0);
+	color: #106ab5;
+	border: 3px solid #106ab5;
+	padding: 0;
+	max-width: 15.625vw;
+	height: 3.6458333vw;
+	text-align: center;
+	
+	text-transform: uppercase;
+	transition: all 0.3s ease-in;
+}
+#BookNowButton:hover {
+	background-color: #106ab5;
+	border: 3px solid #106ab5;
+	color:#fff;
+}
+@media (max-width: 1000px) {
+	header {
+		margin-top: 50px;	
+	}
+}
+@media (max-width: 767px) {
+	header {
+		display: none;	
+	}
+}
+/* END Header */
+
+/* Floorplan */
+#FloorplanMobile {
+	display: none;
+}
+#floorplan-map {
+	width:90%;
+	height:83vw;
+	margin: 0 auto;
+	margin-top: 4.0625vw;
+} 
+@media (max-width: 1920px) {
+#floorplan-map {
+	height:1250px;
+
+}
+}
+@media (max-width: 1300px) {
+	#floorplan-map {
+	width:98%;
+	}
+}
+@media (max-width: 1000px) {
+	#floorplan-map {
+		margin-top: 50px;	
+		width: 100%;
+		height: 650px;
+
+	}
+}
+@media (max-width: 580px) {
+	#floorplan-map {
+		display: none;	
+	}
+	#FloorplanMobile {
+		display: block;
+		margin-top: 80px;
+		text-align: center;
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-bottom: 50px;
+	}
+	#FloorplanMobile h2 {
+		font-size: 36px;	
+	}
+	#DownloadFloorplanButton {
+		font-size: 18px;
+		font-weight: 600;
+		background-color: rgba(255, 255, 255, 0);
+		color: #106ab5;
+		border: 3px solid #106ab5;
+		padding: 0;
+		max-width: 250px;
+		height: 50px;
+		text-align: center;
+		margin-top: 30px;
+		
+		text-transform: uppercase;
+		transition: all 0.3s ease-in;
+	}
+	#DownloadFloorplanButton:hover {
+		background-color: #106ab5;
+		border: 3px solid #106ab5;
+		color:#fff;
+	}
+}
+/*End Floorplan */

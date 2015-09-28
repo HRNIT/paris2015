@@ -1,0 +1,784 @@
+@charset "utf-8";
+/* These CSS rules will affect the sponsors page.  */
+	
+/* Main Content */
+#MainContent {
+	box-sizing: border-box;	
+	margin-top: 4vw;
+}
+@media (max-width: 1000px) {
+	#MainContent {
+		margin-top:15.4vw;	
+	}
+}
+@media (max-width: 640px) {
+	#MainContent {
+		margin-top:15.4vw;
+	}
+}
+#MainContent * {
+	box-sizing: border-box;	
+}
+/* END Main Content */
+
+/* Back to Speakers */
+#BackToSpeakersContainer {
+	width: 100%;
+	height: 3.2291666vw;
+	background-color: #106ab5;	
+}
+#BackToSpeakersInnerContainer {
+	font-size: 0.9375vw;
+	width: 100%;
+	max-width: 59.375vw;
+	margin: 0 auto;	
+	padding-top: 1.1458333vw;
+}
+#BackToSpeakersInnerContainer a {
+	color: #fff;	
+}
+#BackToSpeakersInnerContainer img {
+	width: 0.46875vw;
+	height: 0.8854166vw;
+}
+#BackToSpeakersInnerContainer span {
+	position: relative;
+	left: 0.5208333vw;
+	top: -0.1041666vw;
+}
+@media (max-width: 1919px) {
+	#BackToSpeakersContainer {
+		height: 62px;
+	}
+	#BackToSpeakersInnerContainer {
+		font-size: 18px;
+		max-width: 1140px;
+		padding-top: 22px;
+	}
+	#BackToSpeakersInnerContainer img {
+		width: 9px;
+		height: 17px;
+	}
+	#BackToSpeakersInnerContainer span {
+		left: 10px;
+		top: -2px;
+	}
+}
+@media (max-width: 1140px) {
+	#BackToSpeakersInnerContainer {
+		padding-left: 20px;
+	}
+}
+@media (max-width: 640px) {
+	#BackToSpeakersContainer {
+		height: 55px;
+	}	
+	#BackToSpeakersInnerContainer {
+		font-size: 16px;
+		padding-top: 20px;	
+	}
+	#BackToSpeakersInnerContainer span {
+		top: -3px;
+		left: 7px;
+	}	
+}
+/*End Back to Speakers */
+
+/* Main Speaker Info */
+#SpeakerProfileContainer {
+	width: 100%;
+	background-color: #f4f4f2;
+}
+#SpeakerProfile {
+	width: 100%;
+	max-width: 59.375vw;
+	margin: 0 auto;
+	padding: 4.6875vw 7.8125vw 5.20833333vw 7.8125vw;	
+	background-color: #fff;
+}
+#SpeakerPhoto {
+	width: 17.96875vw;
+	height: 17.96875vw;	
+}
+#SpeakerInfo {
+	display: inline-block;
+	width: 100%;
+	max-width: 20.8333333vw;
+	vertical-align: top;
+	margin-left: 4.6875vw;
+}
+#SpeakerName, #Jobtitle, #CompanyName {
+	line-height: 2.08333333vw;	
+	margin: 0;
+}
+#SpeakerName {
+	font-size: 1.5625vw;
+	margin-top: 0.520833vw;
+}
+#Jobtitle, #CompanyName {
+	font-size: 1.25vw;
+	color: #6c6c6c;	
+}
+#CompanyName {
+	font-weight: 700;
+}
+#SpeakerIconsContainer {
+	font-size: 0;	
+	margin-top: 1.5625vw;
+}
+#SpeakerIconsContainerMobile {
+	display: none;
+}
+.SpeakerIcon {
+	display: inline-block;
+	margin-right: 0.78125vw;
+	width: 1.5625vw;
+	height: 1.5625vw;
+	background-size: cover;
+}
+#SpeakerFacebookIcon {
+	background-image: url(../img/speakers/SocialIcons/facebook-icon.png);
+}
+#SpeakerTwitterIcon {
+	background-image: url(../img/speakers/SocialIcons/twitter-icon.png);
+}
+#SpeakerLinkedInIcon {
+	background-image: url(../img/speakers/SocialIcons/linkedin-icon.png);
+}
+#SpeakerWebsiteIcon {
+	font-size: 1.40625vw;
+	color: #717171;
+	position: relative;
+	top: -0.15625vw;
+	left: 0.2604166vw;
+	transition: all 0.3s;
+}
+#SpeakerWebsiteIcon:hover {
+	color: #106ab5;	
+}
+#CompanyLogo {
+	background-size: cover;
+	margin-top: 25px;
+	max-height:140px;
+}
+@media (max-width: 1919px) {
+	#SpeakerProfile {
+		max-width: 1140px;
+		padding: 90px 150px 100px 150px;	
+	}
+	#SpeakerPhoto {
+		width: 345px;
+		height: 345px;	
+	}
+	#SpeakerInfo {
+		max-width: 400px;
+		margin-left: 90px;
+	}
+	#SpeakerName, #Jobtitle, #CompanyName {
+		line-height: 40px;	
+	}
+	#SpeakerName {
+		font-size: 30px;
+		margin-top: 10px;
+	}
+	#Jobtitle, #CompanyName {
+		font-size: 24px;
+	}
+	#SpeakerIconsContainer {
+		margin-top: 30px;
+	}
+	.SpeakerIcon {
+		margin-right: 15px;
+		width: 30px;
+		height: 30px;
+	}
+	#SpeakerWebsiteIcon {
+		font-size: 27px;
+		top: -3px;
+		left: 5px;
+	}
+	#CompanyLogo {
+		/*margin-top: 75px;*/
+	}
+}
+@media (max-width: 1280px) {
+	#SpeakerProfile {
+		max-width: 89.0625vw;
+		padding: 7.03125vw 11.71875vw 7.8125vw 11.71875vw;	
+	}
+	#SpeakerPhoto {
+		width: 26.953125vw;
+		height: 26.953125vw;	
+	}
+	#SpeakerInfo {
+		max-width: 30vw;
+		margin-left: 7.03125vw;
+	}
+	#SpeakerName, #Jobtitle, #CompanyName {
+		line-height: 3.125vw;	
+	}
+	#SpeakerName {
+		font-size: 2.34375vw;
+		margin-top: 0.78125vw;
+	}
+	#Jobtitle, #CompanyName {
+		font-size: 1.875vw;
+	}
+	#SpeakerIconsContainer {
+		margin-top: 2.34375vw;
+	}
+	.SpeakerIcon {
+		margin-right: 1.171875vw;
+		width: 2.34375vw;
+		height: 2.34375vw;
+	}
+	#SpeakerWebsiteIcon {
+		font-size: 2.109375vw;
+		top: -0.234375vw;
+		left: 0.390625vw;
+	}
+	#CompanyLogo {
+		margin-top: 2.734375vw;
+	}
+}
+@media (max-width: 1000px) {
+	#SpeakerProfile {
+		max-width: 100%;
+		padding: 0 0 6.5104166vw 0;	
+	}
+	#MainSpeakerInfo {
+		background-color: #f4f4f2;
+		padding: 2.6041666vw;/* 20px */
+	}
+	#SpeakerPhoto {
+		width: 26.0416666vw;
+		height: 26.0416666vw;	
+	}
+	#SpeakerInfo {
+		max-width: 60vw;
+		margin-left: 4.5572916vw;
+	}
+	#SpeakerName {
+		font-size: 3.125vw;
+		margin-top: 3.2552083vw;
+		line-height: 4.5572916vw;
+	}
+	#Jobtitle, #CompanyName {
+		font-size: 2.34375vw;
+		line-height: 3.90625vw;
+	}
+	#SpeakerIconsContainer {
+		margin-top: 3.2552083vw;
+	}
+	.SpeakerIcon {
+		width: 3.515625vw;
+		height: 3.515625vw;	
+		margin-right: 1.953125vw;
+	}
+	#SpeakerWebsiteIcon {
+		font-size: 3.515625vw;
+		top: -0.390625vw;
+		left: 0.6510416vw;
+	}
+	#CompanyLogo {
+		display: none;
+	}
+}
+@media (max-width: 640px) {
+	#SpeakerProfile {
+		padding-bottom: 15.625vw;	
+	}
+	#MainSpeakerInfo {
+		padding: 10.3125vw 3.25vw 6.25vw 6.25vw;
+	}
+	#SpeakerPhoto {
+		width: 40.625vw;
+		height: 40.625vw;	
+	}
+	#SpeakerInfo {
+		margin-left: 6.25vw;
+		width: 100%;
+		max-width: 38.0625vw;
+	}
+	#SpeakerName , #Jobtitle, #CompanyName {
+		line-height: 6.875vw;	
+	}
+	#SpeakerName {
+		font-size: 5vw;
+		margin-top: 0px;
+	}
+	#Jobtitle, #CompanyName {
+		font-size: 3.75vw;
+	}
+	#SpeakerIconsContainer {
+		display: none;
+	}
+	#SpeakerIconsContainerMobile {
+		display: block;
+		margin-top: 4.6875vw;
+	}
+	.SpeakerIcon {
+		margin-right: 2.8125vw;	
+		width: 8.4375vw;
+		height: 8.4375vw;
+	}
+	#SpeakerWebsiteIcon {
+		font-size: 8.4375vw;
+		top: -0.9375vw;
+		left: 1.5625vw;
+	}
+}
+/* END Main Speaker Info */
+
+/* Speaker Bio: shares the same font definitions with the .SessionAbstract class */
+#SpeakerBio, .SessionAbstract {
+	font-size: 0.833333vw;
+	line-height: 1.5104166vw;
+	font-weight: 500;
+}
+#SpeakerBio {
+	margin-top: 2.8645833vw;
+	margin-bottom: 0;		
+}
+@media (max-width: 1919px) {
+	#SpeakerBio, .SessionAbstract {
+		font-size: 16px;
+		line-height: 29px;
+	}
+	#SpeakerBio {
+		margin-top: 55px;
+	}
+}
+@media (max-width: 1000px) {
+	#SpeakerBio, .SessionAbstract {
+		font-size: 2.083333vw;
+		line-height: 3.125vw;
+		margin-left: 2.604166vw;
+		margin-right: 2.604166vw;
+	}
+	#SpeakerBio {
+		margin-top: 3.90625vw;		
+	}
+}
+@media (max-width: 640px) {
+	#SpeakerBio, .SessionAbstract {
+		font-size: 4.375vw;
+		line-height: 6.5625vw;
+		margin-left: 6.25vw;
+		margin-right: 6.25vw;
+	}
+	#SpeakerBio {
+		margin-top: 7.8125vw;		
+	}
+}
+/* END Speaker Bio */
+
+/* Collapsible Stages */
+#TalksAt {
+	font-size: 1.0416666vw;
+	color: #000;
+	margin-top: 1.5625vw;
+	margin-bottom: 1.3020833vw;
+}
+.CollapsibleStage {
+	color: #000;
+	margin-bottom: 1.0416666vw;
+}
+.StageHeadline {
+	cursor: pointer;	
+}
+.StageIcon {
+	width: 2.0833333vw;
+	height: 2.0833333vw;	
+}
+.StageName {
+	display: inline-block;
+	font-size: 1.0416666vw;
+	font-weight: 600;
+	position: relative;
+	top: -0.520833vw;
+	left: 1.0416666vw;
+	margin: 0;
+}
+.CollapseIcon {
+	float: right;	
+	margin-right: 1.041666vw;
+	margin-top: 0.520833vw;
+	width: 0.989583vw;
+	height: 0.989583vw;
+}
+.ShowIcon {
+	display: block;	
+}
+.HideIcon {
+	display: none;	
+}
+.StageContent {
+	display: none;	
+}
+#OpenedCollapsibleStageContent {
+	display: block;	
+}
+.SessionTitle {
+	margin-top: 1.5625vw;
+	font-size: 0.9375vw;
+	font-weight: 600;	
+}
+.SessionAbstract {
+	margin-bottom: 0;	
+}
+@media (max-width: 1919px) {
+	#TalksAt {
+		font-size: 20px;
+		margin-top: 30px;
+		margin-bottom: 25px;
+	}
+	.CollapsibleStage {
+		margin-bottom: 20px;	
+	}
+	.StageIcon {
+		width: 40px;
+		height: 40px;	
+	}
+	.StageName {
+		font-size: 20px;
+		top: -10px;
+		left: 20px;
+	}
+	.CollapseIcon {
+		margin-right: 20px;
+		margin-top: 10px;
+		width: 19px;
+		height: 19px;
+	}
+	.SessionTitle {
+		margin-top: 30px;
+		font-size: 18px;
+	}
+}
+@media (max-width: 1280px) {
+	#TalksAt {
+		font-size: 1.5625vw;
+		margin-top: 2.34375vw;
+		margin-bottom: 1.953125vw;
+	}
+	.CollapsibleStage {
+		margin-bottom: 1.5625vw;	
+	}
+	.StageIcon {
+		width: 3.125vw;
+		height: 3.125vw;	
+	}
+	.StageName {
+		font-size: 1.5625vw;
+		top: -0.78125vw;
+		left: 1.5625vw;
+	}
+	.CollapseIcon {
+		margin-right: 1.5625vw;
+		margin-top: 0.78125vw;
+		width: 1.484375vw;
+		height: 1.484375vw;
+	}
+	.SessionTitle {
+		margin-top: 2.34375vw;
+		font-size: 1.40625vw;
+	}
+}
+@media (max-width: 1000px) {
+	#TalksAt, .StageHeadline, .SessionTitle {
+		margin-left: 2.604166vw;
+		margin-right: 2.604166vw;
+	}
+	#TalksAt {
+		font-size: 2.604166vw;
+		margin-bottom: 3.2552083vw;	
+	}
+	.CollapsibleStage {
+		margin-bottom: 2.604166vw;	
+	}
+	.StageIcon {
+		width: 5.2083333vw;
+		height: 5.2083333vw;	
+	}
+	.StageName {
+		font-size: 2.604166vw;
+		top: -1.302083vw;
+		left: 2.6041666vw;
+	}
+	.CollapseIcon {
+		margin-right: 2.604166vw;
+		margin-top: 1.3020833vw;
+		width: 2.4739583vw;
+		height: 2.4739583vw;
+	}
+	.SessionTitle {
+		font-size: 2.604166vw;
+		margin-top: 1.953125vw;
+		margin-bottom: 2.604166vw;
+	}
+	.SessionAbstract {
+		margin-top: 0px;	
+	}
+}
+@media (max-width: 640px) {
+	#TalksAt, .StageHeadline, .SessionTitle {
+		margin-left: 6.25vw;
+		margin-right: 6.25vw;
+	}
+	#TalksAt {
+		font-size: 5.625vw;
+		margin-top: 7.8125vw;
+		margin-bottom: 7.8125vw;
+	}
+	.CollapsibleStage {
+		margin-bottom: 6.25vw;	
+	}
+	.StageHeadline {
+		margin-right: 0;
+	}
+	.StageIcon {
+		width: 10.625vw;
+		height: 10.625vw;	
+	}
+	.StageName {
+		font-size: 5.3125vw;
+		top: -3.125vw;
+		left: 3.125vw;
+	}
+	.LongStageName { /* .LongStageName classes are used 640px and below if the stage name is longer than 25 characters */
+		top: 0;	
+		width: 100%;
+		max-width: 65.75vw;
+	}
+	.CollapseIcon {
+		margin-right:5.25vw;
+		margin-top: 3.125vw;
+		width: 5.9375vw;
+		height: 5.9375vw;
+	}
+	.SessionTitle {
+		font-size: 4.6875vw;
+		margin-top: 4.6875vw;
+		margin-bottom: 6.25vw;
+	}
+	.SessionAbstract {
+		margin-top: 0px;
+		line-height: 5.3125vw;
+	}
+}
+/* END Collapsible Stages */
+
+/* More Speakers of this track.. (Mini Speakers Grid) */
+.MoreSpeakers {
+	font-size: 1.041666vw;
+	font-weight: 600;
+	margin-top: 1.979166vw;
+	margin-bottom: 1.40625vw;	
+}
+.RelatedSpeakersContainer {
+	width: 100%;
+	max-width: 41.66666vw;	
+	padding-bottom: 1.3020833vw;
+	font-size: 0;
+}
+.RelatedSpeaker {
+	display: inline-block;
+	width: 100%;
+	max-width: 6.770833vw;
+	margin-right: 1.0416666vw;	
+	vertical-align: top;
+	margin-bottom: 1.822916vw;
+}
+.RelatedSpeakerPhoto {
+	width: 6.770833vw;
+	height: 6.770833vw;
+	background-size: cover;	
+}
+.RelatedSpeakerInfo {
+	padding-top: 0.520833vw;	
+}
+.RelatedSpeakerInfo * { 
+	margin: 0; 
+	line-height: 0.833333vw;
+}
+.RelatedSpeakerName {
+	font-size: 0.729166vw;
+	font-weight: 700;	
+}
+.RelatedJobtitle, .RelatedCompanyName {
+	font-size: 0.625vw;	
+	color: #6c6c6c;
+}
+.RelatedCompanyName {
+	font-weight: 700;	
+}
+@media (max-width: 1919px) {
+	.MoreSpeakers {
+		font-size: 20px;
+		margin-top: 38px;
+		margin-bottom: 27px;	
+	}
+	.RelatedSpeakersContainer {
+		max-width: 800px;	
+		padding-bottom: 25px;
+	}
+	.RelatedSpeaker {
+		max-width: 130px;
+		margin-right: 20px;	
+		margin-bottom: 35px;
+	}
+	.RelatedSpeakerPhoto {
+		width: 130px;
+		height: 130px;
+	}
+	.RelatedSpeakerInfo {
+		padding-top: 10px;	
+	}
+	.RelatedSpeakerInfo * { 
+		line-height: 16px;
+	}
+	.RelatedSpeakerName {
+		font-size: 14px;
+	}
+	.RelatedJobtitle, .RelatedCompanyName {
+		font-size: 12px;	
+	}
+}
+@media (max-width: 1280px) {
+	.MoreSpeakers {
+		font-size: 1.5625vw;
+		margin-top: 2.96875vw;
+		margin-bottom: 2.109375vw;	
+	}
+	.RelatedSpeakersContainer {
+		max-width: 62.5vw;	
+		padding-bottom: 1.953125vw;
+	}
+	.RelatedSpeaker {
+		max-width: 10.15625vw;
+		margin-right: 1.5625vw;	
+		margin-bottom: 2.734375vw;
+	}
+	.RelatedSpeakerPhoto {
+		width: 10.15625vw;
+		height: 10.15625vw;
+	}
+	.RelatedSpeakerInfo {
+		padding-top: 0.78125vw;	
+	}
+	.RelatedSpeakerInfo * { 
+		line-height: 1.25vw;
+	}
+	.RelatedSpeakerName {
+		font-size: 1.09375vw;
+	}
+	.RelatedJobtitle, .RelatedCompanyName {
+		font-size: 0.9375vw;	
+	}
+}
+@media (max-width: 1000px) {
+	.MoreSpeakers {
+		margin-left: 2.604166vw;
+		margin-top: 1.953125vw;
+		margin-bottom: 2.8645833vw;
+		font-size: 2.083333vw;	
+	}
+	.RelatedSpeakersContainer {
+		max-width: 83.33333vw;	
+		padding-bottom: 1.3020833vw;
+	}
+	.RelatedSpeaker {
+		max-width: 16.927083vw;
+		margin-right: 0px;	
+		margin-left: 2.604166vw;
+		margin-bottom: 4.5572916vw;
+	}
+	.RelatedSpeakerPhoto {
+		width: 16.927083vw;
+		height: 16.927083vw;
+	}
+	.RelatedSpeakerInfo {
+		padding-top: 1.302083vw;	
+	}
+	.RelatedSpeakerInfo * { 
+		line-height: 2.083333vw;
+	}
+	.RelatedSpeakerName {
+		font-size: 1.822916vw;
+	}
+	.RelatedJobtitle, .RelatedCompanyName {
+		font-size: 1.5625vw;	
+	}
+}
+@media (max-width: 640px) {
+	.MoreSpeakers {
+		margin-left: 6.25vw;
+		margin-top: 6.25vw;
+		margin-bottom: 6.875vw;
+		font-size: 4.6875vw;
+	}
+	.RelatedSpeakersContainer {
+		max-width: 100%;
+		padding-bottom: 1.5625vw;	
+	}
+
+	.RelatedSpeaker {
+		max-width: 40.625vw;
+		margin-right: 0px;	
+		margin-left: 6.25vw;
+		margin-bottom: 10.9375vw;
+	}
+	.RelatedSpeakerPhoto {
+		width: 40.625vw;
+		height: 40.625vw;
+	}
+	.RelatedSpeakerInfo {
+		padding-top: 3.125vw;	
+	}
+	.RelatedSpeakerInfo * { 
+		line-height: 5vw;
+	}
+	.RelatedSpeakerName {
+		font-size: 4.375vw;
+	}
+	.RelatedJobtitle, .RelatedCompanyName {
+		font-size: 3.75vw;	
+	}
+}
+/* END More Speakers of this track.. (Mini Speakers Grid) */
+
+/* Go to Top button 640px */
+#GoTopImg img {
+	display: none;	
+}
+#GoTopImg span {
+	display: none;	
+}
+@media (max-width: 640px) {
+	.GoTopButton {
+		color: #fff;
+		font-size: 15px;	
+	}
+	#GoTopImg {
+		background-color: #434343;
+		width: 100%;
+		height: 55px;
+		bottom: 0;
+		right: 0;
+	}
+	#GoTopImg:hover {
+		background-color: #434343;
+	}
+	#GoTopImg .fa-caret-up {
+		display: none;	
+	}
+	#GoTopImg img {
+		margin-top: 12px;
+		display: inline;
+	}
+	#GoTopImg span {
+		display: inline;	
+	}
+}
+/* END Go to Top button 640px */

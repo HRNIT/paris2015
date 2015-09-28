@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* General Definitions*/
+
+.RobotoText {
+  font-family: 'Roboto', sans-serif;
+}
+.OswaldText {
+  font-family: 'Oswald', sans-serif;
+}
+
+/*END  General Definitions*/
+
+#SponsorName {
+	margin:40px auto 40px auto;
+	text-align:center;
+}

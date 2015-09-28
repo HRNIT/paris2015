@@ -1,0 +1,445 @@
+@charset "utf-8";
+/* These CSS rules will affect the sponsors page.  */
+
+
+/* Header */
+header {
+	/*max-height:552px;*/
+	height:100%;
+	background-image:url(../img/sponsors/sponsors-header-bg-desktop.jpg);
+	background-repeat:no-repeat;
+	background-size: cover;
+	width:100%; 
+	margin:0 auto;
+	margin-top:4vw;
+	text-align:center;
+	color:#fff;
+	padding:0.260416vw 0 0 0;
+}
+header h1 {
+	font-size:5.20833vw;
+	margin-bottom:2.60416vw;
+}
+header p {
+	width: 100%;
+	max-width:23.9583vw;
+	margin:0 auto;	
+	padding-bottom: 2.60416vw;
+	font-size:1.14583vw;
+	line-height: 1.302083vw;
+}
+header a {
+	text-align: center;
+	text-decoration: none;	
+	font-size: 0.9375vw;
+	color:#fff;
+	font-weight: bold;
+	display: block;
+	transition: all 0.3s;
+		max-width: 16vw;
+		margin: 0 auto;
+}
+header a:hover {
+	text-decoration: underline;	
+}
+header button {
+	font-size: 1.14583vw;
+	font-weight: 600;
+	background-color: rgba(255, 255, 255, 0);
+	color: #fff;
+	border: 3px solid #fff;
+	margin-top: 1.97916vw;
+	margin-bottom: 3.64583vw;
+	padding-top: 0;
+	max-width: 15.625vw;
+	height: 3.64583vw;
+	transition: all 0.3s ease-in;
+}
+header button:hover {
+	background-color: #fff;
+	color: #106ab5;
+	border: 3px solid #fff;
+}
+
+@media (max-width: 1366px) {
+	header {
+		background-image:url(../img/sponsors/sponsors-header-bg-desktop-1140.jpg);
+		margin-top:3.90625vw;
+		padding:5px 0 0 0;
+	}
+	header h1 {
+		font-size:100px;
+		margin-bottom:55px;
+	}
+	header p {
+		width: 100%;
+		max-width:460px;
+		margin:0 auto;	
+		padding-bottom: 50px;
+		font-size:22px;
+		line-height: 25px;
+	}
+	header a {
+		font-size: 18px;
+		max-width: 300px;
+	}
+	header button {
+		font-size: 22px;
+		border: 3px solid #fff;
+		margin-top: 38px;
+		margin-bottom: 70px;
+		max-width: 300px;
+		height: 70px;
+	}
+	header button:hover {
+		border: 3px solid #fff;
+	}
+}
+@media (max-width: 1000px) {
+	header {
+		margin-top:13.02083vw;	
+	}
+}
+@media (max-width: 1140px) {
+	header {
+		background-image:url(../img/sponsors/sponsors-header-bg-tablet.jpg);
+		/*margin-top:13.02083vw;*/
+		padding:5px 0 0 0;
+	}
+	header h1 {
+		font-size:100px;
+		margin-top: 90px;
+		margin-bottom:55px;
+	}
+}
+@media (max-width: 640px) {
+	header {
+		background-image:url(../img/sponsors/sponsors-header-bg-mobile.jpg);
+		margin-top:3.90625vw;
+		padding:5px 0 0 0;
+		margin-top:15vw;	
+	}
+	header h1 {
+		font-size:48px;
+		margin-top: 60px;
+		margin-bottom:45px;
+	}
+	header p {
+		max-width:280px;
+		padding-bottom: 50px;
+		font-size:16px;
+		line-height: 20px;
+	}
+	header a {
+		font-size: 16px;
+	}
+	header button {
+		font-size: 21px;
+		margin-top: 38px;
+		margin-bottom: 70px;
+		max-width: 300px;
+		height: 70px;
+	}
+	header button:hover {
+		border: 3px solid #fff;
+	}
+}
+/* END Header */
+	
+/* Sponsors */
+#Sponsors {
+	width: 100%;
+	background-color: #f4f4f2;
+}
+
+/*sponsor anchor*/
+.anchorclass{
+	display: block; 
+	position: relative; 
+	top: -100px; 
+	visibility: hidden;
+}
+@media (max-width: 1000px) {
+	.anchorclass{	
+		top: -150px; 
+	}
+}
+@media (max-width: 480px) {
+	.anchorclass{	
+		top: -100px; 
+	}
+}
+#SponsorsInnerContainer {
+	width: 100%;
+	max-width: 68.489583vw;
+	margin: 0 auto;
+	text-align: center;
+}
+#PoweredByWhosWhoLogo {
+	margin-top: 2.0833vw;
+}
+.SponsorHeadline {
+	width: 100%; 
+	text-align: center; 
+	background-image: url(../img/sponsors/headline-background-desktop.png); 
+	padding: 0px; 
+	background-position: center center; 
+	font-size: 40px;
+	background-size: cover;
+	font-weight: 500;
+	margin-top: 65px;
+	margin-bottom: 65px;
+}
+.SponsorHeadline span {
+	margin-left: -0.260416vw;
+}
+.Sponsor {
+	margin-bottom: 55px;	
+	padding-left: 2.60416vw;
+	text-align: left;
+}
+.SponsorLogo, .SponsorDetails {
+	display: inline-block;
+	vertical-align: top;
+}	
+.SponsorLogo {
+	width: 200px;
+	text-align: center;
+	padding-top: 90px;	
+}
+.SponsorLogo img {
+	width: auto;
+	max-width: 200px;
+	height: auto;
+	max-height: 100px;
+}
+.SponsorDetails {
+	width: 100%;
+	max-width: 650px;
+	margin-left: 3.90625vw;
+	font-size: 1.04166vw;
+	color: #322f2f;
+}
+.SponsorName {
+	font-size: 25px;
+	margin-top: 0;
+	margin-bottom: -5px;
+	line-height: 150%;
+	color: #322f2f;
+}
+.SponsorName a {
+	color: #322f2f;
+	transition: all 0.3s;
+}
+.SponsorName a:hover {
+	color: #106ab5;
+	text-decoration: none;
+}
+.SponsorName .fa-external-link {
+	font-size: 1.14583vw;
+	padding-left: 0.260416vw;
+	color: #106ab5;	
+}
+.SponsorDescription {
+	margin-bottom: 25px;
+	font-size: 17px;
+	width: 100%;
+	max-width: 650px;
+	line-height: 150%;
+}
+.SponsorSocialIcons {
+	margin-top: 2vw;
+}
+.SponsorSocialIcon {
+	display: inline-block;	
+	background-repeat: no-repeat;
+	width: 2.60416vw;
+	height: 2.65625vw;
+	margin-right: 0.78125vw;
+}
+.SponsorFacebookIcon {
+	background-image: url(../img/sponsors/facebook-icon.png);
+	background-size: cover;
+}
+.SponsorTwitterIcon {
+	background-image: url(../img/sponsors/twitter-icon.png);
+	background-size: cover;
+}
+.SponsorLinkedinIcon {
+	background-image: url(../img/sponsors/linkedin-icon.png);
+	background-size: cover;
+}
+.SponsorBlogIcon {
+	background-image: url(../img/sponsors/blog-icon.png);
+	background-size: cover;
+}
+@media (max-width: 1920px) {
+	.SponsorDetails {
+		font-size: 20px;
+	}
+	.SponsorName .fa-external-link {
+		font-size: 22px;
+	}
+	.SponsorSocialIcon {
+		width: 45px;
+		height: 46px;
+	}
+	
+}
+@media (max-width: 1390px) {
+	#SponsorsInnerContainer {
+		max-width: 90%;	
+	}
+}
+@media (max-width: 1022px) {
+	.SponsorLogo {
+		text-align: center;	
+		padding-top: 0;
+		width: 100%;
+	}
+	.SponsorName {	
+		text-align:center;
+	}	
+}
+@media (max-width: 1000px) {
+	#SponsorsInnerContainer {
+		max-width: 100%;
+		margin: 0 auto;
+	}
+	#PoweredByWhosWhoLogo {
+		margin-top: 40px;
+	}
+	.SponsorHeadline {
+		width: 95%;
+		margin: 0 auto;
+		margin-top: 65px;
+		margin-bottom: 70px;
+
+		font-size: 40px;
+		background-image: url(../img/sponsors/headline-background-desktop-1140.png); 
+		background-size: cover;
+	}
+	.SponsorHeadline span {
+		margin-left: 5px;	
+	}
+	.Sponsor {	
+		padding-left: 30px;
+		padding-right: 30px;
+		margin-bottom: 65px;
+	}
+	.SponsorLogo, .SponsorDetails {
+		display: block;
+		margin: 0 auto;
+	}	
+	.SponsorDetails {
+		width: 100%;
+		max-width: 650px;
+		margin: 0 auto;
+		font-size: 17px;	
+	}
+	.SponsorName {
+		font-size: 25px;
+		margin-top: 15px;
+	}
+	.SponsorName .fa-external-link {
+		font-size: 22px;
+		padding-left: 5px;	
+	}
+	.SponsorSocialIcon {
+		width: 45px;
+		height: 46px;
+		margin-right: 17px;
+	}
+}
+
+@media (max-width: 640px) {
+	.Sponsor {	
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	#SponsorsInnerContainer {
+		background: none;	
+		padding-top: 0;
+		margin-top: 0;
+	}
+	#WhosWhoAndDiamondImageContainer {
+		width: 100%;
+		max-width: 320px;
+		margin: 0 auto;	
+	}
+	#PoweredByWhosWhoLogo {
+		width: 280px;
+		height: auto;
+	}
+	.SponsorHeadline {
+		
+		width: 90%;
+		font-size: 28px;
+		background-image: url(../img/sponsors/headline-background-mobile.png); 
+		background-size: cover;
+	}
+	.SponsorDetails {
+		padding-left: 10px;
+		padding-right: 5px;
+		box-sizing: border-box;
+	}
+	.SponsorName {
+		margin-bottom: 15px;	
+	}
+	.SponsorName .fa-external-link {
+		font-size: 20px;
+		padding-left: 5px;	
+	}	
+	.SponsorDescription {
+		font-size:13px;
+	}
+	.SponsorSocialIcons {
+		float: none;
+		display: block;	
+		margin-top: 30px;
+	}
+	.SponsorSocialIcon {
+		margin-left: 0; 
+		margin-right: 15px;	
+		width: 41px;
+		height: 42px;
+	}
+}
+
+/*End Sponsors */
+
+
+
+/* Go to Top button */
+#GoTopImg {
+	background-color: rgba(10, 66, 113, 0.57);
+	width: 54px;
+	height: 54px;
+	bottom: 25px;
+	right: 25px;
+	text-align: center;
+	position: fixed;
+	z-index: 10000;
+	transition: all 0.3s;
+}
+#GoTopImg:hover {
+	background-color: rgba(10, 66, 113, 1);
+}
+#GoTopImg .fa {
+	font-size: 30px;
+	color: #f4f4f2;
+	padding-top: 10px;
+}
+/* END Go to Top button */
+
+.EditField {
+width: 320px;
+    height: 35px;
+  padding-left: 6px;
+  margin-bottom:5px;
+	
+}
+
+.Editable{
+	margin-bottom:2vw;	
+}

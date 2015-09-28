@@ -1,0 +1,1975 @@
+@charset "utf-8";
+/* These CSS rules will affect the Agenda page.  */
+
+body * {
+	box-sizing: border-box;	
+}
+@media (max-width: 640px) {
+	body {
+		margin-bottom: 40px;	
+	}
+}
+
+/* Stage Mobile Bar */
+#StageMobileBar {
+	display: none;	
+}
+@media (max-width: 640px) {
+	#StageMobileBar {
+		display: block;
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		height: 40px;
+		background-color: #070707;
+		padding-top: 8px;
+		padding-left: 25px;	
+		z-index: 5000;
+	}	
+	#MobileStageName {
+		font-size: 12px;
+		text-transform: uppercase;	
+		font-family: "Roboto", sans-serif;
+	}
+	#MobileStageListButton {
+		font-size: 30px;
+		color: #fff;	
+		position: absolute;
+		right: 12px;
+		top: 5px;
+		cursor: pointer;
+	}
+}
+/* Stage Mobile Bar */
+
+/* END Stage List */
+#StageList {
+	width: 15.625vw;	
+	top: 4vw;
+	text-align: center;
+	font-size: 0;
+	position: fixed;
+	margin-left: -15.625vw;
+	transition: all 0.3s;
+	z-index: 5000;
+}
+#StageList2 {
+	display: none;	
+}
+.invisible {
+	display: none;	
+}
+#StageList.Clicked {
+	margin-left: 0;	
+}
+#StageListButton {
+	position: absolute;
+	top: 0;
+	right: -5.208333vw;
+	padding-top: 0px;	
+}
+.StageButton {
+	width: 100%;
+	max-width: 33.333333%;
+	height: 5.208333vw;
+	border: 1px solid #363636;
+	background-color: rgba(0,0,0,0.95);
+	color: #c7c7c7;	
+	display: inline-block;
+	vertical-align: top;
+	cursor: pointer;
+	transition: all 0.3s;
+	padding-top: 1.3020833vw;
+}
+.StageButton:hover, .StageButtonClicked {
+	color: #fff;	
+}
+.StageButton .icon {
+	font-size: 1.66vw;
+}
+.StageName {
+	font-size: 0.4166vw;
+	text-transform: uppercase;	
+	margin-top: 0.52083vw;
+}
+#DisruptHR {
+	padding-top: 0.677083vw;
+}
+#DisruptHR .icon-disrupthr {
+	font-size: 2.604166vw;
+}
+#DisruptHR .StageName {
+	margin-top: 0px;
+}
+#ShowSessions {
+	padding-top: 0.78125vw;
+}
+#StageListButton .icon-next-icon {
+	font-size: 2.5vw;	
+	color: #fff;
+	margin-left: 0;
+	transition: all 0.3s;
+}
+#StageListButton:hover .icon-next-icon{
+	margin-left: 0.520833vw;
+}
+#StageListButton .StageName {
+	font-family: 'Roboto', sans-serif;
+	font-size: 0.729166vw;	
+	color: #fff;
+	margin-top: 0;
+}
+#CloseStageList {
+	padding-top: 2.08333vw;	
+}
+#CloseStageList .icon-close-icon {
+	font-size: 1.04166vw;	
+}
+#StageApplyButton .StageName {
+	font-size: 0.6770833vw;	
+	margin-top: 1.04166vw;
+}
+
+
+#StageApplyButton {
+	background-color: #fff;
+	color: #181818;
+	border-right-color: #fff;
+	border-bottom-color: #fff;
+}
+
+#StageApplyButton:hover {
+	background-color: rgba(0,0,0,0.95)!important;
+	color: #fff !important;
+	border-right-color: rgba(0,0,0,0.95)!important;
+	border-bottom-color: rgba(0,0,0,0.95)!important;
+}
+
+#MobileCloseButton01, #MobileNextButton {
+	display: none;
+}
+
+
+@media (max-width: 1920px) {
+#StageList {
+	width: 300px;	
+	top: 4vw;
+	text-align: center;
+	font-size: 0;
+	position: fixed;
+	margin-left: -300px;
+	transition: all 0.3s;
+	z-index: 5000;
+}
+#StageList2 {
+	display: none;	
+}
+.invisible {
+	display: none;	
+}
+#StageList.Clicked {
+	margin-left: 0;	
+}
+#StageListButton {
+	position: absolute;
+	top: 0;
+	right: -100px;
+	padding-top: 0px;	
+}
+.StageButton {
+	width: 100%;
+	max-width: 33.333333%;
+	height: 87px;
+	border: 1px solid #363636;
+	background-color: rgba(0,0,0,0.95);
+	color: #c7c7c7;	
+	display: inline-block;
+	vertical-align: top;
+	cursor: pointer;
+	transition: all 0.3s;
+	padding-top: 17px;
+}
+.StageButton:hover, .StageButtonClicked {
+	color: #fff;	
+}
+.StageButton .icon {
+	font-size: 32px;
+}
+.StageName {
+	font-size: 8px;
+	text-transform: uppercase;	
+	margin-top: 10px;
+}
+#DisruptHR {
+	padding-top: 13px;
+}
+#DisruptHR .icon-disrupthr {
+	font-size: 50px;
+}
+#DisruptHR .StageName {
+	margin-top: 0px;
+}
+#ShowSessions {
+	padding-top: 15px;
+}
+#StageListButton .icon-next-icon {
+	font-size: 48px;	
+	color: #fff;
+	margin-left: 0;
+	transition: all 0.3s;
+}
+#StageListButton:hover .icon-next-icon{
+	margin-left: 10px;
+}
+#StageListButton .StageName {
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;	
+	color: #fff;
+	margin-top: 0;
+}
+#CloseStageList {
+	padding-top: 40px;	
+}
+#CloseStageList .icon-close-icon {
+	font-size: 20px;	
+}
+#StageApplyButton .StageName {
+	font-size: 13px;	
+	margin-top: 20px;
+}
+#StageApplyButton:hover {
+	background-color: #fff;
+	color: #181818;
+	border-right-color: #fff;
+	border-bottom-color: #fff;
+}
+}
+@media (max-width: 1000px) {
+	#StageList {
+		top: 50px;	
+	}
+}
+@media (max-width: 640px) {
+	#StageList {	
+		width: 100%;
+		height: 100vh;
+		background-color: #000;
+		margin-left: 0;
+		margin-top: 0;
+		position: fixed;
+		
+		top: 100vh;
+		left: 0;
+		z-index: 6000;
+		overflow-y: scroll;
+	}
+	#StageList.MobileClicked {
+		top: 0vh;
+	}
+	.StageButton {
+		height: 33vw;	
+		padding-top: 8vw;
+	}
+	.StageButton .icon {
+		font-size: 10vw;
+	}
+	.StageName {
+		font-size: 2.5vw;
+		margin-top: 3.125vw;
+	}
+	#StageListButton {
+		right: -33vw;
+	}
+	#DisruptHR {
+		padding-top: 6.9vw;
+	}
+	#DisruptHR .icon-disrupthr {
+		font-size: 12.5vw;
+	}
+	#DisruptHR .StageName {
+		margin-top: 1vw;
+	}	
+	
+	.StageButton .icon-close-icon, .StageButton .icon-next-icon, .StageButton .icon-back-icon {
+		font-size: 6.25vw;	
+	}
+		
+	#MobileCloseButton01, #MobileCloseButton02 {
+		display: inline-block;
+		padding-top: 12.5vw;
+	}
+	#MobileNextButton, #MobileBackButton {
+		padding-top: 13vw;	
+	}
+	#MobileNextButton {
+		display: inline-block;	
+	}
+
+	#StageList2 {
+		display: block;
+		width: 100%;
+		height: 100vh;
+		background-color: #000;
+		position: fixed;
+		top: 0;
+		left: 100vw;
+		z-index: 6001;
+		text-align: center;
+		font-size: 0;
+		transition: all 0.3s;
+	}
+	#StageList2.MobileNextClicked {
+		left: 0vw;
+	}
+	#MainStage, #IRecruit, #MobileCloseButton01, 
+	#ProductDemoMobile, #Labs1Mobile, #MobileCloseButton02 {
+		border-top: 0;	
+	}
+	#MainStage, #DisruptHR, #SocialSummit, #UserAdoption, #FutureOfWork,
+	#ProductDemoMobile, #MobileBackButton {
+		border-left: 0;	
+	}
+	#MobileCloseButton01, #TalentSummit, #WorkforceSummit, #AnalyticsSummit, #MobileNextButton,
+	#MobileCloseButton02, #ExecutiveSummitMobile {
+		border-right: 0;	
+	}
+	#ProductDemo, #Labs1, #Labs2, #ExecutiveSummit, #StageApplyButton {
+		display: none;	
+	}
+}
+/* END Stage List */
+
+/* Panels */
+.Panel {
+	display: none; /* not visible at 640px and above. */
+	position: fixed;
+	z-index: 6002;
+	top: 0;
+	right: -100vw;
+	width: 100vw;
+	height: 100vh;
+	overflow-y: scroll;	
+	color: #fff;
+	text-align: center;
+	padding-top: 12.5vw;
+	transition: all 0.3s;
+}
+.Panel.PanelClicked {
+	right: 0;
+}
+.PanelInnerContainer {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 80vw;
+	position: relative;	
+	padding-top: 15.625vw;
+}
+.PanelCloseButton {
+	position: absolute;
+	font-size: 7.25vw;
+	right: 13vw;
+	cursor: pointer;	
+	z-index: 6003;
+}
+.Panel .PanelStageIcon {
+	font-size: 31.25vw;	
+}
+.PanelStageName {
+	font-size: 5.625vw;
+	text-transform: uppercase;	
+	font-family: "Roboto", sans-serif;
+	font-weight: 400;
+	margin-top: 0;
+	margin-bottom: 4.6875vw;
+}
+.PanelStageDescription {
+	font-size: 3.75vw;
+	font-family: "Roboto", sans-serif;
+	margin-bottom: 17.1875vw;
+}
+.PanelConfirmButton {
+	width: 100%;
+	max-width: 31.25vw;
+	height: 12.5vw;
+	border: 2px solid #fff;
+	color: #fff;
+	background-color: transparent;
+	font-size: 3.75vw;
+	font-family: "Roboto", sans-serif;
+	padding: 0;
+	margin-bottom: 15vw;
+}
+@media (max-width: 640px) {
+	.Panel {
+		display: block;	
+	}
+}
+/* END Panels */
+
+/* Session Info Modal */
+#SessionInfoModal {
+	width: 700px;
+	color: #737373;
+	left: 60%;
+	border-radius: 0;
+}
+#SessionInfoModal h2, #SessionInfoModal h3, #SessionInfoModal h4, #SessionInfoModal p {
+	text-align: left;
+	font-family: "Roboto", sans-serif;	
+}
+#SessionInfoModalCloseButton {
+	top: 23px;
+	right: 23px;
+	font-size: 24px;
+	color: #DBDBDB;
+}
+#DayInfoContainer {
+	width: 100%;
+	max-width: 180px;
+	display: inline-block;	
+}
+#DayInfoContainer h2 {
+	margin: 0;
+	font-size: 16px;
+	font-weight: 600;	
+	text-transform: uppercase;
+}
+#DayInfoContainer h3 {
+	margin: 0;
+	font-size: 14px;	
+	font-weight: 400;
+	position: relative;
+	top: -3px;
+}
+#SessionInfoModal #ModalStageName {
+	margin-bottom: 5px;
+	font-weight: 500;	
+}
+#SessionStartTime {
+	border-bottom: 1px solid #737373;
+	margin-bottom: 3px;	
+	padding-bottom: 3px;
+}
+
+#SessionInfoContainer {
+	width: 100%;
+	max-width: 400px;
+	display: inline-block;	
+	vertical-align: top;
+	margin-left: 15px;
+	position: relative;
+}
+#SpeakerInfoContainer {
+	margin-bottom: 40px;	
+}
+#SpeakerPhoto, #SpeakerInfo {
+	display: inline-block;
+	vertical-align: top;
+}
+#SpeakerPhoto {
+	width: 130px;
+	height: 130px;
+	margin-top: 5px;	
+}
+#SpeakerInfo {
+	margin-left: 10px;	
+	width: 100%;
+	max-width: 250px;
+}
+#SpeakerInfo h3 {
+	margin: 0;
+	font-size: 14px;
+	font-weight: 600;	
+}
+#SpeakerInfo #CompanyName {
+	font-weight: 400;	
+}
+#SessionInfo {
+	margin-top: 0;
+	padding-bottom: 40px;
+	border-bottom: 1px solid #737373;
+	margin-bottom: 30px;
+}
+#SessionInfo #SessionTitle {
+	text-align: left;
+	font-size: 30px;
+	line-height: 35px;
+	margin-bottom: 30px;
+	margin-top: 0;
+}
+#SessionAbstract {
+	margin: 0;
+	text-align: left;
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: 400;
+}
+
+#SessionAbstract p, #SessionAbstract span{
+	margin: 0 !important;
+	text-align: left !important;
+	font-size: 14px !important;
+	line-height: 21px !important;
+	font-weight: 400 !important;
+	font-family: "Roboto", sans-serif !important;
+	color: #737373 !important;
+}
+
+.PrevNextSession, .FillerPrevNextDiv {
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+	max-width: 150px;
+    min-height: 72px;
+}
+
+.PrevNextSession{
+	cursor: pointer;
+	
+}
+
+.PrevNextSession h3, #PreviousSession p, #NextSession p {
+	margin: 0;
+	font-size: 14px;
+	font-weight: 400;
+}
+.PrevNextSession h4 {
+	margin: 0;
+	margin-top: 5px;
+	font-size: 14px;
+	font-weight: 500;	
+}
+#PreviousSession p, #NextSession p {
+	position: relative;
+	top: -6px;	
+}
+#NextSession {
+	/*position: absolute;
+	right: 0;	*/
+	float: right;
+}
+
+@media (max-width: 1024px) {
+	#SessionInfoModal {
+		left: 15%;
+	}
+}
+@media (max-width: 1000px) {
+	#SessionInfoModal {
+		width: 100%;
+		left: 0;
+		top: 0 !important;
+		position: fixed;
+		height: 100vh;
+		overflow-y: scroll;
+	}
+	#SessionInfoContainer {
+		max-width: 60vw;	
+	}
+}
+/* END Session Info Modal */
+
+
+/* Colors */
+.MainStageBgColor, #MainStage:hover {
+	background-color: #60A9E0;
+} 
+.MainStageColor {
+	color: #60A9E0;
+}
+.MainStageButton.ClickedTabButton, .MainStageButton:hover {
+	background-color: #60A9E0;
+	border-bottom: 2px solid #60A9E0;
+}
+.MainStageBorderColor {
+	   border: #60A9E0 0.052083vw solid;
+       border-bottom: #60A9E0 0.1041666vw solid;
+}
+.MainStageSessionBgColor {
+	background-color: #def0fd;
+}
+
+.IRecruitBgColor, #IRecruit:hover {
+	background-color: #60A9E0;
+} 
+.IRecruitColor {
+	color: #60A9E0;
+}
+.IRecruitButton.ClickedTabButton, .IRecruitButton:hover {
+	background-color: #60A9E0;
+	border-bottom: 2px solid #60A9E0;
+}
+.IRecruitBorderColor {
+	   border: #60A9E0 0.052083vw solid;
+       border-bottom: #60A9E0 0.1041666vw solid;
+}
+.IRecruitSessionBgColor {
+	background-color: #def0fd;	
+}
+
+.DisruptHRBgColor, #DisruptHR:hover  {
+	background-color: #60A9E0;
+}
+.DisruptHRColor {
+	color: #60A9E0;	
+}
+.DisruptHRButton.ClickedTabButton, .DisruptHRButton:hover {
+	background-color: #60A9E0;
+	border-bottom: 2px solid #60A9E0;
+}
+.DisruptHRBorderColor {
+	   border: #60A9E0 0.052083vw solid;
+       border-bottom: #60A9E0 0.1041666vw solid;	
+}
+.DisruptHRSessionBgColor {
+	background-color: #def0fd;	
+}
+
+.HRTechnologyBgColor, #HRTechnology:hover {
+	background-color: #c2682c;
+}
+.HRTechnologyColor {
+	color: #c2682c;
+}
+.HRTechnologyButton.ClickedTabButton, .HRTechnologyButton:hover {
+	background-color: #c2682c;
+	border-bottom: 2px solid #c2682c;
+}
+.HRTechnologyBorderColor {
+	 border: #c2682c 0.052083vw solid;
+     border-bottom: #c2682c 0.1041666vw solid;	
+}
+.HRTechnologySessionBgColor {
+	background-color: #f9d6bf;
+}
+
+.TalentSummitBgColor, #TalentSummit:hover {
+	background-color: #63b0b7;
+}
+.TalentSummitColor {
+	color: #63b0b7;
+}
+.TalentSummitButton.ClickedTabButton, .TalentSummitButton:hover {
+	background-color: #63b0b7;
+	border-bottom: 2px solid #63b0b7;
+}
+.TalentSummitBorderColor {
+	 border: #63b0b7 0.052083vw solid;
+     border-bottom: #63b0b7 0.1041666vw solid;	
+}
+.TalentSummitSessionBgColor {
+	background-color: #d2fafe;	
+}
+
+.SocialSummitBgColor, #SocialSummit:hover {
+	background-color: #468649;
+}
+.SocialSummitColor {
+	color: #468649;
+}
+.SocialSummitButton.ClickedTabButton, .SocialSummitButton:hover {
+	background-color: #468649;
+	border-bottom: 2px solid #468649;
+}
+.SocialSummitBorderColor {
+	 border: #468649 0.052083vw solid;
+     border-bottom: #468649 0.1041666vw solid;	
+}
+.SocialSummitSessionBgColor {
+	background-color: #ddffdf;
+}
+
+.ServicesSummitBgColor, #ServicesSummit:hover {
+	background-color: #8b9647;
+}
+.ServicesSummitColor {
+	color: #8b9647;
+}
+.ServicesSummitButton.ClickedTabButton, .ServicesSummitButton:hover {
+	background-color: #8b9647;
+	border-bottom: 2px solid #8b9647;
+}
+.ServicesSummitBorderColor {
+	 border: #8b9647 0.052083vw solid;
+     border-bottom: #8b9647 0.1041666vw solid;
+}
+.ServicesSummitSessionBgColor {
+	background-color: #f5fbd3;
+}
+
+.WorkforceSummitBgColor, #WorkforceSummit:hover {
+	background-color: #009d93;
+}
+.WorkforceSummitColor{
+	color: #009d93;
+}
+.WorkforceSummitButton.ClickedTabButton, .WorkforceSummitButton:hover {
+	background-color: #009d93;
+	border-bottom: 2px solid #009d93;
+}
+.WorkforceSummitBorderColor{
+	 border: #009d93 0.052083vw solid;
+     border-bottom: #009d93 0.1041666vw solid;
+}
+.WorkforceSummitSessionBgColor {
+	background-color: #dcfffd;	
+}
+
+.UserAdoptionBgColor, #UserAdoption:hover {
+	background-color: #a3bf2a;
+}
+.UserAdoptionColor {
+	color: #a3bf2a;
+}
+.UserAdoptionButton.ClickedTabButton, .UserAdoptionButton:hover {
+	background-color: #a3bf2a;
+	border-bottom: 2px solid #a3bf2a;
+}
+.UserAdoptionBorderColor {
+	border: #a3bf2a 0.052083vw solid;
+     border-bottom: #a3bf2a 0.1041666vw solid;
+}
+.UserAdoptionSessionBgColor {
+	background-color: #f8ffdc;	
+}
+
+.CloudSummitBgColor, #CloudSummit:hover {
+	background-color: #8796ca;
+}
+.CloudSummitColor {
+	color: #8796ca;
+}
+.CloudSummitButton.ClickedTabButton, .CloudSummitButton:hover {
+	background-color: #8796ca;
+	border-bottom: 2px solid #8796ca;
+}
+.CloudSummitBorderColor {
+	border: #8796ca 0.052083vw solid;
+     border-bottom: #8796ca 0.1041666vw solid;
+}
+.CloudSummitSessionBgColor {
+	background-color: #e4eafe;	
+}
+
+.AnalyticsSummitBgColor, #AnalyticsSummit:hover {
+	background-color: #8e549c;
+}
+.AnalyticsSummitColor {
+	color: #8e549c;
+}
+.AnalyticsSummitButton.ClickedTabButton, .AnalyticsSummitButton:hover {
+	background-color: #8e549c;
+	border-bottom: 2px solid #8e549c;
+}
+.AnalyticsSummitBorderColor {
+	border: #8e549c 0.052083vw solid;
+     border-bottom: #8e549c 0.1041666vw solid;
+}
+.AnalyticsSummitSessionBgColor {
+	background-color: #f9e2ff;	
+}
+
+.FutureOfWorkBgColor, #FutureOfWork:hover {
+	background-color: #e8ad30;
+}
+.FutureOfWorkColor {
+	color: #e8ad30;
+}
+.FutureOfWorkButton.ClickedTabButton, .FutureOfWorkButton:hover {
+	background-color: #e8ad30;
+	border-bottom: 2px solid #e8ad30;
+}
+.FutureOfWorkBorderColor {
+	border: #e8ad30 0.052083vw solid;
+     border-bottom: #e8ad30 0.1041666vw solid;
+}
+.FutureOfWorkSessionBgColor {
+	background-color: #fae8c3;
+}
+
+.PayAndRewardsBgColor, #PayAndRewards:hover {
+	background-color: #b01d23;
+}
+.PayAndRewardsColor {
+	color: #b01d23;	
+}
+.PayAndRewardsButton.ClickedTabButton, .PayAndRewardsButton:hover {
+	background-color: #b01d23;
+	border-bottom: 2px solid #b01d23;
+}
+.PayAndRewardsBorderColor {
+	border: #b01d23 0.052083vw solid;
+     border-bottom: #b01d23 0.1041666vw solid;	
+}
+.PayAndRewardsSessionBgColor {
+	background-color: #ffe0e1;	
+}
+
+.ProductDemoBgColor, #ProductDemo:hover, #ProductDemoMobile:hover, .ProductDemoBBgColor, #ProductDemoB:hover {
+	background-color: #aa2532;
+}
+.ProductDemoColor, .ProductDemoBColor {
+	color: #aa2532;
+}
+.ProductDemoButton.ClickedTabButton, .ProductDemoButton:hover, .ProductDemoBButton.ClickedTabButton, .ProductDemoBButton:hover {
+	background-color: #aa2532;
+	border-bottom: 2px solid #aa2532;
+}
+.ProductDemoBorderColor, .ProductDemoBBorderColor {
+	border: #aa2532 0.052083vw solid;
+     border-bottom: #aa2532 0.1041666vw solid;		
+}
+.ProductDemoSessionBgColor, .ProductDemoBSessionBgColor {
+	background-color: #ffe1e4;
+}
+
+.Labs1BgColor, #Labs1:hover, #Labs1Mobile:hover {
+	background-color: #507cbd;
+}
+.Labs1Color {
+	color: #507cbd;
+}
+.Labs1Button.ClickedTabButton, .Labs1Button:hover {
+	background-color: #507cbd;
+	border-bottom: 2px solid #507cbd;
+}
+.Labs1BorderColor {
+	border: #507cbd 0.052083vw solid;
+     border-bottom: #507cbd 0.1041666vw solid;	
+}
+.Labs1SessionBgColor {
+	background-color: #d7e6fc;	
+}
+
+.Labs2BgColor, #Labs2:hover, #Labs2Mobile:hover {
+	background-color: #507cbd;
+}
+.Labs2Color {
+	color: #507cbd;
+}
+.Labs2Button.ClickedTabButton, .Labs2Button:hover {
+	background-color: #507cbd;
+	border-bottom: 2px solid #507cbd;
+}
+.Labs2BorderColor {
+	border: #507cbd 0.052083vw solid;
+     border-bottom: #507cbd 0.1041666vw solid;	
+}
+.Labs2SessionBgColor {
+	background-color: #d7e6fc;	
+}
+
+.Labs3BgColor, #Labs3:hover, #Labs3Mobile:hover {
+	background-color: #507cbd;
+}
+.Labs3Color {
+	color: #507cbd;
+}
+.Labs3Button.ClickedTabButton, .Labs3Button:hover {
+	background-color: #507cbd;
+	border-bottom: 2px solid #507cbd;
+}
+.Labs3BorderColor {
+	border: #507cbd 0.052083vw solid;
+     border-bottom: #507cbd 0.1041666vw solid;	
+}
+.Labs3SessionBgColor {
+	background-color: #d7e6fc;	
+}
+
+
+.ExecutiveSummitBgColor, #ExecutiveSummit:hover, #ExecutiveSummitMobile:hover {
+	background-color: #c30080;
+}
+.ExecutiveSummitColor, .ExecutiveSummitMobileColor {
+	color: #c30080;
+}
+.ExecutiveSummitButton.ClickedTabButton, .ExecutiveSummitButton:hover {
+	background-color: #c30080;
+	border-bottom: 2px solid #c30080;
+}
+.ExecutiveSummitBorderColor {
+	border: #c30080 0.052083vw solid;
+     border-bottom: #c30080 0.1041666vw solid;
+}
+.ExecutiveSummitSessionBgColor {
+	background-color: #fddcf2;	
+}
+
+
+#Unconference:hover, #UnconferenceMobile:hover {
+	background-color: #F15B40;	
+}
+
+.UnconferenceBgColor {
+	background-color: #F15B40;	
+}
+/* END Colors */
+
+
+
+/* END Stage Menu */
+
+/* Header */
+header {
+	background-image:url(../img/agenda/header.jpg);
+	background-repeat:no-repeat;
+	background-size: contain;
+	width:100%;
+	height:27.08333vw; 
+	color:#fff;
+	margin-top: 4.0625vw;
+}
+#HeaderInnerContainer {
+	padding-top: 4.6875vw;
+	padding-left: 16.666666vw;	
+}
+header h1 {
+	font-size:3.125833vw;
+	margin-top: 0px;
+	margin-bottom: 2.4vw;
+}
+header h2 {
+	width: 100%;
+	max-width:29vw;
+	font-size:1.25vw;
+	line-height: 1.5625vw;
+	margin-bottom: 2.2vw;
+	font-weight: 400;
+}
+header button {
+	font-size: 1.1vw;
+	font-weight: 600;
+	background-color: rgba(255, 255, 255, 0);
+	color: #fff;
+	border: 3px solid #fff;
+	padding: 0;
+	max-width: 15.625vw;
+	height: 3.6458333vw;
+	transition: all 0.3s ease-in;
+}
+header button:hover {
+	background-color: #106ab5;
+	border: 3px solid #106ab5;
+}
+
+
+@media (max-width: 1000px) {
+	header {
+		margin-top: 50px;	
+	}	
+	#HeaderInnerContainer { 
+	padding-top: 5.208333vw;
+	}
+}
+	
+	
+@media (max-width: 640px) {
+	header {
+		display:none;
+		height: 43.75vw;	
+		background-size: cover;
+		background-position: center;
+	}
+	#HeaderInnerContainer { 
+		width: 100%;
+		max-width: 75vw;
+		margin: 0 auto;
+		padding-left: 0;
+		padding-top: 10.9375vw;
+		text-align: center;
+	}
+	header h1 {
+		font-size:5.625vw;
+		margin-bottom: 3vw;
+	}
+	header h2 {
+		max-width:100%;
+		font-size: 3.75vw;
+		line-height: 4.6875vw;
+	}	
+}
+/* END Header */
+
+/* Stage Description */
+#StageDescriptionAnchor {
+	position: relative;
+	top: -40px;	
+}
+#StageDescription {
+	width: 100%;
+	height: 13.020833vw;
+	padding-top: 3.645833vw;
+	color: #fff;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	transition:all 0.5s;
+	overflow: hidden;
+	margin-top: -0.2vw;
+	
+}
+#StageDescriptionInnerContainer {
+	width: 100%;
+	max-width: 53.33333vw;	
+	margin: 0 auto;
+	height: 100%;
+	position: relative;
+}
+#StageDescriptionImage {
+	position: absolute; 
+	bottom: 0;
+	right: 0;	
+	width: 18.229166vw;
+	height: 12.1875vw;
+}
+#SelectedStageName {
+	margin: 0;	
+	font-size: 1.04166vw;
+	margin-bottom: 0.78125vw;
+	font-family: 'Roboto', sans-serif;
+}
+#SelectedStageText {
+	margin: 0;	
+	width: 100%;
+	max-width: 30.729166vw;
+	font-size: 0.729166vw;
+	line-height: 0.83333vw;
+	font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+@media (max-width: 1920px) {
+	#StageDescription {
+		width: 100%;
+		height: 250px;
+		margin-top: -5px;
+		padding-top: 70px;
+		color: #fff;
+		background-size: 100% 100%;
+	}
+	#StageDescriptionInnerContainer {
+		width: 100%;
+		max-width: 1024px;	
+		margin: 0 auto;
+	}
+	#StageDescriptionImage {
+		width: 350px;
+		height: 234px;
+	}
+	#SelectedStageName {
+		margin: 0;	
+		font-size: 20px;
+		margin-bottom: 15px;
+		font-family: 'Roboto', sans-serif;
+	}
+	#SelectedStageText {
+		margin: 0;	
+		width: 100%;
+		max-width: 590px;
+		font-size: 14px;
+		line-height: 16px;
+		font-family: 'Roboto', sans-serif;
+	}	
+}
+@media (max-width: 1100px) {
+	#StageDescription {
+		width: 100%;
+		height: 200px;
+		padding-top: 55px;
+	}
+	#StageDescriptionInnerContainer	{
+		padding-left: 50px;	
+		/*max-width: 1024px;*/
+	}
+	#StageDescriptionImage {
+		width: 301px;
+		height: 201px;
+	}
+}
+@media (max-width: 1000px) {
+	#StageDescription {
+		height: 19.53125vw;
+		padding-top: 5.859375vw;
+	}
+	#StageDescriptionInnerContainer	{
+		padding-left: 5.20833vw;	
+	}
+	#SelectedStageName {
+		display: none !important;	
+	}
+	#StageDescriptionImage {
+		width: 28.7760416vw;
+		height: 19.140625vw;
+	}
+	#SelectedStageText {
+		max-width: 63.15104166vw;
+		font-size: 1.422916vw;
+		line-height: 2.0833333vw;
+	}
+}
+@media (max-width: 760px) {
+	#StageDescription {
+		height: 14.0625vw;
+		padding: 3.125vw 3.125vw 0 0;
+	}
+	#StageDescriptionInnerContainer	{
+		margin-left: 0;	
+	}
+	#SelectedStageText {
+		max-width: 100%;
+		font-size: 1.475vw;
+		line-height: 2.5vw;
+	}
+	#StageDescriptionImage {
+		display: none;
+	}
+}
+@media (max-width: 640px) {
+	#StageDescription {
+		height: 65.625vw;
+		padding: 9.375vw 0 0 0;
+	}
+	#SelectedStageText {
+		max-width: 100%;
+		font-size: 2.55vw;
+		line-height: 4.6875vw;
+		padding-right: 5.625vw;
+	}
+	#StageDescriptionImage {
+		display: block;
+		width: 50.3125vw;
+		height: 33.75vw;
+	}		
+}
+
+/* END Stage Description */
+
+/*Stage header upper triangle*/
+#UpperStripe {
+  width: 0;
+  height: 0;
+  border-top: 13vw solid;
+  border-right: 103vw solid transparent;
+  position: absolute;
+  margin-top: -4vw;
+}
+
+@media (max-width: 1920px) {
+#UpperStripe {
+	  width: 0;
+  height: 0;
+  border-top: 250px solid;
+  border-right: 101vw solid transparent;
+  position: absolute;
+  margin-top: -70px;
+
+}
+ 
+}
+
+@media (max-width: 1100px) {
+	
+#UpperStripe {
+  width: 0;
+  height: 0;
+  border-top: 196px solid;
+  border-right: 101vw solid transparent;
+  position: absolute;
+  margin-top: -55px;
+
+}	
+
+  
+}
+
+@media (max-width: 1000px) {
+	
+#UpperStripe {
+  width: 0;
+  height: 0;
+  border-top: 19.3vw solid;
+  border-right: 101vw solid transparent;
+  position: absolute;
+  margin-top: -6vw;
+
+}	
+
+  
+}
+
+
+@media (max-width: 760px) {
+
+#UpperStripe {
+  width: 0;
+  height: 0;
+  border-top: 14vw solid;
+  border-right: 101vw solid transparent;
+  position: absolute;
+  margin-top: -3.2vw;
+}
+
+}
+
+@media (max-width: 640px) {
+#UpperStripe {
+  width: 0;
+  height: 0;
+  border-top: 65vw solid;
+  border-right: 101vw solid transparent;
+  position: absolute;
+  margin-top: -9.2vw;
+}
+
+}
+
+/*End Stage Header upper triangle*/
+
+
+/* Tab Panel Navigation */
+#TabPanelNavigation {
+	width: 100%;
+	max-width: 53.33333vw;	
+	font-size: 0;
+	margin: 0 auto;
+}
+.TabPanelButton {
+	width: 100%;
+	max-width: 33.3333333%;
+	height: 2.083333vw;	
+	font-size: 0.729166vw;
+	color: #747474;
+	background-color: #E0E0E0;
+	border-bottom: 2px solid #E0E0E0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	transition: all 0.3s;
+	border-left: 2px solid #FFF;
+}
+#MoreButton {
+	display: none !important;	
+}
+.TabPanelButton.MainStageButton, .TabPanelButton.DisruptHRButton, .TabPanelButton.IRecruitButton {
+	max-width: 25%;	
+}
+#MoreButton.MainStageButton, #MoreButton.DisruptHRButton, #MoreButton.IRecruitButton {
+	display: inline-block !important;
+}
+
+/*
+.TabPanelButton:hover, 
+.ClickedTabButton {
+	background-color: #7EADB4;
+	color: #fff;	
+	border-bottom: 2px solid #679093;
+}*/
+.TabPanelButton:hover,
+.ClickedTabButton {
+	color: #fff;	
+}
+
+@media (max-width: 1920px) {
+#TabPanelNavigation {
+	max-width: 1024px;	
+}
+.TabPanelButton {
+	height: 40px;	
+	font-size: 14px;
+}
+#TicketsButton {
+	border-left: 2px solid #fff;
+}
+}
+@media (max-width: 1000px) {
+	#TabPanelNavigation {
+		display: none;	
+	}
+}
+/* END Tab Panel Navigation */
+
+
+/* Session List Mobile - EMBERGENCY 
+
+#SessionListMobile {
+	width: 100%;
+}
+.SessionsList {
+	width: 100%;
+	max-width: 53.333333vw;
+	margin: 2.0833333vw auto;
+}
+.Session {
+	margin-bottom: 0.5208333vw;	
+}
+.SessionTimeContainer, .SessionContent {
+	display: inline-block;
+	vertical-align: top;	
+}
+.SessionTimeContainer {
+	width: 5.729166vw;
+	text-align: right;	
+}
+.SessionTimeContainer .fa-caret-right {
+	margin-left: 0.52083vw;	
+	margin-right: 1.04166vw;
+	font-size: 0.78125vw;	
+}
+.SessionStartTime, .SessionTitle, .SessionSpeaker {
+	font-family: 'Roboto', sans-serif;	
+	font-weight: 400;
+	font-size: 0.72916vw;	
+	margin: 0;
+}
+.SessionStartTime, .SessionSpeaker, .BreakSessionTitle {
+	color: #747474;
+}
+.SessionStartTime {
+	display: inline;
+}
+.SessionContent {
+	margin-top: 0;
+	width: 100%;
+	max-width: 43.229166vw;	
+}
+.EventDayTitle {
+	display: none;	
+}
+@media (max-width: 1920px) {
+.SessionsList {
+	max-width: 1024px;
+	margin: 40px auto;
+}
+.Session {
+	margin-bottom: 10px;	
+}
+.SessionTimeContainer {
+	width: 110px;
+}
+.SessionTimeContainer .fa-caret-right {
+	margin-left: 10px;	
+	margin-right: 20px;
+	font-size: 15px;	
+}
+.SessionStartTime, .SessionTitle, .SessionSpeaker {
+	font-size: 14px;	
+}
+.SessionContent {
+	margin-top: 2px;
+	max-width: 830px;	
+}
+}
+*/
+
+#SessionListMobile {
+	display: none;
+}
+
+.SessionsListDesktop .EventDayTitle {
+	margin-top: 34px;
+	margin-bottom: 34px;
+	font-size: 20px;
+	font-family: 'Roboto', sans-serif;	
+}
+
+/* Session List Mobile */
+@media (max-width: 1000px) {
+#SessionListMobile {
+	width: 100%;
+	display: block;
+}
+.EventDayTitle {
+	font-family: 'Roboto', sans-serif;
+	font-size: 2.08333vw;
+	color: #747474;
+	background-color: #E0E0E0;
+	width: 100%;
+	max-width: 10.4166vw;
+	text-align: center;
+	margin: 0;
+	padding: 1.04166vw 0;
+}
+#EventDay2Title {
+	max-width: 13.02083vw;
+	background-color: rgba(116, 116, 116, 0.85);	
+	color: #fff;
+	transition: all 0.3s;
+}
+#EventDay2Title .fa-angle-down {
+	font-size: 2.864583vw;
+}
+
+.SessionsList {
+	width: 100%;
+	max-width: 95vw;
+	margin: 5.208333vw auto;
+}
+.Session {
+	margin-bottom: 1.953125vw;	
+}
+.SessionTimeContainer, .SessionContent {
+	display: inline-block;
+	vertical-align: top;	
+}
+.SessionTimeContainer {
+	width: 10.546875vw;
+	text-align: right;	
+}
+.SessionTimeContainer .fa-caret-right {
+	margin-left: 1.3020833vw;	
+	margin-right: 2.2135416vw;
+	font-size: 1.8229166vw;	
+}
+.SessionStartTime, .SessionTitle, .SessionSpeaker {
+	font-family: 'Roboto', sans-serif;	
+	font-weight: 400;
+	font-size: 1.8229166vw;	
+	margin: 0;
+}
+.SessionStartTime, .SessionSpeaker, .BreakSessionTitle {
+	color: #747474;
+}
+.SessionStartTime {
+	display: inline;
+}
+.SessionContent {
+	margin-top: 0.130208vw;
+	width: 100%;
+	max-width: 79.427083vw;	
+	/*max-width: 82vw;*/
+}
+}
+@media (max-width: 760px) {
+	.EventDayTitle {
+		font-size: 2.5vw;
+		max-width: 12.5vw;
+		padding: 1.25vw 0;
+	}
+	#EventDay2Title {
+		max-width: 15.625vw;
+	}
+	#EventDay2Title .fa-angle-down {
+		font-size: 3.4375vw;
+	}
+	
+	.SessionsList {
+		max-width: 94.375vw;
+		margin: 3.90625vw auto;
+	}
+	.Session {
+		margin-bottom: 1.09375vw;	
+	}
+	.SessionTimeContainer {
+		width: 8.28125vw;
+	}
+	.SessionTimeContainer .fa-caret-right {
+		margin-left: 1.5625vw;	
+		margin-right: 1.25vw;
+		font-size: 1.875vw;	
+	}
+	.SessionStartTime, .SessionTitle, .SessionSpeaker {
+		font-size: 1.875vw;	
+	}
+	.SessionContent {
+		margin-top: 2px;
+		max-width: 79.6875vw;	
+	}	
+}
+@media (max-width: 640px) {
+	.EventDayTitle {
+		font-size: 5vw;
+		max-width: 25vw;
+		padding: 2.5vw 0;
+	}
+	#EventDay2Title {
+		max-width: 31.25vw;
+	}
+	#EventDay2Title .fa-angle-down {
+		font-size: 6.875vw;
+	}
+	
+	.SessionsList {
+		max-width: 89.375vw;
+		margin: 6.25vw auto;
+	}
+	.Session {
+		margin-bottom: 2.1875vw;	
+	}
+	.SessionTimeContainer {
+		width: 18.875vw;	
+	}
+	.SessionTimeContainer .fa-caret-right {
+		margin-left: 3.125vw;	
+		margin-right: 2.5vw;
+		position: relative;
+		top: 3px;
+		font-size: 5vw;
+	}
+	.SessionStartTime, .SessionTitle, .SessionSpeaker {
+		font-size: 3.75vw;
+		line-height: 5vw;	
+	}
+	.SessionContent {
+		max-width: 67.5vw;	
+	}	
+}
+@media (max-width: 380px) {
+	.SessionTimeContainer .fa-caret-right {
+		position: relative;
+		top: 0px;
+	}	
+}
+/* END Session List Mobile */
+
+
+/*Session List Desktop*/
+#SessionListDesktop{
+  margin: 0 auto;
+  max-width: 54.333333333333vw;
+  font-family: 'Roboto', sans-serif;
+	
+}
+
+.AgendaSessionsContainerDesktop{
+	
+	  width: 51.25833vw;
+	  margin-left: -0.1083333vw;
+}
+
+.NormalSession{
+		position: relative;
+		cursor: pointer;
+		overflow-y: hidden;	
+}
+.Dots {
+	font-size: 1.04166vw; 
+	
+	margin: 0; 
+	position: absolute; 
+	right: 0.625vw; 
+	bottom: 0.104166vw;
+}
+
+.BreakSession {
+background-color: rgba(102, 102, 102, 0.21);
+  border: rgba(169, 172, 173, 0.35) 0.052083vw solid;
+  border-bottom: rgba(145, 150, 150, 0.27) 0.1041666vw solid;		
+}
+.BreakSession .Dots {
+	display: none;	
+}
+
+.SessionTitleDesktop{
+	   margin: 0;	
+}
+
+.BreakSessionTitleDesktop {
+	color: #666666;
+	margin: 0;
+}
+
+.SessionDesktop .SessionContent{
+	margin:10px;
+}
+
+.AgendaTimeContainerDesktop, .AgendaSessionsContainerDesktop{
+	
+	  display: inline-block;
+      vertical-align: top;
+
+}
+.AgendaTimeContainerDesktop div {
+	 padding:8px;
+	 border-bottom: 0.052083vw solid #919395;
+	 text-align: right;
+     color: #666666;
+	 max-height: 1.875vw;
+	
+}
+
+.AgendaTimeFull {
+  font-weight: 600;	
+    background-color: rgba(135, 144, 144, 0.12);
+	
+}
+
+.SessionContent h4 {
+	margin-bottom: 0.520833vw;	
+}
+.SpeakerInfo {
+ color: #666666;	
+ margin: 0;
+}
+@media (max-width: 1920px) {
+#SessionListDesktop{
+  margin: 0 auto;
+  max-width: 1020px;
+  font-family: 'Roboto', sans-serif;
+   /* height: 2391px;*/
+	
+}
+
+.AgendaSessionsContainerDesktop{
+	
+	width: 958px;
+	  margin-left: 57px;
+}
+
+
+
+.Dots {
+	font-size: 20px; 
+	margin: 0; 
+	position: absolute; 
+	right: 12px; 
+	bottom: 2px;
+}
+
+.BreakSession {
+  background-color: #CDCDCD;
+  border: rgba(169, 172, 173, 1) 1px solid;
+  border-bottom: rgba(145, 150, 150, 0.5) 2px solid;	
+	
+}
+.SessionTitleDesktop{
+	   margin: 0;	
+}
+
+.BreakSessionTitleDesktop {
+	color: #666666;
+	margin: 0;
+}
+
+.SessionDesktop .SessionContent{
+	margin:10px;	
+}
+
+.AgendaTimeContainerDesktop, .AgendaSessionsContainerDesktop{
+	
+	  display: inline-block;
+      vertical-align: top;
+	  
+
+}
+.AgendaTimeContainerDesktop div {
+	
+	 padding: 8px;
+	 border-bottom: 1px solid #919395;
+	 
+     color: #666666;
+	 max-height: 36px;
+	   width: 1014px;
+     text-align: left;
+     z-index: 1;
+	
+}
+
+.AgendaTimeFull {
+  font-weight: 600;	
+    background-color: rgba(135, 144, 144, 0.12);
+	
+}
+.SpeakerInfo {
+ color: #666666;	
+}
+.SessionContent h4 {
+	margin-bottom: 10px;	
+}
+
+.TimeDivider {
+border-right: 1px solid rgb(145, 147, 149);
+  width: 50px;
+  height: 136px;
+  margin-top: -64px;
+}
+
+}
+
+/*@media (max-width: 1040px) {*/
+@media (max-width: 1100px) {
+.SessionsListDesktop {
+	padding-left: 45px;
+}
+.AgendaSessionsContainerDesktop{
+	
+	/*width: 92vw;*/
+	width: 850px;
+}
+
+.AgendaTimeContainerDesktop div{
+	  width: 906px;
+	
+}
+}
+
+@media (max-width: 1000px) {
+#SessionListDesktop{
+	  display:none;
+}
+.SessionContent h4 {
+	margin-bottom: 0px;	
+}
+}
+
+/* END Session List Desktop*/
+
+
+/* Speakers and Testimonials */
+#SpeakersAndTestimonialsContainer {
+	width: 100%;
+	max-width: 53.33333vw;
+	margin: 2.0833vw auto;	
+	font-size: 0;
+	text-align: center;
+}
+.SpeakerBox, .TestimonialBox {
+	width: 100%;
+	max-width: 33.33333333333%;	
+	display: inline-block;
+	vertical-align: top;
+}
+.SpeakerBoxPhoto {
+	width: 100%;
+	height: 17.760416vw;	
+
+}
+.SpeakerBoxSpeakerInfo {
+	font-size: 0.729166vw;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	color: #747474;
+	text-align: left;
+	margin: 1.04166vw 1.04166vw 0 1.04166vw;
+}
+.TestimonialBox {
+	text-align: left;
+	height: 17.7604166vw;
+	color: #fff;
+	font-size: 0.729166vw;
+	font-family: 'Roboto', sans-serif;
+	padding-left: 2.604166vw;
+	padding-right: 1.822916vw;
+	padding-top: 3.645833vw;
+}
+.TestimonialBox img {
+	width: 3.90625vw;
+	height: 2.9166vw;	
+}
+.Testimonial {
+	margin: 0;	
+	margin-top: 0.83333vw;
+	line-height: 0.83333vw;
+}
+.TestimonialSpeakerName {
+	margin: 0;	
+	margin-top: 1.04166vw;
+}
+@media (max-width: 1920px) {
+#SpeakersAndTestimonialsContainer {
+	max-width: 1024px;
+	margin: 40px auto;	
+}
+.SpeakerBoxPhoto {
+	width: 100%;
+	height: 341px;	
+}
+
+.SpeakerBoxSpeakerInfo {
+	font-size: 14px;
+	margin: 20px 20px 0 20px;
+}
+
+.TestimonialBox {
+	height: 341px;
+	font-size: 14px;
+	padding-left: 50px;
+	padding-right: 35px;
+	padding-top: 70px;
+}
+.TestimonialBox img {
+	width: 75px;
+	height: 56px;	
+}
+.Testimonial {
+	margin-top: 16px;
+	line-height: 16px;
+}
+.TestimonialSpeakerName {
+	margin-top: 20px;
+}	
+}
+@media (max-width: 1023px) {
+#SpeakersAndTestimonialsContainer {
+	max-width: 100%;
+	margin: 2.604166vw auto;	
+}
+.SpeakerBoxSpeakerInfo {
+	font-size: 1.822916vw;
+	margin: 2.604166vw 2.604166vw 0 2.604166vw;
+}
+.TestimonialBox {
+	height: 33.333333vw;
+	font-size: 1.822916vw;
+	padding-left: 2.99479vw;
+	padding-right: 2.99479vw;
+	padding-top: 2.99479vw;
+}
+.TestimonialBox img {
+	width: 7.68229vw;
+	height: 5.729166vw;	
+}
+.Testimonial {
+	margin-top: 2.0833333vw;
+	line-height: 2.0833333vw;
+}
+.TestimonialSpeakerName {
+	margin-top: 2.604166vw;
+}
+}
+@media (max-width: 1023px) {
+#SpeakersAndTestimonialsContainer {
+	max-width: 100%;
+	margin: 2.604166vw auto;	
+}
+
+.SpeakerBoxPhoto {
+	width: 100%;
+	height: 32.633007vw;	
+}
+
+.SpeakerBoxSpeakerInfo {
+	font-size: 1.822916vw;
+	margin: 2.604166vw 2.604166vw 0 2.604166vw;
+	line-height: 2.08333vw;
+}
+.TestimonialBox {
+	/*height: 33.333333vw;*/
+	  height: 32.7vw;
+	font-size: 1.822916vw;
+	padding-left: 2.99479vw;
+	padding-right: 2.99479vw;
+	padding-top: 2.99479vw;
+}
+.TestimonialBox img {
+	width: 7.68229vw;
+	height: 5.729166vw;	
+}
+.Testimonial {
+	margin-top: 2.0833333vw;
+	line-height: 2.0833333vw;
+}
+.TestimonialSpeakerName {
+	margin-top: 2.604166vw;
+}
+}
+@media (max-width: 640px) {
+#SpeakersAndTestimonialsContainer {
+	max-width: 100%;
+	margin: 0 auto;	
+	margin-top: 9.375vw;
+}
+.SpeakerBox {
+	max-width: 50%;	
+}
+
+.SpeakerBoxPhoto {
+	width: 100%;
+	height: 50vw;	
+}
+
+.TestimonialBox {
+	max-width: 100%;
+}
+.SpeakerBoxSpeakerInfo {
+	font-size: 3.75vw;
+	margin: 3.125vw 3.125vw 7.8125vw 4.6875vw;
+	line-height: 4.6875vw;
+}
+.TestimonialBox {
+	height: auto;
+	font-size: 3.75vw;
+	padding: 9.375vw 0 7.8125vw 5.625vw;
+}
+.TestimonialBox img {
+	width: 13.75vw;
+	height: 10.3125vw;	
+	display: inline-block;
+	vertical-align: top;
+}
+.TestimonialTextContainer {
+	display: inline-block;
+	width: 100%;
+	max-width: 68.75vw;
+	margin-left: 5vw;	
+}
+.Testimonial {
+	margin-top: 0;
+	line-height: 4.6875vw;
+}
+.TestimonialSpeakerName {
+	margin-top: 4.6875vw;
+}
+}
+/* Speakers and Testimonials */
+
+/* Sponsors */
+#Sponsors {
+	width: 100%;
+	height: 6.25vw;
+	background-color: rgba(102, 103, 102, 0.1);	
+}
+#SponsorsInnerContainer {
+	width: 100%;
+	max-width: 53.3333vw;
+	margin: 0 auto;
+	font-size: 0;
+	text-align: center;
+}
+.Sponsor {
+	display: inline-block;
+	width: 25%;	
+}
+@media (max-width: 1920px) {
+#Sponsors {
+	height: 120px;	
+}
+#SponsorsInnerContainer {
+	max-width: 1024px;
+}	
+}
+@media (max-width: 1000px) {
+#Sponsors {
+	height: 9.765625vw;
+}
+#SponsorsInnerContainer {
+	max-width: 83.33333vw;
+}
+}
+@media (max-width: 760px) {
+#Sponsors {
+	height: 11.71875vw;
+}
+#SponsorsInnerContainer {
+	max-width: 100%;
+}
+}
+@media (max-width: 640px) {
+	#Sponsors {
+		height: auto;
+	}
+	.Sponsor {
+		width: 50%;	
+	}
+	.WhiteSponsorBg {
+		background-color: #fff;	
+	}
+}
+/* END Sponsors */
+
+
+#GoTopImg {
+	bottom: 50px;
+	z-index: 5000;
+}

@@ -1,0 +1,19 @@
+AddType image/svg+xml svg svgz
+AddEncoding gzip svgz
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^hrtechcongress.com [NC]
+RewriteRule ^(.*)$ http://www.hrtechcongress.com/$1 [L,R=301,NC]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+
+# perform redirect if speaker profile
+RewriteRule    ^speaker-profile/[a-zA-Z]   speaker-profile.php    [NC,L]
+RewriteRule    ^hotels   travel.php    [NC,L]
+
+# 404 redirect
+ErrorDocument 404 /404.php
+
+

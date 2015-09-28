@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* These CSS rules will affect the sponsors page.  */
+
+.CarteTextEdit, .ALaCarteTextContainer{
+  font-size: 0.833333vw;
+  color: #777777;
+  text-align: center;
+  width: 14.84375vw;
+  position: absolute;
+  bottom: -2.441666vw;
+  margin: 0;	
+	
+}
+
+.SysDelete{
+font-size: 30px;
+  position: absolute;
+  z-index: 350;
+  padding: 20px;
+  cursor: pointer;
+  top: -10px;
+  left: -10px;
+  
+}

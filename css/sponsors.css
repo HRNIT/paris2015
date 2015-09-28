@@ -1,0 +1,652 @@
+@charset "utf-8";
+/* These CSS rules will affect the sponsors page.  */
+
+
+
+
+
+/* Header */
+header {
+	background-image:url(../img/sponsors/header.jpg);
+	background-repeat:no-repeat;
+	background-size: contain;
+	width:100%;
+	height:27.08333vw; 
+	color:#fff;
+	padding-left: 10.41666vw;
+	padding-top: 3.125vw;
+	padding-bottom: 3.3854166vw;
+	margin-top: 4.0625vw;
+
+}
+#HeaderInnerContainer {
+	padding-top: 4.6875vw;
+	padding-left: 16.666666vw;	
+}
+header h1 {
+	font-size:3.125833vw;
+	margin-top: 0px;
+	margin-bottom:2.1vw;
+}
+header p {
+	width: 100%;
+	max-width:29vw;
+	font-size:1.25vw;
+	line-height: 1.5625vw;
+	margin-bottom: 2.4vw;
+}
+header button {
+	font-size: 1.25vw;
+	font-weight: 600;
+	background-color: rgba(255, 255, 255, 0);
+	color: #fff;
+	border: 3px solid #fff;
+	padding: 0;
+	max-width: 15.625vw;
+	height: 3.6458333vw;
+	vertical-align: bottom;
+	transition: all 0.3s ease-in;
+}
+header button:hover {
+	background-color: #106ab5;
+	border: 3px solid #106ab5;
+}
+#HeaderWhosWhoLogo {
+	width: 9.895833vw;
+	height: 3.802083vw;
+	margin-left: 2.864583vw;
+}
+@media (max-width: 1000px) {
+	header {
+		margin-top: 50px;	
+	}
+}
+@media (max-width: 768px) {
+	#SponsorLists {
+		margin-top: 12vw;		
+	}
+header {
+	background-image:url(../img/sponsors/header-small-tablet.jpg);
+	background-repeat:no-repeat;
+	background-size: contain;
+	width:100%;
+	height:56.25vw; 
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-left: 7.03125vw;
+}
+header h1 {
+	font-size:6.5625vw;
+	margin-top: 0px;
+	margin-bottom:4.6875vw;
+	padding-top: 7.8125vw;
+}
+header p {
+	width: 100%;
+	max-width:51.5625vw;
+	font-size:2.5vw;
+	line-height: 3.4375vw;
+	margin-bottom:4.6875vw;
+}
+header button {
+	font-size: 2.34375vw;
+	border: 1px solid #fff;
+	max-width: 28.90625vw;
+	height: 7.03125vw;
+}
+header button:hover {
+	background-color: #106ab5;
+	border: 1px solid #106ab5;
+}
+#HeaderWhosWhoLogo {
+	width: 20.3125vw;
+	height: auto;
+	margin-left: 5.46875vw;
+}	
+}
+@media (max-width: 640px) {
+header {
+	background-image:url(../img/sponsors/header-mobile.jpg);
+	background-repeat:no-repeat;
+	background-size: contain;
+	width:100%;
+	height:150vw; 
+	padding:0;
+	padding-top: 5vw;
+	text-align: center;	
+}
+header h1 {
+	font-size:12.5vw;
+	margin-top: 0px;
+	margin-bottom:7.8125vw;
+}
+header p {
+	max-width:78.125vw;
+	font-size:4.0625vw;
+	line-height: 5.625vw;
+	margin: 0 auto;
+	margin-bottom:17.1875vw;
+}
+header button {
+	font-size: 4.6875vw;
+	border: 2px solid #fff;
+	max-width: 62.5vw;
+	height: 12.5vw;
+	position: relative;
+	top: -5vw;
+}
+header button:hover {
+	background-color: #106ab5;
+	border: 2px solid #106ab5;
+}
+#HeaderWhosWhoLogo {
+	display: block;
+	width: 40.625vw;
+	height: auto;
+	margin: 0 auto;
+	margin-top: 6.25vw;
+	margin-bottom: 10vw;
+}	
+#ScrollDownHeaderLinkContainer a span {
+	color: #a1a1c5;	
+}	
+}
+/* END Header */
+
+
+
+
+
+
+
+	
+/* SponsorLists */
+#SponsorLists {
+	width: 100%;
+	background-color: #fff;
+	margin-bottom: 50px;
+}
+
+/*sponsor anchor*/
+.anchorclass{
+	display: block; 
+	position: relative; 
+	top: -80px; 
+	visibility: hidden;
+}
+@media (max-width: 1000px) {
+	.anchorclass{	
+		top: -150px; 
+	}
+}
+@media (max-width: 480px) {
+	.anchorclass{	
+		top: -100px; 
+	}
+}
+
+#SponsorListsInnerContainer {
+	width: 100%;
+	max-width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+#PoweredByWhosWhoLogo {
+	margin-top: 2.0833vw;
+}
+.SponsorListHeadline {
+	width: 60%; 
+	text-align: center; 
+	/*background-image: url(../img/sponsors/headline-background-desktop.png); */
+	padding: 0px; 
+	background-position: center center; 
+	font-size: 40px;
+	background-size: cover;
+	font-weight: 500;
+    margin: 65px auto;
+}
+.SponsorListHeadline span {
+	margin-left: -0.260416vw;
+}
+
+.SponsorList {
+	text-align:justify;
+}
+.SponsorListLogo, .SponsorListDetails {
+	display: block;
+	margin: 0 auto;
+	vertical-align: top;
+}	
+.SponsorListLogo {
+	/*width: 200px;*/
+	text-align: center;
+	padding-top: 50px;	
+}
+.SponsorListLogo img {
+	width: auto;
+	/*max-width: 200px;*/
+	max-width: 230px;
+	height: auto;
+	max-height: 180px;
+	margin-bottom: 3vw;
+}
+.SponsorListDetails {
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+	font-size: 1.04166vw;
+	color: #322f2f;
+	/*font-size: 17px;*/
+}
+.SponsorListName {
+	font-size: 25px;
+	margin-top: 0;
+	margin-bottom: -5px;
+	line-height: 150%;
+	color: #322f2f;
+}
+.SponsorListName a {
+	color: #322f2f;
+	transition: all 0.3s;
+}
+.SponsorListName a:hover {
+	color: #106ab5;
+	text-decoration: none;
+}
+.SponsorListName .fa-external-link {
+	font-size: 1.14583vw;
+	padding-left: 0.260416vw;
+	color: #106ab5;	
+}
+.SponsorListDescription {
+	margin-bottom: 25px;
+	font-size: 17px;
+	width: 100%;
+	/*max-width: 650px;*/
+	line-height: 150%;
+}
+.SponsorListSocialIcons {
+	/*display: inline-block;*/
+	text-align: center;
+    margin: 0 auto 40px auto;
+	padding-left: 12px;
+}
+.SponsorListSocialIcon {
+	display: inline-block;	
+	background-repeat: no-repeat;
+	width: 2.60416vw;
+	height: 2.65625vw;
+	margin-right: 0.78125vw;
+}
+.SponsorListFacebookIcon {
+	background-image: url(../img/sponsors/facebook-icon.png);
+	background-size: cover;
+}
+.SponsorListTwitterIcon {
+	background-image: url(../img/sponsors/twitter-icon.png);
+	background-size: cover;
+}
+.SponsorListLinkedinIcon {
+	background-image: url(../img/sponsors/linkedin-icon.png);
+	background-size: cover;
+}
+.SponsorListBlogIcon {
+	background-image: url(../img/sponsors/blog-icon.png);
+	background-size: cover;
+}
+.SponsorListLinkIcon {
+	background-image: url(../img/sponsors/link-icon.png);
+	background-size: cover;
+}
+
+@media (max-width: 1500px) {
+
+.SponsorListHeadline {
+	width: 80%; 
+}
+
+}
+
+@media (max-width: 1200px) {
+
+.SponsorListHeadline {
+	width: 100%; 
+}
+
+}
+
+@media (max-width: 1920px) {
+	.SponsorListDetails {
+		font-size: 20px;
+	}
+	.SponsorListName .fa-external-link {
+		font-size: 22px;
+	}
+	.SponsorListSocialIcon {
+		width: 36px;
+		height: 37px;
+	}
+	
+}
+@media (max-width: 1390px) {
+	#SponsorListsInnerContainer {
+		max-width: 90%;	
+	}
+}
+@media (max-width: 1022px) {
+	.SponsorListLogo {
+		text-align: center;	
+		padding-top: 0;
+		width: 100%;
+	}
+	.SponsorListName {	
+		text-align:center;
+	}	
+}
+
+
+@media (max-width: 1000px) {
+
+	
+
+	#PoweredByWhosWhoLogo {
+		margin-top: 40px;
+	}
+
+	.SponsorList {	
+		padding-left: 30px;
+		padding-right: 30px;
+		margin-bottom: 65px;
+	}
+	
+	.SponsorListDetails {
+		width: 100%;
+		margin: 0 auto;
+		font-size: 17px;	
+	}
+	.SponsorListName {
+		font-size: 25px;
+		margin-top: 15px;
+	}
+	.SponsorListName .fa-external-link {
+		font-size: 22px;
+		padding-left: 5px;	
+	}
+	.SponsorListSocialIcon {
+		width: 45px;
+		height: 46px;
+		margin-right: 17px;
+	}
+	
+	.SponsorListLogo img {
+	margin-bottom: 8vw;
+}
+	.AlaCarteSponsorBox {
+		margin-bottom: 5.208333vw;	
+	}	
+}
+
+
+@media (max-width: 640px) {
+	.SponsorList {	
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	#SponsorListsInnerContainer {
+		background: none;	
+		padding-top: 0;
+		margin-top: 0;
+	}
+	#WhosWhoAndDiamondImageContainer {
+		width: 100%;
+		max-width: 320px;
+		margin: 0 auto;	
+	}
+	#PoweredByWhosWhoLogo {
+		width: 280px;
+		height: auto;
+	}
+	.SponsorListHeadline {
+		
+		width: 90%;
+		font-size: 28px;
+		background-image:none;
+	}
+	.SponsorListDetails {
+		padding-left: 10px;
+		padding-right: 5px;
+		box-sizing: border-box;
+	}
+	.SponsorListName {
+		margin-bottom: 15px;	
+	}
+	.SponsorListName .fa-external-link {
+		font-size: 20px;
+		padding-left: 5px;	
+	}	
+	.SponsorListDescription {
+		font-size:13px;
+	}
+	.SponsorListSocialIcons {
+		float: none;
+		display: block;	
+		margin-top: 30px;
+	}
+	.SponsorListSocialIcon {
+		margin-left: 0; 
+		margin-right: 15px;	
+		width: 41px;
+		height: 42px;
+	}
+	.AlaCarteSponsorBox {
+		margin-bottom: 12.5vw;	
+	}
+}
+
+/*End SponsorLists */
+
+
+
+
+/* Sponsors Modal */
+.SponsorModal {
+	padding: 0;
+	position: fixed;
+	top: 0 !important;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow-y: scroll;
+}
+
+
+.SponsorModalInnerContainer {
+	text-align:justify;
+}
+.SponsorModalLogo, .SponsorModalDetails {
+	display: block;
+	margin: 0 auto;
+	vertical-align: top;
+}	
+.SponsorModalLogo {
+	/*width: 200px;*/
+	text-align: center;
+	padding-top: 50px;	
+}
+.SponsorModalLogo img {
+	width: auto;
+	/*max-width: 200px;*/
+	max-width: 285px;
+	height: auto;
+	max-height: 100px;
+	margin-bottom: 3vw;
+}
+.SponsorModalDetails {
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+	font-size: 1.04166vw;
+	color: #322f2f;
+	/*font-size: 17px;*/
+}
+.SponsorModalName {
+	font-size: 25px;
+	margin-top: 0;
+	margin-bottom: -5px;
+	line-height: 150%;
+	color: #322f2f;
+}
+.SponsorModalName a {
+	color: #322f2f;
+	transition: all 0.3s;
+}
+.SponsorModalName a:hover {
+	color: #106ab5;
+	text-decoration: none;
+}
+.SponsorModalName .fa-external-link {
+	font-size: 1.14583vw;
+	padding-left: 0.260416vw;
+	color: #106ab5;	
+}
+.SponsorModalDescription {
+	margin-bottom: 25px;
+	font-size: 17px;
+	width: 100%;
+	/*max-width: 650px;*/
+	line-height: 150%;
+}
+.SponsorModalSocialIcons {
+	/*display: inline-block;*/
+	text-align: center;
+    margin: 0 auto 40px auto;
+	padding-left: 12px;
+}
+.SponsorModalSocialIcon {
+	display: inline-block;	
+	background-repeat: no-repeat;
+	width: 2.60416vw;
+	height: 2.65625vw;
+	margin-right: 0.78125vw;
+}
+.SponsorModalFacebookIcon {
+	background-image: url(../img/sponsors/facebook-icon.png);
+	background-size: cover;
+}
+.SponsorModalTwitterIcon {
+	background-image: url(../img/sponsors/twitter-icon.png);
+	background-size: cover;
+}
+.SponsorModalLinkedinIcon {
+	background-image: url(../img/sponsors/linkedin-icon.png);
+	background-size: cover;
+}
+.SponsorModalBlogIcon {
+	background-image: url(../img/sponsors/blog-icon.png);
+	background-size: cover;
+}
+.SponsorModalLinkIcon {
+	background-image: url(../img/sponsors/link-icon.png);
+	background-size: cover;
+}
+
+
+@media (max-width: 1920px) {
+	.SponsorModalDetails {
+		font-size: 20px;
+	}
+	.SponsorModalName .fa-external-link {
+		font-size: 22px;
+	}
+	.SponsorModalSocialIcon {
+		width: 36px;
+		height: 37px;
+	}
+	
+}
+
+@media (max-width: 1022px) {
+	.SponsorModalLogo {
+		text-align: center;	
+		padding-top: 0;
+		width: 100%;
+	}
+	.SponsorModalName {	
+		text-align:center;
+	}	
+}
+
+
+@media (max-width: 1000px) {
+
+	
+
+	.SponsorModalInnerContainer {	
+		padding-left: 30px;
+		padding-right: 30px;
+		margin-bottom: 65px;
+	}
+	
+	.SponsorModalDetails {
+		width: 100%;
+		margin: 0 auto;
+		font-size: 17px;	
+	}
+	.SponsorModalName {
+		font-size: 25px;
+		margin-top: 15px;
+	}
+	.SponsorModalName .fa-external-link {
+		font-size: 22px;
+		padding-left: 5px;	
+	}
+	.SponsorModalSocialIcon {
+		width: 45px;
+		height: 46px;
+		margin-right: 17px;
+	}
+	
+	.SponsorModalLogo img {
+	margin-bottom: 8vw;
+}
+	
+}
+
+
+@media (max-width: 640px) {
+	.SponsorModalInnerContainer {	
+		padding-left: 25px;
+		padding-right: 25px;
+		padding-top: 50px;
+	}
+	.SponsorModalDetails {
+		padding-left: 10px;
+		padding-right: 5px;
+		box-sizing: border-box;
+	}
+	.SponsorModalName {
+		margin-bottom: 15px;	
+	}
+	.SponsorModalName .fa-external-link {
+		font-size: 20px;
+		padding-left: 5px;	
+	}	
+	.reveal-modal .SponsorModalInnerContainer p {
+		font-size:13px;
+		line-height: 150%;
+		text-align: justify;
+	}
+	.SponsorModalSocialIcons {
+		float: none;
+		display: block;	
+		margin-top: 30px;
+	}
+	.SponsorModalSocialIcon {
+		margin-left: 0; 
+		margin-right: 15px;	
+		width: 41px;
+		height: 42px;
+	}
+}
+
+/*End Sponsors */

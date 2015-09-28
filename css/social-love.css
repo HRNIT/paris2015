@@ -1,0 +1,82 @@
+@charset "utf-8";
+/* These CSS rules will affect the tickets page page.  */
+
+
+/* Social Love */
+#SocialLove {
+	text-align: center;
+	width: 100%;
+	margin: 0 auto;
+	margin-top:6vw;
+}
+#SocialLove h2 {
+	font-size: 4.6875vw;
+	margin-top: 3.125vw;
+	margin-bottom: 1.5625vw;
+}
+#SocialLove h2 img {
+	width: 3.645833vw;
+	height: 3.333333vw;
+	padding-bottom: 0.260416vw;
+	margin-left: -0.3vw;
+}
+#SocialLove h3 {
+	font-size: 1.04166vw;
+	color: #010101;
+	margin-bottom: 1.3020833vw;
+	font-weight: 400;
+}
+#SocialLove #SuccessFactorsLogo {
+	width: 18.90625vw;
+	height: 3.59375vw;	
+	margin-bottom: 2.604166vw;
+}
+@media (max-width: 1000px) {
+	#SocialLove {
+		margin-top: 70px;	
+	}
+	#SocialLove h2 {
+		font-size: 9vw;
+		margin-top: 6vw;
+		margin-bottom: 3vw;
+	}
+	#SocialLove h2 img {
+		width: 7vw;
+		height: 6.4vw;
+		padding-bottom: 0.5vw;
+	}
+	#SocialLove h3 {
+		font-size: 2vw;
+		color: #010101;
+		margin-bottom: 2.5vw;
+		font-weight: 400;
+	}
+	#SocialLove #SuccessFactorsLogo {
+		width: 36.3vw;
+		height: 6.9vw;	
+		margin-bottom: 5vw;
+	}
+}
+@media (max-width: 640px) {
+	#SocialLove h2 {
+		font-size: 11.25vw;
+		margin-top: 7.8125vw;
+		margin-bottom: 4.6875vw;
+	}
+	#SocialLove h2 img {
+		width: 7.8125vw;
+		height: 7.1875vw;
+		padding-bottom: 0.625vw;
+		margin-left: -1.5625vw;
+	}
+	#SocialLove h3 {
+		font-size: 4.0625vw;
+		margin-bottom: 4.6875vw;
+	}
+	#SocialLove #SuccessFactorsLogo {
+		width: 72.1875vw;
+		height: 13.75vw;	
+		margin-bottom: 9.375vw;
+	}
+}
+/* END Social Love */

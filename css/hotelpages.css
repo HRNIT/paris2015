@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* These rules will effect the pages stored in the hotelpages folder */
+
+iframe { position:relative; top:4vw; width:100%; height:90vh;}
+@media (max-width: 1000px) {
+	iframe {
+		top: 50px;
+	}
+}
+#DesktopMenu h1 {
+	display: inline-block;
+	position: relative;
+	top: -0.78125vw;
+	left: 15.625vw;
+	font-size: 1.25vw;
+}
+#InfoModal {
+	text-align:center;
+	}
+#InfoModal  img {
+	height:5vw;
+	}	
+#MobileMenuContainer h1 {
+	font-size:12px;
+	position:absolute;
+	top:0.2vw;
+	right:1vw;
+}

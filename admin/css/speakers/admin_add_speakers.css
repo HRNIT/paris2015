@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* General Definitions*/
+
+#DropDiv {
+	background:url(../../img/admin/dndSpeakerProfile.png);
+}
+
+#DropDivCompany{
+	background:url(../../img/admin/dndCompanyLogo.png);
+}

@@ -1,0 +1,780 @@
+@charset "utf-8";
+/* CSS Document for the Press page */
+
+body {
+	background-color: #fff;	
+}
+body * {
+	box-sizing: border-box;	
+}
+
+/* Header */
+header {
+	background-image:url(../../img/press/header.png);
+	background-repeat:no-repeat;
+	background-size: contain;
+	width:100%;
+	height:27.08333vw; 
+	color:#fff;
+	margin-top: 4.0625vw;
+	margin-bottom: -5px;
+}
+#HeaderInnerContainer {
+	padding-top: 4.6875vw;
+	padding-left: 16.666666vw;	
+}
+header h1 {
+	font-size:3.125833vw;
+	margin-top: 0px;
+	margin-bottom: 2.4vw;
+}
+header p {
+	width: 100%;
+	max-width:29vw;
+	font-size:1.25vw;
+	line-height: 1.5625vw;
+	margin-bottom: 3.9vw;
+}
+#BookNowHeaderButton {
+	font-size: 1.25vw;
+	font-weight: 600;
+	background-color: rgba(255, 255, 255, 0);
+	color: #fff;
+	border: 0.15625vw solid #fff;
+	padding-top: 0.8vw;
+	max-width: 15.625vw;
+	height: 3.6458333vw;
+	text-align: center;
+	
+	text-transform: uppercase;
+	transition: all 0.3s ease-in;
+}
+#BookNowHeaderButton:hover {
+	background-color: #106ab5;
+	border: 0.15625vw solid #106ab5;
+	color:#fff;
+}
+@media (max-width: 1000px) {
+	header {
+		margin-top: 50px;	
+	}
+}
+@media (max-width: 767px) {
+	header {
+		display: none;	
+	}
+}
+/* END Header */
+
+/* Tab Panel Buttons */
+#TabPanelButtonsContainer {
+	width: 100%;	
+	margin: 0 auto;
+	margin-top: 4.6875vw;
+	font-size: 0;
+	text-align: center;
+}
+.TabPanelButton {
+	width: 100%;
+	max-width: 26.822916vw;
+	height: 2.604166vw;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	font-size: 0.83333vw;	
+	text-align: center;
+	background-color: #e0e0e0;
+	color: #737373;
+	border-bottom: 0.2604166vw solid #e0e0e0;
+	display: inline-block;
+	text-transform: uppercase;
+	padding-top: 0.78125vw;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+.TabPanelButton:hover, .ClickedTabButton {
+	color: #fff;
+	background-color: #106ab5;
+	border-bottom: 0.2604166vw solid #7bbcd2;
+}
+#MediaPartnersButton, #BlogSquadButton, #AnalystsButton {
+	margin-right: 0.104166vw;	
+}
+.TabPanelButton .icon, #TabPanelAnchor, .ArrowUp {
+	display: none;	
+}
+@media (max-width: 1920px) {
+#TabPanelButtonsContainer {
+	margin-top: 90px;
+}
+.TabPanelButton {
+	width: 100%;
+	max-width: 515px;
+	height: 50px;
+	font-size: 16px;	
+	border-bottom: 5px solid #e0e0e0;
+	padding-top: 15px;
+}
+.TabPanelButton:hover, .ClickedTabButton {
+	border-bottom: 5px solid #7bbcd2;
+}
+#MediaPartnersButton, #BlogSquadButton, #AnalystsButton {
+	margin-right: 2px;	
+}
+}
+@media (max-width: 1100px) {
+.TabPanelButton {
+	max-width: 470px;
+}	
+}
+@media (max-width: 1000px) {
+#TabPanelButtonsContainer {
+	margin-top: 7.8125vw;
+	margin-bottom: 0;
+}
+.TabPanelButton {
+	max-width: 40vw;
+	height: 4.55729166vw;
+	font-size: 1.8229166vw;	
+	padding-top: 0.9114583vw;
+	border-bottom: 0.390625vw solid #e0e0e0;
+}
+.TabPanelButton:hover, .ClickedTabButton {
+	border-bottom: 0.390625vw solid #7bbcd2;
+}
+#MediaPartnersButton, #BlogSquadButton, #AnalystsButton {
+	margin-right: 0.2604166vw;	
+}			
+}
+@media (max-width: 640px) {
+body {
+	margin-bottom: 40px;	/* @640px, the tab panel button bar become position: fixed, bottom: 0.. the height is 40px. This is why we need 40px margin */
+}
+#TabPanelButtonsContainer {
+	margin-top: 0;
+	margin-bottom: 0;
+	position: fixed;
+	bottom: 0;
+	z-index: 1400;
+}
+.TabPanelButton {
+	max-width: 50%;
+	height: 40px;
+	font-size: 14px;	
+	padding-top: 7px;
+	border-bottom: 3px solid #e0e0e0;
+	position: relative;
+}
+.TabPanelButton:hover, .ClickedTabButton {
+	border-bottom: 3px solid #7bbcd2;
+}
+#MediaPartnersButton, #BlogSquadButton, #AnalystsButton {
+	margin-right: 0;
+	/*border-right: 3px solid #fff;	*/
+}
+.ArrowUp {
+	display: block;
+	position: absolute;
+	top: -12px;
+	left: 24vw;
+	width: 0; 
+	height: 0; 
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-bottom: 12px solid #106ab5;
+	opacity: 0;
+	transition: opacity 0.5s;
+}
+.TabPanelButton:hover .ArrowUp, .ClickedTabButtonArrow {
+	opacity: 1;
+}
+.DesktopText {
+	display: none;	
+}
+.TabPanelButton .icon {
+	display: inline;
+	font-size: 22px;	
+}
+#TabPanelAnchor {
+	display: block;	
+}
+}
+@media (max-width: 480px) {
+.ArrowUp {
+	left: 22vw;
+}	
+}
+/* END Tab Panel Buttons */
+
+/* Tab Panel Wrapper */
+#TabPanelWrapper {
+	width: 100%;
+	margin: 0 auto;
+	margin-bottom: 4.6875vw;
+}
+#TabPanelWrapper * {
+	font-family: 'Roboto', sans-serif;	
+}
+#TabPanelWrapper .fa {
+	font-family: 'FontAwesome', sans-serif;	
+}
+@media (max-width: 1920px) {
+#TabPanelWrapper {
+	width: 100%;
+	margin-bottom: 90px;
+}
+}
+@media (max-width: 1000px) {
+#TabPanelWrapper {
+	margin-bottom: 7.8125vw;
+}
+}
+@media (max-width: 640px) {
+#TabPanelWrapper {
+	margin-top: 21.875vw;
+	margin-bottom: 0;
+}
+}
+
+.TabPanel {
+	overflow: hidden;
+	display: none;
+}
+/* END Tab Panel Wrapper */
+
+/* Media Partners */
+#MediaPartners {
+	display: block;
+}
+
+
+
+
+/* END Media Partners */
+
+
+
+
+
+/* Blog Squad & Analysts */
+#BlogSquad, #Analysts {
+	display: none;
+	font-size: 0.5208vw;
+	color: #fff;
+	margin: 0 1% 1% 0;
+	background-color: #fff;
+}
+
+
+#Speakers h2 {
+	font-size: 5.20833vw;
+	text-align: center;
+	margin: 2vw auto;
+}
+#BloggerContainer, #AnalystsContainer {
+	margin: 0 auto;
+	padding: 0;
+	text-align: center;
+}
+.SpeakerOverlay{
+  display: block;
+  position: absolute;
+  margin-top: 19.53125vw;
+  height: 4.6875vw;
+  background-color: rgba(0, 0, 0, 0.62);
+  width: 24.2vw;
+}
+
+.SpeakerOverlay h3{
+  font-size: 2vw;
+  text-align: left;
+  padding-left: 1vw;
+  margin-bottom:0;
+  margin-top: 0.2604166vw;
+  padding-bottom:0;
+}
+
+.SpeakerOverlay h4{
+  font-size: 1.3vw;
+  text-align: left;
+  padding-left: 1vw;
+  margin-top:0;
+  padding-top:0;
+  font-weight:200;
+}
+
+#BloggerContainer ul, #AnalystsContainer ul {
+	list-style: none;
+	padding-left: 0;
+}
+#BloggerContainer ul li, #AnalystsContainer ul li {
+	/*float: left;*/
+	display:inline-block;
+}
+.SpeakersImageContainer {
+	margin: 0.25vw;
+}
+.Square {
+	width: 24.2vw;
+	height: 24.2vw; /* match width for a 1:1 aspect ratio *//*margin: 0.25vw;*/
+}
+.SpeakerName {
+	font-size: 2.08vw;
+	margin: 2vw 0 0 1vw;
+	line-height: 1vw;
+}
+.SpeakerCompany {
+	font-size: 1.25vw;
+	margin: 1vw 0 0 1vw;
+}
+.SpeakerInfo {
+	margin: 0;
+	font-size: 0.927083vw;
+	line-height: 1.5vw;
+}
+.SpeakerHoverLinks {
+	position: absolute;
+	bottom: 1vw;
+	left: 1vw;
+}
+.SpeakerHoverLinks a {
+	color: #fff;
+	font-size: 2.08vw;
+	margin-right: 1vw;
+}
+.TwitterColor {
+	color: #fff;
+}
+.TwitterColor:hover {
+	color: #002b49;
+}
+
+
+@media (max-width: 1416px) {
+.Square {
+	width: 24vw;
+	height: 24vw; /* match width for a 1:1 aspect ratio *//*margin: 0.25vw;*/
+}
+
+.SpeakerOverlay{
+  width: 24vw;
+  height: 4.5vw;
+}
+}
+
+@media (max-width: 1000px) {
+#BlogSquad, #Analysts {
+	font-size: 1.302vw;
+	margin: 0 0.5% 1% 0.5%;
+}
+#Speakers h2 {
+	font-size: 13.02083vw;
+	margin-top: 5.46875vw;
+	margin-bottom: 5.46875vw;
+}
+.Square {
+	width: 47.60vw;
+	height: 49vw; /* match width for a 1:1 aspect ratio *//*margin: 0.5vw;*/
+}
+
+.SpeakerOverlay{
+  width: 47.6vw;
+  margin-top: 39vw;
+  height: 10vw;
+}
+
+.SpeakerOverlay h3{
+  font-size: 4vw;
+  text-align: left;
+  padding-left: 1vw;
+  margin-bottom:0;
+  margin-top: 1vw;
+padding-bottom:0;
+}
+
+.SpeakerOverlay h4{
+  font-size: 2.6vw;
+  text-align: left;
+  padding-left: 1vw;
+  margin-top:0;
+  padding-top:0;
+  font-weight:100;
+}
+
+.SpeakersImageContainer {
+	margin: 0.5vw;
+}
+.SpeakerName {
+	font-size: 4.1328125vw;
+	margin: 3.515625vw 0 0 2vw;
+	line-height: 3.125vw;
+}
+.SpeakerCompany {
+	font-size: 2.48046875vw;
+	margin: 2vw 0 0 2vw;
+}
+.SpeakerInfo {
+	margin: 2vw 1vw 0 2vw;
+	font-size: 1.953125vw;
+	line-height: 3.125vw;
+}
+.SpeakerHoverLinks a {
+	font-size: 4.166666vw;
+	margin-right: 1.25vw;
+	margin-left: 1vw
+}
+
+}
+
+@media (max-width: 640px) {
+#BlogSquad, #Analysts {
+	font-size: 3.1248vw;
+	margin: 0 0.5% 1% 0.5%;
+}
+#Speakers h2 {
+	font-size: 13.75vw;
+	margin-top: 9.375vw;
+	margin-bottom: 9.375vw;
+}
+.Square {
+	width: 95vw;
+	height: 95vw; /* match width for a 1:1 aspect ratio */
+	margin: 0 2vw 2vw 2vw;
+}
+
+.SpeakerOverlay{
+  margin-top: 76.3vw;
+  height: 18.75vw;
+  width: 95vw;
+  margin-left: 2vw;
+}
+
+.SpeakerOverlay h3{
+  font-size: 8vw;
+  text-align: left;
+  padding: 0 0 0 3vw;
+  margin-bottom: 0;
+  margin-top: 1.5625vw;
+}
+
+.SpeakerOverlay h4{
+  font-size: 4.8vw;
+  text-align: left;
+  padding-left: 3.6vw;
+}
+
+.SpeakerName {
+	font-size: 8.125vw;
+	margin: 6vw 0 0 4.8vw;
+	line-height: 7.5vw;
+}
+.SpeakerCompany {
+	font-size: 5.953125vw;
+	margin: 2.4vw 0 0 4.8vw;
+}
+.SpeakerInfo {
+	margin: 2vw 4.8vw 0 4.8vw;
+	font-size: 3.75vw;
+	line-height: 5.9375vw;
+}
+.SpeakerHoverLinks a {
+	font-size: 8.125vw;
+	margin-right: 1.25vw;
+	margin-left: 4.8vw
+}
+
+}
+/*END Speakers */
+
+
+
+/* END Blog Squad & Analysts */
+
+
+
+
+/* Analysts */
+#Analysts {
+	display: none;
+}
+
+/* END Analysts */
+
+
+
+/* Speakers Grid */
+#SpeakersGrid {
+	width: 100%;
+	max-width: 60.677083vw;
+	margin: 0 auto;
+	font-size: 0; /* This snaps the inline-block divs to eachother. Source: http://stackoverflow.com/questions/14241696/how-to-get-rid-of-space-between-divs-when-display-inline-block-and-stacked-horiz 
+					comment this line and see what happens. */
+	padding: 1.5625vw 0 2.34375vw 0;
+}
+.Speaker {
+	width: 100%;
+	max-width: 13.5416666vw;
+	margin: 0 0.78125vw 2.4479166vw 0.78125vw;
+	display: inline-block;
+	vertical-align: top;
+}
+.SpeakerPhoto {
+	width: 100%;
+	max-width: 13.541666vw;
+	height: 13.541666vw;
+	background-size: cover;
+}
+.SelectedSpeakerColor {
+	display: inline-block;
+	float: left;
+	height: 5px; /* fixed 5px on all layout */
+}
+
+.SpeakerInfo {
+	width: 100%;
+	font-weight: 600;
+	padding: 0.8854166vw 0 0 0;
+}
+.SpeakerName, .Jobtitle, .CompanyName {
+	margin: 0;	
+}
+.SpeakerName {
+	font-size: 1.0416666vw;
+}
+.Jobtitle, .CompanyName {
+	font-size: 0.729166vw;
+	color: #6c6c6c;
+}
+.Jobtitle {
+	font-weight: 400;
+	line-height: 1.458333vw;	
+}
+.CompanyName {
+	font-weight: 700;
+	line-height: 1.25vw;
+}
+@media (max-width: 1919px) { /* from 1280 to 1919 everything is defined in pixels */
+	#SpeakersGrid {
+		max-width: 1165px;
+		padding-bottom: 45px;
+		padding-top: 30px: 
+	}
+	.Speaker {
+		max-width: 260px;
+		margin: 0 15px 47px 15px;
+	}
+	.SpeakerPhoto {
+		max-width: 260px;
+		height: 260px;
+	}
+	
+	.SpeakerInfo {
+		padding: 17px 0 0 0;
+	}
+	.SpeakerName, .Jobtitle, .CompanyName {
+		line-height: 18px;	
+	}
+	.SpeakerName {
+		font-size: 20px;
+		line-height: 28px;
+	}
+	.Jobtitle, .CompanyName {
+		font-size: 14px;
+		line-height: 24px;
+	}
+}
+@media (max-width: 1280px) {
+	#SpeakersGrid {
+		max-width: 91.015625vw;
+		padding-bottom: 3.515625vw;
+		padding-top: 2.34375vw;
+	}
+	.Speaker {
+		max-width: 20.3125vw;
+		margin: 0 1.171875vw 3.671875vw 1.171875vw;
+	}
+	.SpeakerPhoto {
+		max-width: 20.3125vw;
+		height: 20.3125vw;
+	}
+	
+	.SpeakerInfo {
+		padding: 1.328125vw 0 0 0;
+	}	
+	.SpeakerName {
+		font-size: 1.5625vw;
+		line-height: 2.1875vw;
+	}
+	.Jobtitle, .CompanyName {
+		font-size: 1.09375vw;
+		line-height: 1.875vw;
+	}
+}
+@media (max-width: 1000px) {
+	#SpeakersGrid {		
+		max-width: 98vw;
+		margin: 0 auto;
+		padding: 15px 0vw 5.2083333vw 0.4vw;
+	}	
+	.Speaker {	
+		max-width: 21.74479vw;
+		margin-left: 1.302083vw;
+		margin-right: 1.302083vw;
+	}
+	.SpeakerPhoto {	
+		max-width: 21.74479vw;
+		height: 21.74479vw;
+	}
+	
+	.SpeakerInfo {
+		padding: 1.953125vw 0;
+	}
+	.SpeakerName, .Jobtitle, .CompanyName {
+		line-height: 2.34375vw;
+	}
+	.SpeakerName {
+		font-size: 2.083333vw;
+	}
+	.Jobtitle, .CompanyName {
+		font-size: 1.5625vw;
+	}
+}
+@media (width: 800px) { /* for tablets with 800px res (e.g. the LG GPad 10.1 tablet, ASUS Transformer, etc. ) */
+	#SpeakersGrid {
+		/*padding-left: 10px;*/
+		padding-right: 0;
+	}
+}
+@media (max-width: 730px) { /* Fixing the grid (4 speakers in 1 row) under 730px */
+	#SpeakersGrid {		
+		padding-left: 1vw;
+	}
+	.Speaker {
+		margin-left: 1vw;
+		margin-right: 1vw;	
+	}
+}
+@media (max-width: 640px) {
+	#SpeakersGrid {
+		padding: 30px 0 12.5vw 2vw;
+	}
+	.Speaker {	
+		max-width: 40.625vw;
+		margin: 0 3.125vw 7.8125vw 3.125vw;
+	}
+	.SpeakerPhoto {	
+		max-width: 40.625vw;
+		height: 40.625vw;
+	}
+	
+	.SpeakerInfo {
+		padding-top: 2.5vw;
+		padding-bottom: 3.125vw;
+	}
+	.SpeakerName, .Jobtitle, .CompanyName {
+		line-height: 5vw;	
+	}
+	.SpeakerName {
+		font-size: 4.375vw;
+	}	
+	.Jobtitle, .CompanyName {
+		font-size: 3.75vw;
+	}
+}
+@media (width: 320px) {
+	#SpeakersGrid {		
+		max-width: 320px;
+		padding-left: 10px;
+	}	
+}
+/* END Speakers Grid */
+
+/*Media Partners*/
+
+#MediaPartners {
+	display: block;
+	width: 100%;
+	max-width: 53.90625vw;
+	margin: 0 auto;
+	margin-bottom: 2.6vw;
+	margin-top: 2.6vw;
+	text-align: center;
+}
+.Sponsor{
+	width: 33%;
+	height: 9.375vw;	
+	line-height: 9.375vw;
+	display: inline-block;
+	/*transition: all 0.3s;*/
+	cursor:pointer;
+}
+.SponsorLogo{
+ 	transition:all 0.3s;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+}
+.SponsorLogoContainer img {
+	max-width: 11.97916vw;
+	max-height: 15vw;
+}
+.Sponsor:hover {
+	background-color: #d8e3eb;
+}
+@media (max-width: 1920px) {
+#MediaPartners {
+	max-width: 1035px;
+	margin-bottom: 50px;
+	margin-top: 50px;
+}
+.Sponsor {
+	height: 180px;	
+	line-height: 180px;
+}
+.SponsorLogoContainer img {
+	max-width: 230px;
+	max-height: 150px;
+	vertical-align: middle;
+}
+}
+@media (max-width: 1000px) {
+#MediaPartners {
+	max-width: 80vw;
+	margin-bottom: 3vw;
+}
+ .Sponsor{
+	 width: 32%;
+	height: 150px;	
+	line-height: 150px;	 
+}
+.SponsorLogoContainer img {
+	max-width: 20vw;
+	max-height: 10vw;
+}
+}
+@media (max-width: 640px) {
+#MediaPartners {
+	max-width: 100%;
+	margin-bottom: 15vw;
+}
+ .Sponsor{
+	width: 45%;	
+	height: 37.5vw;	
+	line-height: 37.5vw;
+}
+.SponsorLogoContainer img {
+	max-width: 35vw;
+	max-height: 25vw;
+}
+}
+
+/* END Media Partners */
+
+
+
+/*END Mediapartners*/
+
+
+/* Go Top Button */
+#GoTopImg {
+	bottom: 60px;	
+}
+

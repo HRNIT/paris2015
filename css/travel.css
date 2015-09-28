@@ -1,0 +1,2125 @@
+@charset "utf-8";
+/* CSS Document for the Venue page */
+
+body {
+	background-color: #fff;	
+}
+body * {
+	box-sizing: border-box;	
+}
+
+/* Header */
+header {
+	background-image:url(../img/travel/travelheader.jpg);
+	background-repeat:no-repeat;
+	background-size: contain;
+	width:100%;
+	height:27.08333vw; 
+	color:#fff;
+	margin-top: 4.0625vw;
+	margin-bottom: -5px;
+}
+#HeaderInnerContainer {
+	padding-top: 4.6875vw;
+	padding-left: 16.666666vw;	
+}
+header h1 {
+	font-size:3.125833vw;
+	margin-top: 0px;
+	margin-bottom: 2.4vw;
+}
+header p {
+	width: 100%;
+	max-width:29vw;
+	font-size:1.25vw;
+	line-height: 1.5625vw;
+	margin-bottom: 3.9vw;
+}
+#BookNowHeaderButton {
+	font-size: 1.25vw;
+	font-weight: 600;
+	background-color: rgba(255, 255, 255, 0);
+	color: #fff;
+	border: 0.15625vw solid #fff;
+	padding-top: 0.8vw;
+	max-width: 15.625vw;
+	height: 3.6458333vw;
+	text-align: center;
+	
+	text-transform: uppercase;
+	transition: all 0.3s ease-in;
+}
+#BookNowHeaderButton:hover {
+	background-color: #106ab5;
+	border: 0.15625vw solid #106ab5;
+	color:#fff;
+}
+@media (max-width: 1000px) {
+	header {
+		margin-top: 50px;	
+	}
+}
+@media (max-width: 768px) {
+header {
+	background-image:url(../img/travel/header-small-tablet.jpg);
+	background-repeat:no-repeat;
+	background-size: contain;
+	width:100%;
+	height:56.25vw; 
+}
+#HeaderInnerContainer {
+	padding-top: 7.8125vw;
+	padding-left: 7.03125vw;	
+}
+header h1 {
+	font-size:6.5625vw;
+	margin-top: 0px;
+	margin-bottom:4.6875vw;
+}
+header p {
+	width: 100%;
+	max-width:47.65625vw;
+	font-size:2.5vw;
+	line-height: 3.4375vw;
+	margin-bottom:9.375vw;
+}
+#BookNowHeaderButton {
+	font-size: 2.34375vw;
+	border: 1px solid #fff;
+	max-width: 28.90625vw;
+	height: 7.03125vw;
+	padding-top: 1.5625vw;
+}
+#BookNowHeaderButton:hover {
+	background-color: #106ab5;
+	border: 1px solid #106ab5;
+}
+}
+@media (max-width: 640px) {
+header {
+	background-image:url(../img/travel/header-mobile.jpg);
+	background-repeat:no-repeat;
+	background-size: contain;
+	width:100%;
+	height:150vw; 
+}
+#HeaderInnerContainer {
+	padding-top: 25vw;
+	padding-left: 0;
+	text-align: center;	
+}
+header h1 {
+	font-size:12.5vw;
+	margin-top: 0px;
+	margin-bottom:7.8125vw;
+}
+header p {
+	max-width:56.25vw;
+	font-size:4.0625vw;
+	line-height: 5.625vw;
+	margin: 0 auto;
+	margin-bottom:15.5vw;
+}
+#BookNowHeaderButton {
+	font-size: 4.6875vw;
+	border: 2px solid #fff;
+	max-width: 62.5vw;
+	height: 12.5vw;
+	padding-top: 2.5vw;
+	margin: 0 auto;
+	margin-bottom: 18.5vw;
+}
+#BookNowHeaderButton:hover {
+	background-color: #106ab5;
+	border: 2px solid #106ab5;
+}
+#ScrollDownHeaderLinkContainer a span {
+	color: #90a8d0;
+}
+}
+/* END Header */
+
+/* Tab Panel Buttons */
+#TabPanelButtonsContainer {
+	width: 100%;	
+	max-width: 57.29166vw;
+	margin: 0 auto;
+	margin-top: 4.6875vw;
+	font-size: 0;
+	text-align: center;
+}
+.TabPanelButton {
+	width: 100%;
+	max-width: 17.77733vw;
+	height: 2.604166vw;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	font-size: 0.83333vw;	
+	text-align: center;
+	background-color: #e0e0e0;
+	color: #737373;
+	border-bottom: 0.2604166vw solid #e0e0e0;
+	display: inline-block;
+	text-transform: uppercase;
+	padding-top: 0.78125vw;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+.TabPanelButton:hover, .ClickedTabButton {
+	color: #fff;
+	background-color: #106ab5;
+	border-bottom: 0.2604166vw solid #7bbcd2;
+}
+#AirlineButton, #HotelsButton, #PartnerProgramButton {
+	margin-right: 0.104166vw;	
+}
+.TabPanelButton .icon, #TabPanelAnchor, .ArrowUp {
+	display: none;	
+}
+@media (max-width: 1920px) {
+#TabPanelButtonsContainer {
+	max-width: 1100px;
+	margin-top: 90px;
+}
+.TabPanelButton {
+	width: 100%;
+	max-width: 341px;
+	height: 50px;
+	font-size: 16px;	
+	border-bottom: 5px solid #e0e0e0;
+	padding-top: 15px;
+}
+.TabPanelButton:hover, .ClickedTabButton {
+	border-bottom: 5px solid #7bbcd2;
+}
+#AirlineButton, #HotelsButton, #PartnerProgramButton {
+	margin-right: 2px;	
+}
+}
+@media (max-width: 1280px) {
+#TabPanelButtonsContainer {
+	max-width: 970px;
+}
+.TabPanelButton {
+	max-width: 320px;
+}	
+}
+@media (max-width: 1000px) {
+#TabPanelButtonsContainer {
+	max-width: 100%;
+	margin-top: 7.8125vw;
+	margin-bottom: 0;
+}
+.TabPanelButton {
+	max-width: 29.66666vw;
+	height: 4.55729166vw;
+	font-size: 1.8229166vw;	
+	padding-top: 0.9114583vw;
+	border-bottom: 0.390625vw solid #e0e0e0;
+}
+.TabPanelButton:hover, .ClickedTabButton {
+	border-bottom: 0.390625vw solid #7bbcd2;
+}
+#AirlineButton, #HotelsButton, #PartnerProgramButton {
+	margin-right: 0.2604166vw;	
+}			
+}
+@media (max-width: 640px) {
+body {
+	margin-bottom: 40px;	/* @640px, the tab panel button bar become position: fixed, bottom: 0.. the height is 40px. This is why we need 40px margin */
+}
+#TabPanelButtonsContainer {
+	margin-top: 0;
+	margin-bottom: 0;
+	position: fixed;
+	bottom: 0;
+	z-index: 1400;
+}
+.TabPanelButton {
+	max-width: 33.333%;
+	height: 40px;
+	font-size: 14px;	
+	padding-top: 7px;
+	border-bottom: 3px solid #e0e0e0;
+	position: relative;
+}
+.TabPanelButton:hover, .ClickedTabButton {
+	border-bottom: 3px solid #7bbcd2;
+}
+#AirlineButton, #HotelsButton, #PartnerProgramButton {
+	margin-right: 0;
+	/*border-right: 3px solid #fff;	*/
+}
+.ArrowUp {
+	display: block;
+	position: absolute;
+	top: -12px;
+	left: 15.5vw;
+	width: 0; 
+	height: 0; 
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-bottom: 12px solid #106ab5;
+	opacity: 0;
+	transition: opacity 0.5s;
+}
+.TabPanelButton:hover .ArrowUp, .ClickedTabButtonArrow {
+	opacity: 1;
+}
+.DesktopText {
+	display: none;	
+}
+.TabPanelButton .icon {
+	display: inline;
+	font-size: 22px;	
+}
+#TabPanelAnchor {
+	display: block;	
+}
+}
+@media (max-width: 480px) {
+.ArrowUp {
+	left: 14.2vw;
+}	
+}
+/* END Tab Panel Buttons */
+
+/* Tab Panel Wrapper */
+#TabPanelWrapper {
+	width: 100%;
+	max-width: 53.33333vw;
+	margin: 0 auto;
+	margin-bottom: 4.6875vw;
+}
+#TabPanelWrapper * {
+	font-family: 'Roboto', sans-serif;	
+}
+#TabPanelWrapper .fa {
+	font-family: 'FontAwesome', sans-serif;	
+}
+#TabPanelWrapper p {
+	font-size: 0.729166vw;
+	line-height: 1.04166vw;	
+	color: #737373;
+}
+#TabPanelWrapper h3 {
+	font-size: 1.25vw;
+	text-transform: uppercase;
+}
+@media (max-width: 1920px) {
+#TabPanelWrapper {
+	width: 100%;
+	max-width: 1024px;
+	margin-bottom: 90px;
+}
+#TabPanelWrapper p {
+	font-size: 14px;
+	line-height: 20px;	
+}
+#TabPanelWrapper h3 {
+	font-size: 24px;
+}
+}
+@media (max-width: 1280px) {
+#TabPanelWrapper {
+	max-width: 960px;
+}	
+}
+@media (max-width: 1000px) {
+#TabPanelWrapper {
+	max-width: 89.84375vw;
+	margin-bottom: 7.8125vw;
+}
+#TabPanelWrapper p {
+	font-size: 1.8229166vw;
+	line-height: 2.604166vw;	
+}
+#TabPanelWrapper h3 {
+	font-size: 3.125vw;
+	line-height: 3.645833vw;	
+}	
+}
+@media (max-width: 640px) {
+#TabPanelWrapper {
+	max-width: 100%;
+	margin-top: 10vw;
+	margin-bottom: 0;
+}
+#TabPanelWrapper p {
+	font-size: 4.0625vw;
+	line-height: 5.625vw;	
+}
+#TabPanelWrapper h3 {
+	font-size: 5.625vw;
+	line-height: 6.5625vw;	
+}	
+#TabPanelWrapper .InvisibleHeadline {
+	visibility: visible;
+	opacity: 1;
+	position: static;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	text-transform: uppercase;
+	font-weight: 400;
+	color: #106ab5;
+	font-size: 11.25vw;
+	line-height: 13.4375vw;
+	margin: 7.8125vw 0 0 0;
+}	
+}
+
+.TabPanel {
+	overflow: hidden;
+	display: none;
+}
+.TabPanel > p {
+	margin-top: 2.604166vw;
+	margin-bottom: 2.604166vw;	
+}
+@media (max-width: 1920px) {
+.TabPanel > p {
+	margin-top: 50px;
+	margin-bottom: 50px;	
+}	
+}
+@media (max-width: 1000px) {
+.TabPanel > p {
+	margin-top: 4.557291vw;
+	margin-bottom: 4.557291vw;	
+}	
+}
+@media (max-width: 640px) {
+.TabPanel > p {
+	width: 100%;
+	max-width: 87.5vw;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 6.25vw;
+	margin-bottom: 6.25vw;	
+}	
+}
+@media (max-width: 640px) {
+.TabPanelOuterWrapper {
+	width: 100%;
+	background-color: #d7d8da;	
+	padding-top: 9.375vw;
+	padding-bottom: 15.625vw;
+	padding-left: 3.125vw;
+	padding-right: 3.125vw;
+}
+}
+/* END Tab Panel Wrapper */
+
+/* Book Now Button */
+.BookNowButton {
+	width: 100%;
+	max-width: 7.8125vw;
+	height: 2.08333vw;
+	padding-top: 0.520833vw;
+	text-align: center;
+	background-color: #106ab5;
+	border: 0.052083vw solid #106ab5;
+	color: #fff;
+	font-size: 0.729166vw;
+	display: inline-block;
+	cursor: pointer;
+	font-weight: 500;
+	transition: all 0.3s;
+}
+.BookNowButton:hover {
+	background-color: transparent;
+	border: 0.052083vw solid #106ab5;
+	color: #106ab5;
+}
+@media (max-width: 1920px) {
+.BookNowButton {
+	max-width: 150px;
+	height: 40px;
+	padding-top: 10px;
+	border: 1px solid #106ab5;
+	font-size: 14px;
+}
+.BookNowButton:hover {
+	border: 1px solid #106ab5;
+}
+}
+@media (max-width: 1000px) {
+.BookNowButton {
+	max-width: 13.02083vw;
+	height: 3.90625vw;
+	padding-top: 0.5vw;
+	font-size: 1.822916vw;
+}		
+}
+@media (max-width: 640px) {
+.BookNowButton {
+	max-width: 31.25vw;
+	height: 12.5vw;
+	padding-top: 3vw;
+	font-size: 3.75vw;
+}		
+}
+/* END Book Now Button*/
+
+
+/* Airline */
+#Airline {
+	display: block;
+}
+#AirlineDiscountCode {
+	font-weight: bold;
+	color: #fd494e;	
+}
+#Airline .TabPanelInnerWrapper {
+	border: 0.0520833vw solid #747474;	
+	width: 100%;
+	max-width: 52.29166vw;
+	height: 22.1875vw;
+}
+#Airplane {
+	width: 30.052083vw;
+	height: 22.1875vw;	
+}
+#AirlineInfo {
+	display: inline-block;	
+	vertical-align: top;
+	margin-left: 2.2395833vw;
+	margin-top: 0.9375vw;
+}
+#KLMLogo {
+	width: 18.28125vw;
+	height: 2.8125vw;	
+}
+#AirlineInfo h3 {
+	margin: 1.04166vw 0 1.302083vw 0;
+}
+#AirlineInfo p {
+	width: 100%;
+	max-width: 16.6666666vw;
+	margin-bottom: 1.04166vw;	
+}
+#MoreDetailsButton {
+	margin-bottom: 2.604166vw;	
+	color: #106ab5;
+	background-color: transparent;
+	border: 0.052083vw solid #106ab5;
+}
+#MoreDetailsButton:hover {
+	color: #fff;
+	background-color: #106ab5;
+}
+#ButtonContainer {
+	width: 100%;
+	position: relative;	
+}
+#DiscountCodeContainer {
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+	max-width: 10.4166vw;
+	height: 2.604166vw;
+	background-image: url(../img/travel/airline/airline-discount-code-container.svg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: #fff;
+	padding-top: 1.04166vw;
+	padding-left: 0.78125vw;
+	margin-top: -0.520833vw;
+	font-size: 0.729166vw;
+	position: absolute;
+	right: -2.55vw;
+}
+#LinkContainer {
+	margin-top: 1.9270833vw;	
+}
+@media (max-width: 1920px) {
+#Airline .TabPanelInnerWrapper {
+	border: 1px solid #747474;	
+	max-width: 1004px;
+	height: 426px;
+}
+#Airplane {
+	width: 577px;
+	height: 426px;	
+}
+#AirlineInfo {
+	margin-left: 43px;
+	margin-top: 18px;
+}
+#KLMLogo {
+	width: 351px;
+	height: 54px;	
+}
+#AirlineInfo h3 {
+	margin: 20px 0 25px 0;
+}
+#AirlineInfo p {
+	max-width: 320px;
+	margin-bottom: 20px;	
+}
+#MoreDetailsButton {
+	margin-bottom: 50px;
+	border: 1px solid #106ab5;	
+}
+#DiscountCodeContainer {
+	max-width: 200px;
+	height: 50px;
+	padding-top: 20px;
+	padding-left: 15px;
+	margin-top: -10px;
+	font-size: 14px;
+	right: -46px;
+}
+#LinkContainer {
+	margin-top: 37px;	
+}
+}
+@media (max-width: 1280px) {
+#AirlineDiscountCode {
+	font-weight: normal;
+}
+#Airline .TabPanelInnerWrapper {
+	max-width: 940px;
+	height: 400px;
+}
+#Airplane {
+	width: 541px;
+	height: 400px;	
+}
+#AirlineInfo {
+	margin-left: 35px;
+}
+#KLMLogo {
+	width: 328px;
+	height: 53px;	
+}
+#AirlineInfo h3 {
+	margin: 15px 0 20px 0;
+}
+#AirlineInfo p {
+	margin-bottom: 40px;	
+}
+#DiscountCodeContainer {
+	right: -50px;
+}
+#LinkContainer {
+	margin-top: 37px;	
+}	
+}
+@media (max-width: 1000px) {
+#AirlineDiscountCode {
+	font-weight: normal;
+}
+#Airline .TabPanelInnerWrapper {
+	max-width: 87.890625vw;
+	height: 37.239583vw;
+}
+#Airplane {
+	width: 50.260416vw;
+	height: 37.239583vw;	
+}
+#AirlineInfo {
+	margin-top: 1.3020833vw;
+	margin-left: 2.34375vw;
+	position: relative;
+	height: 37.2395833vw;
+}
+#KLMLogo {
+	width: 32.1614583vw;
+	height: 5.078125vw;	
+}
+#AirlineInfo h3 {
+	margin: 1.5625vw 0;
+}
+#AirlineInfo p {
+	max-width: 32.552083vw;
+	margin-top: 0;
+	margin-bottom: 1.3020833vw;	
+}
+#MoreDetailsButton {
+	font-size: 1.692708vw;
+}
+#ButtonContainer {
+	position: absolute;
+	bottom: 3.90625vw;	
+}
+#DiscountCodeContainer {
+	max-width: 21.6145833vw;
+	height: 5.078125vw;
+	padding-top: 1.69270833vw;
+	padding-left: 0;
+	right: -4.03645833vw;
+	top: 0.2604166vw;
+	text-align: center;
+	font-size: 1.822916vw;
+}
+#BookingText {
+	display: none;	
+}
+#LinkContainer {
+	margin-top: 0;	
+}	
+}
+@media (max-width: 640px) {
+#Airline .TabPanelInnerWrapper {
+	max-width: 93.75vw;
+	height: auto;
+	margin: 0 auto;
+	border: none;
+	display: flex; display: -moz-flex; display: -webkit-flex;
+	flex-direction: column-reverse; -moz-flex-direction: column-reverse; -webkit-flex-direction: column-reverse;
+}
+#Airplane {
+	width: 100%;
+	height: auto;	
+	display: block;
+}
+#AirlineInfo {
+	margin-top: 3.125vw;
+	margin-left: 5.625vw;
+	height: auto;
+	background-color: #fff;
+	width: 100%;
+	margin: 0;
+	padding-top: 4.6875vw;
+	padding-left: 6.25vw;
+	padding-right: 3.125vw;
+	display: block;
+}
+#KLMLogo {
+	width: 81.25vw;
+	height: 12.5vw;	
+}
+#AirlineInfo h3 {
+	font-size: 4.0625vw;
+	margin-bottom: 0;	
+	font-weight: 500;
+}
+#AirlineInfo p {
+	max-width: 100%;
+	margin-bottom:5vw;	
+}
+#MoreDetailsButton {
+	font-size: 4.0625vw;
+	margin-bottom: 9.375vw;
+}
+#ButtonContainer {
+	position: relative;	
+	bottom: 0;
+}
+#ButtonContainer .BookNowButton {
+	max-width: 31.25vw;
+	height: 12.5vw;
+	font-size: 3.75vw;
+	padding-top: 3.125vw;
+	margin-bottom: 6.25vw;
+}
+#DiscountCodeContainer {
+	position: static;
+	font-size: 4.375vw;
+	display: block;	
+	margin-top: 0;
+	margin-bottom: 6.25vw;
+	max-width: 56.25vw;
+	height: 12.5vw;
+	padding-top: 3.125vw;
+	text-align: left;
+	padding-left: 3.125vw;
+	background-image: url(../img/travel/airline/airline-discount-code-container-mobile.svg);
+}
+#BookingText {
+	display: inline;
+}
+#LinkContainer {
+	display: none;	
+}
+}
+/* END Airline */
+
+/* Hotels */
+#Hotels {
+	display: block;
+	visibility: hidden;
+}
+#GoogleMapsDesktop {
+	width: 100%;
+	height: 30.2083vw;	
+	/*background: url(../img/travel/hotels/google-maps.jpg) no-repeat center;
+	background-size: cover;*/
+}
+.gm-style-mtc {
+	display: none !important;	
+}
+#GoogleMapsMobile {	
+	display: none;
+}
+@media (max-width: 1920px) {
+#GoogleMapsDesktop {
+	height: 580px;	
+}
+}
+@media (max-width: 1280px) {
+#GoogleMapsDesktop {
+	/*height: 420px;*/	
+	/*background: url(../img/travel/hotels/google-maps-1280.jpg) no-repeat center;
+	background-size: cover;*/
+}	
+}
+@media (max-width: 1000px) {
+#GoogleMapsDesktop {	
+	display: none;
+}
+#GoogleMapsMobile {
+	display: block;
+	width: 100%;
+	height: 66.666vw;
+	background: url(../img/travel/hotels/google-maps-768.jpg) no-repeat center;
+	background-size: cover;	
+}	
+}
+@media (max-width: 640px) {
+#GoogleMapsMobile {
+	height: 74.6875vw;	
+	background: url(../img/travel/hotels/google-maps-320.jpg) no-repeat center;
+	background-size: cover;
+}	
+}
+
+
+/* Meridien */
+.HotelNumber { /* 1..2..3...etc at the top-left corner of each hotel */
+	position: absolute;	
+	left: 0;
+	top: 0;
+	width: 2.604166vw;
+	height: 2.604166vw;
+	background-image: url(../img/travel/hotels/hotel-number-bg.svg);
+	color: #fff;
+	font-size: 0.625vw;
+	font-weight: bold;
+	padding-top: 0.4166vw;
+	padding-left: 0.520833vw;
+}
+#LeMeridienEtoile {
+	max-width: 100%;
+	margin-top: 2.604166vw;
+	margin-bottom: 2.604166vw;
+	margin-right: 0;
+	padding: 0;
+	font-size: 0;
+	position: relative;
+}	
+#MeridienPhoto, #MeridienInfo {
+	width: 50%;
+	height: 26.666666vw;
+	display: inline-block;
+	vertical-align: top;
+}
+#MeridienPhoto {
+	background: url(../img/travel/hotels/hotel-photos/hyatt.jpg) no-repeat center;
+	background-size: cover;	
+}
+#MeridienInfo {
+	background-color: #106ab5;	
+	padding-left: 2.604166vw;
+	padding-top: 2.604166vw;
+	padding-right: 3.645833vw;
+	position: relative;
+}
+#MeridienInfo h3,
+#MeridienInfo h4, 
+#MeridienInfo p,
+#MeridienInfo a {
+	color: #fff;
+	transition: all 0.3s;	
+}
+#MeridienInfo h3 {
+	margin: 0;	
+}
+.FromTheEvent {
+	display: none;	
+}
+#MeridienInfo h4 {
+	font-size: 0.625vw;
+	font-weight: 400;
+	margin: 0;	
+}
+#MeridienDescription {
+	margin-top: 1.04166vw;
+	margin-bottom: 1.3020833vw;
+}
+#Hotels .Prices {
+	font-size: 0.9375vw;
+	font-weight: bold;	
+	margin-top: 4vw;
+}
+.Single {
+	margin-right: 1.04166vw;	
+}
+#MeridienInfo a:hover, .HotelAddress a:hover {
+	color: #7bbcd2;
+}
+.HotelAddress span {
+	display: block;	
+}
+#MeridienInfo .BookNowButton {
+	background-color: #fff;
+	color: #156ab1;
+	border: 0.0520833vw solid #fff;
+	margin-top: 0.78125vw;
+	position: absolute;
+	bottom: 3.645833vw;
+}
+#MeridienInfo .BookNowButton:hover {
+	background-color: transparent;
+	color: #fff;
+	border: 0.052083vw solid #fff;	
+}
+
+@media (max-width: 1920px) {
+.HotelNumber { /* 1..2..3...etc at the top-left corner of each hotel */
+	position: absolute;	
+	left: 0;
+	top: 0;
+	width: 50px;
+	height: 50px;
+	color: #fff;
+	font-size: 12px;
+	font-weight: bold;
+	padding-top: 8px;
+	padding-left: 10px;
+}
+#LeMeridienEtoile {
+	max-width: 100%;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	margin-right: 0;
+	border: none;
+	padding: 0;
+	font-size: 0;
+	position: relative;
+}	
+#MeridienPhoto, #MeridienInfo {
+	width: 50%;
+	height: 512px;
+	display: inline-block;
+	vertical-align: top;
+}
+#MeridienInfo {
+	background-color: #106ab5;	
+	padding-left: 50px;
+	padding-top: 50px;
+	padding-right: 70px;
+}
+#MeridienInfo h3,
+#MeridienInfo h4, 
+#MeridienInfo p,
+#MeridienInfo a {
+	color: #fff;
+	transition: all 0.3s;	
+}
+#MeridienInfo h3 {
+	margin: 0;	
+}
+.Distance {
+	font-size: 12px;
+	font-weight: 400;
+	margin: 0;		
+}
+.FromTheEvent {
+	display: none;	
+}
+#MeridienInfo h4 {
+	font-size: 12px;
+	font-weight: 400;
+	margin: 0;	
+}
+#MeridienDescription {
+	margin-top: 20px;
+	margin-bottom: 25px;
+}
+#Hotels .Prices {
+	font-size: 18px;
+	font-weight: bold;	
+	margin-top: 100px;
+}
+.Single {
+	margin-right: 20px;	
+}
+#MeridienInfo a:hover, .HotelAddress a:hover {
+	color: #7bbcd2;
+}
+.HotelAddress span {
+	display: block;	
+}
+#MeridienInfo .BookNowButton {
+	background-color: #fff;
+	color: #156ab1;
+	border: 1px solid #fff;
+	margin-top: 15px;
+	bottom: 50px;
+}
+#MeridienInfo .BookNowButton:hover {
+	background-color: transparent;
+	color: #fff;
+	border: 1px solid #fff;	
+}
+}
+@media (max-width: 1280px) {
+#MeridienPhoto, #MeridienInfo {
+	width: 50%;
+	height: 480px;
+}
+#MeridienInfo {
+	padding-left: 40px;
+	padding-top: 40px;
+	padding-right: 45px;
+}
+#Hotels .Prices {
+	margin-top: 80px;
+}
+}
+@media (max-width: 1000px) {
+.HotelNumber { /* 1..2..3...etc at the top-left corner of each hotel */
+	width: 6.510416vw;
+	height: 6.510416vw;
+	font-size: 1.5625vw;
+	padding-top: 1.04166vw;
+	padding-left: 1.302083vw;
+	top: -0.130208vw;
+	left: -0.130208vw;
+}
+#LeMeridienEtoile {
+	margin-top: 6.510416vw;
+	margin-bottom: 6.510416vw;
+}	
+#MeridienPhoto, #MeridienInfo {
+	width: 50%;
+	height: 44.79166vw;
+}
+#MeridienInfo {
+	padding: 3.2552083vw 1vw 0 3.2552083vw;
+}
+.Distance {
+	font-size: 1.5625vw;
+}
+#MeridienInfo h4 {
+	font-size: 1.5625vw;
+}
+#MeridienDescription {
+	margin-top: 1.953125vw;
+	margin-bottom: 1.953125vw;
+}
+.HiddenParagraphTablet {
+	display: none;	
+}
+#MeridienInfo .HotelAddress {
+	display: none;	
+}
+#Hotels .Prices {
+	font-size: 2.34375vw;
+	margin-top: 0;
+}
+.Single {
+	margin-right: 2.604166vw;	
+}
+#MeridienInfo .BookNowButton {
+	border: 0.130208vw solid #fff;
+	margin-top: 1.953125vw;
+	position: absolute;
+	right: 3.2552083vw;
+	bottom: 3.2552083vw;
+}
+#MeridienInfo .BookNowButton:hover {
+	border: 0.130208vw solid #fff;	
+}	
+}
+@media (max-width: 640px) {
+.HotelNumber { /* 1..2..3...etc at the top-left corner of each hotel */
+	width: 6.25vw;
+	height: 6.25vw;
+	font-size: 3.125vw;
+	padding-top: 0.9375vw;
+	padding-left: 0;
+	text-align: center;
+	background-image: none;
+	background-color: #fff;
+	color: #106ab5;
+	top: -0;
+	left: -0;
+}
+#LeMeridienEtoile {
+	margin-top: 0;
+	margin-bottom: 3.125vw;
+}	
+#MeridienPhoto, #MeridienInfo {
+	width: 46%;
+	height: 46.875vw;
+}
+#MeridienInfo {
+	width: 54%;
+	padding: 3.125vw 3.125vw 0 3.125vw;
+}
+.FromPalais {
+	display: none;	
+}
+.FromTheEvent {
+	display: inline;	
+}
+#MeridienInfo h3 {
+	position: relative;	
+}
+#MeridienInfo h3 sup {
+	position: absolute;	
+	bottom: 0px;
+}
+#MeridienInfo h4 {
+	font-size: 3.75vw;
+	margin-top: 0.9375vw;
+	margin-bottom: 0;
+}
+#MeridienDescription {
+	display: none;
+}
+.HiddenParagraphTablet {
+	display: none;	
+}
+#Hotels .Prices { /* Single and Double bed price definitions for ALL hotels */
+	font-size: 4.375vw;
+	margin: 0;
+	font-weight: 500;
+}
+.Prices span { 
+	display: block;
+}
+.Single {
+	margin-right: 6.25vw;	
+}
+.HotelAddress {
+	display: none;	
+}
+#MeridienInfo .BookNowButton {
+	border: 0.3125vw solid #fff;
+	margin-top: 1.5vw;
+	position: static;
+	
+	width: 31.25vw;
+	height: 7.8125vw;
+	padding-top: 0.9375vw;
+}
+#MeridienInfo .BookNowButton:hover {
+	border: 0.3125vw solid #fff;	
+}	
+}
+/* END Meridien */
+
+/* Hotels List */
+.LeftHotel {
+	margin-right: 2.08333vw;	
+}
+.Hotel {
+	width: 100%;
+	max-width: 24.84375vw;
+	border: 0.052083vw solid #747474;
+	padding: 1.04166vw 0 1.04166vw 1.04166vw;
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: 2.604166vw;	
+}
+.LastHotel {
+	margin-bottom: 0;	
+}
+.MoreHotelPhoto {
+	width: 8.33333vw;
+	height: 8.33333vw;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.SoldOutTransparentLayer {
+	opacity: 0.5;
+}
+.SoldOutTransparentLayer .BookNowButton {
+	visibility: hidden;
+}
+.SoldOut {
+	position: absolute;	
+	width: 8.33333vw;
+	height: 8.33333vw;
+	left: 8.333333vw;
+	bottom: 1.04166vw;
+}
+
+#HyattPhoto {
+	background: url(../img/travel/hotels/hotel-photos/meridien.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#SplendidPhoto {
+	background: url(../img/travel/hotels/hotel-photos/splendid.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#MonPhoto {
+	background: url(../img/travel/hotels/hotel-photos/mon.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#RegentsPhoto {
+	background: url(../img/travel/hotels/hotel-photos/regents.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;	
+}
+#NapoleonPhoto {
+	background: url(../img/travel/hotels/hotel-photos/napoleon.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;	
+}
+#LaVillaPhoto {
+	background: url(../img/travel/hotels/hotel-photos/lavilla.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;	
+}
+#LesJardinsPhoto {
+	background: url(../img/travel/hotels/hotel-photos/lesjardins.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;		
+}
+#DuretPhoto {
+	background: url(../img/travel/hotels/hotel-photos/duret.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;	
+}
+#SofitelPhoto {
+	background: url(../img/travel/hotels/hotel-photos/sofitel.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;		
+}
+#MaillotPhoto {
+	background: url(../img/travel/hotels/hotel-photos/maillot.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;	
+}
+.MoreHotelInfo {
+	position: relative;
+	padding-left: 0.78125vw;
+	top: -0.260416vw;
+	width: 100%;
+	max-width: 14.0625vw;
+	height: 8.33333vw;
+	display: inline-block;
+	vertical-align: top;
+}
+.MoreHotelInfo h3 {
+	margin: 0;
+	line-height: 100%;	
+}
+.MoreHotelInfo h4 {
+	color: #737373;
+	font-size: 0.625vw;
+}
+.MoreHotelInfo .Distance {
+	margin-top: 0.260416vw;
+}
+.MoreHotelInfo p {
+	width: 100%;
+	max-width: 15.104166vw;
+}
+.MoreHotelInfo .Prices {
+	position: absolute;
+	bottom: 2.08333vw;	
+}
+.HotelBookingContainer {
+	position: absolute;	
+	bottom: 1.04166vw;
+	right: 0.46875vw;
+	width: 14.0625vw;
+}
+.HotelBookingContainer .BookNowButton {
+	max-width: 6.770833vw;
+	height: 2.0833333vw;	
+}
+.HotelBookingCode {
+	font-size: 0.729166vw;
+	color: #fff;
+	display: inline-block;
+	width: 100%;
+	max-width: 8.59375vw;
+	height: 2.604166vw;
+	padding-top: 1.04166vw;
+	padding-left: 0.520833vw;
+	background: url(../img/travel/hotels/hotel-discount-code-bg.svg) no-repeat center;
+	background-size: cover;
+	position: absolute;
+	bottom: 0;
+	margin-left: 0.3125vw;
+}
+@media (max-width: 1920px) {
+.LeftHotel {
+	margin-right: 40px;	
+}
+.Hotel {
+	width: 100%;
+	max-width: 477px;
+	border: 1px solid #747474;
+	padding: 20px 0 20px 20px;
+	margin-bottom: 50px;	
+}
+.MoreHotelPhoto {
+	width: 160px;
+	height: 160px;
+}
+.SoldOut {
+	width: 160px;
+	height: 160px;
+	left: 160px;
+	bottom: 20px;
+}
+.MoreHotelInfo {
+	padding-left: 15px;
+	top: -5px;
+	max-width: 270px;
+	height: 160px;
+}
+.MoreHotelInfo h4 {
+	color: #737373;
+	font-size: 12px;
+}
+.MoreHotelInfo .Distance {
+	margin-top: 5px;
+}
+.MoreHotelInfo p {
+	max-width: 290px;
+}
+.MoreHotelInfo .Prices {
+	bottom: 40px;	
+}
+.HotelBookingContainer {
+	bottom: 20px;
+	right: 9px;
+	width: 270px;
+}
+.HotelBookingContainer .BookNowButton {
+	max-width: 130px;
+	height: 40px;	
+}
+.HotelBookingCode {
+	font-size: 14px;
+	max-width: 165px;
+	height: 50px;
+	padding-top: 20px;
+	padding-left: 10px;
+	margin-left: 6px;
+}
+}
+@media (max-width: 1280px) {
+.LeftHotel {
+	margin-right: 35px;	
+}
+.Hotel {
+	width: 100%;
+	max-width: 450px;
+	padding: 20px 0 10px 20px;
+	margin-bottom: 40px;
+}
+.MoreHotelPhoto {
+	width: 150px;
+	height: 150px;
+}
+.SoldOut {
+	width: 160px;
+	height: 160px;
+	left: 160px;
+	bottom: 15px;
+}
+.MoreHotelInfo {
+	padding-left: 10px;
+	top: -5px;
+	width: 100%;
+	max-width: 260px;
+	height: 160px;
+}
+.MoreHotelInfo .Prices {
+	bottom: 43px;	
+}
+.HotelBookingContainer {
+	position: absolute;	
+	bottom: 20px;
+	right: -6px;
+	width: 270px;
+}
+.HotelBookingContainer .BookNowButton {
+	max-width: 124px;
+	height: 40px;	
+}
+.HotelBookingCode {
+	font-size: 14px;
+	max-width: 155px;
+	height: 49px;
+	padding-top: 20px;
+	padding-left: 10px;
+	background: url(../img/travel/hotels/hotel-discount-code-bg-1280.svg) no-repeat center;
+	background-size: cover;
+	position: absolute;
+	bottom: 0;
+	margin-left: 6px;
+}
+#LesJardins .HotelBookingCode {
+	padding-left: 3px;	
+}
+}
+@media (max-width: 1000px) {
+.LeftHotel {
+	margin-right: 2.2135416vw;	
+}
+.Hotel {
+	width: 100%;
+	max-width: 42.96875vw;
+	border: 0.1302083vw solid #747474;
+	padding: 1.953125vw 0 1.953125vw 1.953125vw;
+	margin-bottom: 2.604166vw;	
+}
+.Hotel .HotelNumber { /* 1..2..3...etc at the top-left corner of each hotel */
+	width: 4.6875vw;
+	height: 4.6875vw;
+	font-size: 1.171875vw;
+	padding-top: 0.6510416vw;
+	padding-left: 0.9114583vw;
+}
+.MoreHotelPhoto {
+	width: 14.0625vw;
+	height: 14.0625vw;
+}
+.SoldOut {
+	width: 20.833333vw;
+	height: 20.833333vw;
+	left: 11.71875vw;
+	bottom: 1.302083vw;
+}
+.MoreHotelInfo {
+	position: relative;
+	padding-left: 0.6510416vw;
+	top: -0.6510416vw;
+	width: 100%;
+	max-width: 26.04166vw;
+	height: 15.885416vw;
+	display: inline-block;
+	vertical-align: top;
+}
+#Hotels .MoreHotelInfo h3 {
+	margin: 0;
+	font-size: 2.734375vw;
+	line-height: 100%;
+	position: relative;
+}
+.MoreHotelInfo h4 {
+	color: #737373;
+	font-size: 1.5625vw;
+}
+.MoreHotelInfo .Distance {
+	margin-top: 0.6510416vw;
+}
+.MoreHotelInfo p {
+	width: 100%;
+	max-width: 37.760416vw;
+}
+#Hotels .MoreHotelInfo .Prices {
+	position: absolute;
+	bottom: -1.302083vw;	
+	font-size: 2.083333vw;
+}
+.MoreHotelInfo .Prices span {
+	display: block;
+}
+.HotelBookingContainer {
+	position: static;	
+	width: 35.15625vw;
+}
+.HotelBookingContainer .BookNowButton {
+	max-width: 18.229166vw;
+	height: 3.7760416vw;	
+}
+.HotelBookingCode {
+	font-size: 1.822916vw;
+	color: #fff;
+	display: inline-block;
+	width: 100%;
+	max-width: 22.135416vw;
+	height: 4.4270833vw;
+	padding-top: 1.302083vw;
+	padding-left: 2.604166vw;
+	background: url(../img/travel/hotels/hotel-discount-code-bg-768.svg) no-repeat center;
+	background-size: cover;
+	position: absolute;
+	bottom: 1.953125vw;
+	right: -1.302083vw;
+	margin-left: 0.78125vw;
+}
+#LesJardins .HotelBookingCode {
+	padding-left: 1.302083vw;	
+}
+#Maillot .Distance {
+	margin-top: -0.520833vw;
+}	
+}
+@media (max-width: 640px) {
+.LeftHotel {
+	margin-right: 0;	
+}
+.Hotel {
+	max-width: 100%;
+	border: none;
+	padding: 0;
+	margin-bottom: 3.125vw;
+	background-color: #fff;	
+	font-size: 0;
+}
+.Hotel .HotelNumber { /* 1..2..3...etc at the top-left corner of each hotel */
+	width: 6.25vw;
+	height: 6.25vw;
+	font-size: 3.125vw;
+	padding-top: 0.9375vw;
+	padding-left: 0;
+	text-align: center;
+	background-image: none;
+	top: 0;
+	left: 0;
+}
+.MoreHotelPhoto {
+	width: 46%;
+	height: 46.875vw;
+}
+.SoldOut {
+	width: 40.625vw;
+	height: 40.625vw;
+	left: 25vw;
+	bottom: 3.125vw;
+}
+.MoreHotelInfo {
+	position: relative;
+	padding: 3.125vw;
+	top: 0;
+	max-width: 54%;
+	height: 46.875vw;
+	display: inline-block;
+	vertical-align: top;
+}
+#Hotels .MoreHotelInfo h3 {
+	margin: 0;
+	font-size: 4.6875vw;
+	font-weight: 500;
+	line-height: 100%;
+	position: relative;
+}
+.MoreHotelInfo h4 {
+	color: #737373;
+	font-size: 3.75vw;
+}
+.MoreHotelInfo .Distance {
+	margin-top: 1.5625vw;
+}
+.MoreHotelInfo p {
+	width: 100%;
+	max-width: 90.625vw;
+}
+#Hotels .MoreHotelInfo .Prices {
+	position: absolute;
+	bottom: 14.0625vw;
+	font-size: 4.375vw;
+	width: 100%;
+	max-width: 46.875vw;
+}
+.HotelBookingContainer {
+	position: static;	
+	width: 84.375vw;
+}
+.HotelBookingContainer .BookNowButton {
+	max-width: 31.25vw;
+	height: 7.8125vw;	
+	padding-top: 0.9375vw;
+	position: absolute;
+	bottom: 3.125vw;
+	right: 15.625vw;
+}
+.HotelBookingCode {
+	display: none;
+}
+#Maillot {
+	margin-bottom: 0;	
+}
+#Maillot .Distance {
+	margin-top: 0vw;
+}
+#Maillot .Prices {
+	top: 22.5vw;
+}
+}
+/* END Hotels List */
+/* END Hotels */
+
+/* Partner Program */
+#PartnerProgram {
+	display: none;
+}
+.Program {
+	border: 0.0520833vw solid #7b7b7b;
+	font-size: 0;
+	margin-bottom: 2.604166vw;
+}
+.ProgramInfo {
+	padding: 2.083333vw 1.5625vw 1.04166vw 2.08333vw;
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+}
+.ProgramTitle {
+	margin: 0;	
+	width: 100%;
+	max-width: 16.666666vw;
+	line-height: 1.5vw;
+}
+.ProgramDescription {
+	margin: 1.3020833vw 0 1.822916vw 0;	
+}
+.ShortProgramDescription {
+	display: none;	
+}
+.ProgramDetails {
+	position: relative;	
+}
+.ProgramDetails p {
+	margin: 0;
+	border-left: 0.2604166vw solid #7b7b7b;
+	padding-left: 0.78125vw;
+}
+.ProgramDetails .BookNowButton {
+	position: absolute;
+	right: 1.04166vw;
+	bottom: 0px;	
+}
+.ProgramPhoto {
+	width: 50%;
+	height: 26.6666vw;
+	display: inline-block;	
+	vertical-align: top;	
+}
+.MobileProgramPhoto {
+	display: none;	
+}
+#SaintGermain .ProgramPhoto {
+	background: url(../img/travel/partner-program/saint-germain.jpg) no-repeat center;
+	background-size: cover;
+}
+#WineAndCheeseTasting .ProgramPhoto{
+	background: url(../img/travel/partner-program/wine-and-cheese-tasting.jpg) no-repeat center;
+	background-size: cover;
+}
+#WineAndCheeseTasting .ProgramDescription {
+	margin-right: 1.04166vw;	
+}
+#LouvreMuseum .ProgramPhoto{
+	background: url(../img/travel/partner-program/louvre-museum.jpg) no-repeat center;
+	background-size: cover;
+}
+#LouvreMuseum .ProgramDescription {
+	margin-right: 2.34375vw;	
+}
+#Montmartre {
+	margin-bottom: 0;	
+}
+#Montmartre .ProgramPhoto{
+	background: url(../img/travel/partner-program/montmartre.jpg) no-repeat center;
+	background-size: cover;
+}
+@media (max-width: 1920px) {
+.Program {
+	border: 1px solid #7b7b7b;
+	margin-bottom: 50px;
+}
+.ProgramInfo {
+	padding: 40px 30px 20px 40px;
+}
+.ProgramTitle {
+	max-width: 320px;
+	line-height: 28.8px;
+}
+.ProgramDescription {
+	margin: 25px 0 35px 0;	
+}
+.ProgramDetails p {
+	border-left: 5px solid #7b7b7b;
+	padding-left: 15px;
+}
+.ProgramDetails .BookNowButton {
+	right: 20px;	
+}
+.ProgramPhoto {
+	width: 50%;
+	height: 512px;
+}
+#WineAndCheeseTasting .ProgramDescription {
+	margin-right: 20px;	
+}
+#LouvreMuseum .ProgramDescription {
+	margin-right: 45px;	
+}	
+}
+@media (max-width: 1280px) {
+.Program {
+	margin-bottom: 50px;
+}
+.ProgramInfo {
+	padding: 30px 30px 10px 40px;
+}
+.ProgramTitle {
+	max-width: 320px;
+	line-height: 28.8px;
+}
+.ProgramDescription {
+	margin: 25px 0 15px 0;	
+}
+.ProgramDetails p {
+	border-left: 5px solid #7b7b7b;
+	padding-left: 15px;
+}
+.ProgramDetails p strong {
+	font-weight: 400;
+}
+.ProgramDetails .BookNowButton {
+	right: 0px;	
+}
+.ProgramPhoto {
+	width: 50%;
+	height: 480px;
+}
+#WineAndCheeseTasting .ProgramDescription {
+	margin-right: 20px;	
+}
+#LouvreMuseum .ProgramDescription {
+	margin-right: 45px;	
+}	
+}
+@media (max-width: 1000px) {
+.Program {
+	margin-bottom: 6.510416vw;
+}
+.ProgramInfo {
+	width: 50%;
+	padding: 3.25520833vw 2.604166vw 1.3020833vw 3.2552083vw;
+}
+.ProgramTitle {
+	max-width: 41.66666vw;
+	line-height: 2.864583vw;
+}
+.ProgramDescription {
+	margin: 1.953125vw 0 3.2552083vw 0;	
+}
+.LongProgramDescription {
+	display: none;	
+}
+.ShortProgramDescription {
+	display: inline;	
+}
+.ProgramDetails p {
+	border-left: 0.6510416vw solid #7b7b7b;
+	padding-left: 1.953125vw;
+}
+.ProgramDetails p strong {
+	font-weight: 400;
+}
+.ProgramDetails .BookNowButton {
+	right: 0px;	
+}
+.ProgramPhoto {
+	width: 50%;
+	height: 44.79166vw;
+}
+#WineAndCheeseTasting .ProgramDescription {
+	margin-right: 0px;	
+}
+#LouvreMuseum .ProgramDescription {
+	margin-right: 0px;	
+}	
+#Montmartre .ProgramInfo {
+	padding-right: 	1.953125vw;
+}
+}
+@media (max-width: 640px) {
+.Program {
+	margin-bottom: 9.375vw;
+	border: none;
+	background-color: #fff;
+}
+.ProgramInfo {
+	width: 100%;
+	display: block;
+	padding: 4.6875vw 6.25vw 6.25vw 4.6875vw;
+}
+.ProgramTitle {
+	max-width: 100%;
+	font-weight: 500;
+}
+.ProgramDescription {
+	margin: 4.6875vw 0 7.8125vw 0;	
+}
+.LongProgramDescription {
+	display: none;	
+}
+.ShortProgramDescription {
+	display: inline;	
+}
+.ProgramDetails p {
+	border-left: 0.9375vw solid #7b7b7b;
+	padding-left: 3.125vw;
+}
+.ProgramDetails p strong {
+	font-weight: 400;
+}
+.ProgramDetails .BookNowButton {
+	right: 0px;	
+}
+.ProgramPhoto {
+	display: block;
+	width: 100%;
+	height: 93.75vw;
+}
+.DesktopProgramPhoto {
+	display: none;	
+}
+.MobileProgramPhoto {
+	display: block;	
+}
+#WineAndCheeseTasting .ProgramDescription {
+	margin-right: 0px;	
+}
+#LouvreMuseum .ProgramTitle {
+	width: 100%;
+	max-width: 62.5vw;	
+}
+#Montmartre .ProgramInfo {
+	padding-right: 6.25vw;
+}
+	
+}
+/* END Partner Program */
+
+/* Getting There */
+#GettingThere {
+	display: block;
+	visibility: hidden;
+}
+#GettingThereMap {
+	/*background: url(../img/travel/getting-there/map.jpg) center no-repeat;
+	background-size: cover;*/
+	width: 100%;
+	height: 21.875vw;
+	margin-top: 2.604166vw;
+	margin-bottom: 2.604166vw;
+	text-align: center;
+}
+/*
+#MapPin {
+	width: 1.9270833vw;
+	height: 2.4479166vw;
+	margin-top: 8.0729166vw;	
+	margin-bottom: 0.520833vw;
+}
+#VenueLocation {
+	width: 100%;
+	max-width: 10.41666vw;
+	height: 2.864583vw;
+	background-color: rgba(255,255,255,0.9);
+	padding-top: 0.2604166vw;
+	margin: 0 auto;
+}
+#VenueLocation h3, #VenueLocation h4 {
+	margin: 0;
+	font-weight: 400;	
+}
+#VenueLocation h3 {
+	font-size: 0.9375vw;
+	text-transform: none;
+}
+#VenueLocation h4 {
+	font-size: 0.640625vw;
+}*/
+
+.Transport {
+	margin-bottom: 2.1875vw;	
+}
+#LastTransport {
+	margin-bottom: 0;	
+}
+.Transport img {
+	display: inline-block;	
+	vertical-align: top;
+	width: 2.8125vw;
+	height: 2.8125vw;
+}
+#RATPLogo {
+	width: 	3.1770833vw;
+	height: 3.8020833vw;
+}
+.TransportDescription {
+	display: inline-block;	
+	vertical-align: top;
+	margin-top: -0.2604166vw;
+	width: 100%;
+	max-width: 47.395833vw;
+	margin-left: 2.083333vw;
+}
+.TransportType {
+	margin-top: 0;
+	margin-bottom: 0.78125vw;	
+}
+.TransportText {
+	margin: 0;	
+}
+.TransportDescription ul {
+	padding-left: 0;
+	margin-left: 0.78125vw;
+	margin-top: 0;
+}
+.TransportDescription ul li {
+	color: #737373;
+	font-size: 0.729166vw;
+}
+#Antony {
+	margin-bottom: 0;	
+}
+
+@media (max-width: 1920px) {
+#GettingThereMap {
+	height: 420px;
+	margin-top: 50px;
+	margin-bottom: 40px;
+}
+/*#MapPin {
+	width: 37px;
+	height: 47px;
+	margin-top: 155px;	
+	margin-bottom: 10px;
+}
+#VenueLocation {
+	max-width: 200px;
+	height: 55px;
+	padding-top: 5px;
+}
+#VenueLocation h3 {
+	font-size: 18px;
+}
+#VenueLocation h4 {
+	font-size: 12.3px;
+}*/
+
+.Transport {
+	margin-bottom: 42px;	
+}
+.Transport img {
+	width: 54px;
+	height: 54px;
+}
+#RATPLogo {
+	width: 	61px;
+	height: 73px;
+}
+.TransportDescription {
+	margin-top: -5px;
+	max-width: 910px;
+	margin-left: 40px;
+}
+.TransportType {
+	margin-bottom: 15px;	
+}
+.TransportDescription ul {
+	margin-left: 15px;
+}
+.TransportDescription ul li {
+	font-size: 14px;
+}	
+}
+@media (max-width: 1280px) {
+.TransportDescription {
+	margin-top: -5px;
+	max-width: 855px;
+	margin-left: 40px;
+}	
+}
+@media (max-width: 1000px) {
+#GettingThereMap {
+	height: 39.192708vw;
+	margin-top: 5.208333vw;
+	margin-bottom: 4.5vw;
+}
+/*#MapPin {
+	width: 4.8177083vw;
+	height: 6.11979166vw;
+	margin-top: 13.020833vw;	
+	margin-bottom: 0.651041vw;
+}
+#VenueLocation {
+	max-width: 24.739583vw;
+	height: 6.5104166vw;
+	padding-top: 0vw;
+}
+#VenueLocation h3 {
+	font-size: 2.2786458vw;
+}
+#VenueLocation h4 {
+	font-size: 1.5625vw;
+}*/
+
+.Transport {
+	margin-bottom: 4.166666vw;	
+}
+.Transport img {
+	width: 6.5104166vw;
+	height: 6.5104166vw;
+}
+#RATPLogo {
+	width: 	6.7708333vw;
+	height: 8.0729166vw;
+}
+.TransportDescription {
+	margin-top: -0.6510416vw;
+	max-width: 78.7760416vw;
+	margin-left: 2.604166vw;
+}
+.TransportType {
+	margin-bottom: 1.953125vw;	
+}
+.TransportDescription ul {
+	margin-left: 1.953125vw;
+}
+.TransportDescription ul li {
+	font-size: 1.822916vw;
+}
+}
+@media (max-width: 640px) {
+#GettingThereMap {
+	/*background: url(../img/travel/getting-there/map-mobile.jpg) center no-repeat;
+	background-size: cover;*/
+	/*height: 131.25vw;*/
+	height: 100vw;
+	margin-top: 9.375vw;
+	margin-bottom: 8vw;
+}
+/*#MapPin {
+	width: 11.5625vw;
+	height: 14.6875vw;
+	margin-top: 46.875vw;	
+	margin-bottom: 3.125vw;
+}
+#VenueLocation {
+	max-width: 60.9375vw;
+	height: 15.625vw;
+	padding-top: 1.5625vw;
+}
+#VenueLocation h3 {
+	font-size: 5.625vw;
+}
+#VenueLocation h4 {
+	font-size: 3.75vw;
+}*/
+
+.Transport {
+	margin-bottom: 6.875vw;	
+	margin-left: 3.125vw;
+}
+#LastTransport {
+	margin-bottom: 15.625vw;	
+}
+.Transport img {
+	width: 9.375vw;
+	height: 9.375vw;
+}
+#RATPLogo {
+	width: 	10vw;
+	height: 13.125vw;
+}
+.TransportDescription {
+	margin-top: 0;
+	max-width: 75vw;
+	margin-left: 4.6875vw;
+}
+.TransportType {
+	margin-bottom: 3.125vw;
+	font-weight: 500;	
+}
+.TransportDescription ul {
+	margin-left: 4.6875vw;
+}
+.TransportDescription ul li {
+	font-size: 4.0625vw;
+}	
+}
+/* END Getting There */
+
+
+/* Reveal custom css for travel page */
+#PartnerProgramModal select {
+	height: 56px;
+	width: 100%;
+	font-size: 18px;
+	font-family: 'Raleway', sans-serif;
+	padding-left: 20px;
+	font-weight: 300;
+	border: 1px solid #ccc;
+	color: #353530;
+}
+#RadioButtonsContainer {
+	width: 100%;
+	text-align: center;	
+}
+#PartnerProgramModal input[type="radio"] {
+	height: 20px;
+	width: 50px;
+	display: inline-block;
+	margin-bottom: 50px;
+}
+#PartnerProgramModal label {
+	font-family: 'Roboto', sans-serif;
+	color: #353530;
+	font-size: 20px;	
+	margin-right: 20px;
+	position: relative;
+	top: -3px;
+	font-weight: 300;
+}
+@media (max-width: 480px) {
+#PartnerProgramModal {
+	padding-left: 20px;
+	padding-right: 20px;	
+}
+#PartnerProgramModal label {
+	margin-right: 10px;
+}
+}
+@media (max-width: 420px) {
+#PartnerProgramModal input[type="radio"] {
+	margin-left: 0;
+	margin-right: 0;
+}
+#PartnerProgramModal label {
+	margin-right: 0px;
+}
+}
+/* END Reveal custom css for travel page */
+
+
+
+/* Go Top Button */
+#GoTopImg {
+	bottom: 60px;	
+}

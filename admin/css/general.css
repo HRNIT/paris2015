@@ -1,0 +1,117 @@
+@charset "utf-8";
+/* These CSS rules will effect every page. Use this file keeping this in mind and override the settings with the custom CSS is necessary */
+
+
+/* General HTML tag rules */
+body {
+	background: #f4f4f2;
+	color: #353530;
+	font-family: 'Raleway', sans-serif;
+	margin:0 auto;
+	padding:0;
+	width:100%;
+	overflow-x:hidden;
+}
+
+section {    /* Override default behavior */
+	margin:0;
+	width:100%;
+	padding:0;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: "proxima-nova", sans-serif;
+}
+
+a {
+	text-decoration: none;	
+}
+
+button {
+	max-width:300px;
+	width:100%;
+	height:70px;
+	text-align:center;
+	padding-top:5px;
+	font-size:24px;
+	font-weight:bold;
+	text-transform:uppercase;
+	border:0;	
+}
+
+button:hover {
+	cursor:pointer;
+}
+	
+/* General classes */
+
+.BlueText {
+	color: #106ab5;
+}
+.RedText {
+	color: #fd494e;
+}
+
+.WhiteText {
+	color: #fff;
+}
+.YellowText {
+	color: #efed44;
+}
+.FontRaleway {
+	font-family: 'Raleway', sans-serif;
+}
+.FontProximaNova {
+	font-family: "proxima-nova", sans-serif;
+}
+.FontSourceSansPro {
+	font-family: 'Source Sans Pro', sans-serif;	
+}
+.FontLato {
+	font-family: 'Lato', sans-serif;
+}
+.InvisibleHeadline {   		/*Make sections W3C valid without breaking their layout. */
+	position: absolute;
+	opacity: 0;
+}
+.BlueButton {
+	background:#106ab5;	
+	color:white;
+	transition:all 0.3s;
+	cursor:pointer;
+	padding:1vw 1.25vw;
+	}	
+.BlueButton:hover {
+	background:white;	
+	color:#106ab5;
+}
+.BlackButton {
+	background:#1a1a18;	
+	color:white;
+	transition:all 0.3s;
+}	
+.BlackButton:hover {
+	background:white;	
+	color:#1a1a18;
+}
+	
+/* Go to Top button */
+#GoTopImg {
+	background-color: rgba(10, 66, 113, 0.57);
+	width: 54px;
+	height: 54px;
+	bottom: 25px;
+	right: 25px;
+	text-align: center;
+	position: fixed;
+	z-index: 10000;
+	transition: all 0.3s;
+}
+#GoTopImg:hover {
+	background-color: rgba(10, 66, 113, 1);
+}
+#GoTopImg .fa {
+	font-size: 30px;
+	color: #f4f4f2;
+	padding-top: 10px;
+}
+/* END Go to Top button */

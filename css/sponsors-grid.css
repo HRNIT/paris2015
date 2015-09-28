@@ -1,0 +1,174 @@
+@charset "utf-8";
+/* These CSS rules will affect the sponsors page.  */
+
+
+	
+/* Sponsors Grid */
+#Sponsors {
+	width: 100%;
+	background-color: #fff;
+	font-size: 0;
+}
+#Sponsors * {
+	box-sizing: border-box;
+}
+
+#SponsorGrid {
+text-align: center;
+}
+
+.SponsorHeadline {
+	width: 100%;
+	max-width: 59.375vw; 
+	background-size: cover;
+	background-position: center center; 
+	font-size: 1.875vw;
+	font-weight: 500;
+	text-align: center; 
+	padding: 0px; 
+	margin: 0 auto;
+	margin-top: 3.90625vw;
+	margin-bottom: 2.6041666vw;
+}
+.SponsorHeadline span {
+	margin-left: -0.260416vw;
+}
+.CategoryContainer {
+  width: 100%;
+  max-width: 89.5833333vw;
+  margin: 0 auto;
+  text-align: center;	
+  	
+}
+.Sponsor {
+	width: 10.84375vw;
+	height: 10.677083vw;
+	display: inline-block;
+	text-align: center; /* aligns the Sponsor logo container divs (.SponsorLogo) to the center */
+	position: relative;
+	padding-top: 2.604166vw;
+	transition: all 0.3s;
+}
+.Sponsor:hover {
+	background-color: #d8e3eb;	
+}
+.Sponsor:hover img{
+	opacity: 1;
+}
+.Sponsor img { /* the small + icon on hover */
+	position: absolute;	
+	left: 0.8854166vw;
+	top: 0.8854166vw;
+	width: 1.3020833vw;
+	height: 1.3020833vw;
+	opacity: 0;
+	transition: all 0.3s;
+}
+.SponsorLogo {
+	display: inline-block;
+	width: 7.979166vw;
+	height: 5.7291666vw;
+	background-position: center; 
+	background-repeat: no-repeat; 
+	background-size: contain;
+}
+
+#AlaCarteWrapper .Sponsor {
+	margin-bottom: 3.645833vw;
+}
+.ALaCarteTextContainer { /* Sponsored A La Carte product text */
+	font-size: 0.833333vw;
+	color: #777777;
+	text-align: center;
+	width: 10.84375vw;
+	position: absolute;
+	margin: 0;
+}
+@media (max-width: 1000px) {
+	.ALaCarteTextContainer { /* Sponsored A La Carte product text */
+		font-size: 1.2vw;
+		height: 2.34375vw;
+		bottom: -2.5vw;
+	}
+}
+
+@media (max-width: 767px) {
+	.SponsorHeadline {
+		font-size: 2.864583vw;
+		max-width: 80vw;
+		margin-top: 5.859375vw;
+		margin-bottom: 3.90625vw;
+	}
+	.CategoryContainer {
+		max-width: 80vw; 
+	}
+	.Sponsor, #crossknowledgeSponsor, #adpSponsor, #inforSponsor {
+		width: 19.921875vw;
+		height: 14.3229166vw;
+		padding-top: 3.2552083vw;
+		vertical-align:middle;
+	}
+	.Sponsor img { /* the small + icon on hover */
+		left: 1.3020833vw;
+		top: 1.3020833vw;
+		width: 1.953125vw;
+		height: 1.953125vw;
+	}	
+	.SponsorLogo, #crossknowledgeSponsorBox {
+		width: 15.625vw;
+		height: 7.8125vw;
+	}
+	#AlaCarteWrapper .Sponsor {
+		margin-bottom: 4.81770833vw;
+	}
+	.ALaCarteTextContainer { /* Sponsored A La Carte product text */
+		font-size: 1.71875vw;
+		width: 19.921875vw;
+		height: 3.90625vw;
+		bottom: -4.16666vw;
+	}
+}
+
+@media (max-width: 639px) {
+	.SponsorHeadline {
+		font-size: 6.875vw;
+		background-image: none;
+		margin-top: 10vw;
+		margin-bottom: 8vw;
+	}
+	#SponsorHeadlineAlaCarte {
+		background-image: none; 
+	}
+	.Sponsor, #crossknowledgeSponsor, #adpSponsor, #inforSponsor {
+		width: 39.7vw;
+		height: 28.4172vw;
+		padding-top: 6vw;
+	}
+	.Sponsor img { /* the small + icon on hover */
+		left: 2.65625vw;
+		top: 2.65625vw;
+		width: 3.90625vw;
+		height: 3.90625vw;
+	}
+	.SponsorLogo, #crossknowledgeSponsorBox {
+		width: 30vw;
+		height: 17.1875vw;
+	}
+	#AlaCarteWrapper .Sponsor {
+		margin-bottom: 11.5625vw;
+	}
+	.ALaCarteTextContainer { /* Sponsored A La Carte product text */
+		font-size: 3.4375vw;
+		width: 39.7vw;
+		height: 9.375vw;
+		bottom: -10vw;
+	}
+}
+
+/*Correction for search bar*/
+.token-input-list-facebook {
+  position: absolute;
+  top: -2px;
+  left: 210px;
+}
+/*End Sponsors Grid */

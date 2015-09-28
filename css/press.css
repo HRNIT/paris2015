@@ -1,0 +1,739 @@
+@charset "utf-8";
+/* CSS Document for the Press page */
+
+body {
+	background-color: #fff;	
+}
+body * {
+	box-sizing: border-box;	
+}
+
+/* Header */
+header {
+	background-image:url(../img/press/header.png);
+	background-repeat:no-repeat;
+	background-size: contain;
+	width:100%;
+	height:27.08333vw; 
+	color:#fff;
+	margin-top: 4.0625vw;
+	margin-bottom: -5px;
+}
+#HeaderInnerContainer {
+	padding-top: 4.6875vw;
+	padding-left: 16.666666vw;	
+}
+header h1 {
+	font-size:3.125833vw;
+	margin-top: 0px;
+	margin-bottom: 2.4vw;
+}
+header p {
+	width: 100%;
+	max-width:29vw;
+	font-size:1.25vw;
+	line-height: 1.5625vw;
+	margin-bottom: 3.9vw;
+}
+#BookNowHeaderButton {
+	font-size: 1.25vw;
+	font-weight: 600;
+	background-color: rgba(255, 255, 255, 0);
+	color: #fff;
+	border: 0.15625vw solid #fff;
+	padding-top: 0.8vw;
+	max-width: 15.625vw;
+	height: 3.6458333vw;
+	text-align: center;
+	
+	text-transform: uppercase;
+	transition: all 0.3s ease-in;
+}
+#BookNowHeaderButton:hover {
+	background-color: #106ab5;
+	border: 0.15625vw solid #106ab5;
+	color:#fff;
+}
+@media (max-width: 1000px) {
+	header {
+		margin-top: 50px;	
+	}
+}
+@media (max-width: 768px) {
+header {
+	background-image:url(../img/press/header-small-tablet.jpg);
+	background-repeat:no-repeat;
+	background-size: contain;
+	width:100%;
+	height:56.25vw; 
+}
+#HeaderInnerContainer {
+	padding-top: 7.8125vw;
+	padding-left: 7.03125vw;	
+}
+header h1 {
+	font-size:6.5625vw;
+	margin-top: 0px;
+	margin-bottom:4.6875vw;
+}
+header p {
+	width: 100%;
+	max-width:60vw;
+	font-size:2.5vw;
+	line-height: 3.4375vw;
+	margin-bottom:6.25vw;
+}
+#BookNowHeaderButton {
+	font-size: 2.34375vw;
+	border: 1px solid #fff;
+	max-width: 28.90625vw;
+	height: 7.03125vw;
+	padding-top: 1.7vw;
+}
+#BookNowHeaderButton:hover {
+	background-color: #106ab5;
+	border: 1px solid #106ab5;
+}
+}
+@media (max-width: 640px) {
+header {
+	background-image:url(../img/press/header-mobile.jpg);
+	background-repeat:no-repeat;
+	background-size: contain;
+	width:100%;
+	height:150vw;
+}
+#HeaderInnerContainer {
+	padding-top: 19vw;
+	padding-left: 0;
+	text-align: center;	
+}
+header h1 {
+	font-size:12.5vw;
+	margin-top: 0px;
+	margin-bottom:7.8125vw;
+}
+header p {
+	max-width:78.125vw;
+	font-size:4.0625vw;
+	line-height: 5.625vw;
+	margin: 0 auto;
+	margin-bottom:21.875vw;
+}
+#BookNowHeaderButton {
+	font-size: 4.6875vw;
+	border: 2px solid #fff;
+	max-width: 62.5vw;
+	height: 12.5vw;
+	margin: 0 auto;
+	padding-top: 2.5vw;
+	margin-bottom: 15.3vw;
+}
+#BookNowHeaderButton:hover {
+	background-color: #106ab5;
+	border: 2px solid #106ab5;
+}	
+#ScrollDownHeaderLinkContainer a span {
+	color: #a5c0d4;	
+}	
+}
+/* END Header */
+
+/* Tab Panel Buttons */
+#TabPanelButtonsContainer {
+	width: 100%;	
+	margin: 0 auto;
+	margin-top: 4.6875vw;
+	font-size: 0;
+	text-align: center;
+}
+.TabPanelButton {
+	width: 100%;
+	max-width: 26.822916vw;
+	height: 2.604166vw;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	font-size: 0.83333vw;	
+	text-align: center;
+	background-color: #e0e0e0;
+	color: #737373;
+	border-bottom: 0.2604166vw solid #e0e0e0;
+	display: inline-block;
+	text-transform: uppercase;
+	padding-top: 0.78125vw;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+.TabPanelButton:hover, .ClickedTabButton {
+	color: #fff;
+	background-color: #106ab5;
+	border-bottom: 0.2604166vw solid #7bbcd2;
+}
+#MediaPartnersButton, #BlogSquadButton, #AnalystsButton {
+	margin-right: 0.104166vw;	
+}
+.TabPanelButton .icon, #TabPanelAnchor, .ArrowUp {
+	display: none;	
+}
+@media (max-width: 1920px) {
+#TabPanelButtonsContainer {
+	margin-top: 90px;
+}
+.TabPanelButton {
+	width: 100%;
+	max-width: 515px;
+	height: 50px;
+	font-size: 16px;	
+	border-bottom: 5px solid #e0e0e0;
+	padding-top: 15px;
+}
+.TabPanelButton:hover, .ClickedTabButton {
+	border-bottom: 5px solid #7bbcd2;
+}
+#MediaPartnersButton, #BlogSquadButton, #AnalystsButton {
+	margin-right: 2px;	
+}
+}
+@media (max-width: 1100px) {
+.TabPanelButton {
+	max-width: 470px;
+}	
+}
+@media (max-width: 1000px) {
+#TabPanelButtonsContainer {
+	margin-top: 7.8125vw;
+	margin-bottom: 0;
+}
+.TabPanelButton {
+	max-width: 40vw;
+	height: 4.55729166vw;
+	font-size: 1.8229166vw;	
+	padding-top: 0.9114583vw;
+	border-bottom: 0.390625vw solid #e0e0e0;
+}
+.TabPanelButton:hover, .ClickedTabButton {
+	border-bottom: 0.390625vw solid #7bbcd2;
+}
+#MediaPartnersButton, #BlogSquadButton, #AnalystsButton {
+	margin-right: 0.2604166vw;	
+}			
+}
+@media (max-width: 640px) {
+body {
+	margin-bottom: 40px;	/* @640px, the tab panel button bar become position: fixed, bottom: 0.. the height is 40px. This is why we need 40px margin */
+}
+#TabPanelButtonsContainer {
+	margin-top: 0;
+	margin-bottom: 0;
+	position: fixed;
+	bottom: 0;
+	z-index: 1400;
+}
+.TabPanelButton {
+	max-width: 50%;
+	height: 40px;
+	font-size: 14px;	
+	padding-top: 7px;
+	border-bottom: 3px solid #e0e0e0;
+	position: relative;
+}
+.TabPanelButton:hover, .ClickedTabButton {
+	border-bottom: 3px solid #7bbcd2;
+}
+#MediaPartnersButton, #BlogSquadButton, #AnalystsButton {
+	margin-right: 0;
+	/*border-right: 3px solid #fff;	*/
+}
+.ArrowUp {
+	display: block;
+	position: absolute;
+	top: -12px;
+	left: 24vw;
+	width: 0; 
+	height: 0; 
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-bottom: 12px solid #106ab5;
+	opacity: 0;
+	transition: opacity 0.5s;
+}
+.TabPanelButton:hover .ArrowUp, .ClickedTabButtonArrow {
+	opacity: 1;
+}
+.DesktopText {
+	display: none;	
+}
+.TabPanelButton .icon {
+	display: inline;
+	font-size: 22px;	
+}
+#TabPanelAnchor {
+	display: block;	
+}
+}
+@media (max-width: 480px) {
+.ArrowUp {
+	left: 22.5vw;
+}	
+}
+/* END Tab Panel Buttons */
+
+/* Tab Panel Wrapper */
+#TabPanelWrapper {
+	width: 100%;
+	margin: 0 auto;
+	margin-bottom: 4.6875vw;
+}
+#TabPanelWrapper .fa {
+	font-family: 'FontAwesome', sans-serif;	
+}
+@media (max-width: 1920px) {
+#TabPanelWrapper {
+	width: 100%;
+	margin-bottom: 90px;
+}
+}
+@media (max-width: 1000px) {
+#TabPanelWrapper {
+	margin-bottom: 7.8125vw;
+}
+}
+@media (max-width: 640px) {
+#TabPanelWrapper {
+	margin-top: 3.125vw;
+	margin-bottom: 0;
+}
+}
+.TabPanel {
+	overflow: hidden;
+	display: none;
+	margin-top: 50px
+}
+/* END Tab Panel Wrapper */
+
+/* Media Partners */
+#MediaPartners {
+	display: none;
+	width: 100%;
+	max-width: 53.90625vw;
+	margin: 0 auto;
+	margin-bottom: 2.6vw;
+	margin-top: 2.6vw;
+	text-align: center;
+}
+.Sponsor{
+	width: 33%;
+	height: 9.375vw;	
+	line-height: 9.375vw;
+	display: inline-block;
+	border: 0.10416vw solid transparent;
+	position: relative;
+	transition: all 0.3s;
+}
+.SponsorLogo{
+ 	transition:all 0.3s;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+}
+.SponsorLogoContainer img {
+	max-width: 11.97916vw;
+	max-height: 15vw;
+	vertical-align: middle;
+}
+.Sponsor:hover {
+	border: 0.10416vw solid #d8e3eb;
+	/*background-color: #d8e3eb;*/
+}
+.MediapartnerHoverPlus {
+ position:absolute; 
+ top: 0.78125vw;
+ left: 0.78125vw;
+ width: 1.302083vw;
+ height: 1.302083vw;
+ opacity: 0;
+ transition: all 0.3s;
+}
+.Sponsor:hover .MediapartnerHoverPlus {
+ opacity: 1;
+}
+@media (max-width: 1920px) {
+#MediaPartners {
+	max-width: 1035px;
+	margin-bottom: 50px;
+	margin-top: 50px;
+}
+.Sponsor {
+	height: 180px;	
+	line-height: 180px;
+	border: 2px solid transparent;
+}
+.Sponsor:hover {
+	border: 2px solid #d8e3eb;
+}
+.SponsorLogoContainer img {
+	max-width: 230px;
+	max-height: 150px;
+}
+.MediapartnerHoverPlus {
+ top: 15px;
+ left: 15px;
+ width: 25px;
+ height: 25px;
+}
+}
+@media (max-width: 1000px) {
+#MediaPartners {
+	max-width: 80vw;
+	margin-bottom: 3vw;
+}
+ .Sponsor{
+	 width: 32%;
+	height: 150px;	
+	line-height: 150px;	 
+}
+.SponsorLogoContainer img {
+	max-width: 20vw;
+	max-height: 10vw;
+}
+.MediapartnerHoverPlus {
+ top: 1.302083vw;
+ left: 1.302083vw;
+ width: 2.60416vw;
+ height: 2.60416vw;
+}
+}
+@media (max-width: 640px) {
+#MediaPartners {
+	max-width: 100%;
+	margin-bottom: 15vw;
+	margin-top: 0;
+}
+ .Sponsor{
+	width: 45%;	
+	height: 37.5vw;	
+	line-height: 37.5vw;
+}
+.SponsorLogoContainer img {
+	max-width: 35vw;
+	max-height: 25vw;
+}
+.MediapartnerHoverPlus {
+ top: 3.125vw;
+ left: 3.125vw;
+ width: 4.6875vw;
+ height: 4.6875vw;
+}
+}
+
+/* END Media Partners */
+
+/* Blog Squad & Analysts */
+#BlogSquad, #Analysts {
+	display: block;
+	font-size: 0.5208vw;
+	color: #fff;
+	margin: 0 1% 1% 0;
+	margin-top: 2.6vw;
+	background-color: #fff;
+}
+#BloggerContainer, #AnalystsContainer {
+	margin: 0 auto;
+	padding: 0;
+	margin-top: 50px;
+	text-align: center;
+}
+.SpeakerOverlay{
+  display: block;
+  position: absolute;
+  margin-top: 12.7vw;
+  height: 4.5vw;
+  background-color: rgba(0, 0, 0, 0.62);
+  width: 17.18vw;
+}
+
+.SpeakerOverlay h3{
+  font-size: 1vw;
+  text-align: left;
+  padding-left: 0.5vw;
+  margin: 0.4vw 0 0 0;
+  padding-bottom:0;
+  	color: #fff;
+}
+
+.SpeakerOverlay h4{
+  font-size: 0.75vw;
+  text-align: left;
+  padding-left: 0.5vw;
+  margin:0;
+  padding-top:0.1vw;
+  font-weight:400;
+  line-height: 140%;
+  	color: #fff;
+}
+
+#BloggerContainer ul, #AnalystsContainer ul {
+	list-style: none;
+	padding-left: 0;
+}
+#BloggerContainer ul li, #AnalystsContainer ul li {
+	/*float: left;*/
+	display:inline-block;
+}
+.SpeakersImageContainer {
+	margin: 0.25vw;
+}
+.Square {
+	width: 17.2vw;
+	height: 17.2vw; /* match width for a 1:1 aspect ratio *//*margin: 0.25vw;*/
+}
+.SpeakerName, .SpeakerCompany, .SpeakerJobTitle, .SpeakerInfo {
+	color: #fff;	
+}
+.SpeakerName {
+	font-size: 1.3vw;
+
+	margin: 1.3vw 0 0 1vw;
+	line-height: 0.2vw;
+	font-weight:400;
+}
+.SpeakerJobTitle {
+	font-size: 0.8vw;
+	margin-left: 1vw;
+	margin-top: 0.9vw;
+	margin-bottom: 0;
+}
+.SpeakerCompany {
+	font-size: 0.8vw;
+	margin-left: 1vw;
+	margin-top: 0.2vw;
+	margin-bottom: 0;
+}
+.SpeakerInfo {
+	margin: 0.5vw 1vw 0 1vw;
+	font-size: 0.75vw;
+	line-height: 1.2vw;
+}
+.SpeakerHoverLinks {
+	position: absolute;
+	bottom: 0;
+	left: 1vw;
+}
+.SpeakerHoverLinks a {
+	color: #fff;
+	font-size: 1.25vw;
+	margin-right: 1vw;
+}
+.TwitterColor {
+	color: #FFF;
+}
+.TwitterColor:hover {
+	color: #002b49;	
+}
+
+/*
+@media (max-width: 1416px) {
+.Square {
+	width: 24vw;
+	height: 24vw; 
+}
+
+.SpeakerOverlay{
+  width: 24vw;
+  height: 4.5vw;
+}
+}
+*/
+
+@media (max-width: 1000px) {
+#BlogSquad, #Analysts {
+	font-size: 1.302vw;
+	margin: 0 0.5% 1% 0.5%;
+}
+#Speakers h2 {
+	font-size: 13.02083vw;
+	margin-top: 5.46875vw;
+	margin-bottom: 5.46875vw;
+}
+/*.Square {
+	width: 21.60vw;
+	height: 21.60vw; 
+}*/
+.Square {
+	width: 30vw;
+	height: 30vw; 
+}
+
+.SpeakerOverlay{
+  /*margin-top: 16vw;*/
+  /*height: 5.8vw;*/
+  /*width: 21.5vw;*/
+  margin-top: 21.5vw;
+  height: 8.5vw;
+  width: 30vw;
+}
+
+.SpeakerOverlay h3{
+  /*font-size: 1.5vw;*/
+  font-size: 2vw;
+  text-align: left;
+  padding-left: 1vw;
+ margin: 1vw 0 0 0;
+padding-bottom:0;
+}
+
+.SpeakerOverlay h4{
+  /*font-size: 1.3vw;*/
+  font-size: 1.6vw;
+  text-align: left;
+  padding-left: 1vw;
+  margin-top:0;
+  padding-top:0;
+}
+
+.SpeakersImageContainer {
+	margin: 0.5vw;
+}
+.SpeakerName {
+	/*font-size: 1.5vw;*/
+	font-size: 2vw;
+	margin: 1.5vw 0 0 2vw;
+	line-height: 130%;
+}
+.SpeakerJobTitle {
+	/*font-size: 1.2vw;*/
+	font-size: 1.4vw;
+	margin-top: 0.5vw;
+	margin-bottom: 1vw;
+	margin-left: 2vw;
+	line-height: 100%;
+}
+.SpeakerCompany {
+	/*font-size: 1.2vw;*/
+	font-size: 1.4vw;
+	margin-bottom: 1vw;
+	margin-left: 2vw;
+	line-height: 100%;
+}
+.SpeakerInfo {
+	margin: 0.5vw 1vw 0 2vw;
+	/*font-size: 1.2vw;
+	line-height: 1.5vw;*/
+	font-size: 1.2vw;
+	line-height: 140%;
+}
+.SpeakerHoverLinks {
+	margin-bottom: 1.2vw;	
+}
+.SpeakerHoverLinks a {
+	font-size: 2vw;
+	margin-right: 1.25vw;
+	margin-left: 1vw
+}
+
+}
+
+@media (max-width: 640px) {
+#BlogSquad, #Analysts {
+	font-size: 3.1248vw;
+	margin: 0 0.5% 1% 0.5%;
+}
+#BloggerContainer {
+	margin-top: 0;	
+}
+#Speakers h2 {
+	font-size: 13.75vw;
+	margin-top: 9.375vw;
+	margin-bottom: 9.375vw;
+}
+.Square {
+	/*width: 45vw;
+	height: 45vw;  */
+	width: 90vw;
+	height: 90vw;
+	margin: 0 0.5vw 0.5vw 0.5vw;
+}
+
+.SpeakerOverlay{
+ /* margin-top: 32vw;*/
+ margin-top: 64vw;
+  /*height: 13vw;*/
+  height: 26vw;
+  /*width: 45vw;*/
+  width: 90vw;
+  margin-left: 0.8vw;
+}
+
+.SpeakerOverlay h3{
+  /*font-size: 3.6vw;*/
+  font-size: 6vw;
+  padding: 0 0 0 3vw;
+  margin: 2vw 0 1vw 0;
+}
+
+.SpeakerOverlay h4{
+  /*font-size: 2.9vw;*/
+  font-size: 5vw;
+  padding-left: 3.2vw;
+}
+
+.SpeakerName {
+	/*font-size: 3.4vw;*/
+	font-size: 7vw;
+	margin: 3vw 0 0 4.8vw;
+	/*line-height: 1vw;*/
+	line-height: 130%;
+}
+.SpeakerJobTitle {
+	/*font-size: 3vw;*/
+	font-size: 5vw;
+	margin-top: 2vw;
+	margin-left: 4.8vw;
+	margin-bottom: 1vw;
+	line-height: 140%;
+}
+.SpeakerCompany {
+	/*font-size: 3vw;*/
+	font-size: 5vw;
+	margin-top: 2vw;
+	margin-left: 4.8vw;
+	margin-bottom: 1vw;
+}
+.SpeakerInfo {
+	margin: 2.5vw 4.8vw 0 4.8vw;
+	/*font-size: 2.1vw;*/
+	font-size: 4vw;
+	/*line-height: 3.1vw;*/
+}
+.SpeakerHoverLinks {
+	margin-bottom: 3vw;	
+}
+.SpeakerHoverLinks a {
+	font-size: 8vw;
+	margin-right: 1.25vw;
+	margin-left: 4.8vw;
+}
+}
+/* END Blog Squad & Analysts */
+
+/* Modal */
+#press_first_name, #press_last_name, #press_email, #press_phone, #press_company, #press_title {
+	width: 49%;	
+}
+#press_last_name, #press_phone, #press_title {
+	position: absolute;
+	right: 0;
+}
+@media (max-width: 640px) {
+	#press_first_name, #press_last_name, #press_email, #press_phone, #press_company, #press_title {
+		width: 100%;	
+	}
+	#press_last_name, #press_phone, #press_title {
+		position: static;
+	}
+}
+/* Modal */
+
+/* Go Top Button */
+#GoTopImg {
+	bottom: 60px;	
+}
