@@ -44,6 +44,20 @@ $speakers = new speakers_main;
 <meta name="theme-color" content="#ffffff">
 <link rel="shortcut icon" href="favicon.ico">
 
+<!-- Include jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+
+<script type="text/javascript">
+ (function() {
+  if ($(window).width() > 640) {
+
+    window.location = 'speakers';
+} 
+})();
+</script>
+
 <!--Include Raleway Google Font -->
 <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
 
@@ -63,19 +77,6 @@ $speakers = new speakers_main;
 <!-- Favicon setting -->
 <link rel="shortcut icon" href="favicon.png">
 
-<!-- Include jQuery -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-
-<script type="text/javascript">
- (function() {
-  if ($(window).width() < 641) {
-
-    window.location = 'speakers-mobile';
-} 
-})();
-</script>
-
 <!-- Include General CSS Definitions -->
 <link rel="stylesheet" href="css/general.css" />
 
@@ -84,6 +85,7 @@ $speakers = new speakers_main;
 
 <!-- Include Footer CSS Definitions -->
 <link rel="stylesheet" href="css/footer.css" />
+
 
 
 
@@ -287,21 +289,6 @@ $(document).ready(function() {
     <!-- END Speakers Grid --> 
   </section>
   <!--END Speakers --> 
-  
-  <!--Speaker List Section -->
-  <div id="SpeakerListSection">
-    <?php
-
-        
-
-
- $content = $speakers->speaker();  
-
-
-echo $content;
-?>
-  </div>
-  <!-- END Speaker List Section --> 
   
 </div>
 <!-- END Main Content --> 
