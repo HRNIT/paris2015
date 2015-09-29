@@ -159,17 +159,18 @@ class sponsors_main extends config {
 
 
 	//This is the function what collets all the sponsors to the content multi dimensional array.
-  public function sponsors_modal_list() {
+  public function sponsors_modal($sId, $sp_mode) {
+	  
 		$content = '';
-		
 		//ORDER BY CASE sdc.sponsor_id WHEN 14 THEN 1 END DESC, rand()    :O  ilyenkor a 14-es id-jú lesz mindig az első a többi pedig random utána 
 		//ha meg fix a sorrend akkor meg ORDER BY sdc.id DESC
 	
 		//Get basic date about a sponsors
 		                    //Name                 Bio         Category              website         image       image alt       sponsor_id
-		$stat_q = "SELECT sn.sponsor_name, sb.sponsor_bio, sc.category_id, sl.sponsor_link_url, idb.image_url, idb.alt_name, sdc.sponsor_id FROM sponsors_name as sn, sponsors_bio as sb, sponsors_data_connection as sdc, sponsors_status as ss, sponsors_category as sc, sponsors_links as sl, image_db as idb, image_connection as ic WHERE sdc.sponsor_name_id=sn.id AND sdc.sponsor_bio_id=sb.id AND sdc.sponsor_id=ss.sponsor_id AND ss.status_id='1' AND sdc.sponsor_link_id=sl.id AND ic.entity_type_id='2' AND ic.entity_id=sdc.sponsor_id AND idb.id=ic.image_db_id AND sdc.sponsor_category_id=sc.id ORDER BY sn.sponsor_name ASC";	
+		$stat_q = "SELECT sn.sponsor_name, sb.sponsor_bio, sc.category_id, sl.sponsor_link_url, idb.image_url, idb.alt_name, sdc.sponsor_id FROM sponsors_name as sn, sponsors_bio as sb, sponsors_data_connection as sdc, sponsors_status as ss, sponsors_category as sc, sponsors_links as sl, image_db as idb, image_connection as ic WHERE sdc.sponsor_name_id=sn.id AND sdc.sponsor_bio_id=sb.id AND sdc.sponsor_id=ss.sponsor_id AND ss.status_id='1' AND sdc.sponsor_link_id=sl.id AND ic.entity_type_id='2' AND ic.entity_id=sdc.sponsor_id AND idb.id=ic.image_db_id AND sdc.sponsor_category_id=sc.id AND sdc.sponsor_id= :id ORDER BY sn.sponsor_name ASC";	
 					
 		$stat = $this->pdo->prepare($stat_q);
+		$stat->bindValue(':id', $sId, \PDO::PARAM_INT);
 		$stat->execute();
 
 			if ($stat->rowCount() > 0) {
@@ -208,15 +209,85 @@ class sponsors_main extends config {
 									}//link type fetch ends
 								}//if stype row count end
 								
+								
+                             $k = 0;
+							 
+							 if ($sp_mode == 1) {
+			               $prevnext_q = "SELECT sn.sponsor_name, sdc.sponsor_id FROM sponsors_name as sn, sponsors_data_connection as sdc, sponsors_status as ss, sponsors_category as sc, image_db as idb, image_connection as ic WHERE sdc.sponsor_name_id=sn.id AND sdc.sponsor_id=ss.sponsor_id AND ss.status_id='1' AND ic.entity_type_id='2' AND ic.entity_id=sdc.sponsor_id AND idb.id=ic.image_db_id AND sdc.sponsor_category_id=sc.id AND sc.category_id <> 0 ORDER BY sc.category_id, sn.sponsor_name ASC";	
+							 }
+								
+							 if ($sp_mode == 2) {
+			               $prevnext_q = "SELECT sn.sponsor_name, sdc.sponsor_id FROM sponsors_name as sn, sponsors_data_connection as sdc, sponsors_status as ss, sponsors_category as sc, image_db as idb, image_connection as ic, sponsors_alacarte as sa WHERE sdc.sponsor_name_id=sn.id AND sdc.sponsor_id=ss.sponsor_id AND ss.status_id='1' AND ic.entity_type_id='2' AND ic.entity_id=sdc.sponsor_id AND idb.id=ic.image_db_id AND sdc.sponsor_category_id=sc.id AND sdc.sponsor_id=sa.sponsor_id ORDER BY sn.sponsor_name ASC";	
+							 }										  
+							  $prevnext = $this->pdo->prepare($prevnext_q);
+							  $prevnext->execute();
+							  
+								if ($prevnext->rowCount() > 0) {	
+								
+									while($prevnext_data = $prevnext->fetch()){ //facebook
+									     $order[$k] = $prevnext_data['sponsor_id'];
+										 
+							             if($prevnext_data['sponsor_id'] == $sId) {
+											 
+											 $prev_num = $k - 1;
+											 if(isset($order[$prev_num])) {
+												 $prev =  $order[$prev_num];
+											 }
+											 $next_num = $k + 1;
+											  
+										 }
+										 
+										$k++;
+											 
+									 
+									}//prevnext type fetch ends
+								}//if prevnextrow count end								  
+								  
+					if (isset($order[$next_num])){
+					  	$next = $order[$next_num];
+					}								
+								
+								
 				$achor = $this->clean_str($sponsors['sponsor_name']);	
 				
 			
 		$content .='<!-- '.$sponsors['sponsor_name'].' -->
-		<div id="'.$achor.'Modal" class="reveal-modal SponsorModal" data-reveal> <a class="close-reveal-modal">&#215;</a>
+
+ <div id="ModalBigContainer">
+		       <a class="close-reveal-modal" id="CloseSponsorModal">&#215;</a>';
+			   
+ 	     $content.='<!-- Desktop Arrows -->';
+	//PREV
+	if (isset($prev)){	
+        $content.='<i class="DesktopNavigationArrow NavigationArrow icon icon-back-icon" data-sponsormode="'.$sp_mode.'" data-sponsor_id="'.$prev.'"></i>';
+	}
+	
+	
+	//NEXT
+	if (isset($next)){	
+       $content.='<i class="DesktopNavigationArrow NavigationArrow icon icon-next-icon" data-sponsormode="'.$sp_mode.'" data-sponsor_id="'.$next.'"></i>';
+	}
+     $content.='<!-- END Desktop Arrows --> ';
+	 
+	 
+     $content.='<!-- Mobile Arrows -->
+    <div id="MobileArrowsContainer">';
+	//MOBILE PREV
+	if (isset($prev)){	
+    	 $content.='<img class="MobileArrow NavigationArrow" id="MobileArrowPrev" src="img/speakers/mobile-arrow-left.png" alt="<<" data-sponsormode="'.$sp_mode.'" data-sponsor_id="'.$prev.'">';
+	}
+	
+	
+	//MOBILE NEXT
+	if (isset($next)){		
+    	 $content.='<img class="MobileArrow NavigationArrow" id="MobileArrowNext" src="img/speakers/mobile-arrow-right.png" alt=">>" data-sponsormode="'.$sp_mode.'" data-sponsor_id="'.$next.'">';
+	}
+	
+	
+   $content.='  </div>
+    <!-- END Mobile Arrows -->';			   
 		
-		
-		
-        <div class="SponsorModalInnerContainer">
+          $content.='<div class="SponsorModalInnerContainer">
             <div class="SponsorModalLogo"><img src="img/sponsors/logos/'.$sponsors['image_url'].'" alt="'.$sponsors['alt_name'].'"></div>
             <div class="SponsorModalDetails">';
 
@@ -359,7 +430,7 @@ class sponsors_main extends config {
 					
 					//# ez után kell egy url anchor tag
 			 $content .=' <!-- '.$sponsors['sponsor_name'].' -->
-            <a href="#'.$achor.'" class="SponsorGridAnchor" data-sponsornametag="'.$achor.'" '.$anal_code('SponsorPage','ScrollToAnchor', $achor).'><div class="Sponsor" '.$tempId.' data-sponsornum="'.$sponsors['sponsor_id'].'" '.$tag.'>
+            <a class="SponsorGridAnchor" data-reveal-id="SponsorsModal" data-sponsor_id="'.$sponsors['sponsor_id'].'" data-sponsornametag="'.$achor.'" '.$anal_code('SponsorPage','ScrollToAnchor', $achor).'><div class="Sponsor" '.$tempId.' data-sponsornum="'.$sponsors['sponsor_id'].'" '.$tag.'>
                 <div '.$tempIdTwo.' class="SponsorLogo" style="background-image: url(img/sponsors/logos/'.$sponsors['image_url'].');"></div>
                 <img src="img/sponsors/sponsor-hover-plus-icon.png" alt="+">
             </div>
@@ -436,7 +507,7 @@ class sponsors_main extends config {
 			$achor = $this->clean_str($sponsors['sponsor_name']);
 									 
 			 $content .=' <!-- '.$sponsors['sponsor_name'].' -->
-            <a href="#'.$achor.'" class="SponsorGridAnchor" data-sponsornametag="'.$achor.'" '.$anal_code('SponsorPage','ScrollToAnchor', $achor).'><div class="Sponsor AlaCarteSponsorBox" data-sponsornum="'.$sponsors['sponsor_id'].'" '.$tag.'>
+            <a class="SponsorGridAnchorAlaCarte" data-reveal-id="SponsorsModal" data-sponsor_id="'.$sponsors['sponsor_id'].'" data-sponsornametag="'.$achor.'" '.$anal_code('SponsorPage','ScrollToAnchor', $achor).'><div class="Sponsor AlaCarteSponsorBox" data-sponsornum="'.$sponsors['sponsor_id'].'" '.$tag.'>
                 <div class="SponsorLogo" style="background-image: url(img/sponsors/logos/'.$sponsors['image_url'].');"></div>
                 <img src="img/sponsors/sponsor-hover-plus-icon.png" alt="+">
 				<p class="ALaCarteTextContainer">'.$sponsors['text'].'</p>
@@ -459,58 +530,7 @@ class sponsors_main extends config {
 		return $content;
 }
 
-public function get_search_data() {
-	$values = array();
-		             
-					    
-			$category_q = "SELECT id, sub_category FROM sponsors_filter_sub_categories";	
-					
-		$category = $this->pdo->prepare($category_q);
-		$category->execute();
 
-			if ($category->rowCount() > 0) {
-					while($cat = $category->fetch()){
-						$values[] = array('id' => 'sc_'.$cat['id'], 'name' => $cat['sub_category']);
-					}
-			}
-	
-	
-	//Még kellenek a sponsorok is!
-	
-
-	
-			$sponsor_q = "SELECT sn.sponsor_name, sdc.sponsor_id FROM sponsors_name as sn, sponsors_data_connection as sdc, sponsors_status as ss WHERE sdc.sponsor_name_id=sn.id AND sdc.sponsor_id=ss.sponsor_id AND ss.status_id='1' ORDER BY sn.sponsor_name ASC";	
-					
-		$sponsor = $this->pdo->prepare($sponsor_q);
-		$sponsor->execute();
-
-			if ($sponsor->rowCount() > 0) {
-					while($spns = $sponsor->fetch()){
-						$values[] = array('id' => 'sn_'.$spns['sponsor_id'], 'name' => $spns['sponsor_name']);
-					}
-			}
-	
-
-	return json_encode($values);
-}
- 
- 
-public function list_sub_filters($main_id) {
-	 $content = '';
-				$category_q = "SELECT sfsc.id, sfsc.sub_category FROM sponsors_filter_sub_categories as sfsc, sponsors_filter_category_connection as sfcc WHERE sfcc.filter_sub_id=sfsc.id AND sfcc.filter_main_id= :id";	
-					
-		$category = $this->pdo->prepare($category_q);
-		$category->bindValue(':id', $main_id, \PDO::PARAM_INT);
-		$category->execute();
-
-			if ($category->rowCount() > 0) {
-					while($cat = $category->fetch()){
-						$content .='<li data-category="'.$cat['id'].'"><span>'.$cat['sub_category'].'</span></li>';
-					}
-			}
-	
-	return $content;
-}
 
 }
 ?>	

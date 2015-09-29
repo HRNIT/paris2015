@@ -86,7 +86,7 @@ Display Speaker Modal
 
 
 /*///////////// 
-Display Agenda Modal
+Display Speaker Modal 2
 ///////////////*/
  if(isset($_POST['action']) && $_POST['action'] == 'speaker_modal_next'){
 	$the_main = new speakers\speakers_main;
@@ -102,6 +102,26 @@ Display Agenda Modal
 	}
 
 }// new sponsor
+
+
+/*///////////// 
+Display Sponsor Modal
+///////////////*/
+
+
+ if(isset($_POST['action']) && $_POST['action'] == 'sponsor_modal'){
+	$the_main = new sponsors\sponsors_main;
+	
+
+    $result = $the_main->sponsors_modal($_POST['sponsor_id'], $_POST['sponsor_mode']);
+	if (isset($result)) {
+	 
+	 echo $result;	
+	}
+
+
+}
+
 
 /*///////////// 
 Display Agenda Modal

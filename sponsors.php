@@ -63,6 +63,9 @@ $sponsors = new sponsors_main;
 <!-- Include General CSS Definitions -->
 <link rel="stylesheet" href="css/general.css" />
 
+<!-- Modal Arrows -->
+<link rel="stylesheet" href="css/modal-arrows.css" />
+
 <!-- Include the Navigation Menu`s CSS Definitions -->
 <link rel="stylesheet" href="css/menu.css" />
 
@@ -174,6 +177,9 @@ $sponsors = new sponsors_main;
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
+<!-- Swipe :) -->
+<script src="vendor/hammer/hammer.js"></script>
+
 <!-- Scroll to top JS -->
 <script src="js/gotopscroll.js"></script>
 
@@ -183,9 +189,11 @@ $sponsors = new sponsors_main;
 <!-- Menu JS -->
 <script src="js/menu.js"></script>
 
+<!-- Social widget mobile controller -->
+<script src="js/social.js"></script>
+
 <!-- Include Reveal Modal -->
 <link rel="stylesheet" href="vendor/reveal/reveal.css">
-<script src="vendor/reveal/jquery.min.js" type="text/javascript"></script>
 <script src="vendor/reveal/jquery.reveal.js" type="text/javascript"></script>
 
 <!-- Token input -->
@@ -476,109 +484,6 @@ $(document).ready(function() {
 </section>
 <!--END Sponsors --> 
 
-<!-- SponsorLists -->
-<section id="SponsorLists"> 
-  <!-- SponsorLists List -->
-  <div id="SponsorListsInnerContainer"> 
-    
-    <!-- Diamond SponsorLists -->
-    <h2 class="SponsorListHeadline FontRaleway"><span>Diamond Sponsors</span></h2>
-    <?php 
-
-  $content = $sponsors->sponsors(1); 
-  echo $content;	
-
-  
-?>
-    
-    <!-- END Diamond SponsorLists --> 
-    
-    <!-- Emerald SponsorLists -->
-    <h2 class="SponsorListHeadline FontRaleway"><span>Emerald Sponsors</span></h2>
-    <?php 
-
-  $content = $sponsors->sponsors(2); 
-  echo $content;	
-
-  
-?>
-    
-    <!-- END Emerald SponsorLists --> 
-    
-    <!-- Platinum SponsorLists -->
-    <h2 class="SponsorListHeadline FontRaleway"><span>Platinum Sponsors</span></h2>
-    <?php 
-
-  $content = $sponsors->sponsors(3); 
-  echo $content;	
-
-  
-?>
-    <!-- END Platinum SponsorLists --> 
-    
-    <!-- Gold SponsorLists -->
-    <h2 class="SponsorListHeadline FontRaleway"><span>Gold Sponsors</span></h2>
-    <?php 
-
-  $content = $sponsors->sponsors(4); 
-  echo $content;	
-
-  
-?>
-    
-    <!-- END Gold SponsorLists --> 
-    
-    <!-- Silver SponsorLists -->
-    <h2 class="SponsorListHeadline FontRaleway"><span>Silver Sponsors</span></h2>
-    <?php 
-
-  $content = $sponsors->sponsors(5); 
-  echo $content;	
-
-  
-?>
-    
-    <!-- END Silver SponsorLists --> 
-    
-    <!-- Exhibitors -->
-    <h2 class="SponsorListHeadline FontRaleway"><span>Sponsors</span></h2>
-    <?php 
-
-  $content = $sponsors->sponsors(6); 
-  echo $content;	
-
-  
-?>
-    <h2 class="SponsorListHeadline FontRaleway"><span>A La Carte Sponsors</span></h2>
-    <?php 
-
-  $content = $sponsors->sponsors(0); 
-  echo $content;	
-
-  
-?>
-
-
-    <!-- Silver SponsorLists -->
-    <h2 class="SponsorListHeadline FontRaleway"><span>disruptHR Sponsors</span></h2>
-    <?php 
-
-  $content = $sponsors->sponsors(7); 
-  echo $content;	
-
-  
-?>
-    
-    <!-- END Silver SponsorLists --> 
-    
-    <!-- END Exhibitors --> 
-  </div>
-  
-  <!-- END SponsorLists List --> 
-  
-</section>
-<!--END SponsorLists --> 
-
 <!--END Sponsors --> 
 <!-- FOOTER -->
 <footer>
@@ -629,17 +534,13 @@ $(document).ready(function() {
 </a> 
 <!-- END Go to Top Button --> 
 
-<!-- Sponsor Modals -->
-<div id="SponsorModalContainer">
-  <?php 
-
-  $content = $sponsors->sponsors_modal_list(); 
-  echo $content;	
-
+<!-- Speaker Modal-->
+<div id="SponsorsModal" class="reveal-modal" data-reveal>
+   	<div id="ModalBigContainer"></div>
+    
   
-?>
 </div>
-<!-- End Sponsor Modals --> 
+<!-- END Speaker Modal --> 
 
 <!-- Download Brochure Modal -->
 <div id="DownloadBrochureModal" class="reveal-modal" data-reveal> <a class="close-reveal-modal">&#215;</a>

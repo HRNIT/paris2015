@@ -650,3 +650,65 @@ header button:hover {
 }
 
 /*End Sponsors */
+
+/*Modal Navigation Arrows*/
+
+.DesktopNavigationArrow {
+	position: absolute;
+	top: 205px;	
+	font-size: 25px;
+}
+.icon-back-icon, .icon-next-icon {
+	color: 	#b9b9b9;
+	transition: color 0.3s;
+	cursor: pointer;
+}
+.icon-back-icon:hover, .icon-next-icon:hover {
+	color: 	#6f6e71;
+}
+.icon-back-icon {
+	left: 10px;	
+}
+.icon-next-icon {
+	right: 10px;	
+}
+
+#MobileArrowsContainer {
+	display: none;	
+}
+
+@media (max-width: 1020px) {
+	.DesktopNavigationArrow {
+	top: 24.5098vw;	
+	font-size: 2.45098vw;
+}
+.icon-back-icon {
+	left: 3.921568vw;	
+}
+.icon-next-icon {
+	right: 3.921568vw;	
+}
+}
+
+
+@media (max-width: 640px) {
+.DesktopNavigationArrow {
+	display: none;
+}
+
+
+#MobileArrowsContainer {
+	display:none;
+	position: fixed;
+	bottom: 50px;
+	text-align: center;
+	margin-left: 18.125vw;
+}
+.MobileArrow {
+	cursor: pointer;
+	margin: 0 7.8125vw;	
+	width: 4.375vw;
+	height: 3.4375vw;
+	padding: 5vw;
+}
+}
