@@ -1,4 +1,4 @@
-var timer = {};
+var arrowtimer = {};
 
 $(document).ready(function() {
 	
@@ -7,13 +7,19 @@ $('body').on('click', '.SpeakerModalTrigger', function(event) {
 	
 	var speaker_tag = $(this).data('speakertag');
 	
+	var size = 1;
+	
+	if ($(window).width() <= 640) {	
+	  size = 2;  
+	}
+	
 	//$('#SessionInfoModal').html('');
 
 	
 				  $.ajax({
                 url: 'controllers/ajax.php',
                 type: 'POST',
-                data: {action:"speaker_modal", speaker_tag:speaker_tag},
+                data: {action:"speaker_modal", speaker_tag:speaker_tag, size:size},
                 success: function(data) {
 					/*
 					  if ($(window).width() <= 640) {
@@ -38,35 +44,45 @@ $('body').on('click', '#CloseSpeakerModal', function(event) {
        $(this).trigger('reveal:close');
  });	  
 	  	  
-	  
-$('body').on('touchmove', '#SpeakerModal', function(event) {
+	   
+ $('body').on('touchmove', '#SpeakerModal', function(event) {
  if ($(window).width() <= 640) {	
  
-     	if(typeof timer.modal != "unedfined"){
-			clearTimeout(timer.modal);	
-		}
-			
-			
-       $('#MobileArrowsContainer').fadeIn(200);
+     	if(typeof arrowtimer.modal != "unedfined"){
+			clearTimeout(arrowtimer.modal);
+		} 
+		
+		var dsp = $('#MobileArrowsContainer').css('display');
+		 	if (dsp === "none"){	
+		         $('#MobileArrowsContainer').fadeIn(400);	
+			}
+ 
 	   
-	  timer.modal= setTimeout(function () {
-		  $('#MobileArrowsContainer').fadeOut(300);
+	  arrowtimer.modal= setTimeout(function () {
+		  $('#MobileArrowsContainer').fadeOut(400);
+		 
        } , 5000); //set timeout function end
 	   
  }
 	   
- });		  
+ });
+ 	  
 	  
 $('body').on('click', '.NavigationArrow', function(event) {
 		  
-     	if(typeof timer.modal != "unedfined"){
-			clearTimeout(timer.modal);	
+     	if(typeof arrowtimer.modal != "unedfined"){
+			clearTimeout(arrowtimer.modal);	
 		}
 	
 	
 	
 	var speaker_id = $(this).data('speaker_id');
 
+	var size = 1;
+	
+	if ($(window).width() <= 640) {	
+	  size = 2;  
+	}
 
   //add possible fadeOut effect
 
@@ -74,7 +90,7 @@ $('body').on('click', '.NavigationArrow', function(event) {
 				  $.ajax({
                 url: 'controllers/ajax.php',
                 type: 'POST',
-                data: {action:"speaker_modal_next", speaker_id:speaker_id},
+                data: {action:"speaker_modal_next", speaker_id:speaker_id, size:size},
                 success: function(data) {
 					
 					
@@ -101,6 +117,12 @@ $(function(){
 	
 	var hammertime = new Hammer(myElement);
 	
+	var size = 1;
+	
+	if ($(window).width() <= 640) {	
+	  size = 2;  
+	}	
+	
 	//SWIPE RIGHT
     hammertime.on('swiperight', function(ev) {
 		
@@ -110,7 +132,7 @@ $(function(){
       				  $.ajax({
                 url: 'controllers/ajax.php',
                 type: 'POST',
-                data: {action:"speaker_modal_next", speaker_id:speaker_id},
+                data: {action:"speaker_modal_next", speaker_id:speaker_id, size:size},
                 success: function(data) {
 					
 					
@@ -139,7 +161,7 @@ $(function(){
 				  $.ajax({
                 url: 'controllers/ajax.php',
                 type: 'POST',
-                data: {action:"speaker_modal_next", speaker_id:speaker_id},
+                data: {action:"speaker_modal_next", speaker_id:speaker_id, size:size},
                 success: function(data) {
 					
 					

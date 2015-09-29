@@ -110,6 +110,7 @@ $speakers = new speakers_main;
 
 <!-- Include Custom CSS Definitions -->
 <link rel="stylesheet" href="css/speakers.css" />
+<link rel="stylesheet" href="css/speakers-mobile.css" />
 
 <!-- Thank you modal -->
 <script type="text/javascript">
@@ -279,7 +280,7 @@ $(document).ready(function() {
 
 
 
-  $content = $speakers->speakers(); 
+  $content = $speakers->speakers(1); 
     if(isset($content)) {
 		  echo $content;	
 	}

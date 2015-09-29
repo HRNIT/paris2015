@@ -9,7 +9,7 @@ class speakers_main extends config {
 This displays the speakers grid on the speakers page
 *******************/
 
-  public function speakers() {
+  public function speakers($mode) {
 	  // The ribbon above the pictures
 	   // <!--<div class="SelectedSpeakerColor FutureOfWorkforceLearningColor" style="width: 100%;"></div>-->
 	  
@@ -37,10 +37,19 @@ This displays the speakers grid on the speakers page
 						 $content.='<!-- '.$speakers['speaker_name'].' -->
 						  <div class="Speaker">
 						  
-							 <a class="SpeakerModalTrigger" data-speakertag="'.$speakers['speaker_tag'].'" data-speaker_id="'.$speakers['speaker_id'].'" data-reveal-id="SpeakerModal" href="#" '.$anal_code('SpeakerPage','ScrollToAnchor', $speakers['speaker_tag']).' >
+							 <a class="SpeakerModalTrigger" data-speakertag="'.$speakers['speaker_tag'].'" data-speaker_id="'.$speakers['speaker_id'].'" data-reveal-id="SpeakerModal" href="#" '.$anal_code('SpeakerPage','ScrollToAnchor', $speakers['speaker_tag']).' >';
 						  	  
-							  <div class="SpeakerPhoto" style="background-image: url(img/speakers/SpeakerPhotos/'.$speakers['image_url'].');">
-							  </div>
+							  //Load normal pictures for desktop
+							  if ($mode === 1){
+							     $content.=' <div class="SpeakerPhoto" style="background-image: url(img/speakers/SpeakerPhotos/'.$speakers['image_url'].');">';
+							  }
+							  
+							  //Load smaller pictures for mobile
+							  if ($mode === 2){
+							     $content.=' <div class="SpeakerPhoto" style="background-image: url(img/speakers/SpeakerPhotosSmall/'.$speakers['image_url'].');">';
+							  }
+							   
+							 $content.=' </div>
 							 
 							  <div class="SpeakerInfo">
 								  <h6 class="SpeakerName BlueText FontRaleway">'.$speakers['speaker_name'].'</h6>
@@ -208,9 +217,19 @@ public function speaker() {
     <div class="SpeakerProfile">
 	    <a href="#" id="'.$data['speaker_tag'].'" class="SpeakerListAnchor"></a>
             <!-- Main Speaker Info: it will get 20px/vw padding AND #f4f4f2 background-color on mobile -->
-            <div id="MainSpeakerInfo">
-                <img id="SpeakerPhoto" src="img/speakers/SpeakerPhotos/'.$data['image_url'].'" alt="'.$data['speaker_name'].' picture">
-                <div id="SpeakerInfo">
+            <div id="MainSpeakerInfo">';
+			
+			//display the desktop (bigger profile picture)
+			if ($size === 1){
+               $content .=' <img id="SpeakerPhoto" src="img/speakers/SpeakerPhotos/'.$data['image_url'].'" alt="'.$data['speaker_name'].' picture">';
+			}
+			
+			//On mobile we display a smaller picture
+			if ($size === 2){
+               $content .=' <img id="SpeakerPhoto" src="img/speakers/SpeakerPhotosSmall/'.$data['image_url'].'" alt="'.$data['speaker_name'].' picture">';
+			}			
+				
+                $content .='<div id="SpeakerInfo">
                     <h2 id="SpeakerName" class="FontRaleway BlueText">'.$data['speaker_name'].'</h2>
                     <p id="Jobtitle">'.$data['title'].'</p>
                     <p id="CompanyName">'.$data['company_name'].'</p>
@@ -310,9 +329,11 @@ public function id_tag_convert($id) {
 	
 }
  
-public function speaker_modals($stag) {
+public function speaker_modals($stag, $size) {
 	$content = "";
 	
+//$size = windows size.. for the profile picture 
+
 			                    //Name                 Bio         Category              website         image       image alt       speaker_id
 		$speaker_q = "SELECT sn.speaker_name, sb.speaker_bio, st.title, scn.company_name, idb.image_url, idb.alt_name, sdc.speaker_id, sdc.speaker_company_id, stag.speaker_tag FROM speakers_name as sn, speakers_bio as sb, speakers_data_connection as sdc, speakers_status as ss, speakers_title as st, speakers_company_name as scn, speakers_company_data_connection as scdc, image_db as idb, image_connection as ic, speakers_tag as stag WHERE sdc.speaker_name_id=sn.id AND sdc.speaker_bio_id=sb.id AND sdc.speaker_id=ss.speaker_id AND ss.speaker_status_id='1' AND ic.entity_type_id='1' AND ic.entity_id=sdc.speaker_id AND idb.id=ic.image_db_id AND sdc.speaker_company_id=scdc.speaker_company_id AND scdc.speaker_company_name_id=scn.id AND sdc.speaker_title_id=st.id AND stag.id=sdc.speaker_tag_id AND stag.speaker_tag = :tag";	
 		

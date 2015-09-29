@@ -75,7 +75,7 @@ Display Speaker Modal
 	$the_main = new speakers\speakers_main;
 	
 
-    $result = $the_main->speaker_modals($_POST['speaker_tag']);
+    $result = $the_main->speaker_modals($_POST['speaker_tag'], $_POST['size']);
 	if (isset($result)) {
 	 
 	 echo $result;	
@@ -94,7 +94,7 @@ Display Agenda Modal
 	$tag = $the_main->id_tag_convert($_POST['speaker_id']);
 
     if (isset($tag)){
-			$result = $the_main->speaker_modals($tag);
+			$result = $the_main->speaker_modals($tag, $_POST['size']);
 			if (isset($result)) {
 			 
 			 echo $result;	

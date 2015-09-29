@@ -459,7 +459,7 @@ header button:hover {
 
 .DesktopNavigationArrow {
 	position: absolute;
-	top: 250px;	
+	top: 205px;	
 	font-size: 25px;
 }
 .icon-back-icon, .icon-next-icon {
@@ -471,10 +471,10 @@ header button:hover {
 	color: 	#6f6e71;
 }
 .icon-back-icon {
-	left: 40px;	
+	left: 10px;	
 }
 .icon-next-icon {
-	right: 40px;	
+	right: 10px;	
 }
 
 #MobileArrowsContainer {

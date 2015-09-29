@@ -99,6 +99,9 @@ $speakers = new speakers_main;
 <!-- Scroll to top JS -->
 <script src="js/speakers.js"></script>
 
+<!-- Social widget -->
+<script src="js/social.js"></script>
+
 <!-- Include Reveal Modal -->
 <link rel="stylesheet" href="vendor/reveal/reveal.css">
 <script src="vendor/reveal/jquery.min.js" type="text/javascript"></script>
@@ -275,7 +278,7 @@ $(document).ready(function() {
 
 
 
-  $content = $speakers->speakers(); 
+  $content = $speakers->speakers(2); 
     if(isset($content)) {
 		  echo $content;	
 	}
