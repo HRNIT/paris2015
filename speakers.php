@@ -104,7 +104,6 @@ $speakers = new speakers_main;
 
 <!-- Include Reveal Modal -->
 <link rel="stylesheet" href="vendor/reveal/reveal.css">
-<script src="vendor/reveal/jquery.min.js" type="text/javascript"></script>
 <script src="vendor/reveal/jquery.reveal.js" type="text/javascript"></script>
 
 

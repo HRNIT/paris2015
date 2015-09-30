@@ -68,9 +68,9 @@ $sponsors = new sponsors_main;
 
 <script type="text/javascript">
  (function() {
-  if ($(window).width() < 641) {
+  if ($(window).width() > 640) {
 
-    window.location = 'sponsors-mobile';
+    window.location = 'sponsors';
 } 
 })();
 </script>
@@ -172,15 +172,18 @@ $sponsors = new sponsors_main;
     width: 9.17604vw;
     height: 6.58854159vw;
 }*/
+#inforSponsorBox {
+    width: 23.17604vw;
+    height: 18.588542vw;
 }
+}
+/*
 @media (max-width: 640px) {
 #inforSponsorBox{
     width: 23.17604vw;
     height: 18.588542vw;
 	}
-}
-	
-	
+}*/
 </style>
 
 
@@ -205,7 +208,6 @@ $sponsors = new sponsors_main;
 <script src="vendor/reveal/jquery.reveal.js" type="text/javascript"></script>
 
 <!-- Include Custom CSS Definitions -->
-<link rel="stylesheet" href="css/sponsors.css" />
 <link rel="stylesheet" href="css/sponsors-mobile.css" />
 
 <!-- Thank you modal -->

@@ -1,0 +1,399 @@
+@charset "utf-8";
+/* These CSS rules will affect the sponsors page.  */
+
+/* Header */
+
+@media (max-width: 640px) {
+header {
+	background-image:url(../img/sponsors/header-mobile.jpg);
+	background-repeat:no-repeat;
+	background-size: contain;
+	width:100%;
+	height:150vw; 
+	padding:0;
+	padding-top: 5vw;
+	text-align: center;	
+	margin-top: 50px;
+	color:#fff;	
+}
+#HeaderInnerContainer {
+	padding-top: 4.6875vw;
+	padding-left: 16.666666vw;	
+}
+header h1 {
+	font-size:12.5vw;
+	margin-top: 0px;
+	margin-bottom:7.8125vw;
+	padding-top: 7.8125vw;
+}
+header p {
+	width: 100%;
+	max-width:78.125vw;
+	font-size:4.0625vw;
+	line-height: 5.625vw;
+	margin: 0 auto;
+	margin-bottom:17.1875vw;
+}
+header button {
+	font-size: 4.6875vw;
+	font-weight: 600;
+	background-color: rgba(255, 255, 255, 0);
+	border: 2px solid #fff;
+	padding: 0;
+	max-width: 62.5vw;
+	height: 12.5vw;
+	position: relative;
+	vertical-align: bottom;
+	top: -5vw;
+	color:#fff;	
+	transition: all 0.3s ease-in;
+}
+header button:hover {
+	background-color: #106ab5;
+	border: 2px solid #106ab5;
+}
+#HeaderWhosWhoLogo {
+	display: block;
+	width: 40.625vw;
+	height: auto;
+	margin: 0 auto;
+	margin-top: 6.25vw;
+	margin-bottom: 10vw;
+}	
+#ScrollDownHeaderLinkContainer a span {
+	color: #a1a1c5;	
+}	
+}
+/* END Header */
+
+/* Sponsors Grid */
+#Sponsors {
+	width: 100%;
+	background-color: #fff;
+	font-size: 0;
+}
+#Sponsors * {
+	box-sizing: border-box;
+}
+
+#SponsorGrid {
+text-align: center;
+}
+
+@media (max-width: 639px) {
+	#Sponsors {
+		width: 100%;
+		background-color: #fff;
+		font-size: 0;
+	}
+	#Sponsors * {
+		box-sizing: border-box;
+	}
+	#SponsorGrid {
+		text-align: center;
+	}	
+	.SponsorHeadline {
+		width: 100%;
+		max-width: 80vw;
+		font-weight: 500;
+		text-align: center; 
+		padding: 0px; 
+		margin: 0 auto;
+		font-size: 6.875vw;
+		margin-top: 10vw;
+		margin-bottom: 8vw;
+	}
+	#SponsorHeadlineAlaCarte {
+		background-image: none; 
+	}
+	.Sponsor {
+		display: inline-block;
+		text-align: center; 
+		position: relative;	
+		transition: all 0.3s;
+		cursor: pointer;
+	}
+	.Sponsor:hover {
+		background-color: #d8e3eb;	
+	}
+	.Sponsor:hover img{
+		opacity: 1;
+	}
+	.Sponsor, #crossknowledgeSponsor, #adpSponsor, #inforSponsor {
+		width: 39.7vw;
+		height: 28.4172vw;
+		padding-top: 6vw;
+	}
+	.Sponsor img { 
+		position: absolute;	
+		opacity: 0;
+		transition: all 0.3s;
+		left: 2.65625vw;
+		top: 2.65625vw;
+		width: 3.90625vw;
+		height: 3.90625vw;
+	}
+	.SponsorLogo, #crossknowledgeSponsorBox {
+		display: inline-block;
+		width: 30vw;
+		height: 17.1875vw;
+		background-position: center; 
+		background-repeat: no-repeat; 
+		background-size: contain;
+	}
+	#AlaCarteWrapper .Sponsor {
+		margin-bottom: 11.5625vw;
+	}
+	.ALaCarteTextContainer { 
+		color: #777777;
+		text-align: center;
+		position: absolute;
+		margin: 0;
+		font-size: 3.4375vw;
+		width: 39.7vw;
+		height: 9.375vw;
+		bottom: -10vw;
+	}
+}
+/* END Sponsor Grid */
+
+/* sponsor anchor */
+.anchorclass{
+	display: block; 
+	position: relative; 
+	top: -80px; 
+	visibility: hidden;
+}
+@media (max-width: 1000px) {
+	.anchorclass{	
+		top: -150px; 
+	}
+}
+@media (max-width: 480px) {
+	.anchorclass{	
+		display: block; 
+		position: relative; 
+		top: -100px; 
+		visibility: hidden;
+	}
+}
+/* END sponsor anchor */
+	
+/* SponsorLists */
+@media (max-width: 640px) {
+	.SponsorList {
+		width: 100%;
+		background-color: #fff;
+		margin-bottom: 65px;	
+		padding-left: 15px;
+		padding-right: 15px;
+		text-align:justify;
+	}
+	#SponsorListsInnerContainer {
+		width: 100%;
+		max-width: 100%;
+		margin: 0 auto;
+		text-align: center;
+		padding-top: 0;
+		margin-top: 0;
+	}
+	#PoweredByWhosWhoLogo {
+		margin-top: 40px;
+		width: 280px;
+		height: auto;
+	}
+	.SponsorListHeadline {
+		text-align: center; 
+		padding: 0px; 
+		font-weight: 500;
+		margin: 65px auto;
+		width: 90%;
+		font-size: 28px;
+		background-image:none;
+	}
+	.SponsorListLogo, .SponsorListDetails {
+		display: block;
+		margin: 0 auto;
+		vertical-align: top;
+	}	
+	.SponsorListLogo {
+		width: 100%;
+		text-align: center;
+		padding-top: 0px;	
+	}
+	.SponsorListLogo img {
+		width: auto;
+		max-width: 230px;
+		height: auto;
+		max-height: 180px;
+		margin-bottom: 8vw;
+	}
+	.SponsorListDetails {
+		width: 100%;
+		margin: 0 auto;
+		color: #322f2f;
+		font-size: 17px;
+		padding-left: 10px;
+		padding-right: 5px;
+		box-sizing: border-box;
+	}
+	.SponsorListName {
+		line-height: 150%;
+		text-align:center;
+		font-size: 25px;
+		margin-top: 15px;	
+		margin-bottom: 15px;	
+	}
+	.SponsorListName .fa-external-link {
+		font-size: 20px;
+		padding-left: 5px;	
+		color: #106ab5;	
+	}	
+	.SponsorListDescription {
+		margin-bottom: 25px;
+		width: 100%;
+		line-height: 150%;
+		font-size:13px;
+	}
+	.SponsorListSocialIcons {
+		text-align: center;
+		float: none;
+		display: block;	
+		margin-top: 30px;
+	}
+	.SponsorListSocialIcon {
+		display: inline-block;	
+		background-repeat: no-repeat;
+		margin-left: 0; 
+		margin-right: 15px;	
+		width: 41px;
+		height: 42px;
+	}
+	.SponsorListFacebookIcon {
+		background-image: url(../img/sponsors/facebook-icon.png);
+		background-size: cover;
+	}
+	.SponsorListTwitterIcon {
+		background-image: url(../img/sponsors/twitter-icon.png);
+		background-size: cover;
+	}
+	.SponsorListLinkedinIcon {
+		background-image: url(../img/sponsors/linkedin-icon.png);
+		background-size: cover;
+	}
+	.SponsorListBlogIcon {
+		background-image: url(../img/sponsors/blog-icon.png);
+		background-size: cover;
+	}
+	.SponsorListLinkIcon {
+		background-image: url(../img/sponsors/link-icon.png);
+		background-size: cover;
+	}	
+	.AlaCarteSponsorBox {
+		margin-bottom: 12.5vw;	
+	}
+}
+/*End SponsorLists */
+
+/* Sponsors Modal */
+@media (max-width: 640px) {
+	#SponsorsModal {
+		padding-left: 0;
+		padding-right: 0;	
+	}
+	#SponsorsModal .close-reveal-modal {
+		font-size: 60px;
+		font-weight: 400;	
+	}
+	.SponsorModalInnerContainer {	
+		padding-left: 25px;
+		padding-right: 25px;
+		padding-top: 50px;
+		margin-bottom: 0;
+	}
+	.SponsorModalDetails {
+		padding-left: 10px;
+		padding-right: 5px;
+		box-sizing: border-box;
+	}
+	.SponsorModalLogo {
+		text-align: center;	
+	}
+	.SponsorModalLogo img {
+		width: auto;
+		max-width: 285px;
+		height: auto;
+		max-height: 100px;
+		margin-bottom: 8vw;
+	}
+	.SponsorModalName {
+		margin-bottom: 15px;	
+	}
+	.SponsorModalName .fa-external-link {
+		font-size: 20px;
+		padding-left: 5px;	
+	}
+	#SponsorsModal .SponsorModalDescription * {
+		font-size:13px;
+		line-height: 150%;
+		text-align: justify;
+	}
+	.SponsorModalSocialIcons {
+		float: none;
+		display: block;	
+		margin-top: 30px;
+		margin-bottom: 35px;
+		text-align: center;
+	}
+	.SponsorModalSocialIcon {
+		display: inline-block;	
+		background-repeat: no-repeat;
+		margin-left: 0; 
+		margin-right: 15px;	
+		width: 41px;
+		height: 42px;
+	}
+	.SponsorModalFacebookIcon {
+		background-image: url(../img/sponsors/facebook-icon.png);
+		background-size: cover;
+	}
+	.SponsorModalTwitterIcon {
+		background-image: url(../img/sponsors/twitter-icon.png);
+		background-size: cover;
+	}
+	.SponsorModalLinkedinIcon {
+		background-image: url(../img/sponsors/linkedin-icon.png);
+		background-size: cover;
+	}
+	.SponsorModalBlogIcon {
+		background-image: url(../img/sponsors/blog-icon.png);
+		background-size: cover;
+	}
+	.SponsorModalLinkIcon {
+		background-image: url(../img/sponsors/link-icon.png);
+		background-size: cover;
+	}
+}
+
+/*End Sponsors */
+
+/*Modal Navigation Arrows*/
+@media (max-width: 640px) {
+.DesktopNavigationArrow {
+	display: none;
+}
+#MobileArrowsContainer {
+	display:none;
+	position: fixed;
+	bottom: 170px;
+	text-align: center;
+	margin-left: 18.125vw;
+}
+.MobileArrow {
+	cursor: pointer;
+	margin: 0 7.8125vw;	
+	width: 4.375vw;
+	height: 3.4375vw;
+	padding: 5vw;
+}
+}
