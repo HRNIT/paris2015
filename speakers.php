@@ -111,6 +111,7 @@ $speakers = new speakers_main;
 <link rel="stylesheet" href="css/speakers.css" />
 <link rel="stylesheet" href="css/speakers-mobile.css" />
 
+
 <!-- Thank you modal -->
 <script type="text/javascript">
 $(document).ready(function() {
@@ -123,6 +124,30 @@ $(document).ready(function() {
 });
 </script>
 <!-- END Thank you modal  -->
+
+<!-- MODAL OPEN FROM EXTERNAL LINK -->
+<script type="text/javascript">
+ $(document).ready(function() {
+	 
+	    var parentURL = window.parent.location.href;
+    	var tag_number = parentURL.search("#");
+		var tag = parentURL.substr(tag_number, parentURL.length);
+		
+		var tagLast = tag.substr(tag.length - 1);
+		var tagFirst = tag.substr(1,1);
+ 		var sTag = tagFirst.toUpperCase()+tag.substr(2, tag.length-3)+tagLast.toUpperCase();
+		
+
+  if(window.location.href.indexOf(tag) != -1 && tag_number !=-1) {
+	  
+	   ExternalModal (sTag);
+			 
+   }
+});
+ 
+ 
+ </script>
+<!-- END MODAL OPEN FROM EXTERNAL LINK -->
 
 <!-- GOOGLE ANALYTICS TRACKING SCRIPT -->
 <script type="text/javascript">
@@ -429,14 +454,7 @@ $(document).ready(function() {
 </div>
 <!-- END Thank You For Apply Modal --> 
 
-<!-- Named anchor Hashtag script -->
-<script type="text/javascript">
-$('a[href*=#]:not([href=#])').click(function(){
-    $('html, body').animate({
-        scrollTop: $( $(this).attr('href') ).offset().top
-    }, 1000);
-});
-</script> 
+
 
 <!-- Start of Async HubSpot Analytics Code --> 
 <script type="text/javascript">

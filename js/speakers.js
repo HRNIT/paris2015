@@ -180,3 +180,34 @@ $(function(){
 	  
      });	
  });	
+ 
+function ExternalModal(speaker_tag) {
+
+   var size = 1;
+	
+	if ($(window).width() <= 640) {	
+	  size = 2;  
+	}
+	
+	jQuery("#SpeakerModal").reveal();
+
+				  $.ajax({
+                url: 'controllers/ajax.php',
+                type: 'POST',
+                data: {action:"speaker_modal", speaker_tag:speaker_tag, size:size},
+                success: function(data) {
+					/*
+					  if ($(window).width() <= 640) {
+                    		$('html, body').animate({scrollTop:0}, 'slow');
+					   }
+					*/
+					
+                    $('#SpeakerModal').html(data);
+                    $( "#ModalBigContainer").fadeIn('fast');
+					  
+                   }
+				   
+				   
+            });
+			
+}

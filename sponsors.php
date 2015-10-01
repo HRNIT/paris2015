@@ -221,6 +221,30 @@ $(document).ready(function() {
 </script>
 <!-- END Thank you modal  -->
 
+
+<!-- MODAL OPEN FROM EXTERNAL LINK -->
+<script type="text/javascript">
+ $(document).ready(function() {
+	 
+	    var parentURL = window.parent.location.href;
+    	var tag_number = parentURL.search("#");
+		var tag = parentURL.substr(tag_number, parentURL.length);
+		
+		var tagLast = tag.substr(tag.length - 1);
+		var tagFirst = tag.substr(1,1);
+ 		var sTag = tagFirst+tag.substr(2, tag.length-3)+tagLast;
+      
+  if(window.location.href.indexOf(tag) != -1 && tag_number !=-1) {
+	  
+	   ExternalModal (sTag);
+			 
+   }
+});
+ 
+ 
+ </script>
+<!-- END MODAL OPEN FROM EXTERNAL LINK -->
+
 <!-- GOOGLE ANALYTICS TRACKING SCRIPT -->
 <script type="text/javascript">
 

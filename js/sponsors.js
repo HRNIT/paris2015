@@ -203,3 +203,46 @@ $(function(){
 	  
      });	
  });	
+ 
+ function ExternalModal(sponsor_tag) {
+	
+   var size = 1;
+	
+	if ($(window).width() <= 640) {	
+	  size = 2;  
+	}
+	
+	$('.SponsorGridAnchor').each(function(index, element) {
+        var temp_tag = $(this).data('sponsornametag');
+	   
+		
+		if (temp_tag == sponsor_tag){
+		   var sponsor_id = $(this).data('sponsor_id');
+		   var sponsor_mode = $(this).data('sponsor_reveal_mode');
+		   
+				jQuery("#SponsorsModal").reveal();
+	  
+						$.ajax({
+					  url: 'controllers/ajax.php',
+					  type: 'POST',
+					  data: {action:"sponsor_modal", sponsor_id:sponsor_id, sponsor_mode:sponsor_mode},
+					  success: function(data) {
+						  
+	  
+						  $('#SponsorsModal').html(data);
+						  $( "#ModalBigContainer").fadeIn('fast');
+							
+						 }
+						 
+						 
+				  }); 
+				 
+				 
+		   
+		}
+		
+    });
+	
+	
+			
+}

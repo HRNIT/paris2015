@@ -430,7 +430,7 @@ class sponsors_main extends config {
 					
 					//# ez után kell egy url anchor tag
 			 $content .=' <!-- '.$sponsors['sponsor_name'].' -->
-            <a class="SponsorGridAnchor" data-reveal-id="SponsorsModal" data-sponsor_id="'.$sponsors['sponsor_id'].'" data-sponsornametag="'.$achor.'" '.$anal_code('SponsorPage','ScrollToAnchor', $achor).'><div class="Sponsor" '.$tempId.' data-sponsornum="'.$sponsors['sponsor_id'].'" '.$tag.'>
+            <a class="SponsorGridAnchor" data-reveal-id="SponsorsModal" data-sponsor_id="'.$sponsors['sponsor_id'].'" data-sponsornametag="'.$achor.'" '.$anal_code('SponsorPage','ScrollToAnchor', $achor).' data-sponsor_reveal_mode="1"><div class="Sponsor" '.$tempId.' data-sponsornum="'.$sponsors['sponsor_id'].'" '.$tag.'>
                 <div '.$tempIdTwo.' class="SponsorLogo" style="background-image: url(img/sponsors/logos/'.$sponsors['image_url'].');"></div>
                 <img src="img/sponsors/sponsor-hover-plus-icon.png" alt="+">
             </div>
@@ -507,7 +507,7 @@ class sponsors_main extends config {
 			$achor = $this->clean_str($sponsors['sponsor_name']);
 									 
 			 $content .=' <!-- '.$sponsors['sponsor_name'].' -->
-            <a class="SponsorGridAnchorAlaCarte" data-reveal-id="SponsorsModal" data-sponsor_id="'.$sponsors['sponsor_id'].'" data-sponsornametag="'.$achor.'" '.$anal_code('SponsorPage','ScrollToAnchor', $achor).'><div class="Sponsor AlaCarteSponsorBox" data-sponsornum="'.$sponsors['sponsor_id'].'" '.$tag.'>
+            <a class="SponsorGridAnchorAlaCarte" data-reveal-id="SponsorsModal" data-sponsor_id="'.$sponsors['sponsor_id'].'" data-sponsornametag="'.$achor.'" '.$anal_code('SponsorPage','ScrollToAnchor', $achor).' data-sponsor_reveal_mode="0"><div class="Sponsor AlaCarteSponsorBox" data-sponsornum="'.$sponsors['sponsor_id'].'" '.$tag.'>
                 <div class="SponsorLogo" style="background-image: url(img/sponsors/logos/'.$sponsors['image_url'].');"></div>
                 <img src="img/sponsors/sponsor-hover-plus-icon.png" alt="+">
 				<p class="ALaCarteTextContainer">'.$sponsors['text'].'</p>
