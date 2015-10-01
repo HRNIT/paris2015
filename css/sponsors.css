@@ -13,6 +13,7 @@ header {
 	padding-top: 3.125vw;
 	padding-bottom: 3.3854166vw;
 	margin-top: 4.0625vw;
+	box-sizing: border-box;
 
 }
 #HeaderInnerContainer {
@@ -23,7 +24,7 @@ header h1 {
 	font-size:3.125833vw;
 	margin-top: 0px;
 	margin-bottom:2.1vw;
-	padding-top: 7.8125vw;
+	padding-top: 2vw;
 }
 header p {
 	width: 100%;
@@ -695,6 +696,10 @@ text-align: center;
 	height: 100vh;
 	overflow-y: scroll;
 }
+#SponsorsModal .close-reveal-modal {
+	font-size: 60px;
+	font-weight: 400;	
+}
 .SponsorModalInnerContainer {
 	text-align:justify;
 }
@@ -810,10 +815,6 @@ text-align: center;
 	}	
 }
 @media (max-width: 1000px) {
-	#SponsorsModal .close-reveal-modal {
-		font-size: 60px;
-		font-weight: 400;	
-	}
 	.SponsorModalInnerContainer {	
 		padding-left: 30px;
 		padding-right: 30px;

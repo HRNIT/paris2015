@@ -93,14 +93,9 @@ $sponsors = new sponsors_main;
 #crossknowledgeSponsorBox {
 	width: 11vw;
 }
-/*#adpSponsor,*/ #inforSponsor {
+#inforSponsor {
 	width: 9vw;
 }
-/*
-#adpSponsorBox {
-	transform: scale(1.8, 1.8);
-}
-*/
 #ibmSponsor {
 	transform: scale(0.8, 0.8);
 }
@@ -136,14 +131,6 @@ $sponsors = new sponsors_main;
 	height:9vw;
 	} 	
 
-
-@media (max-width: 768px) {
-#inforSponsorBox{
-    width: 14.17604vw;
-    height: 10.588542vw;
-}
-}
-
 @media (max-width: 640px) {
 #successfactorsSponsorBox {
 	width: 30vw;
@@ -157,7 +144,6 @@ $sponsors = new sponsors_main;
 #oracleSponsor {
 	height: 28.41vw;
 }	
-}
 #ibmGridLogo {
 	max-width: 200px;
 }
@@ -168,19 +154,11 @@ $sponsors = new sponsors_main;
 	max-height: 108px;
 	
 }
-/*#inforSponsorBox{
-    width: 9.17604vw;
-    height: 6.58854159vw;
-}*/
-}
-@media (max-width: 640px) {
 #inforSponsorBox{
     width: 23.17604vw;
     height: 18.588542vw;
 	}
 }
-	
-	
 </style>
 
 

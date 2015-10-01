@@ -44,7 +44,7 @@ $('body').on('click', '#CloseSpeakerModal', function(event) {
        $(this).trigger('reveal:close');
  });	  
 	  	  
-	   
+/*	   
  $('body').on('touchmove', '#SpeakerModal', function(event) {
  if ($(window).width() <= 640) {	
  
@@ -66,7 +66,7 @@ $('body').on('click', '#CloseSpeakerModal', function(event) {
  }
 	   
  });
- 	  
+ 	*/  
 	  
 $('body').on('click', '.NavigationArrow', function(event) {
 		  
