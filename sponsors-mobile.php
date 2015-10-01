@@ -73,6 +73,15 @@ $sponsors = new sponsors_main;
     window.location = 'sponsors';
 } 
 })();
+
+$( window ).resize(function() {
+
+if ($(window).width() > 641) {
+
+    window.location = 'sponsors';
+} 
+	
+});
 </script>
 
 <!-- Include General CSS Definitions -->

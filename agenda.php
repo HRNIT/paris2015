@@ -34,6 +34,30 @@ if(!isset($_SESSION)){
 <meta property="og:image" content="http://hrtechcongress.com/img/preview-images/preview-image-2.jpg" />
 <meta property="og:image" content="http://hrtechcongress.com/img/preview-images/preview-image-3.jpg" />
 
+<!-- Include jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+<script type="text/javascript">
+ $(document).ready(function() {
+	var size = 1; 
+	 
+  if ($(window).width() < 641) {
+    $('a').each(function(index, value){
+      var slink = $(this).attr('href');
+
+	  if (typeof slink != "undefined"){
+	    slink = slink.replace('speakers#','speakers-mobile#');
+
+	     $(this).attr('href', slink);
+	  
+	  }
+});
+   
+  }  
+});
+</script>
+
 <!--Include Raleway Google Font -->
 <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
 
@@ -43,6 +67,8 @@ if(!isset($_SESSION)){
 <!--Include Include Proxima Nova Font (Adobe Typekit) -->
 <script src="//use.typekit.net/gku8ogo.js"></script>
 <script>try{Typekit.load();}catch(e){}</script>
+
+
 
 <!--Include Font Awesome -->
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -77,9 +103,7 @@ if(!isset($_SESSION)){
 <!-- Include Footer CSS Definitions -->
 <link rel="stylesheet" href="css/footer.css" />
 
-<!-- Include jQuery -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
 
 <!-- Scroll to top JS -->
 <script src="js/gotopscroll.js"></script>

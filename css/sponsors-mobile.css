@@ -300,6 +300,13 @@ text-align: center;
 	#SponsorsModal {
 		padding-left: 0;
 		padding-right: 0;	
+			padding: 0;
+	position: fixed;
+	top: 0 !important;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow-y: scroll;
 	}
 	#SponsorsModal .close-reveal-modal {
 		font-size: 60px;
@@ -323,7 +330,7 @@ text-align: center;
 		width: auto;
 		max-width: 285px;
 		height: auto;
-		max-height: 100px;
+		max-height: 160px;
 		margin-bottom: 8vw;
 	}
 	.SponsorModalName {
@@ -380,20 +387,45 @@ text-align: center;
 /*Modal Navigation Arrows*/
 @media (max-width: 640px) {
 .DesktopNavigationArrow {
-	display: none;
+	/*display: none;*/
 }
 #MobileArrowsContainer {
 	display:none;
-	position: fixed;
+/*	position: fixed;
 	bottom: 170px;
 	text-align: center;
 	margin-left: 18.125vw;
+*/
 }
+/*
 .MobileArrow {
 	cursor: pointer;
 	margin: 0 7.8125vw;	
 	width: 4.375vw;
 	height: 3.4375vw;
 	padding: 5vw;
+}*/
+.DesktopNavigationArrow {
+	position: absolute;
+	top: 205px;	
+	font-size: 25px;
+}
+.icon-back-icon, .icon-next-icon {
+	color: 	#b9b9b9;
+	transition: color 0.3s;
+	cursor: pointer;
+}
+.icon-back-icon:hover, .icon-next-icon:hover {
+	color: 	#6f6e71;
+}
+.icon-back-icon {
+	left: 10px;	
+}
+.icon-next-icon {
+	right: 10px;	
+}
+
+#MobileArrowsContainer {
+	display: none;	
 }
 }

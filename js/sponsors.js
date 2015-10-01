@@ -72,7 +72,7 @@ $('body').on('click', '#CloseSponsorModal', function(event) {
        $(this).trigger('reveal:close');
  });	  
 	  	
-	   
+	 /*  
  $('body').on('touchmove', '#SponsorsModal', function(event) {
  if ($(window).width() <= 640) {	
  
@@ -94,7 +94,7 @@ $('body').on('click', '#CloseSponsorModal', function(event) {
  }
 	   
  });
- 	  
+ 	*/  
 	  
 $('body').on('click', '.NavigationArrow', function(event) {
 		  

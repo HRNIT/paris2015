@@ -254,6 +254,10 @@ header button:hover {
 #SpeakerModal * {
 	text-align: left !important;	
 }
+#SpeakerModal .close-reveal-modal {
+	font-size: 60px;
+	font-weight: 400;	
+}
 .SpeakerProfileContainer {
 	/*width: 100%;
 	background-color: #fff;*/
@@ -323,7 +327,7 @@ header button:hover {
 	#SpeakerWebsiteIcon {
 		color: #717171;
 		position: relative;
-		transition: all 0.3s;
+		transition: color 0.3s;
 		font-size: 27px;
 		top: -3px;
 		left: 5px;

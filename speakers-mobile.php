@@ -56,6 +56,16 @@ $speakers = new speakers_main;
     window.location = 'speakers';
 } 
 })();
+
+
+$( window ).resize(function() {
+
+if ($(window).width() > 641) {
+
+    window.location = 'speakers';
+} 
+	
+});
 </script>
 
 <!--Include Raleway Google Font -->
@@ -109,6 +119,9 @@ $speakers = new speakers_main;
 
 <!-- Include Custom CSS Definitions -->
 <link rel="stylesheet" href="css/speakers-mobile.css" />
+
+<!-- Modal Arrows -->
+<link rel="stylesheet" href="css/modal-arrows.css" />
 
 <!-- Thank you modal -->
 <script type="text/javascript">
