@@ -1,47 +1,31 @@
 <?php 
-namespace HRNParis\sponsors;
-include_once('controllers/sponsors_main.php');
+namespace HRNParis\speakers;
+include_once('controllers/speakers_main.php');
 
-$sponsors = new sponsors_main;
+$speakers = new speakers_main;
 ?>
 
 <!doctype html>
 <html lang="en">
 <head>
-<meta name="description" content="HR Tech World Congress">
-<meta name="keywords" content="HR Conference, HR event, HR Tech, HRN Europe">
+<meta name="description" content="The fastest growing HR event in the world. Paris October 24 - 25">
+<meta name="keywords" content="HR Conference, HR Tech Europe, HR Tech Conference, HR Congress, HR Tech Congress, iRecruit, disruptHR ">
 <meta name="author" content="HRN Europe - The Pan European HR Network">
 <meta name="designer" content="Designed by: Judit Bernat - juditbernat.mail@gmail.com ">
-<meta name="developer" content="Developed by: TesseracT - bottyan.tamas@web-developer.hu">
+<meta name="developer" content="Developed by: TesseracT - bottyan.tamas@web-developer.hu, Benedek Nagy - trialshock@gmail.com, Myrrdhinn - balazs.pentek@web-developer.hu">
 <meta charset="utf-8" />
 <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-<title>HR Tech World Congress | Sponsors</title>
+<title>HR Tech World Congress | Speakers</title>
 
 <!-- Open Graph data -->
 <meta property="og:site_name" content="HR Tech World Congress"/>
-<meta property="og:title" content="Who’s Who in HR - The 2015 Sponsors at HR Tech World Congress"/>
+<meta property="og:title" content="There is an Amazing Speaker Line-Up for HR Tech World Congress 2015!"/>
 <meta property="og:description" content="The fastest growing HR event in the world! Paris October 24 - 25"/>
-<meta property="og:url" content="http://hrtechcongress.com/sponsors">
-<meta property="og:type" content="website"/>
+<meta property="og:url" content="http://hrtechcongress.com/speakers">
+<meta property="og:type" content="article"/>
 <meta property="og:image" content="http://hrtechcongress.com/img/preview-images/preview-image-1.jpg" />
 <meta property="og:image" content="http://hrtechcongress.com/img/preview-images/preview-image-2.jpg" />
 <meta property="og:image" content="http://hrtechcongress.com/img/preview-images/preview-image-3.jpg" />
-
-<!--Include Raleway Google Font -->
-<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
-
-<!-- Include Source Sans Prog Google Font -->
-<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-
-<!--Include Include Proxima Nova Font (Adobe Typekit) -->
-<script src="//use.typekit.net/gku8ogo.js"></script>
-<script>try{Typekit.load();}catch(e){}</script>
-
-<!-- Include Lato Google Font -->
-<link href='http://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
-
-<!--Include Font Awesome -->
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 <!-- Favicon -->
 <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-touch-icon-57x57.png">
@@ -61,166 +45,83 @@ $sponsors = new sponsors_main;
 <link rel="shortcut icon" href="favicon.ico">
 
 <!-- Include jQuery -->
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
 
 <script type="text/javascript">
  (function() {
-  if ($(window).width() < 641) {
+  if ($(window).width() > 640) {
 
-    window.location = 'sponsors-mobile';
+    window.location = 'speakers';
 } 
 })();
 </script>
 
+<!--Include Raleway Google Font -->
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+
+<!-- Include Source Sans Prog Google Font -->
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+<!--Include Proxima Nova Font (Adobe Typekit) -->
+<script src="//use.typekit.net/gku8ogo.js"></script>
+<script>try{Typekit.load();}catch(e){}</script>
+
+<!-- Include Lato Google Font -->
+<link href='http://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+
+<!--Include Font Awesome -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+<!-- Favicon setting -->
+<link rel="shortcut icon" href="favicon.png">
+
 <!-- Include General CSS Definitions -->
 <link rel="stylesheet" href="css/general.css" />
-
-<!-- Modal Arrows -->
-<link rel="stylesheet" href="css/modal-arrows.css" />
 
 <!-- Include the Navigation Menu`s CSS Definitions -->
 <link rel="stylesheet" href="css/menu.css" />
 
 <!-- Include Footer CSS Definitions -->
 <link rel="stylesheet" href="css/footer.css" />
-<style>
-#crossknowledgeSponsor {
-	width: 14vw;
-}
-#crossknowledgeSponsorBox {
-	width: 11vw;
-}
-/*#adpSponsor,*/ #inforSponsor {
-	width: 9vw;
-}
-/*
-#adpSponsorBox {
-	transform: scale(1.8, 1.8);
-}
-*/
-#ibmSponsor {
-	transform: scale(0.8, 0.8);
-}
-#successfactorsSponsorBox {
-	width: 12vw;
-}
-#successfactorsSponsor {
-	margin-left: -1.5vw;
-}
-#oracleSponsorBox {
-	height: 7vw;
-}
-#oracleSponsor {
-	height: 11vw;
-	margin-right: 1.5625vw;
-	position: relative;
-	top: 0.520833vw;
-}
-#corehrSponsorBox {
-	width: 9vw;
-	height:9vw;
-	}
-#corehrSponsor{
-	position:relative;
-	top:2vw;
-	}	
-#includeedSponsor {
-		position:relative;
-	top:2vw;
-	}
-#includeedSponsorBox {
-	width: 9vw;
-	height:9vw;
-	} 	
 
 
-@media (max-width: 768px) {
-#inforSponsorBox{
-    width: 14.17604vw;
-    height: 10.588542vw;
-}
-}
-
-@media (max-width: 640px) {
-#successfactorsSponsorBox {
-	width: 30vw;
-}
-#successfactorsSponsor {
-	margin-left: 0;
-}
-#oracleSponsorBox {
-	height: 17.187vw;
-}
-#oracleSponsor {
-	height: 28.41vw;
-}	
-}
-#ibmGridLogo {
-	max-width: 200px;
-}
-#oracleGridLogo {
-	max-height: 210px;
-}
-#workdayGridLogo {
-	max-height: 108px;
-	
-}
-/*#inforSponsorBox{
-    width: 9.17604vw;
-    height: 6.58854159vw;
-}*/
-}
-@media (max-width: 640px) {
-#inforSponsorBox{
-    width: 23.17604vw;
-    height: 18.588542vw;
-	}
-}
-	
-	
-</style>
-
-
-
-<!-- Swipe :) -->
+<!-- Mobile Menu JS -->
 <script src="vendor/hammer/hammer.js"></script>
 
 <!-- Scroll to top JS -->
 <script src="js/gotopscroll.js"></script>
 
-<!-- Sponsors JS -->
-<script src="js/sponsors.js"></script>
-
-<!-- Menu JS -->
+<!-- Mobile Menu JS -->
 <script src="js/menu.js"></script>
 
-<!-- Social widget mobile controller -->
+<!-- Scroll to top JS -->
+<script src="js/speakers.js"></script>
+
+<!-- Social widget -->
 <script src="js/social.js"></script>
 
 <!-- Include Reveal Modal -->
 <link rel="stylesheet" href="vendor/reveal/reveal.css">
+<script src="vendor/reveal/jquery.min.js" type="text/javascript"></script>
 <script src="vendor/reveal/jquery.reveal.js" type="text/javascript"></script>
 
 <!-- Include Custom CSS Definitions -->
-<link rel="stylesheet" href="css/sponsors.css" />
-<link rel="stylesheet" href="css/sponsors-mobile.css" />
+<link rel="stylesheet" href="css/speakers-mobile.css" />
 
 <!-- Thank you modal -->
 <script type="text/javascript">
 $(document).ready(function() {
-	if(window.location.href.indexOf('#ThankYouForEnquiryModal') != -1) {
-   		jQuery("#ThankYouForEnquiryModal").reveal();
- 	} 
 	if(window.location.href.indexOf('#ThankYouBrochureModal') != -1) {
    		jQuery("#ThankYouBrochureModal").reveal();
  	} 
+	if(window.location.href.indexOf('#ThankYouForEnquiryModal') != -1) {
+   		jQuery("#ThankYouForEnquiryModal").reveal();
+ 	} 	
 });
 </script>
 <!-- END Thank you modal  -->
-
 
 <!-- MODAL OPEN FROM EXTERNAL LINK -->
 <script type="text/javascript">
@@ -232,8 +133,9 @@ $(document).ready(function() {
 		
 		var tagLast = tag.substr(tag.length - 1);
 		var tagFirst = tag.substr(1,1);
- 		var sTag = tagFirst+tag.substr(2, tag.length-3)+tagLast;
-      
+ 		var sTag = tagFirst.toUpperCase()+tag.substr(2, tag.length-3)+tagLast.toUpperCase();
+		
+
   if(window.location.href.indexOf(tag) != -1 && tag_number !=-1) {
 	  
 	   ExternalModal (sTag);
@@ -259,6 +161,7 @@ $(document).ready(function() {
   })();
 
 </script>
+
 </head>
 <body>
 <nav>
@@ -270,8 +173,8 @@ $(document).ready(function() {
       <div id="MobileMenuListContainer"> <img id="MobileMenuCloseButton" src="img/menu/mobile-close-button.png" alt="X" onClick='HideMobileMenu()'>
         <ul id="MobileUl">
           <li><a href="http://hrtechcongress.com#AboutSection" onClick="_gaq.push(['_trackEvent', 'Navigation', 'InternalForward', 'About']);" title="About">About</a></li>
-          <li><a href="speakers" onClick="_gaq.push(['_trackEvent', 'Navigation', 'InternalForward', 'Speakers']);" title="Speakers">Speakers</a></li>
-          <li><a href="sponsors" onClick="_gaq.push(['_trackEvent', 'Navigation', 'InternalForward', 'Sponsors']);" title="Sponsors" id="MobileMenuItemHovered">Sponsors</a></li>
+          <li><a href="speakers" onClick="_gaq.push(['_trackEvent', 'Navigation', 'InternalForward', 'Speakers']);" title="Speakers" id="MobileMenuItemHovered">Speakers</a></li>
+          <li><a href="sponsors" onClick="_gaq.push(['_trackEvent', 'Navigation', 'InternalForward', 'Sponsors']);" title="Sponsors">Sponsors</a></li>
           <li><a href="press" onClick="_gaq.push(['_trackEvent', 'Navigation', 'InternalForward', 'Press']);" title="Press">Press</a></li>
           <li><a href="agenda" onClick="_gaq.push(['_trackEvent', 'Navigation', 'InternalForward', 'Agenda']);" title="Agenda">Agenda</a></li>          
           <li><a href="travel" onClick="_gaq.push(['_trackEvent', 'Navigation', 'InternalForward', 'Travel']);" title="Travel">Travel</a></li>
@@ -293,10 +196,10 @@ $(document).ready(function() {
     <a href="http://hrtechcongress.com#AboutSection" onClick="_gaq.push(['_trackEvent', 'Navigation', 'InternalForward', 'About']);" title="About">
     <li class="DesktopMenuItem" id="MenuItemAbout">ABOUT</li>
     </a> <a href="speakers" title="Speakers" onClick="_gaq.push(['_trackEvent', 'Navigation', 'InternalForward', 'Speakers']);">
-    <li class="DesktopMenuItem" id="MenuItemSpeakers">SPEAKERS</li>
+    <li class="DesktopMenuItem DesktopMenuItemHovered" id="MenuItemSpeakers">SPEAKERS</li>
     </a>
     <a href="sponsors" title="Sponsors" onClick="_gaq.push(['_trackEvent', 'Navigation', 'InternalForward', 'Sponsors']);">
-    <li class="DesktopMenuItem DesktopMenuItemHovered" id="MenuItemSponsors">SPONSORS</li>
+    <li class="DesktopMenuItem" id="MenuItemSponsors">SPONSORS</li>
     </a>
     <a href="press" title="Press" onClick="_gaq.push(['_trackEvent', 'Navigation', 'InternalForward', 'Press']);">
         <li class="DesktopMenuItem" id="MenuItemSponsors">PRESS</li>
@@ -358,12 +261,12 @@ $(document).ready(function() {
 </script> 
 <!-- Twitter share Link -->
 <div id="SocialWidgetWrapper"> 
-  <a href="http://www.facebook.com/share.php?u=http://hrtechcongress.com/sponsors&title=HRTechCongress" target="_blank" onClick="_gaq.push(['_trackEvent', 'FloatingSocialShare', 'ExternalForward', 'Facebook']);">
+  <a href="http://www.facebook.com/share.php?u=http://hrtechcongress.com/speakers&title=HRTechCongress" target="_blank" onClick="_gaq.push(['_trackEvent', 'FloatingSocialShare', 'ExternalForward', 'Facebook']);">
   <div id="FacebookShare"><i class="fa fa-facebook"></i></div>
   </a>
-   <a href="https://twitter.com/home?status=Who’s Who in HR - The 2015 Sponsors at HR Tech World Congress%0Ahttp://hrtechcongress.com/sponsors%0A%23hrtechworld %23hrtech" class="twittershare twitter" data-text="Who’s Who in HR - The 2015 Sponsors at HR Tech World Congress" onClick="_gaq.push(['_trackEvent', 'FloatingSocialShare', 'ExternalForward', 'Twitter']);">
+   <a href="https://twitter.com/home?status=There is an Amazing Speaker Line-Up for HR Tech World Congress 2015!%0Ahttp://hrtechcongress.com/speakers%0A%23hrtechworld %23hrtech" class="twittershare twitter" data-text="There is an Amazing Speaker Line-Up for HR Tech World Congress 2015!" onClick="_gaq.push(['_trackEvent', 'FloatingSocialShare', 'ExternalForward', 'Twitter']);">
   <div id="TwitterShare"><i class="fa fa-twitter"></i></div>
-  </a> <a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&url=http://hrtechcongress.com/sponsors&title=Who’s Who in HR - The 2015 Sponsors at HR Tech World Congress" onClick="_gaq.push(['_trackEvent', 'FloatingSocialShare', 'ExternalForward', 'LinkedIn']);">
+  </a> <a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&url=http://hrtechcongress.com/speakers&title=There is an Amazing Speaker Line-Up for HR Tech World Congress 2015!" onClick="_gaq.push(['_trackEvent', 'FloatingSocialShare', 'ExternalForward', 'LinkedIn']);">
   <div id="LinkedInShare"><i class="fa fa-linkedin"></i></div>
   </a> </div>
 <!--END Social Share Widget -->
@@ -371,145 +274,49 @@ $(document).ready(function() {
 
 <!-- Header -->
 <header>
-  <h1>SPONSORS</h1>
-  <p>A Who's Who of HR Software, Service and Solution leaders offer the best solutions, services and products in the World for you to Optimise, Enable & Unleash Your People!</p>
-  <span data-reveal-id="BecomeASponsorModal" onClick="_gaq.push(['_trackEvent', 'SponsorsPage', 'ModalOpen', 'BecomeASponsor']);">
-  <button class="FontRaleway">Become a Sponsor</button>
-  </span> <img id="HeaderWhosWhoLogo" src="img/sponsors/whos-who-logo-white.png" alt="Who's Who in HR"> 
-           <div id="ScrollDownHeaderLinkContainer">
-             <a href="#SponsorsContent" title="Scroll down for more..." >
+  <div id="HeaderInnerContainer">
+    <h1 class="FontRaleway">Speakers</h1>
+    <p class="FontRaleway">The Movers, the Shakers &amp; the industry Rock Stars bringing you the insight, knowledge, and practical experience to enable you to unleash your people.</p>
+    <span data-reveal-id="BecomeASpeakerModal" onClick="_gaq.push(['_trackEvent', 'SpeakersPage', 'ModalOpen', 'BecomeASpeaker']);">
+    <button class="FontRaleway">Become a Speaker</button>
+    </span> 
+         <div id="ScrollDownHeaderLinkContainer">
+             <a href="#Speakers" title="Scroll down for more..." >
                  <span>Scroll Down For More...</span>
-                 <img id="ScrollDownIcon" src="img/sponsors/scroll-down-icon.png" alt="Scroll Down">
+                 <img id="ScrollDownIcon" src="img/speakers/scroll-down-icon.png" alt="Scroll Down">
              </a>
-         </div>  
-  </header>
-<!-- END Header -->
-<a id="SponsorsContent" style="position: relative; top: -8vw;"></a>
-<section id="Sponsors"> 
-  <!-- Sponsors Grid -->
-  <div id="SponsorGrid"> 
-    <!-- Diamond Sponsors -->
-    <div class="SponsorsInnerContainer">
-      <h2 class="SponsorHeadline">Diamond Sponsors</h2>
+         </div> 
+    </div>
+</header>
+<!-- END Header --> 
+
+<!-- Main Content -->
+<div id="MainContent"> 
+  
+  <!-- Speakers -->
+  <section id="Speakers">
+    <h2 class="InvisibleHeadline">Speakers</h2>
+    <!-- Speakers Grid -->
+    <div id="SpeakersGrid">
       <?php 
 
-  $content = $sponsors->sponsors_grid(1); 
-  echo $content;	
 
-  
+
+  $content = $speakers->speakers(2); 
+    if(isset($content)) {
+		  echo $content;	
+	}
+   
+
+
 ?>
     </div>
-    <!-- END Diamond Sponsors --> 
-    <!-- Emerald Sponsors -->
-    <div class="SponsorsInnerContainer">
-      <h2 class="SponsorHeadline">Emerald Sponsors</h2>
-      <?php 
-
-  $content = $sponsors->sponsors_grid(2); 
-  echo $content;	
-
+    <!-- END Speakers Grid --> 
+  </section>
+  <!--END Speakers --> 
   
-?>
-    </div>
-    <!-- END Emerald Sponsors --> 
-    <!-- Platinum Sponsors -->
-    <div class="SponsorsInnerContainer">
-      <h2 class="SponsorHeadline">Platinum Sponsors</h2>
-      <?php 
-
-  $content = $sponsors->sponsors_grid(3); 
-  echo $content;	
-
-  
-?>
-    </div>
-    <!-- END Platinum Sponsors --> 
-    <!-- Gold Sponsors -->
-    <div class="SponsorsInnerContainer">
-      <h2 class="SponsorHeadline">Gold Sponsors</h2>
-      <?php 
-
-  $content = $sponsors->sponsors_grid(4); 
-  echo $content;	
-
-  
-?>
-    </div>
-    <!-- END Gold Sponsors --> 
-    <!-- Silver Sponsors -->
-    <div class="SponsorsInnerContainer">
-      <h2 class="SponsorHeadline">Silver Sponsors</h2>
-      <?php 
-
-  $content = $sponsors->sponsors_grid(5); 
-  echo $content;	
-
-  
-?>
-    </div>
-    <!-- END Silver Sponsors --> 
-    <!-- Sponsors -->
-    <div class="SponsorsInnerContainer">
-      <h2 class="SponsorHeadline">Sponsors</h2>
-      <?php 
-
-  $content = $sponsors->sponsors_grid(6); 
-  echo $content;	
-
-  
-?>
-    </div>
-    <!-- END Sponsors --> 
-    <!-- A La Carte Sponsors -->
-    <div class="SponsorsInnerContainer">
-      <h2 class="SponsorHeadline">A La Carte Sponsors</h2>
-      <?php 
-
-  $content = $sponsors->sponsors_grid_alacarte();        
-  echo $content;	
-
-  
-?>
-    </div>
-    <!-- END Sponsors --> 
-    
-    <!-- disruptHRsponsor -->
-    <div class="SponsorsInnerContainer">
-      <h2 class="SponsorHeadline" >disruptHR Sponsors</h2>
-      <?php 
-
-   $content = $sponsors->sponsors_grid(7);       
-  echo $content;	
-
-  
-?>
-    </div>
-    <!-- END disruptHr Sponsors -->    
-    
-  </div>
-  <!-- END Sponsors Grid -->
-  </div>
-  <!-- END Sponsors Grid Container -->
-  
-  <div id="FilteredGrid"> 
-    <!-- Filtered Grid -->
-    <div class="CategoryContainer"> </div>
-  </div>
-  <!-- END Filtered Grid --> 
-  
-</section>
-<!--END Sponsors -->
-
-<div id="FilteredGrid"> 
-  <!-- Filtered Grid -->
-  <div class="CategoryContainer"> </div>
 </div>
-<!-- END Filtered Grid -->
-
-</section>
-<!--END Sponsors --> 
-
-<!--END Sponsors --> 
+<!-- END Main Content --> 
 <!-- FOOTER -->
 <footer>
   <div id="FooterWrapper">
@@ -560,7 +367,7 @@ $(document).ready(function() {
 <!-- END Go to Top Button --> 
 
 <!-- Speaker Modal-->
-<div id="SponsorsModal" class="reveal-modal" data-reveal>
+<div id="SpeakerModal" class="reveal-modal" data-reveal>
    	<div id="ModalBigContainer"></div>
     
   
@@ -574,7 +381,7 @@ $(document).ready(function() {
   <!-- BEGINING of : DOWNLOAD BROCHURE MODAL FORM -->
   <form action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
     <input type=hidden name="oid" value="00DD0000000nwgk">
-    <input type=hidden name="retURL" value="http://hrtechcongress.com/sponsors#ThankYouBrochureModal">
+    <input type=hidden name="retURL" value="http://hrtechcongress.com/speakers#ThankYouBrochureModal">
     <div class="InputFieldsContainer">
         <input required placeholder="First Name *"  id="first_name" maxlength="40" name="first_name" size="20" type="text" />
         <input required placeholder="Last Name *" id="last_name" maxlength="80" name="last_name" size="20" type="text" />
@@ -582,48 +389,54 @@ $(document).ready(function() {
     <div class="InputFieldsContainer">
         <input required placeholder="Email Address *" id="email" maxlength="80" name="email" size="20" type="text" />
         <input required placeholder="Phone Number *" id="phone" maxlength="40" name="phone" size="20" type="text" />
-    </div>    
-    <div class="InputFieldsContainer">   
+    </div>
+    <div class="InputFieldsContainer">
         <input required placeholder="Company *" id="company" maxlength="40" name="company" size="20" type="text" />
         <input required placeholder="Job Title *" id="title" maxlength="40" name="title" size="20" type="text" />
     </div>
-    <select  style="display:none;"   id="lead_source" name="lead_source">
+    <select  style="display:none;"   id="lead_source" name="lead_source" placeholder="Lead Source">
       <option selected="selected" value="HRTechParis2015-DownloadPDF">HRTechParis2015-DownloadPDF</option>
     </select>
     <input onClick="_gaq.push(['_trackEvent', 'DownloadPDFForm', 'FromSubmission', 'InquirySent']);" class="submitbutton" type="submit" name="submit" value="SEND">
   </form>
   <!-- END of : DOWNLOAD BROCHURE MODAL FORM --> 
 </div>
-<!-- END Download Brochure Modal --> 
 
-<!-- Become a Sponsor Modal -->
-<div id="BecomeASponsorModal" class="reveal-modal" data-reveal> <a class="close-reveal-modal">&#215;</a>
-  <h2>Apply for Sponsorship</h2>
-  <p>Gain direct access to more than 4,000 enterprise HR decision makers.</p>
-  <!-- BEGINING of : BECOME A SPONSOR MODAL FORM -->
+<!-- Become a Speaker Modal -->
+<div id="BecomeASpeakerModal" class="reveal-modal" data-reveal> <a class="close-reveal-modal">&#215;</a>
+  <h2>Call for Speakers</h2>
+  <p>HR Tech World is seeking submissions from expert speakers who can offer key insights into areas of impact in HR, management, technology and the future of work.</p>
+  <!-- BEGINING of : BECOME A SPEAKER MODAL FORM -->
   <form action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
     <input type=hidden name="oid" value="00DD0000000nwgk">
-    <input type=hidden name="retURL" value="http://hrtechcongress.com/sponsors#ThankYouForEnquiryModal">
+    <input type=hidden name="retURL" value="http://hrtechcongress.com/speakers#ThankYouForEnquiryModal">
     <div class="InputFieldsContainer">
         <input required placeholder="First Name *"  id="first_name" maxlength="40" name="first_name" size="20" type="text" />
         <input required placeholder="Last Name *" id="last_name" maxlength="80" name="last_name" size="20" type="text" />
-    </div>    
-    <div class="InputFieldsContainer">    
+    </div>
+    <div class="InputFieldsContainer">
         <input required placeholder="Email Address *" id="email" maxlength="80" name="email" size="20" type="text" />
         <input required placeholder="Phone Number *" id="phone" maxlength="40" name="phone" size="20" type="text" />
-    </div>    
-    <div class="InputFieldsContainer">    
+    </div>
+    <div class="InputFieldsContainer">
         <input required placeholder="Company *" id="company" maxlength="40" name="company" size="20" type="text" />
         <input required placeholder="Job Title *" id="title" maxlength="40" name="title" size="20" type="text" />
     </div>
     <select  style="display:none;"   id="lead_source" name="lead_source">
-      <option selected="selected" value="HRTechParis2015-BecomeASponsor">HRTechParis2015-BecomeASponsor</option>
+      <option selected="selected" value="HRTechParis2015-BecomeASpeaker">HRTechParis2015-BecomeASpeaker</option>
     </select>
-    <input onClick="_gaq.push(['_trackEvent', 'BecomeASponsorForm', 'FromSubmission', 'InquirySent']);" class="submitbutton" type="submit" name="submit" value="SEND">
+    <input onClick="_gaq.push(['_trackEvent', 'BecomeASpeaker', 'FromSubmission', 'InquirySent']);" class="submitbutton" type="submit" name="submit" value="SEND">
   </form>
-  <!-- END of : BECOME A SPONSOR MODAL FORM --> 
+  <!-- END of : BECOME A SPEAKER MODAL FORM --> 
 </div>
-<!-- END Become a Sponsor Modal --> 
+<!-- END Become a Speaker Modal --> 
+
+<!-- Thank You Brochure Modal -->
+<div id="ThankYouBrochureModal" class="reveal-modal" data-reveal> <a class="close-reveal-modal">&#215;</a>
+  <h2>Thank you!</h2>
+  <p>You shall receive an email shortly from one of our team.</p>
+</div>
+<!-- END Thank You Modal --> 
 
 <!-- Thank You For Apply Modal -->
 <div id="ThankYouForEnquiryModal" class="reveal-modal" data-reveal> <a class="close-reveal-modal">&#215;</a>
@@ -639,14 +452,7 @@ $(document).ready(function() {
 </div>
 <!-- END Thank You For Apply Modal --> 
 
-<!-- Thank You Brochure Modal -->
-<div id="ThankYouBrochureModal" class="reveal-modal" data-reveal> <a class="close-reveal-modal">&#215;</a>
-  <h2>Thank you!</h2>
-  <p>You shall receive an email shortly from one of our team.</p>
-</div>
-<!-- END Thank You Modal --> 
-
-<!-- Named anchor Hashtag script --> 
+<!-- Named anchor Hashtag script -->
 <script type="text/javascript">
 $('a[href*=#]:not([href=#])').click(function(){
     $('html, body').animate({

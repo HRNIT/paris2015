@@ -1,9 +1,11 @@
 <?php 
 namespace HRNParis\ajax;
 use HRNParis\sponsors as sponsors;
+use HRNParis\speakers as speakers;
 use HRNParis\agenda as agenda;
 use HRNParis\main as main;
 include_once('sponsors_main.php');
+include_once('speakers_main.php');
 include_once('agenda_main.php');
 include_once('main.php');
 
@@ -62,6 +64,63 @@ Display Sponsor
 
 
 }// new sponsor
+
+
+/*///////////// 
+Display Speaker Modal
+///////////////*/
+
+
+ if(isset($_POST['action']) && $_POST['action'] == 'speaker_modal'){
+	$the_main = new speakers\speakers_main;
+	
+
+    $result = $the_main->speaker_modals($_POST['speaker_tag'], $_POST['size']);
+	if (isset($result)) {
+	 
+	 echo $result;	
+	}
+
+
+}
+
+
+/*///////////// 
+Display Speaker Modal 2
+///////////////*/
+ if(isset($_POST['action']) && $_POST['action'] == 'speaker_modal_next'){
+	$the_main = new speakers\speakers_main;
+	
+	$tag = $the_main->id_tag_convert($_POST['speaker_id']);
+
+    if (isset($tag)){
+			$result = $the_main->speaker_modals($tag, $_POST['size']);
+			if (isset($result)) {
+			 
+			 echo $result;	
+			}
+	}
+
+}// new sponsor
+
+
+/*///////////// 
+Display Sponsor Modal
+///////////////*/
+
+
+ if(isset($_POST['action']) && $_POST['action'] == 'sponsor_modal'){
+	$the_main = new sponsors\sponsors_main;
+	
+
+    $result = $the_main->sponsors_modal($_POST['sponsor_id'], $_POST['sponsor_mode']);
+	if (isset($result)) {
+	 
+	 echo $result;	
+	}
+
+
+}
 
 
 /*///////////// 
@@ -346,7 +405,7 @@ Save press Data
 
 
 /*///////////// 
-Display Agenda Modal
+URL decoder
 ///////////////*/
 
 

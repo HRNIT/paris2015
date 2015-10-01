@@ -63,6 +63,19 @@ $speakers = new speakers_main;
 <!-- Favicon setting -->
 <link rel="shortcut icon" href="favicon.png">
 
+<!-- Include jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+<script type="text/javascript">
+ (function() {
+  if ($(window).width() < 641) {
+
+    window.location = 'speakers-mobile';
+} 
+})();
+</script>
+
 <!-- Include General CSS Definitions -->
 <link rel="stylesheet" href="css/general.css" />
 
@@ -72,9 +85,11 @@ $speakers = new speakers_main;
 <!-- Include Footer CSS Definitions -->
 <link rel="stylesheet" href="css/footer.css" />
 
-<!-- Include jQuery -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<!-- Modal Arrows -->
+<link rel="stylesheet" href="css/modal-arrows.css" />
+
+<!-- Mobile Menu JS -->
+<script src="vendor/hammer/hammer.js"></script>
 
 <!-- Scroll to top JS -->
 <script src="js/gotopscroll.js"></script>
@@ -85,16 +100,17 @@ $speakers = new speakers_main;
 <!-- Scroll to top JS -->
 <script src="js/speakers.js"></script>
 
+
+
 <!-- Include Reveal Modal -->
 <link rel="stylesheet" href="vendor/reveal/reveal.css">
-<script src="vendor/reveal/jquery.min.js" type="text/javascript"></script>
 <script src="vendor/reveal/jquery.reveal.js" type="text/javascript"></script>
 
-<!-- Include Custom CSS Definitions -->
-<link rel="stylesheet" href="css/speaker-profile.css" />
 
 <!-- Include Custom CSS Definitions -->
 <link rel="stylesheet" href="css/speakers.css" />
+<link rel="stylesheet" href="css/speakers-mobile.css" />
+
 
 <!-- Thank you modal -->
 <script type="text/javascript">
@@ -108,6 +124,30 @@ $(document).ready(function() {
 });
 </script>
 <!-- END Thank you modal  -->
+
+<!-- MODAL OPEN FROM EXTERNAL LINK -->
+<script type="text/javascript">
+ $(document).ready(function() {
+	 
+	    var parentURL = window.parent.location.href;
+    	var tag_number = parentURL.search("#");
+		var tag = parentURL.substr(tag_number, parentURL.length);
+		
+		var tagLast = tag.substr(tag.length - 1);
+		var tagFirst = tag.substr(1,1);
+ 		var sTag = tagFirst.toUpperCase()+tag.substr(2, tag.length-3)+tagLast.toUpperCase();
+		
+
+  if(window.location.href.indexOf(tag) != -1 && tag_number !=-1) {
+	  
+	   ExternalModal (sTag);
+			 
+   }
+});
+ 
+ 
+ </script>
+<!-- END MODAL OPEN FROM EXTERNAL LINK -->
 
 <!-- GOOGLE ANALYTICS TRACKING SCRIPT -->
 <script type="text/javascript">
@@ -264,7 +304,7 @@ $(document).ready(function() {
 
 
 
-  $content = $speakers->speakers(); 
+  $content = $speakers->speakers(1); 
     if(isset($content)) {
 		  echo $content;	
 	}
@@ -276,21 +316,6 @@ $(document).ready(function() {
     <!-- END Speakers Grid --> 
   </section>
   <!--END Speakers --> 
-  
-  <!--Speaker List Section -->
-  <div id="SpeakerListSection">
-    <?php
-
-        
-
-
- $content = $speakers->speaker();  
-
-
-echo $content;
-?>
-  </div>
-  <!-- END Speaker List Section --> 
   
 </div>
 <!-- END Main Content --> 
@@ -343,23 +368,13 @@ echo $content;
 </a> 
 <!-- END Go to Top Button --> 
 
-<!-- Speakers Modal -->
-<div id="SpeakersModalContainer">
-  <?php 
-
-
-
-  $content = $speakers->speaker_modals();
-    if(isset($content)) {
-		  echo $content;	
-	}
-   
-
-
-?>
+<!-- Speaker Modal-->
+<div id="SpeakerModal" class="reveal-modal" data-reveal>
+   	<div id="ModalBigContainer"></div>
+    
+  
 </div>
-
-<!-- END Speakers Modal --> 
+<!-- END Speaker Modal --> 
 
 <!-- Download Brochure Modal -->
 <div id="DownloadBrochureModal" class="reveal-modal" data-reveal> <a class="close-reveal-modal">&#215;</a>
@@ -439,14 +454,7 @@ echo $content;
 </div>
 <!-- END Thank You For Apply Modal --> 
 
-<!-- Named anchor Hashtag script -->
-<script type="text/javascript">
-$('a[href*=#]:not([href=#])').click(function(){
-    $('html, body').animate({
-        scrollTop: $( $(this).attr('href') ).offset().top
-    }, 1000);
-});
-</script> 
+
 
 <!-- Start of Async HubSpot Analytics Code --> 
 <script type="text/javascript">
