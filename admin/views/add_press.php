@@ -101,13 +101,14 @@ use HRNParis\main as main;
          <textarea class="MainPageBio" id="SpeakerMPBio" placeholder="Short Bio"></textarea><br />		
      </fieldset>';
 
+if (isset($_SESSION['super_admin'])) { 
    	  $content .='
 	  <fieldset>';
 	      $content .="<legend>Person's Image</legend>";
 		 $content .='<div class="dropzone" id="DropDiv"></div><br />
 		 <input type="file" name="file" style="display:none" />
      </fieldset>';
-	 
+}
 
 	 
 	 $content .='

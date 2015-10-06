@@ -44,7 +44,7 @@ use HRNParis\main as main;
 <body>
  <!--Main Wrapper-->
 	<div class="wrapper">
-	  <h1 class="WrapperMainH1">HR Tech Europe - Paris site 2015 |<br /> Add New Speaker</h1>
+	  <h1 class="WrapperMainH1">HR Tech Europe - London site 2016 |<br /> Add New Speaker</h1>
 	  
 	  	        <div id="MenuIconContainer">';
 	
@@ -66,7 +66,7 @@ use HRNParis\main as main;
 	<!--Form container-->
 	 <div id="container">';
 	 
-	 	if (isset($_SESSION['user'])) {
+	 	if (isset($_SESSION['speakers_admin'])) {
 			include_once('controllers/main.php');
 			$main = new main\main;
 			
@@ -87,15 +87,24 @@ use HRNParis\main as main;
 		<input class="AdminInputField" id="SpeakerTitle" type="text" placeholder="Job Title" /><br />
          <textarea class="TextAreaClass" id="SpeakerBio" placeholder="Bio"></textarea><br />
      </fieldset>';
-	 
-	 	 $content .='
-	 <fieldset>';
-	     $content .="<legend>Speaker's Company</legend>";
-		$content .='<input class="AdminInputField" id="CompanyName" type="text" placeholder="Company Name" /><br />
-		<input class="AdminInputField" id="CompanyWebsite" type="text" placeholder="Company Website" /><br />';
-		 $content .='<div class="dropzone" id="DropDivCompany"></div><br />
-		 <input id="CompanyLogo" type="file" name="companylogo" style="display:none" />
+
+   	  $content .='
+	  <fieldset>';
+	      $content .="<legend>Main Page</legend>";
+       $content .='<label><input type="checkbox" id="MainCheckbox"> Display on Main Page</label><br /><br />
+	     <textarea class="MainPageBio" id="SpeakerMPBio" placeholder="Hover info text"></textarea><br />
      </fieldset>';
+	 
+	if (isset($_SESSION['speakers_admin'])) { 
+		  $content .='
+		  <fieldset>';
+			  $content .="<legend>Speaker's Image</legend>";
+			 $content .='<div class="dropzone" id="DropDiv"></div><br />
+			 <input type="file" name="file" style="display:none" />
+		 </fieldset>';
+	}
+	 
+
 	 
 	 $content .='
 	 <fieldset>';
@@ -108,20 +117,24 @@ use HRNParis\main as main;
      </fieldset>';
 	 
 
-   	  $content .='
-	  <fieldset>';
-	      $content .="<legend>Speaker's Image</legend>";
-		 $content .='<div class="dropzone" id="DropDiv"></div><br />
-		 <input type="file" name="file" style="display:none" />
-     </fieldset>';
+
 	 
 	 
-   	  $content .='
-	  <fieldset>';
-	      $content .="<legend>Main Page</legend>";
-       $content .='<label><input type="checkbox" id="MainCheckbox"> Display on Main Page</label><br /><br />
-	     <textarea class="MainPageBio" id="SpeakerMPBio" placeholder="Main Page Bio"></textarea><br />
-     </fieldset>';
+
+	 
+	 	 $content .='
+	 <fieldset>';
+	     $content .="<legend>Speaker's Company</legend>";
+		$content .='<input class="AdminInputField" id="CompanyName" type="text" placeholder="Company Name" /><br />
+		<input class="AdminInputField" id="CompanyWebsite" type="text" placeholder="Company Website" /><br />';
+		
+		if (isset($_SESSION['speakers_admin'])) { 
+		
+		 $content .='<div class="dropzone" id="DropDivCompany"></div><br />
+		 <input id="CompanyLogo" type="file" name="companylogo" style="display:none" />';
+		 
+		}
+     $content .=' </fieldset>';	 
 
     $content .= '<button class="AdminSubmitButton" name="NewSpeakerSave" id="NewSpeakerSave" type="Submit">Save</button>';
 	
@@ -133,7 +146,7 @@ use HRNParis\main as main;
 	   
 	 } //if isset agenda_admin 
 	 else {
-		$content.="<h1 style='text-align:center'>Nothing to see here!</h1>"; 
+		$content.="<h1 style='text-align:center'>You don't have access to this page!<br /><br /> If you feel you should see the content, please contact the IT guys!</h1>"; 
 	 }
 	 
 	 

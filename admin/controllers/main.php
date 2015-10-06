@@ -151,7 +151,73 @@ public function pic_upload($entity_type, $entity_id, $file, $alt) {
 						 	
 					
 				}
-	
+				
+if(!isset($_SESSION['super_admin'])){				
+switch ($entity_type) {
+    case 1:
+			   $status_q = "UPDATE speakers_status SET speaker_status_id = '3' WHERE speaker_id = :id";
+			   $status = $this->pdo->prepare($status_q);
+	  
+			   $status->bindValue(':id', $entity_id, \PDO::PARAM_INT);
+			   
+			   $status->execute();
+			   
+			  $note_text = "Speaker needs approval: ".$alt; 
+				
+			  //If there is no picture, we upload a new notification
+			 $this->manage_notification(1, $entity_id, $note_text, 1);			   
+			   
+			   
+        break;
+    case 2:
+					  //Sponsor Status
+			   $status_q = "UPDATE sponsors_status SET status_id = '3' WHERE sponsor_id = :id";
+			   $status = $this->pdo->prepare($status_q);
+	  
+			   $status->bindValue(':id', $entity_id, \PDO::PARAM_INT);
+			   
+			   $status->execute();
+			   
+			  $note_text = "Sponsor needs approval: ".$alt; 
+				
+			  //If there is no picture, we upload a new notification
+			 $this->manage_notification(2, $entity_id, $note_text, 1);				   
+		   
+			   
+        break;
+    case 5:
+			   $status_q = "UPDATE mediapartners_status SET status_id = '3' WHERE sponsor_id = :id";
+			   $status = $this->pdo->prepare($status_q);
+	  
+			   $status->bindValue(':id', $entity_id, \PDO::PARAM_INT);
+			   
+			   $status->execute();
+			   
+			  $note_text = "Partner needs approval: ".$alt; 
+				
+			  //If there is no picture, we upload a new notification
+			 $this->manage_notification(5, $entity_id, $note_text, 1);				   
+			  
+        break;
+		
+    case 6:
+			   $status_q = "UPDATE blogsquad_status SET speaker_status_id = '3' WHERE speaker_id = :id";
+			   $status = $this->pdo->prepare($status_q);
+	  
+			   $status->bindValue(':id', $entity_id, \PDO::PARAM_INT);
+			   
+			   $status->execute();
+			   
+			  $note_text = "Blogger needs approval: ".$alt; 
+				
+			  //If there is no picture, we upload a new notification
+			 $this->manage_notification(6, $entity_id, $note_text, 1);				   
+			   
+        break;		
+}
+ 
+}				
+	//$this->manage_notification($entity_type, $entity_id, '', 0);
 
 	
 }
@@ -210,6 +276,63 @@ public function press_pic_upload($entity_type, $entity_id, $file, $alt) {
 					
 				}
 	
+if(!isset($_SESSION['super_admin'])){				
+switch ($entity_type) {
+    case 1:
+			   $status_q = "UPDATE speakers_status SET speaker_status_id = '3' WHERE speaker_id = :id";
+			   $status = $this->pdo->prepare($status_q);
+	  
+			   $status->bindValue(':id', $entity_id, \PDO::PARAM_INT);
+			   
+			   $status->execute();
+			   
+			   
+        break;
+    case 2:
+					  //Sponsor Status
+			   $status_q = "UPDATE sponsors_status SET status_id = '3' WHERE sponsor_id = :id";
+			   $status = $this->pdo->prepare($status_q);
+	  
+			   $status->bindValue(':id', $entity_id, \PDO::PARAM_INT);
+			   
+			   $status->execute();
+			   
+		   
+			   
+        break;
+    case 5:
+			   $status_q = "UPDATE mediapartners_status SET status_id = '3' WHERE sponsor_id = :id";
+			   $status = $this->pdo->prepare($status_q);
+	  
+			   $status->bindValue(':id', $entity_id, \PDO::PARAM_INT);
+			   
+			   $status->execute();
+			   
+			  $note_text = "Partner needs approval: ".$alt; 
+				
+			  //If there is no picture, we upload a new notification
+			 $this->manage_notification(5, $entity_id, $note_text, 1);				   
+			  
+        break;
+		
+    case 6:
+			   $status_q = "UPDATE blogsquad_status SET speaker_status_id = '3' WHERE speaker_id = :id";
+			   $status = $this->pdo->prepare($status_q);
+	  
+			   $status->bindValue(':id', $entity_id, \PDO::PARAM_INT);
+			   
+			   $status->execute();
+			   
+			  $note_text = "Blogger needs approval: ".$alt; 
+				
+			  //If there is no picture, we upload a new notification
+			 $this->manage_notification(6, $entity_id, $note_text, 1);				   
+			   
+        break;		
+}					
+}
+				
+	//$this->manage_notification($entity_type, $entity_id, '', 0);
 
 	
 }
@@ -251,6 +374,58 @@ public function pic_upload_agenda($entity_id, $file, $alt) {
 	
 
 	
+}
+
+
+
+public function approve_entity($entity_id, $entity_type){
+	
+	
+switch ($entity_type) {
+    case 1:
+			   $status_q = "UPDATE speakers_status SET speaker_status_id = '1' WHERE speaker_id = :id";
+			   $status = $this->pdo->prepare($status_q);
+	  
+			   $status->bindValue(':id', $entity_id, \PDO::PARAM_INT);
+			   
+			   $status->execute();
+			   
+			   
+        break;
+    case 2:
+					  //Sponsor Status
+			   $status_q = "UPDATE sponsors_status SET status_id = '1' WHERE sponsor_id = :id";
+			   $status = $this->pdo->prepare($status_q);
+	  
+			   $status->bindValue(':id', $entity_id, \PDO::PARAM_INT);
+			   
+			   $status->execute();
+			   
+		   
+			   
+        break;
+    case 5:
+			   $status_q = "UPDATE mediapartners_status SET status_id = '1' WHERE sponsor_id = :id";
+			   $status = $this->pdo->prepare($status_q);
+	  
+			   $status->bindValue(':id', $entity_id, \PDO::PARAM_INT);
+			   
+			   $status->execute();
+			  
+        break;
+		
+    case 6:
+			   $status_q = "UPDATE blogsquad_status SET speaker_status_id = '1' WHERE speaker_id = :id";
+			   $status = $this->pdo->prepare($status_q);
+	  
+			   $status->bindValue(':id', $entity_id, \PDO::PARAM_INT);
+			   
+			   $status->execute();
+			   
+        break;		
+}	
+	
+    $this->manage_notification($entity_type, $entity_id, '', 0);		
 }
 
 /**************
@@ -393,12 +568,23 @@ public function save_sponsor() {
 		 }
 			
 			
+			if(isset($_SESSION['super_admin'])){
+				$status_id = 1;
+			} else {
+				$note_text = "Sponsor needs approval: ".$_POST['SponsorName']; 
+				
+			  //If there is no picture, we upload a new notification
+			 $this->manage_notification(2, $sponsor_id, $note_text, 1);	
+				
+				$status_id = 3;
+			}
 			
 			
 				//Sponsor Status
-		 $status_q = "INSERT INTO sponsors_status SET status_id = '1', sponsor_id = :id";
+		 $status_q = "INSERT INTO sponsors_status SET status_id = :status_id, sponsor_id = :id";
 		 $status = $this->pdo->prepare($status_q);
-
+         
+		 $status->bindValue(':status_id', $status_id, \PDO::PARAM_INT);
 		 $status->bindValue(':id', $sponsor_id, \PDO::PARAM_INT);
 		 
 		 $status->execute();
@@ -432,12 +618,18 @@ public function save_sponsor() {
 		 $this->pdo->commit();
 		 
 		 if (isset($connection_id)){
-			 
-			 //upload the logo if the database queries are done
-			 $file_info = $this->file_upload('sponsors/logos/', $_POST['SponsorName']);
-			 
-			 //upload the name of the file to the database
-			 $this->pic_upload(2, $sponsor_id, $file_info['name'], $_POST['SponsorName'].' Logo');
+			 if (isset($_FILES) && $_FILES !== '' && !empty($_FILES) && isset($_FILES['file'])){ 
+				   //upload the logo if the database queries are done
+				   $file_info = $this->file_upload('sponsors/logos/', $_POST['SponsorName']);
+				   
+				   //upload the name of the file to the database
+				   $this->pic_upload(2, $sponsor_id, $file_info['name'], $_POST['SponsorName'].' Logo');
+			 } else {
+				$note_text = "Sponsor needs a logo: ".$_POST['SponsorName']; 
+				
+			  //If there is no picture, we upload a new notification
+			 $this->manage_notification(2, $sponsor_id, $note_text, 1);	
+			}
 			 
 			 //And now the social links:
 			 if(isset($_POST['Facebook']) && $_POST['Facebook'] != ''){
@@ -619,6 +811,7 @@ public function edit_sponsor() {
 			   
 			   $status->execute();
 		 
+                           $this->manage_notification(2, $sponsor_id, '', 0);
 		  }
 		 		
 		if (isset($bio_id) || isset($name_id) || isset($category_id) || isset($link_id)){	
@@ -1221,14 +1414,27 @@ public function save_mediapartner() {
 				 $category->execute();
 				 
 					$category_id = $this->pdo->lastInsertId(); 	
+					
+					
 			
-			
+			if(isset($_SESSION['super_admin'])){
+				$status_id = 1;
+			} else {
+				
+				$note_text = "Mediapartner needs approval: ".$_POST['SponsorName']; 
+				
+			  //If there is no picture, we upload a new notification
+			 $this->manage_notification(5, $sponsor_id, $note_text, 1);					
+				
+				$status_id = 3;
+			}			
 
 			
 				//Sponsor Status
-		 $status_q = "INSERT INTO mediapartners_status SET status_id = '1', sponsor_id = :id";
+		 $status_q = "INSERT INTO mediapartners_status SET status_id = :status_id, sponsor_id = :id";
 		 $status = $this->pdo->prepare($status_q);
-
+		 
+         $status->bindValue(':status_id', $status_id, \PDO::PARAM_INT);	
 		 $status->bindValue(':id', $sponsor_id, \PDO::PARAM_INT);
 		 
 		 $status->execute();
@@ -1287,13 +1493,21 @@ public function save_mediapartner() {
 		 
 		 $this->pdo->commit();
 		 
+		 
 		 if (isset($connection_id)){
-			 
+			  if (isset($_FILES) && $_FILES !== '' && !empty($_FILES) && isset($_FILES['file'])){ 
 			 //upload the logo if the database queries are done
 			 $file_info = $this->file_upload('press/Mediapartners/logos/', $_POST['SponsorName']);
 			 
 			 //upload the name of the file to the database
 			 $this->pic_upload(5, $sponsor_id, $file_info['name'], $_POST['SponsorName'].' Logo');
+			 
+		 } else {
+				$note_text = "Mediapartner needs a logo: ".$_POST['SponsorName']; 
+				
+			  //If there is no picture, we upload a new notification
+			 $this->manage_notification(5, $sponsor_id, $note_text, 1);	
+			}	 
 			 
 			 //And now the social links:
 			 if(isset($_POST['Facebook']) && $_POST['Facebook'] != ''){
@@ -1413,6 +1627,8 @@ public function edit_mediapartner() {
 			   $status->bindValue(':id', $sponsor_id, \PDO::PARAM_INT);
 			   
 			   $status->execute();
+			   
+			    $this->manage_notification(5, $sponsor_id, '', 0);
 		 
 		  }
 		 		
@@ -1931,12 +2147,26 @@ public function save_speaker() {
 		  
 		  //---------------
 		    //End Company Data
+			
+		  if(isset($_SESSION['super_admin'])){
+				$status_id = 1;
+			} else {
+				
+				$note_text = "Speaker needs approval: ".$_POST['SpeakerName']; 
+				
+			  //If there is no picture, we upload a new notification
+			 $this->manage_notification(1, $speaker_id, $note_text, 1);					
+				
+				$status_id = 3;
+			}
+				
 				
 			
 				//speaker Status
-		 $status_q = "INSERT INTO speakers_status SET speaker_status_id = '1', speaker_id = :id";
+		 $status_q = "INSERT INTO speakers_status SET speaker_status_id = :status_id, speaker_id = :id";
 		 $status = $this->pdo->prepare($status_q);
 
+		 $status->bindValue(':status_id', $status_id, \PDO::PARAM_INT);	
 		 $status->bindValue(':id', $speaker_id, \PDO::PARAM_INT);
 		 
 		 $status->execute();
@@ -1992,6 +2222,7 @@ public function save_speaker() {
 		 $this->pdo->commit();
 		 
 		 if (isset($connection_id)){
+			if (isset($_FILES) && $_FILES !== '' && !empty($_FILES) && isset($_FILES['file'])){ 
 			 
 			 //upload the logo if the database queries are done
 			 $file_info = $this->file_upload('speakers/SpeakerPhotos/', $speaker_tag);
@@ -1999,6 +2230,12 @@ public function save_speaker() {
 			 //upload the name of the file to the database
 			 $this->pic_upload(1, $speaker_id, $file_info['name'], $speaker_tag);
 			 
+			} else {
+				$note_text = "Speaker needs a profile picture: ".$_POST['SpeakerName']; 
+				
+			  //If there is no picture, we upload a new notification
+			 $this->manage_notification(1, $speaker_id, $note_text, 1);	
+			}
 			 //And now the social links:
 			 if(isset($_POST['Facebook']) && $_POST['Facebook'] != ''){
 				 $this->social_link_upload(1, $speaker_id, 1, $_POST['Facebook']);
@@ -2234,6 +2471,7 @@ public function edit_speaker() {
 			   
 			   $text = "Deleted";
 			   
+                           $this->manage_notification(1, $speaker_id, '', 0);
 			   return $text;
 		 
 		  }
@@ -2685,12 +2923,24 @@ if (isset($entity) && $entity != ''){
 		  
 		  //---------------
 		    //End Company Data
+		
+			if(isset($_SESSION['super_admin'])){
+				$status_id = 1;
+			} else {
+				$note_text = "Blogger needs approval: ".$_POST['SpeakerName']; 
+				
+			  //If there is no picture, we upload a new notification
+			 $this->manage_notification($entity_id, $speaker_id, $note_text, 1);				
+				
+				$status_id = 3;
+			}
 				
 			
 				//speaker Status
-		 $status_q = "INSERT INTO ".$entity."_status SET speaker_status_id = '1', speaker_id = :id";
+		 $status_q = "INSERT INTO ".$entity."_status SET speaker_status_id = :status_id, speaker_id = :id";
 		 $status = $this->pdo->prepare($status_q);
 
+         $status->bindValue(':status_id', $status_id, \PDO::PARAM_INT);	
 		 $status->bindValue(':id', $speaker_id, \PDO::PARAM_INT);
 		 
 		 $status->execute();
@@ -2743,15 +2993,21 @@ if (isset($entity) && $entity != ''){
 
 		 
 		 $this->pdo->commit();
+
 		 
 		 if (isset($connection_id)){
-	        if(isset($_FILES)){
+	       	if (isset($_FILES) && $_FILES !== '' && !empty($_FILES) && isset($_FILES['file'])){ 
 				 //upload the logo if the database queries are done
 				 $file_info = $this->file_upload('press/'.$location.'/Photos/', $file_name);
 				 
 				 //upload the name of the file to the database
 				 $this->press_pic_upload($entity_id, $speaker_id, $file_info['name'], $file_name);
-			}
+			} else {
+				$note_text = "Blogger needs a profile picture: ".$_POST['SpeakerName']; 
+				
+			  //If there is no picture, we upload a new notification
+			 $this->manage_notification($entity_id, $speaker_id, $note_text, 1);	
+			}	
 			
 			 
 			 //And now the social links:
@@ -3005,6 +3261,8 @@ if (isset($entity) && $entity != ''){
 			   $status->bindValue(':id', $speaker_id, \PDO::PARAM_INT);
 			   
 			   $status->execute();
+			   
+			   $this->manage_notification($entity_id, $speaker_id, '', 0);	
 			   
 			   $text = "Deleted";
 			   

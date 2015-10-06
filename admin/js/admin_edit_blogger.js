@@ -375,6 +375,30 @@ $(document).ready(function(){
 
   })
   
+	
+    $('.SysApprove').bind('click', function () {
+		
+		//get the id of the activated element
+		var entity_id = $(this).data('speaker');
+		var entity_type = $(this).data('entity_type');
+
+	  $.ajax({
+                url: '../controllers/ajax.php',
+                type: 'POST',
+                data: {action:"approve_entities", entity_id:entity_id, entity_type:entity_type},
+                success: function(data) {
+					alert('Approved!');
+				    setTimeout(function () {
+                      location.reload();
+                      }, 1000); //will call the function after 1 secs.
+					
+                   }
+            });
+			  
+          
+        
+
+  })		
 	 
 	 
    

@@ -64,7 +64,7 @@ public function get_carted_data($sId){
 	
 		//Get basic date about a sponsors
 		                    //Name                 Bio         Category              website         image       image alt       sponsor_id
-		$stat_q = "SELECT sn.sponsor_name, sb.sponsor_bio, sc.category_id, sl.sponsor_link_url, idb.image_url, idb.alt_name, sdc.sponsor_id FROM sponsors_name as sn, sponsors_bio as sb, sponsors_data_connection as sdc, sponsors_status as ss, sponsors_category as sc, sponsors_links as sl, image_db as idb, image_connection as ic WHERE sdc.sponsor_name_id=sn.id AND sdc.sponsor_bio_id=sb.id AND sdc.sponsor_id=ss.sponsor_id AND ss.status_id='1' AND sdc.sponsor_link_id=sl.id AND ic.entity_type_id='2' AND ic.entity_id=sdc.sponsor_id AND idb.id=ic.image_db_id AND sdc.sponsor_category_id=sc.id AND sc.category_id= :category  ORDER BY sn.sponsor_name ASC";	
+		$stat_q = "SELECT sn.sponsor_name, sb.sponsor_bio, sc.category_id, sl.sponsor_link_url, sdc.sponsor_id, ss.status_id FROM sponsors_name as sn, sponsors_bio as sb, sponsors_data_connection as sdc, sponsors_status as ss, sponsors_category as sc, sponsors_links as sl WHERE sdc.sponsor_name_id=sn.id AND sdc.sponsor_bio_id=sb.id AND sdc.sponsor_id=ss.sponsor_id AND (ss.status_id='1' OR ss.status_id='3') AND sdc.sponsor_link_id=sl.id AND sdc.sponsor_category_id=sc.id AND sc.category_id= :category  ORDER BY sn.sponsor_name ASC";	
 					
 		$stat = $this->pdo->prepare($stat_q);
 		$stat->bindValue(':category', $category, \PDO::PARAM_INT);
@@ -72,6 +72,27 @@ public function get_carted_data($sId){
 
 			if ($stat->rowCount() > 0) {
 					while($sponsors = $stat->fetch()){
+
+
+						//Logo
+					$sponsor_logo_q = "SELECT idb.image_url, idb.alt_name FROM image_db as idb, image_connection as ic WHERE ic.entity_type_id='2' AND ic.entity_id= :id AND ic.image_db_id=idb.id";	
+			
+					$sponsor_logo = $this->pdo->prepare($sponsor_logo_q);
+					$sponsor_logo->bindValue(':id', $sponsors['sponsor_id'], \PDO::PARAM_INT);
+					$sponsor_logo->execute();
+			
+						if ($sponsor_logo->rowCount() > 0) {
+								$spimage = $sponsor_logo->fetch();
+								$sponsors['image_url'] = $spimage['image_url'];
+								$sponsors['alt_name'] = $spimage['alt_name'];
+								
+						} else {
+							 $sponsors['image_url'] = '';
+							 $sponsors['alt_name'] = '';
+						}
+							
+
+
 
 						
 		//Get the social link types
@@ -182,17 +203,28 @@ public function get_carted_data($sId){
 	
 				$content .='<div class="ReturnValue" style="display:none"></div>';
 		       $content .='<div class="SystemIcons">';
-			   $content .=' <i data-sponsor="'.$sponsors['sponsor_id'].'" class="fa fa-pencil SysIcon SysCategories"></i>';
+			   //$content .=' <i data-sponsor="'.$sponsors['sponsor_id'].'" class="fa fa-pencil SysIcon SysCategories"></i>';
 			  if (isset($_SESSION['super_admin'])) {
-				    $content .='<i data-sponsor="'.$sponsors['sponsor_id'].'" class="fa fa-cog SysIcon SysOptions"></i>';
+				    //$content .='<i data-sponsor="'.$sponsors['sponsor_id'].'" class="fa fa-cog SysIcon SysOptions"></i>';
 			   }
 			          
 			        
-				    $content .=' <i data-sponsor="'.$sponsors['sponsor_id'].'" class="fa fa-times SysIcon SysDelete"></i>
-				 </div>';
-		
-             $content .='<div class="SponsorLogo dropzone" data-sponsor="'.$sponsors['sponsor_id'].'" data-sname="'.$sponsors['sponsor_name'].'"><img src="../img/sponsors/logos/'.$sponsors['image_url'].'" alt="'.$sponsors['alt_name'].'"></div>
-            <div class="SponsorDetails">';
+				    $content .=' <i data-sponsor="'.$sponsors['sponsor_id'].'" class="fa fa-trash-o SysIcon SysDelete"></i>';
+					
+						if (isset($_SESSION['super_admin']) && $sponsors['status_id'] == 3){
+	                     $content .='<div class="SysApprove" data-entity_type="2" data-sponsor="'.$sponsors['sponsor_id'].'">Approve Sponsor</div>';
+	                    }
+					
+					
+					
+				 $content .='</div>';
+		   if (isset($_SESSION['sponsors_admin'])){
+               $content .='<div class="SponsorLogo dropzone" data-sponsor="'.$sponsors['sponsor_id'].'" data-sname="'.$sponsors['sponsor_name'].'"><img src="../img/sponsors/logos/'.$sponsors['image_url'].'" alt="'.$sponsors['alt_name'].'"></div>';
+	     	} else {
+				$content .=' <div class="SponsorLogoNormal"><img src="../img/sponsors/logos/'.$sponsors['image_url'].'" alt="'.$sponsors['alt_name'].'"></div>';
+			}
+
+            $content .='<div class="SponsorDetails">';
 			
                   //Sponsor name			
             	$content .='<h2 class="SponsorName Editable" data-type="NameEdit" data-sponsor="'.$sponsors['sponsor_id'].'">'.$sponsors['sponsor_name'].'</h2>';
@@ -348,7 +380,8 @@ public function get_carted_data($sId){
 }
 
 
-//This is the function what collets all the sponsors to the content multi dimensional array.
+
+	//This is the function what collets all the sponsors to the content multi dimensional array.
   public function agenda_sponsors_edit($category) {
 
           $main = new main\main;	
@@ -557,7 +590,6 @@ public function get_carted_data($sId){
 			
 		return $content;
 }
-
 
 public function list_sub_filters($main_id) {
 	 $content = '';

@@ -84,19 +84,16 @@ $(document).ready(function(){
 								type: 'POST',
 								data: {action:"edit_speakers", sId:sId, edit_type:edit_type, new_data:new_data},
 								success: function(data) {
-
-								}
-								
-								
-							});
-
+									if (data != '' && typeof data != 'undefined'){
+										 $('#ReturnValue').html('<i class="fa fa-check-circle"></i> The data have been saved!');
+										 $('#ReturnValue').css("color","#0FB323");
+										 $('#ReturnValue').fadeIn('slow');
+										
+									
 							              this_class.css('display','none');
 										  this_class.siblings('#'+original_class).html(new_data);
 		                                  this_class.siblings('#'+original_class).css('display','block');
 										
-										 $('#ReturnValue').html('<i class="fa fa-check-circle"></i> The data have been saved!');
-										 $('#ReturnValue').css("color","#0FB323");
-										 $('#ReturnValue').fadeIn('slow');
 										
 
 										
@@ -104,7 +101,13 @@ $(document).ready(function(){
 		                                          $('#ReturnValue').fadeOut('slow');
                                           } , 3000); //set timeout function end
 										  
+										 
+										
+									}
+									
 
+								}
+							});
 										  
 
 					  }
@@ -247,51 +250,58 @@ $(document).ready(function(){
 		
 		
 	  $('#SpeakerPhoto').bind('click', function (e) {
+		  
 		  var speaker_id = $(this).data('speaker');
 		  var speaker_name = $(this).data('sname');
 		  
-		  var myDropzone = Dropzone.forElement(this);
+		  if (typeof speaker_id !== "undefined"){
 		  
-		  
-		  myDropzone.on("sending", function(file, xhr, formData) {
-						formData.append("action", "edit_speaker_image");
-						formData.append("speaker_id", speaker_id);
-						formData.append("speaker_name", speaker_name);
-               });
-		  
-		  
-		  myDropzone.on("addedfile", function(file) {
-			 setTimeout(function () {
-                  myDropzone.processQueue();
-				  
-						$('#ReturnValue').html('<i class="fa fa-check-circle"></i> The data have been saved!');
-							 $('#ReturnValue').css("color","#0FB323");
-							 $('#ReturnValue').fadeIn('slow');
+					var myDropzone = Dropzone.forElement(this);
+					
+					
+					myDropzone.on("sending", function(file, xhr, formData) {
+								  formData.append("action", "edit_speaker_image");
+								  formData.append("speaker_id", speaker_id);
+								  formData.append("speaker_name", speaker_name);
+						 });
+					
+					
+					myDropzone.on("addedfile", function(file) {
+					   setTimeout(function () {
+							myDropzone.processQueue();
 							
-
+								  $('#ReturnValue').html('<i class="fa fa-check-circle"></i> The data have been saved!');
+									   $('#ReturnValue').css("color","#0FB323");
+									   $('#ReturnValue').fadeIn('slow');
+									  
+		  
+									  
+									setTimeout(function () {
+												$('#ReturnValue').fadeOut('slow');
+										} , 2000); //set timeout function end
+										
 							
-						  setTimeout(function () {
-									  $('#ReturnValue').fadeOut('slow');
-							  } , 2000); //set timeout function end
-							  
-				  
-				  			 setTimeout(function () {
-                                  location.reload();
-				
-                           }, 2000); //will call the function after 2 secs.
-				
-            }, 1000); //will call the function after 2 secs.
+									   setTimeout(function () {
+											location.reload();
+						  
+									 }, 2000); //will call the function after 2 secs.
+						  
+					  }, 1000); //will call the function after 2 secs.
+						
+							
+						});
 			  
-				  
-              });
+		  } 
 
-     })  	
+     }); 	
 	 
 	 
 	 
 	 	  $('#CompanyLogo').bind('click', function (e) {
 		  var company_id = $(this).data('company');
 		  var company_name = $(this).data('cname');
+		
+		  if (typeof company_id !== "undefined"){
 		  
 		  var myDropzone = Dropzone.forElement(this);
 		  
@@ -326,6 +336,8 @@ $(document).ready(function(){
 			  
 				  
               });
+			  
+		  }
 
      })  	
 	 
@@ -361,6 +373,31 @@ $(document).ready(function(){
 
   })
   
+	
+		//Hide the element and show the input field associated with the element + focus the input box
+    $('.SysApprove').bind('click', function () {
+		
+		//get the id of the activated element
+		var entity_id = $(this).data('speaker');
+		var entity_type = $(this).data('entity_type');
+
+	  $.ajax({
+                url: '../controllers/ajax.php',
+                type: 'POST',
+                data: {action:"approve_entities", entity_id:entity_id, entity_type:entity_type},
+                success: function(data) {
+					alert('Approved!');
+				    setTimeout(function () {
+                      location.reload();
+                      }, 1000); //will call the function after 1 secs.
+					
+                   }
+            });
+			  
+          
+        
+
+  })	
 	 
 	 
 	/*-----------------------

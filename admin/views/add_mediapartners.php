@@ -89,14 +89,14 @@ use HRNParis\main as main;
 		<input class="AdminInputField" id="Google" type="text" placeholder="Google+" /><br />
      </fieldset>';
 */	 
-
+if (isset($_SESSION['super_admin'])) { 
    	  $content .='
 	  <fieldset>
 	     <legend>Image</legend>
 		 <div class="dropzone" id="DropDiv"></div><br />
 		 <input type="file" name="file" style="display:none" />
      </fieldset>';
-
+}
     $content .= '<button class="AdminSubmitButton" name="NewSponsorSave" id="NewSponsorSave" type="Submit">Save</button>';
 	
  $content .= '

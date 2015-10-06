@@ -1,3 +1,7 @@
+var sendCheck = {};
+
+sendCheck.CanGo = 0;
+
 $(document).ready(function(){
 
 
@@ -43,7 +47,80 @@ Dropzone.autoDiscover = false;
 			
 			            //prevents the default form submit
 		  			e.preventDefault();
-		            e.stopPropagation(); 
+		            e.stopPropagation();
+					
+					
+		if (sendCheck.CanGo !== 1) {				
+		
+		  //get the data
+		  var SponsorName = $('#SponsorName').val();
+		  var SponsorURL = $('#SponsorURL').val();
+
+
+		  	   //check if the fields are filled out or not
+			if ((typeof SponsorName != "undefined") && SponsorName != '' && (typeof SponsorURL != "undefined") && SponsorURL != '') {
+				
+            									$.ajax({
+								url: 'controllers/ajax.php',
+								type: 'POST',
+								data: {action:"add_new_mediapartner", SponsorName:SponsorName, SponsorURL:SponsorURL},
+								success: function(data) {
+						           if (typeof data != "undefined"){
+										
+										
+										 $('#ReturnValue').html('<i class="fa fa-check-circle"></i> The data have been saved! The page will reload!');
+										 $('#ReturnValue').css("color","#0FB323");
+										 $('#ReturnValue').fadeIn('slow');
+										
+
+										
+									  setTimeout(function () {
+		                                          $('#ReturnValue').fadeOut('slow');
+                                          } , 3000); //set timeout function end
+										  
+										setTimeout(function () {
+		                                          location.reload();
+                                          } , 3000); //set timeout function end
+										   
+										
+									}
+							}
+
+								
+							});		
+				
+			} else {
+		
+			    //if stuff is missing
+				window.location.hash = '#ReturnValue';
+				$("#ReturnValue").html('<i class="fa fa-exclamation-triangle"></i> Please, fill out the missing fields!');
+				$("#ReturnValue").css("color","#F54949");
+				$("#ReturnValue").fadeIn('slow');
+
+		        setTimeout(function () {
+		            $("#ReturnValue").fadeOut('slow');
+                 } , 3000); //set timeout function end
+	   
+	   
+			    if (typeof SponsorName == "undefined" || SponsorName == '') {
+					$('#SponsorName').css("border","1px solid #9B1515");
+				} else {
+					$('#SponsorName').css("border","1px solid #cccccc");
+				}
+	
+	
+				if (typeof SponsorURL == "undefined" || SponsorURL == '') {
+					$('#SponsorURL').css("border","1px solid #9B1515");
+				} else {
+					$('#SponsorURL').css("border","1px solid #cccccc");
+				}
+				
+	
+               return false;
+			}
+	   
+	}				
+					 
 		
 
 	
@@ -109,6 +186,10 @@ function save_check() {
       this.on("addedfile", function(file) {
         // Capture the Dropzone instance as closure.
        var dz = this;
+	   
+	   			
+		var canGo = 1;
+		sendCheck.CanGo = 1;	
 
           // Listen to the click event
         $('#NewSponsorSave').on("click", function(e) {
@@ -116,9 +197,10 @@ function save_check() {
           // Make sure the button click doesn't submit the form:
           // Remove the file preview.
 		    e.preventDefault();
-            e.stopPropagation();
+            e.stopPropagation();			
 			
 			var Check = save_check();
+		
 
 			if (Check == true) {
 				   dz.processQueue();

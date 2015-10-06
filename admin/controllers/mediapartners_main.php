@@ -36,7 +36,7 @@ class mediapartners_main extends config {
 			if ($order->rowCount() > 0) {	
 				while($mp_id = $order->fetch()){ 	
 		                    
-		$stat_q = "SELECT sn.sponsor_name, idb.image_url, idb.alt_name, sdc.sponsor_id FROM mediapartners_name as sn, mediapartners_data_connection as sdc, mediapartners_status as ss, mediapartners_category as sc, image_db as idb, image_connection as ic WHERE sdc.sponsor_name_id=sn.id AND sdc.sponsor_id=ss.sponsor_id AND ss.status_id='1' AND ic.entity_type_id='5' AND ic.entity_id=sdc.sponsor_id AND idb.id=ic.image_db_id AND sdc.sponsor_category_id=sc.id AND sc.category_id= :category AND sdc.sponsor_id= :mediapartner  ORDER BY sn.sponsor_name ASC";	
+		$stat_q = "SELECT sn.sponsor_name, sdc.sponsor_id FROM mediapartners_name as sn, mediapartners_data_connection as sdc, mediapartners_status as ss, mediapartners_category as sc WHERE sdc.sponsor_name_id=sn.id AND sdc.sponsor_id=ss.sponsor_id AND ss.status_id='1' AND sdc.sponsor_category_id=sc.id AND sc.category_id= :category AND sdc.sponsor_id= :mediapartner  ORDER BY sn.sponsor_name ASC";	
 					
 		$stat = $this->pdo->prepare($stat_q);
 		$stat->bindValue(':category', $category, \PDO::PARAM_INT);
@@ -45,11 +45,29 @@ class mediapartners_main extends config {
 
 			if ($stat->rowCount() > 0) {
 					while($sponsors = $stat->fetch()){
+						
+						//Logo
+					$sponsor_logo_q = "SELECT idb.image_url, idb.alt_name FROM image_db as idb, image_connection as ic WHERE ic.entity_type_id='5' AND ic.entity_id= :id AND ic.image_db_id=idb.id";	
+			
+					$sponsor_logo = $this->pdo->prepare($sponsor_logo_q);
+					$sponsor_logo->bindValue(':id', $sponsors['sponsor_id'], \PDO::PARAM_INT);
+					$sponsor_logo->execute();
+			
+						if ($sponsor_logo->rowCount() > 0) {
+								$spimage = $sponsor_logo->fetch();
+								$sponsors['image_url'] = $spimage['image_url'];
+								$sponsors['alt_name'] = $spimage['alt_name'];
+								
+						} else {
+							 $sponsors['image_url'] = '';
+							 $sponsors['alt_name'] = '';
+						}						
+						
 
 					$achor = $this->clean_str($sponsors['sponsor_name']);
 					
 					
-						$tempId = 'id="'.$achor.'Sponsor"';
+						$tempId = 'id="'.$achor.'Partner"';
 						$tempIdTwo = 'id="'.$achor.'SponsorBox"';
 					
 	
@@ -98,7 +116,7 @@ class mediapartners_main extends config {
 	
 		//Get basic date about a sponsors
 		                    //Name                 Bio         Category              website         image       image alt       sponsor_id
-		$stat_q = "SELECT sn.sponsor_name, sc.category_id, sl.sponsor_link_url, idb.image_url, idb.alt_name FROM mediapartners_name as sn, mediapartners_data_connection as sdc, mediapartners_status as ss, mediapartners_category as sc, mediapartners_links as sl, image_db as idb, image_connection as ic WHERE sdc.sponsor_name_id=sn.id AND sdc.sponsor_id=ss.sponsor_id AND ss.status_id='1' AND sdc.sponsor_link_id=sl.id AND ic.entity_type_id='5' AND ic.entity_id=sdc.sponsor_id AND idb.id=ic.image_db_id AND sdc.sponsor_category_id=sc.id AND sdc.sponsor_id = :id  ORDER BY sn.sponsor_name ASC";	
+		$stat_q = "SELECT sn.sponsor_name, sc.category_id, sl.sponsor_link_url, ss.status_id FROM mediapartners_name as sn, mediapartners_data_connection as sdc, mediapartners_status as ss, mediapartners_category as sc, mediapartners_links as sl WHERE sdc.sponsor_name_id=sn.id AND sdc.sponsor_id=ss.sponsor_id AND (ss.status_id='1' OR ss.status_id='3') AND sdc.sponsor_link_id=sl.id AND sdc.sponsor_category_id=sc.id AND sdc.sponsor_id = :id  ORDER BY sn.sponsor_name ASC";	
 					
 		$stat = $this->pdo->prepare($stat_q);
 		$stat->bindValue(':id', $mediapartner, \PDO::PARAM_INT);
@@ -107,6 +125,24 @@ class mediapartners_main extends config {
 			if ($stat->rowCount() > 0) {
 					while($sponsors = $stat->fetch()){
             $sponsors['sponsor_id'] = $mediapartner;
+			
+									//Logo
+					$sponsor_logo_q = "SELECT idb.image_url, idb.alt_name FROM image_db as idb, image_connection as ic WHERE ic.entity_type_id='5' AND ic.entity_id= :id AND ic.image_db_id=idb.id";	
+			
+					$sponsor_logo = $this->pdo->prepare($sponsor_logo_q);
+					$sponsor_logo->bindValue(':id', $sponsors['sponsor_id'], \PDO::PARAM_INT);
+					$sponsor_logo->execute();
+			
+						if ($sponsor_logo->rowCount() > 0) {
+								$spimage = $sponsor_logo->fetch();
+								$sponsors['image_url'] = $spimage['image_url'];
+								$sponsors['alt_name'] = $spimage['alt_name'];
+								
+						} else {
+							 $sponsors['image_url'] = '';
+							 $sponsors['alt_name'] = '';
+						}	
+			
 						
 		//Get the social link types
 		$s = 10;
@@ -170,11 +206,22 @@ class mediapartners_main extends config {
 		       $content .='<div class="SystemIcons">';
 			
 			        
-				    $content .=' <i data-sponsor="'.$sponsors['sponsor_id'].'" class="fa fa-times SysIcon SysDelete"> DELETE</i>
-				 </div>';
-		
-             $content .='<div class="SponsorLogo dropzone" data-sponsor="'.$sponsors['sponsor_id'].'" data-sname="'.$sponsors['sponsor_name'].'"><img src="../img/press/Mediapartners/logos/'.$sponsors['image_url'].'" alt="'.$sponsors['alt_name'].'"></div>
-            <div class="SponsorDetails">';
+				    $content .=' <i data-sponsor="'.$sponsors['sponsor_id'].'" class="fa fa-times SysIcon SysDelete"> DELETE</i>';
+					
+					if (isset($_SESSION['super_admin']) && $sponsors['status_id'] == 3){
+	                     $content .='<div class="SysApprove" data-entity_type="5" data-sponsor="'.$data['sponsor_id'].'">Approve Partner</div>';
+	                    }
+					
+					
+				 $content.='</div>';
+
+			 		   if (isset($_SESSION['sponsors_admin'])){
+               $content .='<div class="SponsorLogo dropzone" data-sponsor="'.$sponsors['sponsor_id'].'" data-sname="'.$sponsors['sponsor_name'].'"><img src="../img/press/Mediapartners/logos/'.$sponsors['image_url'].'" alt="'.$sponsors['alt_name'].'"></div>';
+	     	} else {
+				$content .=' <div class="SponsorLogoNormal"><img src="../img/press/Mediapartners/logos/'.$sponsors['image_url'].'" alt="'.$sponsors['alt_name'].'"></div>';
+			}
+			 
+            $content .=' <div class="SponsorDetails">';
 			
                   //Sponsor name			
             	$content .='<h2 class="SponsorName Editable" data-type="NameEdit" data-sponsor="'.$sponsors['sponsor_id'].'">'.$sponsors['sponsor_name'].'</h2>';

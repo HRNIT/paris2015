@@ -3,6 +3,7 @@
 
 body {
 	font-family: 'Roboto', sans-serif;
+	margin: 0;
 }
 
 .RobotoText {
@@ -172,4 +173,73 @@ body {
 	padding: 2vw;
 	background-color:rgba(0,0,0,0.94);
 	z-index: 5000;
+}
+
+#NotificationCenter{
+    margin-top: 0vw;
+    background-color: rgba(23, 11, 11, 0.74);
+    padding: 0 6vw;
+	opacity: 0;
+	list-style-type:none;
+    -webkit-animation: easing 1s forwards;  /* Chrome, Safari, Opera */
+    -webkit-animation-timing-function: ease-in;  /* Chrome, Safari, Opera */
+    animation: easing 1s forwards;
+    animation-timing-function: ease-in;
+	-webkit-animation-delay: 0.3s; /* Chrome, Safari, Opera */
+    animation-delay: 0.3s;
+	z-index:50000;
+}
+
+#NotificationCenter li {
+ color:	#FBF0EE;
+ opacity:0;
+ padding: 0.4vw;
+    -webkit-animation: displaying 0.7s forwards;  /* Chrome, Safari, Opera */
+    -webkit-animation-timing-function: ease-in;  /* Chrome, Safari, Opera */
+    animation: displaying 0.7s forwards;
+    animation-timing-function: ease-in;
+	-webkit-animation-delay: 1s; /* Chrome, Safari, Opera */
+    animation-delay: 1s;
+	text-decoration: none;
+}
+
+#NotificationCenter li a {
+	text-decoration: none;
+	color:	#FBF0EE;
+}
+
+/*Notification displaying*/
+@-webkit-keyframes easing {
+    from {opacity:0; padding:0 6vw;}
+    to {opacity:1; padding: 1vw 6vw;}
+}
+
+@keyframes easing {
+    from {opacity:0; padding:0 6vw;}
+    to {opacity:1; padding: 1vw 6vw;}
+}
+
+/*Notification li displaying*/
+@-webkit-keyframes displaying {
+    from {opacity:0;}
+    to {opacity:1; }
+}
+
+@keyframes displaying {
+    from {opacity:0; }
+    to {opacity:1;}
+}
+
+.SysApprove {
+    padding: 12px;
+    margin: 30px 0;
+    width: 146px;
+    background-color: #0A8646;
+    color: #fff;
+	cursor:pointer;
+	transition: all 0.3s;
+}
+
+.SysApprove:hover {
+	background-color: #3C4A43;
 }

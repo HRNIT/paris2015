@@ -143,6 +143,21 @@ $(document).ready(function() {
 <?php 
 include_once('views/menu.php');
    show_menu('press');
+   
+   
+    if (isset($_SESSION['super_admin'])) {
+	 
+	
+$content = $sponsors->display_notifications(); 
+    if(isset($content) && $content != '') {
+		echo '<ul id="NotificationCenter"> '; 	
+		  echo $content;	
+		echo '</ul>';  
+	}
+	
+	
+	
+ }  
 ?>
   
 <!-- END MAIN MENU -->

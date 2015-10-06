@@ -13,7 +13,7 @@ class press_main extends config {
 		$content = '';
 		
 		                    
-		$stat_q = "SELECT sn.speaker_name, st.title, scn.company_name, idb.image_url, idb.alt_name, sdc.speaker_id, sdc.speaker_company_id, stag.speaker_tag FROM speakers_name as sn, speakers_data_connection as sdc, speakers_status as ss, speakers_title as st, speakers_company_name as scn, speakers_company_data_connection as scdc, image_db as idb, image_connection as ic, speakers_tag as stag, speakers_order as soo WHERE sdc.speaker_name_id=sn.id AND sdc.speaker_id=ss.speaker_id AND ss.speaker_status_id='1' AND ic.entity_type_id='1' AND ic.entity_id=sdc.speaker_id AND idb.id=ic.image_db_id AND sdc.speaker_company_id=scdc.speaker_company_id AND scdc.speaker_company_name_id=scn.id AND sdc.speaker_title_id=st.id AND stag.id=sdc.speaker_tag_id AND sdc.speaker_id=soo.speaker_id ORDER BY soo.order_id ASC";	
+		$stat_q = "SELECT sn.speaker_name, st.title, scn.company_name, idb.image_url, idb.alt_name, sdc.speaker_id, sdc.speaker_company_id, stag.speaker_tag FROM speakers_name as sn, speakers_data_connection as sdc, speakers_status as ss, speakers_title as st, speakers_company_name as scn, speakers_company_data_connection as scdc, image_db as idb, image_connection as ic, speakers_tag as stag, speakers_order as soo WHERE sdc.speaker_name_id=sn.id AND sdc.speaker_id=ss.speaker_id AND (ss.speaker_status_id='1' OR ss.speaker_status_id='3') AND ic.entity_type_id='1' AND ic.entity_id=sdc.speaker_id AND idb.id=ic.image_db_id AND sdc.speaker_company_id=scdc.speaker_company_id AND scdc.speaker_company_name_id=scn.id AND sdc.speaker_title_id=st.id AND stag.id=sdc.speaker_tag_id AND sdc.speaker_id=soo.speaker_id ORDER BY soo.order_id ASC";	
 					
 		$stat = $this->pdo->prepare($stat_q);
 		$stat->execute();
@@ -78,7 +78,7 @@ class press_main extends config {
 				while($main_id = $mainpage->fetch()){ 	
 		
 		                    
-		$stat_q = "SELECT sn.speaker_name, st.title, sdc.speaker_id, stag.speaker_tag FROM ".$entity."_name as sn, ".$entity."_data_connection as sdc, ".$entity."_status as ss, ".$entity."_title as st, ".$entity."_tag as stag, ".$entity."_order as soo WHERE sdc.speaker_name_id=sn.id AND sdc.speaker_id=ss.speaker_id AND ss.speaker_status_id='1' AND sdc.speaker_title_id=st.id AND stag.id=sdc.speaker_tag_id AND sdc.speaker_id=soo.speaker_id AND sdc.speaker_id= :id ORDER BY soo.order_id ASC";	
+		$stat_q = "SELECT sn.speaker_name, st.title, sdc.speaker_id, stag.speaker_tag FROM ".$entity."_name as sn, ".$entity."_data_connection as sdc, ".$entity."_status as ss, ".$entity."_title as st, ".$entity."_tag as stag, ".$entity."_order as soo WHERE sdc.speaker_name_id=sn.id AND sdc.speaker_id=ss.speaker_id AND (ss.speaker_status_id='1' OR ss.speaker_status_id='3')AND sdc.speaker_title_id=st.id AND stag.id=sdc.speaker_tag_id AND sdc.speaker_id=soo.speaker_id AND sdc.speaker_id= :id ORDER BY soo.order_id ASC";	
 					
 		$stat = $this->pdo->prepare($stat_q);
 		$stat->bindValue(':id', $main_id[0], \PDO::PARAM_INT);
@@ -184,7 +184,7 @@ public function display_press($type) {
 	
 	
 			                    //Name                 Bio         Category              website         image       image alt       speaker_id
-		$speaker_q = "SELECT sn.speaker_name, st.title, sdc.speaker_id, stag.speaker_tag FROM ".$entity."_name as sn, ".$entity."_data_connection as sdc, ".$entity."_status as ss, ".$entity."_title as st, ".$entity."_tag as stag, ".$entity."_order as soo WHERE sdc.speaker_name_id=sn.id AND sdc.speaker_id=ss.speaker_id AND ss.speaker_status_id='1' AND sdc.speaker_title_id=st.id AND stag.id=sdc.speaker_tag_id AND sdc.speaker_id=soo.speaker_id AND sdc.speaker_id= :id ORDER BY soo.order_id ASC";	
+		$speaker_q = "SELECT sn.speaker_name, st.title, sdc.speaker_id, stag.speaker_tag FROM ".$entity."_name as sn, ".$entity."_data_connection as sdc, ".$entity."_status as ss, ".$entity."_title as st, ".$entity."_tag as stag, ".$entity."_order as soo WHERE sdc.speaker_name_id=sn.id AND sdc.speaker_id=ss.speaker_id AND (ss.speaker_status_id='1' OR ss.speaker_status_id='3') AND sdc.speaker_title_id=st.id AND stag.id=sdc.speaker_tag_id AND sdc.speaker_id=soo.speaker_id AND sdc.speaker_id= :id ORDER BY soo.order_id ASC";	
 		
 		//company websited and company logo need to be separate
 					
@@ -385,7 +385,7 @@ public function press($tag, $type) {
 	}
 	
 			                    //Name                 Bio         Category              website         image       image alt       speaker_id
-		$speaker_q = "SELECT sn.speaker_name, st.title, sdc.speaker_id FROM ".$entity."_name as sn, ".$entity."_data_connection as sdc, ".$entity."_status as ss, ".$entity."_title as st, ".$entity."_tag as stag WHERE sdc.speaker_name_id=sn.id AND sdc.speaker_id=ss.speaker_id AND ss.speaker_status_id='1' AND sdc.speaker_title_id=st.id AND stag.speaker_tag = :tag AND stag.id=sdc.speaker_tag_id LIMIT 0,1";	
+		$speaker_q = "SELECT sn.speaker_name, st.title, sdc.speaker_id, ss.speaker_status_id FROM ".$entity."_name as sn, ".$entity."_data_connection as sdc, ".$entity."_status as ss, ".$entity."_title as st, ".$entity."_tag as stag WHERE sdc.speaker_name_id=sn.id AND sdc.speaker_id=ss.speaker_id AND (ss.speaker_status_id='1' OR ss.speaker_status_id='3') AND sdc.speaker_title_id=st.id AND stag.speaker_tag = :tag AND stag.id=sdc.speaker_tag_id LIMIT 0,1";	
 		
 		//company websited and company logo need to be separate
 					
@@ -542,13 +542,26 @@ public function press($tag, $type) {
 				
 				$content .='<section id="SpeakerProfileContainer">
     <div id="SpeakerProfile" on>
-	<div class="SysDelete" data-speaker="'.$data['speaker_id'].'">Delete</div>
+	<div class="SysDelete" data-speaker="'.$data['speaker_id'].'">Delete</div>';
+	
+		if (isset($_SESSION['super_admin']) && $data['speaker_status_id'] == 3){
+	    $content .='<div class="SysApprove" data-entity_type="6" data-speaker="'.$data['speaker_id'].'">Approve Blogger</div>';
+	   }
+	
 
-	     <div id="ReturnValue" style="display:none"></div>
+	    $content.=' <div id="ReturnValue" style="display:none"></div>
             <!-- Main Speaker Info: it will get 20px/vw padding AND #f4f4f2 background-color on mobile -->
-            <div id="MainSpeakerInfo">
-                <img id="SpeakerPhoto" data-speaker="'.$data['speaker_id'].'" data-sname="'.$data['speaker_name'].'" class="dropzone" src="'.$photo_url.'/Photos/'.$data['image_url'].'" alt="'.$data['speaker_name'].' picture" alt="Profile picture">
-                <div id="SpeakerInfo">';
+            <div id="MainSpeakerInfo">';
+			
+						//Make sure, that only the super admins can change profile pictures
+			if (isset($_SESSION['speakers_admin'])){
+				
+				  $content .=' <img id="SpeakerPhoto" data-speaker="'.$data['speaker_id'].'" data-sname="'.$data['speaker_name'].'" class="dropzone" src="'.$photo_url.'/Photos/'.$data['image_url'].'" alt="'.$data['speaker_name'].' picture" alt="Profile picture">';
+			} else {
+			      $content .='<img id="SpeakerPhotoUser" src="'.$photo_url.'/Photos/'.$data['image_url'].'" alt="'.$data['speaker_name'].' picture">';
+			}
+
+                $content .='<div id="SpeakerInfo">';
 				
 				      //Name
                     $content .='<h2 id="SpeakerName" class="FontRaleway BlueText Editable" data-type="NameEdit" data-speaker="'.$data['speaker_id'].'">'.$data['speaker_name'].'</h2>';
@@ -594,8 +607,7 @@ public function press($tag, $type) {
             <!-- END Main Speaker Info -->
             <!-- Speaker Bio -->';
 
-			
-					if (!isset($mpbio_text[0]) || $mpbio_text[0] == '<p><br></p><p><br></p>') {
+			             if (!isset($mpbio_text[0]) || strlen($mpbio_text[0]) < 10) {
 						   $bio_text = '<p>Type a Bio here!</p><p><br></p>';
 						   
 					   } else {

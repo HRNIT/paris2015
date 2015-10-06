@@ -10,9 +10,10 @@
 	
 }
 
-#CompanyLogo {
+#CompanyLogo, #CompanyLogoNormal {
 	  margin-top: 3.90625vw;
 	  max-height:100%;
+	  max-width:250px;
 }
 
 .CompanyWebsiteEdit {
@@ -53,4 +54,18 @@ background-color: rgba(218, 5, 5, 0.95);
 #MPBioTextClick:hover {
 	background-color: rgba(218, 5, 5, 0.95);
 	
+}
+
+.SysApprove {
+    padding: 12px;
+    margin: 30px 0;
+    width: 146px;
+    background-color: #0A8646;
+    color: #fff;
+	cursor:pointer;
+	transition: all 0.3s;
+}
+
+.SysApprove:hover {
+	background-color: #3C4A43;
 }

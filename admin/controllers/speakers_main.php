@@ -11,15 +11,49 @@ class speakers_main extends config {
 	   // <!--<div class="SelectedSpeakerColor FutureOfWorkforceLearningColor" style="width: 100%;"></div>-->
 	  
 		$content = '';
+
+
 		
 		                    
-		$stat_q = "SELECT sn.speaker_name, st.title, scn.company_name, idb.image_url, idb.alt_name, sdc.speaker_id, sdc.speaker_company_id, stag.speaker_tag FROM speakers_name as sn, speakers_data_connection as sdc, speakers_status as ss, speakers_title as st, speakers_company_name as scn, speakers_company_data_connection as scdc, image_db as idb, image_connection as ic, speakers_tag as stag, speakers_order as soo WHERE sdc.speaker_name_id=sn.id AND sdc.speaker_id=ss.speaker_id AND ss.speaker_status_id='1' AND ic.entity_type_id='1' AND ic.entity_id=sdc.speaker_id AND idb.id=ic.image_db_id AND sdc.speaker_company_id=scdc.speaker_company_id AND scdc.speaker_company_name_id=scn.id AND sdc.speaker_title_id=st.id AND stag.id=sdc.speaker_tag_id AND sdc.speaker_id=soo.speaker_id ORDER BY soo.order_id ASC";	
+		$stat_q = "SELECT sn.speaker_name, st.title, sdc.speaker_id, stag.speaker_tag FROM speakers_name as sn, speakers_data_connection as sdc, speakers_status as ss, speakers_title as st, speakers_tag as stag, speakers_order as soo WHERE sdc.speaker_name_id=sn.id AND sdc.speaker_id=ss.speaker_id AND (ss.speaker_status_id='1' OR ss.speaker_status_id='3') AND sdc.speaker_title_id=st.id AND stag.id=sdc.speaker_tag_id AND sdc.speaker_id=soo.speaker_id ORDER BY soo.order_id ASC";	
 					
 		$stat = $this->pdo->prepare($stat_q);
 		$stat->execute();
 
 			if ($stat->rowCount() > 0) {
 					while($speakers = $stat->fetch()){
+						
+						//Logo
+					$profile_q = "SELECT idb.image_url, idb.alt_name FROM image_db as idb, image_connection as ic WHERE ic.entity_type_id='1' AND ic.entity_id= :id AND ic.image_db_id=idb.id";	
+			
+					$profile = $this->pdo->prepare($profile_q);
+					$profile->bindValue(':id', $speakers['speaker_id'], \PDO::PARAM_INT);
+					$profile->execute();
+			
+						if ($profile->rowCount() > 0) {
+								$spimage = $profile->fetch();
+								$speakers['image_url'] = $spimage['image_url'];
+								
+						} else {
+							 $speakers['image_url'] = '';
+						}
+							
+
+					$company_q = "SELECT scn.company_name  FROM speakers_company_name as scn, speakers_company_data_connection as scdc, speakers_data_connection as sdc WHERE sdc.speaker_company_id=scdc.speaker_company_id AND scdc.speaker_company_name_id=scn.id AND sdc.speaker_id = :id";	
+			
+					$company = $this->pdo->prepare($company_q);
+					$company->bindValue(':id', $speakers['speaker_id'], \PDO::PARAM_INT);
+					$company->execute();
+			
+						if ($company->rowCount() > 0) {
+								$spcompany = $company->fetch();
+								$speakers['company_name'] = $spcompany['company_name'];
+								
+						} else {
+							 		$speakers['company_name'] = '';
+						}
+						
+												
 			
 						 $content.='<!-- '.$speakers['speaker_name'].' -->
 						  <div class="Speaker" data-speaker="'.$speakers['speaker_id'].'">
@@ -61,7 +95,7 @@ class speakers_main extends config {
 				while($main_id = $mainpage->fetch()){ 	
 		
 		                    
-		$stat_q = "SELECT sn.speaker_name, st.title, scn.company_name, idb.image_url, idb.alt_name, sdc.speaker_id, sdc.speaker_company_id, stag.speaker_tag FROM speakers_name as sn, speakers_data_connection as sdc, speakers_status as ss, speakers_title as st, speakers_company_name as scn, speakers_company_data_connection as scdc, image_db as idb, image_connection as ic, speakers_tag as stag, speakers_order as soo WHERE sdc.speaker_name_id=sn.id AND sdc.speaker_id=ss.speaker_id AND ss.speaker_status_id='1' AND ic.entity_type_id='1' AND ic.entity_id=sdc.speaker_id AND idb.id=ic.image_db_id AND sdc.speaker_company_id=scdc.speaker_company_id AND scdc.speaker_company_name_id=scn.id AND sdc.speaker_title_id=st.id AND stag.id=sdc.speaker_tag_id AND sdc.speaker_id=soo.speaker_id AND sdc.speaker_id= :id ORDER BY soo.order_id ASC";	
+		$stat_q = "SELECT sn.speaker_name, st.title, scn.company_name, idb.image_url, idb.alt_name, sdc.speaker_id, sdc.speaker_company_id, stag.speaker_tag FROM speakers_name as sn, speakers_data_connection as sdc, speakers_status as ss, speakers_title as st, speakers_company_name as scn, speakers_company_data_connection as scdc, image_db as idb, image_connection as ic, speakers_tag as stag, speakers_order as soo WHERE sdc.speaker_name_id=sn.id AND sdc.speaker_id=ss.speaker_id AND (ss.speaker_status_id='1' OR ss.speaker_status_id='3') AND ic.entity_type_id='1' AND ic.entity_id=sdc.speaker_id AND idb.id=ic.image_db_id AND sdc.speaker_company_id=scdc.speaker_company_id AND scdc.speaker_company_name_id=scn.id AND sdc.speaker_title_id=st.id AND stag.id=sdc.speaker_tag_id AND sdc.speaker_id=soo.speaker_id AND sdc.speaker_id= :id ORDER BY soo.order_id ASC";	
 					
 		$stat = $this->pdo->prepare($stat_q);
 		$stat->bindValue(':id', $main_id[0], \PDO::PARAM_INT);
@@ -103,7 +137,7 @@ public function speaker($tag) {
 	$content = "";
 	
 			                    //Name                 Bio         Category              website         image       image alt       speaker_id
-		$speaker_q = "SELECT sn.speaker_name, sb.speaker_bio, st.title, scn.company_name, idb.image_url, idb.alt_name, sdc.speaker_id, sdc.speaker_company_id FROM speakers_name as sn, speakers_bio as sb, speakers_data_connection as sdc, speakers_status as ss, speakers_title as st, speakers_company_name as scn, speakers_company_data_connection as scdc, image_db as idb, image_connection as ic, speakers_tag as stag WHERE sdc.speaker_name_id=sn.id AND sdc.speaker_bio_id=sb.id AND sdc.speaker_id=ss.speaker_id AND ss.speaker_status_id='1' AND ic.entity_type_id='1' AND ic.entity_id=sdc.speaker_id AND idb.id=ic.image_db_id AND sdc.speaker_company_id=scdc.speaker_company_id AND scdc.speaker_company_name_id=scn.id AND sdc.speaker_title_id=st.id AND stag.speaker_tag = :tag AND stag.id=sdc.speaker_tag_id LIMIT 0,1";	
+		$speaker_q = "SELECT sn.speaker_name, sb.speaker_bio, st.title, sdc.speaker_id, sdc.speaker_company_id, ss.speaker_status_id FROM speakers_name as sn, speakers_bio as sb, speakers_data_connection as sdc, speakers_status as ss, speakers_title as st, speakers_tag as stag WHERE sdc.speaker_name_id=sn.id AND sdc.speaker_bio_id=sb.id AND sdc.speaker_id=ss.speaker_id AND (ss.speaker_status_id='1' OR ss.speaker_status_id='3') AND sdc.speaker_title_id=st.id AND stag.speaker_tag = :tag AND stag.id=sdc.speaker_tag_id LIMIT 0,1";	
 		
 		//company websited and company logo need to be separate
 					
@@ -113,6 +147,39 @@ public function speaker($tag) {
 
 			if ($speaker->rowCount() > 0) {
 					$data = $speaker->fetch();
+
+						//Logo
+					$profile_q = "SELECT idb.image_url, idb.alt_name FROM image_db as idb, image_connection as ic WHERE ic.entity_type_id='1' AND ic.entity_id= :id AND ic.image_db_id=idb.id";	
+			
+					$profile = $this->pdo->prepare($profile_q);
+					$profile->bindValue(':id', $data['speaker_id'], \PDO::PARAM_INT);
+					$profile->execute();
+			
+						if ($profile->rowCount() > 0) {
+								$spimage = $profile->fetch();
+								$data['image_url'] = $spimage['image_url'];
+								
+						} else {
+							 $data['image_url'] = '';
+						}
+							
+
+					$company_q = "SELECT scn.company_name  FROM speakers_company_name as scn, speakers_company_data_connection as scdc, speakers_data_connection as sdc WHERE sdc.speaker_company_id=scdc.speaker_company_id AND scdc.speaker_company_name_id=scn.id AND sdc.speaker_id = :id";	
+			
+					$company = $this->pdo->prepare($company_q);
+					$company->bindValue(':id', $data['speaker_id'], \PDO::PARAM_INT);
+					$company->execute();
+			
+						if ($company->rowCount() > 0) {
+								$spcompany = $company->fetch();
+								$data['company_name'] = $spcompany['company_name'];
+								
+						} else {
+							 		$data['company_name'] = '';
+						}
+						
+						
+						
 					
 					
 					//Logo
@@ -218,18 +285,35 @@ public function speaker($tag) {
 				
 				$content .='<section id="SpeakerProfileContainer">
     <div id="SpeakerProfile" on>
-	<div class="SysDelete" data-speaker="'.$data['speaker_id'].'">Delete Speaker</div>
-	<label><input type="checkbox" id="MainCheckbox" '.$checkmp.'" data-speaker="'.$data['speaker_id'].'"> Display on Main Page</label>
+	<div class="SysDelete" data-speaker="'.$data['speaker_id'].'">Delete Speaker</div>';
+	
+	if (isset($_SESSION['super_admin']) && $data['speaker_status_id'] == 3){
+	    $content .='<div class="SysApprove" data-entity_type="1" data-speaker="'.$data['speaker_id'].'">Approve Speaker</div>';
+	   }
+	
+	$content .='<label><input type="checkbox" id="MainCheckbox" '.$checkmp.'" data-speaker="'.$data['speaker_id'].'"> Display on Main Page</label>
 	<br />
-	<p id="MPBioTextClick" data-speaker="'.$data['speaker_id'].'">Main Page Bio</p>
+	<p id="MPBioTextClick" data-speaker="'.$data['speaker_id'].'">Hover info text</p>
 	<div id="MPBioText" style="display:none">
 	  <label>Mainpage bio text: <br /><textarea id="MPBioTextArea">'.$mpbio_text[0].'</textarea></label>
 	</div>
 	     <div id="ReturnValue" style="display:none"></div>
             <!-- Main Speaker Info: it will get 20px/vw padding AND #f4f4f2 background-color on mobile -->
-            <div id="MainSpeakerInfo">
-                <img id="SpeakerPhoto" data-speaker="'.$data['speaker_id'].'" data-sname="'.$data['speaker_name'].'" class="dropzone" src="../../img/speakers/SpeakerPhotos/'.$data['image_url'].'" alt="'.$data['speaker_name'].' picture" alt="Profile picture">
-                <div id="SpeakerInfo">';
+            <div id="MainSpeakerInfo">';
+			
+			
+			//Make sure, that only the super admins can change profile pictures
+			if (isset($_SESSION['speakers_admin'])){
+				
+				  $content .=' <img id="SpeakerPhoto" data-speaker="'.$data['speaker_id'].'" data-sname="'.$data['speaker_name'].'" class="dropzone" src="../../img/speakers/SpeakerPhotos/'.$data['image_url'].'" alt="'.$data['speaker_name'].' picture" alt="Profile picture">';
+			} else {
+			      $content .='<img id="SpeakerPhotoUser" src="../../img/speakers/SpeakerPhotos/'.$data['image_url'].'" alt="'.$data['speaker_name'].' picture">';
+			}
+			   
+             
+				
+				
+                $content .='<div id="SpeakerInfo">';
 				
 				      //Name
                     $content .='<h2 id="SpeakerName" class="FontRaleway BlueText Editable" data-type="NameEdit" data-speaker="'.$data['speaker_id'].'">'.$data['speaker_name'].'</h2>';
@@ -254,13 +338,36 @@ public function speaker($tag) {
 					
                          $content .='<p><span data-entity_id="'.$data['speaker_id'].'" data-entity_type="1" class="SocialLinkEdit"><i class="fa fa-comment fa-2x"></i>Social Links</span></p>';
                         
-                    $content .='</div>';
-					 if (isset($CompanyLogo['image_url'])) {
-						  $content .='<img class="dropzone" id="CompanyLogo" src="../../img/speakers/CompanyLogos/'.$CompanyLogo['image_url'].'" alt="'.$data['company_name'].'" data-company="'.$data['speaker_company_id'].'" data-cname="'.$data['company_name'].'">';
-					 } else {
-						 $content .='<img class="dropzone" id="CompanyLogo" src="../img/admin/upload.png" alt="'.$data['company_name'].'" data-company="'.$data['speaker_company_id'].'" data-cname="'.$data['company_name'].'">'; 
-					 }
+                    $content .='</div><p style="margin-top:50px;">Company Logo:</p>';
+					
+					
+					
+				 
+					  
+					  
+					  if (isset($_SESSION['speakers_admin'])){
+						  
+								   if (isset($CompanyLogo['image_url'])) {
+								  
+									 $content .='<img class="dropzone" id="CompanyLogo" src="../../img/speakers/CompanyLogos/'.$CompanyLogo['image_url'].'" alt="'.$data['company_name'].'" data-company="'.$data['speaker_company_id'].'" data-cname="'.$data['company_name'].'">';	  
+								  
+								   } else {
+								 $content .='<img class="dropzone" id="CompanyLogo" src="../img/admin/upload.png" alt="'.$data['company_name'].'" data-company="'.$data['speaker_company_id'].'" data-cname="'.$data['company_name'].'">'; 
+								  }
                    
+						  
+					  } else {
+						   if (isset($CompanyLogo['image_url'])) {
+						       $content .='<img id="CompanyLogoNormal" src="../../img/speakers/CompanyLogos/'.$CompanyLogo['image_url'].'" alt="'.$data['company_name'].'">';
+					       }
+						  
+						  
+					  }
+					  
+
+					
+				   
+				   
                 $content .='</div>
                 <!-- Speaker Icons Container Mobile -->
                 <div id="SpeakerIconsContainerMobile">';
@@ -281,7 +388,7 @@ public function speaker($tag) {
             <!-- Speaker Bio -->';
 
 			
-					if (strlen($data['speaker_bio']) < 45) {
+					if (!isset($data['speaker_bio']) || strlen($data['speaker_bio']) < 10) {
 						   $bio_text = '<p>Type a Bio here!</p><p><br></p>';
 						   
 					   } else {

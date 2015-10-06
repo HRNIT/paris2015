@@ -1,3 +1,7 @@
+var sendCheck = {};
+
+sendCheck.CanGo = 0;
+
 $(document).ready(function(){
 
       $(function(){
@@ -67,36 +71,87 @@ Dropzone.autoDiscover = false;
 			            //prevents the default form submit
 		  			e.preventDefault();
 		            e.stopPropagation(); 
+					
+	if (sendCheck.CanGo !== 1) {				
 		
 		  //get the data
 		  var SponsorName = $('#SponsorName').val();
-		  var SponsorURL = $('#CompanyURL').val();
+		  var SponsorURL = $('#SponsorURL').val();
 		  var SponsorBio = $('#SponsorBio').val();
 		  var Facebook = $('#Facebook').val();
 		  var Twitter = $('#Twitter').val();
 		  var Linkedin = $('#Linkedin').val();
 		  var Flickr = $('#Flickr').val();
 		  var Google = $('#Google').val();
+	      var Category = $('#Category').val();	
 		  
-		  
-		  
+		    
+		  var AlacarteText = $('#AlaCarteText').val();
+		  if (typeof AlacarteText === "undefined"){
+			$('#AlaCarteText').val('');
+		  }
+	 
+			var check = $('#Alacarte').prop('checked');
+				
+			if (check === true) {
+				var Alacarte = 1;
+			} else {
+				
+				var Alacarte = 0;
+			}
+		
+		 var OnlyCarte = $('#OnlyAlacarte').prop('checked');	
+		 
+			if (OnlyCarte === true) {
+				Category = 20;
+			} 
 		  
 		  
 		  	   //check if the fields are filled out or not
-			if ((typeof SponsorName != "undefined") && SponsorName != '' && (typeof SponsorURL != "undefined") && SponsorURL != '' 
-			&&  (typeof SponsorBio != "undefined") && SponsorBio != '') {
+			if ((typeof SponsorName != "undefined") && SponsorName != '' && (typeof SponsorURL != "undefined") && SponsorURL != '' && (typeof SponsorBio != "undefined") && SponsorBio != '' && (typeof Category != "undefined") && Category != '' ) {
 				
-             return true;
+            									$.ajax({
+								url: 'controllers/ajax.php',
+								type: 'POST',
+								data: {action:"add_new_sponsor", SponsorName:SponsorName, SponsorURL:SponsorURL, SponsorBio:SponsorBio, Category:Category, Facebook:Facebook, Twitter:Twitter, Linkedin:Linkedin, Flickr:Flickr, Google:Google, Alacarte:Alacarte, AlacarteText:AlacarteText},
+								success: function(data) {
+						           if (typeof data != "undefined"){
+										
+										
+										 $('#ReturnValue').html('<i class="fa fa-check-circle"></i> The data have been saved! The page will reload!');
+										 $('#ReturnValue').css("color","#0FB323");
+										 $('#ReturnValue').fadeIn('slow');
+										
+
+										
+									  setTimeout(function () {
+		                                          $('#ReturnValue').fadeOut('slow');
+                                          } , 3000); //set timeout function end
+										  
+										setTimeout(function () {
+		                                          location.reload();
+                                          } , 3000); //set timeout function end
+										   
+										
+									}
+							}
+
+								
+							});		
 				
 			} else {
 		
 			    //if stuff is missing
 				window.location.hash = '#ReturnValue';
 				$("#ReturnValue").html('<i class="fa fa-exclamation-triangle"></i> Please, fill out the missing fields!');
-				$("#ReturnValue").css("color","#9B1515");
+				$("#ReturnValue").css("color","#F54949");
 				$("#ReturnValue").fadeIn('slow');
 
-				
+		        setTimeout(function () {
+		            $("#ReturnValue").fadeOut('slow');
+                 } , 3000); //set timeout function end
+	   
+	   
 			    if (typeof SponsorName == "undefined" || SponsorName == '') {
 					$('#SponsorName').css("border","1px solid #9B1515");
 				} else {
@@ -105,9 +160,9 @@ Dropzone.autoDiscover = false;
 	
 	
 				if (typeof SponsorURL == "undefined" || SponsorURL == '') {
-					$('#CompanyURL').css("border","1px solid #9B1515");
+					$('#SponsorURL').css("border","1px solid #9B1515");
 				} else {
-					$('#CompanyURL').css("border","1px solid #cccccc");
+					$('#SponsorURL').css("border","1px solid #cccccc");
 				}
 	
 	
@@ -116,30 +171,21 @@ Dropzone.autoDiscover = false;
 				} else {
 					$('#SponsorBio').css("border","1px solid #cccccc");
 				}
+				
+			    if (typeof Category == "undefined" || Category == '') {
+					$('#Category').css("border","1px solid #9B1515");
+				} else {
+					$('#Category').css("border","1px solid #cccccc");
+				}				
 	
                return false;
 			}
 	   
+	}
 	
-  })  
+  }); 
   
-          // Listen to the click event
-        $('#NewSponsorSave').on("click", function(e) {
-          // Make sure the button click doesn't submit the form:
-          // Remove the file preview.
-		    e.preventDefault();
-            e.stopPropagation();
-			
-			if (typeof canGo == "undefined") {
-							    //if stuff is missing
-				window.location.hash = '#ReturnValue';
-				$("#ReturnValue").html('<i class="fa fa-exclamation-triangle"></i> Please, upload a logo!');
-				$("#ReturnValue").css("color","#9B1515");
-				$("#ReturnValue").fadeIn('slow');
-			}
-           
-		 
-        });
+
   
 	   
 	   
@@ -160,13 +206,13 @@ function save_check() {
 		  var Category = $('#Category').val();
 		  
 		  var AlacarteText = $('#AlaCarteText').val();
-		      if (typeof AlacarteText == "undefined"){
+		      if (typeof AlacarteText === "undefined"){
 				$('#AlaCarteText').val('');
 			  }
 		 
 		        var check = $('#Alacarte').prop('checked');
 					
-				if (check == true) {
+				if (check === true) {
 					Alacarte = 1;
 				} else {
 					
@@ -175,7 +221,7 @@ function save_check() {
 			
 			 var OnlyCarte = $('#OnlyAlacarte').prop('checked');	
 			 
-			 	if (OnlyCarte == true) {
+			 	if (OnlyCarte === true) {
 					Category = 20;
 				} 
 		  
@@ -262,7 +308,7 @@ function save_check() {
        var dz = this;
 	   
 	   var canGo = 1;
-
+       sendCheck.CanGo = 1;
           // Listen to the click event
         $('#NewSponsorSave').on("click", function(e) {
 			

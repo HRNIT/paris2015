@@ -9,6 +9,20 @@ if(!isset($_SESSION)) {
 	session_start();
 }
 
+
+ /*///////////// 
+Approve
+///////////////*/
+ 
+
+ if(isset($_POST['action']) && $_POST['action'] == 'approve_entities' && isset($_POST['entity_id']) && isset($_POST['entity_type'])){
+	$the_main = new main\main;
+    $the_main->approve_entity($_POST['entity_id'], $_POST['entity_type']);
+	
+
+}// approve
+
+
 /*///////////// 
 Add new Sponsor
 ///////////////*/

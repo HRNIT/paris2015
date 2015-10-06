@@ -44,7 +44,7 @@ use HRNParis\main as main;
 <body>
  <!--Main Wrapper-->
 	<div class="wrapper">
-	  <h1 class="WrapperMainH1">HR Tech Europe - Paris site 2015 |<br /> Add New Sponsor</h1>
+	  <h1 class="WrapperMainH1">HR Tech Europe - London site 2016 |<br /> Add New Sponsor</h1>
 	  
 	  	        <div id="MenuIconContainer">';
 	
@@ -66,7 +66,7 @@ use HRNParis\main as main;
 	<!--Form container-->
 	 <div id="container">';
 	 
-	 	if (isset($_SESSION['user'])) {
+	 	if (isset($_SESSION['sponsors_admin'])) {
 			include_once('controllers/main.php');
 			$main = new main\main;
 			
@@ -108,13 +108,15 @@ use HRNParis\main as main;
 		<input class="AdminInputField" id="Google" type="text" placeholder="Google+" /><br />
      </fieldset>';
 	 
-
+	if (isset($_SESSION['sponsors_admin'])) { 
    	  $content .='
 	  <fieldset>
 	     <legend>Image</legend>
 		 <div class="dropzone" id="DropDiv"></div><br />
 		 <input type="file" name="file" style="display:none" />
      </fieldset>';
+	 
+	}
 
     $content .= '<button class="AdminSubmitButton" name="NewSponsorSave" id="NewSponsorSave" type="Submit">Save</button>';
 	
@@ -126,7 +128,7 @@ use HRNParis\main as main;
 	   
 	 } //if isset agenda_admin 
 	 else {
-		$content.="<h1 style='text-align:center'>Nothing to see here!</h1>"; 
+		$content.="<h1 style='text-align:center'>You don't have access to this page!<br /><br /> If you feel you should see the content, please contact the IT guys!</h1>"; 
 	 }
 	 
 	 

@@ -60,7 +60,7 @@ $speakers = new speakers_main;
 
 
 <?php 
-if(isset($_SESSION['admin'])){
+if(isset($_SESSION['speakers_admin'])){
 	echo '
 	<link rel="stylesheet" href="css/admin_menu.css" />
 	<link rel="stylesheet" href="css/admin_socials.css" />
@@ -86,6 +86,20 @@ if(isset($_SESSION['admin'])){
 <?php 
 include_once('views/menu.php');
    show_menu('speakers');
+   
+   if (isset($_SESSION['super_admin'])) {
+	 
+	
+$content = $speakers->display_notifications(); 
+    if(isset($content) && $content != '') {
+		echo '<ul id="NotificationCenter"> '; 	
+		  echo $content;	
+		echo '</ul>';  
+	}
+	
+	
+	
+ }
 ?>
   
   

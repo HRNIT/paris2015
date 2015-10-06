@@ -1,4 +1,13 @@
+var sendCheck = {};
+
+sendCheck.CanGo = 0;
+
+
+
+
 $(document).ready(function(){
+
+	
 
       $(function(){
           $('#SpeakerBio').editable({inlineMode: false,
@@ -53,19 +62,7 @@ Dropzone.autoDiscover = false;
 	   
 	     }) 
 
-	       	/*-----------------------
-		 Change inside the element
-	    ------------------------	*/
-      $('#NewSpeakerSave').bind('click', function (e) {
-		    //if the save button pressed
-			
-			            //prevents the default form submit
-		  			e.preventDefault();
-		            e.stopPropagation(); 
-		
-             save_check();
-	
-  })  
+ 
   
           // Listen to the click event
         $('#NewSpeakerSave').on("click", function(e) {
@@ -74,20 +71,88 @@ Dropzone.autoDiscover = false;
 		    e.preventDefault();
             e.stopPropagation();
 			
-			if (typeof canGo == "undefined") {
-							    //if stuff is missing
+			if (sendCheck.CanGo != 1) {
+		  var SpeakerName = $('#SpeakerName').val();
+		  var SpeakerTitle = $('#SpeakerTitle').val();
+		  var SpeakerBio = $('#SpeakerBio').val();
+		  var CompanyName = $('#CompanyName').val();
+		  var CompanyWebsite = $('#CompanyWebsite').val();
+		  var Facebook = $('#Facebook').val();
+		  var Twitter = $('#Twitter').val();
+		  var Linkedin = $('#Linkedin').val();
+		  var Flickr = $('#Flickr').val();
+		  var Google = $('#Google').val();
+		  var MainPageBio = $('#SpeakerMPBio').val();
+	
+		var MainPage_chckbox = $('#MainCheckbox').prop('checked');
+		if (MainPage_chckbox == true) {
+		     MainPage = 1;
+		} else {
+		     MainPage = 0;
+		}				
+
+				//Ide kell majd egy ajax ami továbbítja az adatokat :D   add_new_press actionnal :)
+
+if ((typeof SpeakerName != "undefined") && SpeakerName != '') {	
+
+			
+									$.ajax({
+								url: 'controllers/ajax.php',
+								type: 'POST',
+								data: {action:"add_new_speaker", SpeakerName:SpeakerName, SpeakerTitle:SpeakerTitle, SpeakerBio:SpeakerBio, CompanyName:CompanyName, CompanyWebsite:CompanyWebsite, Facebook:Facebook, Twitter:Twitter, Linkedin:Linkedin, Flickr:Flickr, Google:Google, MainPage:MainPage, MainPageBio:MainPageBio},
+								success: function(data) {
+						           if (typeof data != "undefined"){
+										
+										
+										 $('#ReturnValue').html('<i class="fa fa-check-circle"></i> The data have been saved! The page will reload!');
+										 $('#ReturnValue').css("color","#0FB323");
+										 $('#ReturnValue').fadeIn('slow');
+										
+
+										
+									  setTimeout(function () {
+		                                          $('#ReturnValue').fadeOut('slow');
+                                          } , 3000); //set timeout function end
+										  
+										setTimeout(function () {
+		                                          location.reload();
+                                          } , 3000); //set timeout function end
+										   
+										
+									}
+							}
+
+								
+							});		
+
+							
+    }//if speakerName != undefined
+	else {
+		
+			    //if stuff is missing
 				window.location.hash = '#ReturnValue';
-				$("#ReturnValue").html('<i class="fa fa-exclamation-triangle"></i> Please, upload a logo!');
+				$("#ReturnValue").html('<i class="fa fa-exclamation-triangle"></i> Please, fill out the missing fields!');
 				$("#ReturnValue").css("color","#9B1515");
 				$("#ReturnValue").fadeIn('slow');
-			}
+
+				
+			    if (typeof SpeakerName == "undefined" || SpeakerName == '') {
+					$('#SpeakerName').css("border","1px solid #9B1515");
+				} else {
+					$('#SpeakerName').css("border","1px solid #cccccc");
+				}
+				
+	}// speaker name != else
+							
+							
+			}//can go != 1
            
 		 
-        });
+        }); //newspeaker save on click
   
 	   
 	   
-      });
+      }); //document.ready
 
 
 function save_check() {
@@ -110,7 +175,7 @@ function save_check() {
 		  
 		  	   //check if the fields are filled out or not
 			if ((typeof SpeakerName != "undefined") && SpeakerName != '' && (typeof SpeakerTitle != "undefined") && SpeakerTitle != '' 
-			&&  (typeof SpeakerBio != "undefined") && SpeakerBio != '' &&  (typeof CompanyName != "undefined") && CompanyName != '') {
+			&&  (typeof SpeakerBio != "undefined") && SpeakerBio != '') {
 				
 				if (MainPage == true && typeof SpeakerMPBio != "undefined" && SpeakerMPBio != ''){
 					 return true;
@@ -171,12 +236,6 @@ function save_check() {
 					$('#SponsorBio').css("border","1px solid #cccccc");
 				}
 				
-				if (typeof CompanyName == "undefined" || CompanyName == '') {
-					$('#CompanyName').css("border","1px solid #9B1515");
-				} else {
-					$('#CompanyName').css("border","1px solid #cccccc");
-				}
-	
 	
                return false;
 			}
@@ -236,6 +295,7 @@ function save_check() {
        var dz = this;
 	   
 	   var canGo = 1;
+        sendCheck.CanGo = 1;
 
           // Listen to the click event
         $('#NewSpeakerSave').on("click", function(e) {
